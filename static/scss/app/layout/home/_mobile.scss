@@ -1,0 +1,32 @@
+@include exports('mobile') {
+  #mobile {
+  	background: #FFF;
+  	.container {
+  		float: left;
+  	}
+  	text-align: center;
+  	p {
+  		text-align: left;
+  	}
+  	img {
+  		float: right;
+  		width: 400px;
+  	}
+  }
+  @media (max-width: 640px){
+    #mobile {
+      img{
+        max-width:80%;
+        float: none;
+        margin: auto;
+        display: none;
+      }
+      .container{
+        float: none;
+        p {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

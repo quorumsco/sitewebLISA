@@ -1,0 +1,96 @@
+doctype html
+html
+    block vars
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title #{pageTitle} - Quorum
+        meta(name='description' content='Quorum')
+        meta(name='keywords' content='quorum')
+        meta(name='author' content='Lisa Grenier - Quorum')
+        link(rel="icon", type="image/png", href="images/icons/favicon-96x96.png", sizes="96x96")
+        link(rel="icon", type="image/png", href="images/icons/favicon-32x32.png", sizes="32x32")
+        link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
+        link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans')
+        link(rel='stylesheet' href='stylesheets/app.css')
+    body.fr
+        #nav
+            .banner
+                span +33 1 79 73 40 04 - info@quorumimpact.com
+                button.align-right Get Early Access
+            nav
+                h1.nav-brand
+                    a(href='/')
+                        img(src='images/nav/quorum-logo.png' alt='Quorum')
+                .nav-toggle
+                    a(href='#')
+                        i.fa.fa-fw.fa-bars
+                .nav-links
+                    ul.main-links
+                        li
+                            a(href='/expertise.html' lang="fr") Produit
+                            a(href='/expertise.html' lang="en") Product
+                        li
+                            a(href='/labs.html') FAQ
+                        li
+                            a(href='/team.html' lang="fr") Contact
+                            a(href='/team.html' lang="en") Get In Touch
+                    ul.lang
+                        li
+                            a(href="#" onClick="document.body.className='en'; event.preventDefault();" lang='fr')
+                                img(src='images/nav/english.jpg' alt='English')
+                        li
+                            a(href="#" onClick="document.body.className='fr'; event.preventDefault();" lang='en')
+                                img(src='images/nav/french.jpg' alt='Français')
+        block content
+        footer#footer
+            .container
+                .copyright
+                    span &copy; Quorum 2016
+                .social-links
+                    ul
+                        li
+                            a(href='//facebook.com/quorumimpact' target="_blank")
+                                i.icon-facebook
+                        li
+                            a(href='//twitter.com/quorumimpact' target="_blank")
+                                i.icon-twitter
+                        li
+                            a(href='//www.linkedin.com/company/10114882' target="_blank")
+                                i.icon-linkedin
+                        li
+                            a(href='//google.com/+Quorumappsdata' target="_blank")
+                                i.icon-google
+                .pages(lang="fr")
+                    ul
+                        li
+                            a(href='/about.html') A Propos
+                        li
+                            a(href='#') Tech
+                        li
+                            a(href='#') Blog
+                        li
+                            a(href='#') Contact
+                        li
+                            a(href='#') Informations Légales
+                .pages(lang="en")
+                    ul
+                        li
+                            a(href='/about.html') About
+                        li
+                            a(href='#') Tech
+                        li
+                            a(href='#') Blog
+                        li
+                            a(href='#') Get In Touch
+                        li
+                            a(href='#') Legal
+
+    script(src='//code.jquery.com/jquery-2.1.4.min.js')
+    script(src='javascripts/TweenMax.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js')
+    script(src='javascripts/plugins/animation.gsap.js')
+    script(src="javascripts/typed.js")
+    script(src='javascripts/particles.min.js')
+    script(src='javascripts/app.js')

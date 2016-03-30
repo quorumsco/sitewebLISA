@@ -1,0 +1,15 @@
+@include exports('product') {
+  #product {
+    p {
+      text-align: center;
+      }
+    .container .content p:first-child {
+    	margin-bottom: 60px;
+    }
+    @media (max-width: 640px){
+    	.container .content p:first-child {
+    		margin-bottom: 40px;
+    	}
+    }
+  }
+}

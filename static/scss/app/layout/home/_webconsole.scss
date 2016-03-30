@@ -1,0 +1,38 @@
+@include exports('webconsole') {
+  #webconsole {
+  	background: #47B6FF;
+  	text-align: center;
+  	.top {
+  		margin-bottom: 30px;
+  	}
+  	p {
+  		text-align: right;
+  	}
+  	.container {
+  		float: right;
+  		display: inline-block;
+  	}
+  	img{
+  		float: left;
+  		width: 500px;
+  		display: inline-block;
+  		vertical-align: middle;
+  	}
+  }
+  @media (max-width: 640px){
+    #webconsole {
+      img{
+        max-width:80%;
+        float: none;
+        margin: auto;
+        display: none;
+      }
+      .container{
+        float: none;
+        p {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

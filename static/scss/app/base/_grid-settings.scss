@@ -1,0 +1,45 @@
+// Neat Overrides
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 12;
+// $max-width: em(1088);
+
+// Neat Breakpoints
+$small-screen: em(300);
+$medium-screen: em(1024);
+$large-screen: em(1440);
+$xlarge-screen: em(1921);
+
+$susy: (
+  container: $xlarge-screen,
+  columns: 1,
+  gutters: 1/8
+);
+
+html,body {
+  height:100%;
+}
+
+.container {
+  @include container($small-screen);
+
+  @include susy-media($medium-screen) {
+    @include container($medium-screen);
+  }
+
+  @include susy-media($large-screen) {
+    @include container($large-screen);
+  }
+
+  @include susy-media($xlarge-screen) {
+    @include container($xlarge-screen);
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

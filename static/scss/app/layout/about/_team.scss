@@ -1,0 +1,28 @@
+@include exports('team') {
+	#team{
+		@media(max-width: 640px){
+			.container .content div {
+				width: 100%;
+			}
+		}
+		.container .content div{
+			display: inline-block;
+			text-align: center;
+			margin: 20px;
+			img{
+				margin: 0 30px;
+				width: 200px;
+				border-radius: 50%;
+			}
+		} 
+		ul {
+			text-align: center;
+		}
+		ul li {
+			display: inline-block;
+		}
+		i {
+			font-size: 15px;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+@include exports('believe') {
+	#believe{
+		p {
+			text-align: justify;
+		}
+		ul {
+			text-align: center;
+			margin-bottom: 15px;
+			li {
+				display: inline-block;
+				height: 60px;
+				width: 200px;
+				vertical-align: middle;
+				padding: 20px;
+				margin: 5px 20px;
+				border: 1px #DDD solid;
+			}
+		}
+	}
+}
