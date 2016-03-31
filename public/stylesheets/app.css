@@ -726,16 +726,16 @@ section .blank {
   }
 }
 
-@media (max-width: 40em) {
-  #product p {
-    text-align: justify;
-  }
-}
-
 #target button {
   margin: 0 10px;
   height: 200px;
   width: 200px;
+}
+@media (max-width: 40em) {
+  #target button {
+    height: 100px;
+    margin-top: 10px;
+  }
 }
 #target ul {
   padding-left: 0;
@@ -762,6 +762,9 @@ section .blank {
     padding-bottom: 0px;
     background-size: 100%;
     background-position: center;
+  }
+  #webconsole .container {
+    max-width: 100%;
   }
 }
 #webconsole .container {
@@ -797,6 +800,9 @@ section .blank {
     background-position: center;
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+  #mobile .container {
+    max-width: 100%;
   }
 }
 #mobile .container {
