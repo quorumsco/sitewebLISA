@@ -590,7 +590,7 @@ header {
 }
 
 .small {
-  height: 200px;
+  height: 150px;
 }
 
 #home {
@@ -600,6 +600,10 @@ header {
 }
 #home .container {
   padding-top: 100px;
+}
+
+#about .container {
+  padding-top: 35px;
 }
 
 section {
@@ -698,6 +702,85 @@ section .blank {
     margin-right: 0;
     background: rgba(120, 120, 120, 0.3);
   }
+}
+
+#believe p {
+  text-align: justify;
+}
+#believe ul li {
+  display: inline-block;
+  height: 60px;
+  width: 200px;
+  vertical-align: middle;
+  padding: 20px;
+  margin: 5px 20px;
+  border: 1px solid;
+}
+#believe ul li:nth-child(1) {
+  border-color: #0E949A;
+}
+#believe ul li:nth-child(2) {
+  border-color: #8256F5;
+}
+#believe ul li:nth-child(3) {
+  border-color: #6AD932;
+}
+#believe ul li:nth-child(4) {
+  border-color: #F14E6C;
+}
+#believe ul li:nth-child(5) {
+  border-color: #47B6FF;
+}
+
+#team p {
+  text-align: justify;
+}
+#team ul {
+  list-style-type: none;
+}
+#team ul li {
+  display: inline-block;
+  margin: 20px;
+}
+#team .container .content div {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  margin: 0 15px;
+}
+#team .container .content div p {
+  text-align: center;
+}
+#team .container .content div img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+#findUs .left {
+  width: 50%;
+  display: inline-block;
+  margin-top: 90px;
+  float: left;
+}
+#findUs ul {
+  padding: 0;
+  list-style-type: none;
+}
+#findUs ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#findUs ul li a {
+  color: #212121;
+}
+#findUs .right {
+  width: 50%;
+  display: inline-block;
+}
+
+#job p:nth-child(1) {
+  text-align: justify;
 }
 
 @font-face {

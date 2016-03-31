@@ -1,5 +1,32 @@
 @include exports('team') {
 	#team{
-	
+		p {
+			text-align: justify;
+		}
+		ul {
+			list-style-type: none;
+			li {
+				display: inline-block;
+				margin: 20px;
+			}
+		}
+		.container{
+			.content {
+				div {
+					p { 
+						text-align: center; 
+					}
+					width: 300px;
+					height: 300px;
+					display: inline-block;
+					margin: 0 15px;
+					img {
+						height: 200px;
+						width: 200px;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
 	}
 }

@@ -8,7 +8,7 @@
 		height: 450px;
 	}
 	.small {
-		height: 200px;
+		height: 150px;
 	}
 	#home{
 		background: url('../images/header/home-header.jpg');
@@ -19,7 +19,9 @@
 		}
 	}
 	#about{
-	
+		.container{
+			padding-top: 35px;
+		}
 	}
 	#campaigners{
 	

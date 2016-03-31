@@ -1,5 +1,33 @@
 @include exports('believe') {
 	#believe{
-	
+		p {
+			text-align: justify;
+		}
+		ul {
+			li {
+				display: inline-block;
+				height: 60px;
+				width: 200px;
+				vertical-align: middle;
+				padding: 20px;
+				margin: 5px 20px;
+				border: 1px solid;
+				&:nth-child(1){
+					border-color: $dark-blue;
+				}
+				&:nth-child(2){
+					border-color: $purple;
+				}
+				&:nth-child(3){
+					border-color: $green;
+				}
+				&:nth-child(4){
+					border-color: $pink;
+				}
+				&:nth-child(5){
+					border-color: $blue;
+				}
+			}
+		}
 	}
 }
