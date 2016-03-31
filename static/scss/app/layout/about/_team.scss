@@ -9,6 +9,17 @@
 				display: inline-block;
 				margin: 20px;
 			}
+			@media(max-width: $small-screen){
+				li {
+					display: block;
+				}		
+			}
+
+		}
+		@media(max-width: $small-screen){
+			ul {
+				padding-left: 0;
+			}		
 		}
 		.container{
 			.content {
@@ -21,10 +32,18 @@
 					display: inline-block;
 					margin: 0 15px;
 					img {
-						height: 200px;
 						width: 200px;
 						border-radius: 50%;
 					}
+				}
+				@media(max-width: $small-screen){
+					div {
+						width: 200px;		
+						height: 220px;
+						img {
+							width: 150px;
+						}
+					}		
 				}
 			}
 		}

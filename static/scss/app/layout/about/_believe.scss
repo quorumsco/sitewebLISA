@@ -28,6 +28,16 @@
 					border-color: $blue;
 				}
 			}
+			@media(max-width: 640px){
+				li {
+					margin: 5px 0;
+				}
+			}
+		}
+		@media(max-width: 640px){
+			ul {
+				padding-left:0;
+			}
 		}
 	}
 }

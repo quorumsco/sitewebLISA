@@ -637,6 +637,11 @@ header {
 .small {
   height: 150px;
 }
+@media (max-width: 40em) {
+  .small {
+    height: 120px;
+  }
+}
 
 #home {
   background: url("../images/header/home-header.jpg");
@@ -839,6 +844,16 @@ section .blank {
 #believe ul li:nth-child(5) {
   border-color: #47B6FF;
 }
+@media (max-width: 640px) {
+  #believe ul li {
+    margin: 5px 0;
+  }
+}
+@media (max-width: 640px) {
+  #believe ul {
+    padding-left: 0;
+  }
+}
 
 #team p {
   text-align: justify;
@@ -850,6 +865,16 @@ section .blank {
   display: inline-block;
   margin: 20px;
 }
+@media (max-width: 40em) {
+  #team ul li {
+    display: block;
+  }
+}
+@media (max-width: 40em) {
+  #team ul {
+    padding-left: 0;
+  }
+}
 #team .container .content div {
   width: 300px;
   height: 300px;
@@ -860,13 +885,21 @@ section .blank {
   text-align: center;
 }
 #team .container .content div img {
-  height: 200px;
   width: 200px;
   border-radius: 50%;
 }
+@media (max-width: 40em) {
+  #team .container .content div {
+    width: 200px;
+    height: 220px;
+  }
+  #team .container .content div img {
+    width: 150px;
+  }
+}
 
 #findUs .left {
-  width: 50%;
+  width: 40%;
   display: inline-block;
   margin-top: 90px;
   float: left;
@@ -883,8 +916,28 @@ section .blank {
   color: #212121;
 }
 #findUs .right {
+  margin: 15px 0 0 4px;
   width: 50%;
   display: inline-block;
+}
+#findUs .right img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 40em) {
+  #findUs .left {
+    margin-top: 10px;
+    float: none;
+    width: 100%;
+  }
+  #findUs .right {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #findUs .right img {
+    margin: 0 auto;
+  }
 }
 
 #job p:nth-child(1) {

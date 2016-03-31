@@ -15,6 +15,9 @@
 	}
 	.small {
 		height: 150px;
+		@media(max-width: $small-screen){
+			height: 120px;
+		}
 	}
 	#home{
 		background: url('../images/header/home-header.jpg');
