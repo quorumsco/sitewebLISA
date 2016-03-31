@@ -1,70 +1,16 @@
 body {
-  @include font-feature-settings('kern', 'liga', 'pnum');
-  color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  line-height: $base-line-height;
-    @media(max-width: 640px) {
-      font-size: $small-font-size;
-  }
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $heading-font-family;
-  font-size: $base-font-size;
-  line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+h1{
+	font-size: $header-font-size;
 }
-h3, h3 span {
-  @media(max-width: 640px) {
-    font-size: 20px;
-    margin: 0 0 1em;
-  }
+h2{
+	font-size: $header-font-size - 5;
+}
+h3 {
+	font-size: $base-font-size + 10;	
+	margin-bottom: 5px;
 }
 h4 {
-  @media(max-width: 640px) {
-    font-size: 17px;
-    margin: 0 0 1em;
-  }
-}
-
-p {
-  margin: 0 0 $small-spacing;
-}
-
-a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color .1s linear;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: darken($action-color, 15%);
-  }
-
-  &:active,
-  &:focus {
-    outline: none;
-  }
-}
-
-hr {
-  border-bottom: $base-border;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing 0;
-}
-
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
+	font-size: $base-font-size + 4;	
 }

@@ -1,18 +1,15 @@
 @include exports('target') {
-  #target {
-	text-align: center;
-	.container {
-		div {
-			display: inline-block;
+	#target {
+		button {
+			margin: 0 10px;
 			height: 200px;
 			width: 200px;
-			margin : 20px 20px;
-			text-align: center;
-			button {
-				width: 100%;
-				height: 100%;
+		}
+		ul{
+			list-style-type: none;
+			li{
+				display: inline-block;
 			}
 		}
 	}
-  }
 }

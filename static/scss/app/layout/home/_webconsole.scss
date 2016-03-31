@@ -1,38 +1,22 @@
 @include exports('webconsole') {
-  #webconsole {
-  	background: #47B6FF;
-  	text-align: center;
-  	.top {
-  		margin-bottom: 30px;
-  	}
-  	p {
-  		text-align: right;
-  	}
-  	.container {
-  		float: right;
-  		display: inline-block;
-  	}
-  	img{
-  		float: left;
-  		width: 500px;
-  		display: inline-block;
-  		vertical-align: middle;
-  	}
-  }
-  @media (max-width: 640px){
-    #webconsole {
-      img{
-        max-width:80%;
-        float: none;
-        margin: auto;
-        display: none;
-      }
-      .container{
-        float: none;
-        p {
-          text-align: justify;
-        }
-      }
-    }
-  }
+	#webconsole {
+		background: url('../images/home/webconsole-test.png');
+		background-repeat: no-repeat;
+		background-position: 40px 40px;
+		background-size: 600px;
+		@media(max-width: 650px){
+			background-size: 100%;
+			background-position: center;
+		}
+		.container{
+			margin-left: 45%; 
+			@media(max-width: 650px){
+				margin-left: 0;
+				background: rgba(120,120,120,0.3);
+			}
+		}
+		.title {
+			background-color: $dark-pink;
+		}
+	}
 }

@@ -10,95 +10,44 @@
 @import 'app/layout/base';
 
 @font-face {
-  font-family: 'quorum';
-  src:url('../fonts/quorum.eot?n9t7a7');
-  src:url('../fonts/quorum.eot?#iefixn9t7a7') format('embedded-opentype'),
-  url('../fonts/quorum.ttf?n9t7a7') format('truetype'),
-  url('../fonts/quorum.woff?n9t7a7') format('woff'),
-  url('../fonts/quorum.svg?n9t7a7#quorum') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'ProximaNova-Bold';
+  src:url('../fonts/ProximaNova-Bold.otf');
 }
-
+@font-face {
+  font-family: 'ProximaNova-LightItalic';
+  src:url('../fonts/ProximaNova-LightItalic.otf');
+}
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src:url('../fonts/ProximaNova-Regular.otf');
+}
 body.en :lang(fr) {
   display: none;
 }
 body.fr :lang(en) {
   display: none;
 }
-
-i[class^='icon-'],
-i[class*=' icon-'] {
-  font-family: 'quorum';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+	position: absolute;
+	width: 100%;
+	background: #F2F2F2;
+	color: $font-color;
 }
-
-.icon-data:before {
-  content: "\e600";
+.blue {
+  background-color: $blue;
 }
-.icon-dots:before {
-  content: "\e601";
+.purple {
+  background-color: $purple;
 }
-.icon-facebook:before {
-  content: "\e602";
+.pink {
+  background-color: $pink;
 }
-.icon-google:before {
-  content: "\e603";
+.green {
+  background-color: $green;
 }
-.icon-human:before {
-  content: "\e604";
+.dark-pink {
+  background-color: $dark-pink;
 }
-.icon-human66:before {
-  content: "\e605";
-}
-.icon-increasing:before {
-  content: "\e606";
-}
-.icon-linkedin:before {
-  content: "\e607";
-}
-.icon-loading:before {
-  content: "\e608";
-}
-.icon-meeting:before {
-  content: "\e609";
-}
-.icon-megaphone:before {
-  content: "\e60a";
-}
-.icon-round:before {
-  content: "\e60b";
-}
-.icon-society:before {
-  content: "\e60c";
-}
-.icon-touch-pad:before {
-  content: "\e60d";
-}
-.icon-town:before {
-  content: "\e60e";
-}
-.icon-twitter:before {
-  content: "\e60f";
-}
-.icon-vote:before {
-  content: "\e610";
-}
-
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+.dark-blue {
+  background-color: $dark-blue;
 }

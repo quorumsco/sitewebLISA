@@ -1,32 +1,19 @@
 @include exports('mobile') {
-  #mobile {
-  	background: #FFF;
-  	.container {
-  		float: left;
-  	}
-  	text-align: center;
-  	p {
-  		text-align: left;
-  	}
-  	img {
-  		float: right;
-  		width: 400px;
-  	}
-  }
-  @media (max-width: 640px){
-    #mobile {
-      img{
-        max-width:80%;
-        float: none;
-        margin: auto;
-        display: none;
-      }
-      .container{
-        float: none;
-        p {
-          text-align: justify;
-        }
-      }
-    }
-  }
+	#mobile{
+		background: url('../images/home/mobile-test.png');
+		background-repeat: no-repeat;
+		background-size: 360px;
+		background-position:95% 20px;
+		@media(max-width: 650px){
+			background-size: 100%;
+			background-position: center;
+		}
+		.container{
+			margin-right: 40%; 
+			@media(max-width: 650px){
+				margin-right: 0;
+				background: rgba(120,120,120,0.3);
+			}
+		}
+	}
 }

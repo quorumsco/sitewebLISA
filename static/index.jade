@@ -2,26 +2,25 @@ extends ./layout.jade
 block vars
     - var pageTitle = 'Home'
 block content
-    header#home
+    header#home.big
         .container
             h1 MOBILISE BEYOND EXPECTATIONS
             h2 Every movement starts with a simple talk
+            button.green Get Early Access
 
     main
         section#product
             .container
-                header
-                    h3
-                        span Product
-                .content
-                    p Build people centered, meaningful and organized field actions.
-                    p The app that makes every interaction with people count.
+                h3 Product
+                hr.title.green
+                p Build people centered, meaningful and organized field actions.
+                p.blank
+                p The app that makes every interaction with people count.
+        hr
         section#webconsole
-            img(src="../images/home/webconsole-test.png")
             .container
-                header
-                    h3
-                        span Web Console
+                h3 Web Console
+                hr.title.pink
                 .content
                     .top
                         h4 Organize
@@ -34,54 +33,48 @@ block content
                         p Develop custom survey
                         p Track, Analyze and predict with data 
                         p Receive real-time results of your team progressions & actionable insights
-            div.clearfix
+        hr
         section#mobile
             .container
-                header
-                    h3
-                        span Mobile
+                h3 Mobile
+                hr.title.purple
                 .content
-                    h4
-                        span Build big movements from your smartphone
-                        span Save hours with instant capture on the field
+                    h4 Build big movements from your smartphone
+                    b Save hours with instant capture on the field
                     p Anytime/anywhere information about your cause for your team
                     p Anytime/anywhere add a new person or organization to your movement
-                    p Anytime/Anywhere log contact, assign tags, set follow-ups, change volunteer status,
-                    p record donations and adjust support level
+                    p Anytime/Anywhere log contact, assign tags, set follow-ups, change volunteer status, record donations and adjust support level
                     p Motivate the team
                     p Don’t fill contact forms, hold conversation with people thanks to targeted information 
                     p Integrated Canvassing features
                     p Find teammates to drive action together
                     p Follow your movement and teammates progression
-            img(src="../images/home/mobile-test.png")
-            div.clearfix
+        hr
         section#target
             .container
-                header
-                    h3
-                        span Target
+                h3 Target
+                hr.title.dark-blue
                 h4 Build a movement with the field
-                div
-                    a(href='#')
-                        button.target
-                            p Campaigners
-                div
-                    a(href='#')
-                        button.target
-                            p Non Profits
-                div
-                    a(href='#')
-                        button.target
-                            p Agency
-                            p Avocacy
-                div
-                    a(href='#')
-                        button.target
-                            p Individuals
+                ul
+                    li
+                        a(href='#')
+                            button.blue
+                                p Campaigners
+                    li
+                        a(href='#')
+                            button.dark-pink
+                                p Non Profits
+                    li
+                        a(href='#')
+                            button.green
+                                p Agency & Avocacy
+                    li
+                        a(href='#')
+                            button.purple
+                                p Individuals
         section#cta
             .container
                 .content
                     a(href='#')
-                        button
-                            span Get Early Access
+                        button.dark-blue Get Early Access
         
