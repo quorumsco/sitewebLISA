@@ -1,3 +1,4 @@
+
 @include exports('section') {
 	section {
 	  	padding: 15px 0 20px 0;
@@ -6,10 +7,18 @@
 	  		width: 30%;
 	  		border: 0px;
 	  		height: 2px;
-	  		margin-bottom: 25px;
+	  		margin: 0 auto;
 	  	}
 	  	.blank {
 	  		padding: 10px;
+	  		@media(max-width: $small-screen){
+				display: none;
+			}
 	  	}
+	  	@media(max-width: $small-screen){
+			.container {
+				padding: 0 8px;
+			}
+		}
 	}
 }

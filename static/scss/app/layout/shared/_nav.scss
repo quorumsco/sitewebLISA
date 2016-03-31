@@ -5,7 +5,6 @@
 		width:100%;
 		border-bottom: 1px solid #EEE;
 		.content{
-			margin-right: 40px;
 			.nav-toggle {
 				float: right;
 				display: none;
@@ -16,6 +15,9 @@
 				li{
 					display: inline;
 					width: 200px;
+					&:last-child{
+						margin-right: 40px;
+					}
 				}
 				a {
 					width: 200px;
@@ -50,15 +52,26 @@
 			img{
 				margin-top: 6px;
 				width: 200px;
+				@media(max-width: $small-screen){
+					margin-top: 10px;
+				}
 			}
 		}
 		.dropdown-menu {
 			display:none;
 		}
-	}
-	@media(max-width: $small-screen){
-		.banner{ 	
-			display: none;
+		@media(max-width: $small-screen){
+			.banner{ 	
+				display: none;
+			}
+			.content {
+				.nav-toggle{
+					display: inline;
+				}
+				ul.nav {
+					display: none;
+				}
+			}
 		}
 	}
 }

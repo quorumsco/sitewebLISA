@@ -1,5 +1,9 @@
 @include exports('product') {
-  #product {
-
-  }
+  	#product {
+  		@media(max-width: $small-screen){
+  			p {
+  				text-align: justify;
+  			}
+  		}
+  	}
 }

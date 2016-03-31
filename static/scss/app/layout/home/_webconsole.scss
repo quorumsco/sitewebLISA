@@ -5,6 +5,8 @@
 		background-position: 40px 40px;
 		background-size: 600px;
 		@media(max-width: 650px){
+			padding-top: 0px;
+			padding-bottom: 0px;
 			background-size: 100%;
 			background-position: center;
 		}
@@ -13,6 +15,20 @@
 			@media(max-width: 650px){
 				margin-left: 0;
 				background: rgba(120,120,120,0.3);
+				h3 {
+					margin: 0 0 5px 0;
+					padding-top: 40px;
+				}
+				.content {
+					.bottom {
+						p {
+							&:last-child{
+								margin-bottom: 0px;
+								padding-bottom: 60px;
+							}
+						}
+					}
+				}
 			}
 		}
 		.title {

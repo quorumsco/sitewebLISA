@@ -434,9 +434,6 @@ $ms-ratio: $major-second;*/
 $base-spacing: $base-line-height;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;*/
-/*$base-background-color: #fff;
-$base-font-color: $dark-gray;
-$action-color: $blue;*/
 html, body {
   height: 100%;
 }
@@ -493,27 +490,54 @@ button {
   padding: 20px;
   border: none;
   border-radius: 5px;
+  color: #F2F2F2;
 }
 
 body {
   font-family: "ProximaNova-Regular";
+  font-size: 16px;
+}
+@media (max-width: 40em) {
+  body {
+    font-size: 13px;
+  }
 }
 
 h1 {
   font-size: 37px;
 }
+@media (max-width: 40em) {
+  h1 {
+    font-size: 25px;
+  }
+}
 
 h2 {
   font-size: 32px;
+}
+@media (max-width: 40em) {
+  h2 {
+    font-size: 22px;
+  }
 }
 
 h3 {
   font-size: 26px;
   margin-bottom: 5px;
 }
+@media (max-width: 40em) {
+  h3 {
+    font-size: 19px;
+  }
+}
 
 h4 {
   font-size: 20px;
+}
+@media (max-width: 40em) {
+  h4 {
+    font-size: 16px;
+  }
 }
 
 #nav {
@@ -521,9 +545,6 @@ h4 {
   position: fixed;
   width: 100%;
   border-bottom: 1px solid #EEE;
-}
-#nav .content {
-  margin-right: 40px;
 }
 #nav .content .nav-toggle {
   float: right;
@@ -536,6 +557,9 @@ h4 {
 #nav .content ul.nav li {
   display: inline;
   width: 200px;
+}
+#nav .content ul.nav li:last-child {
+  margin-right: 40px;
 }
 #nav .content ul.nav a {
   width: 200px;
@@ -570,23 +594,44 @@ h4 {
   margin-top: 6px;
   width: 200px;
 }
+@media (max-width: 40em) {
+  #nav .navbar-brand img {
+    margin-top: 10px;
+  }
+}
 #nav .dropdown-menu {
   display: none;
 }
-
 @media (max-width: 40em) {
-  .banner {
+  #nav .banner {
+    display: none;
+  }
+  #nav .content .nav-toggle {
+    display: inline;
+  }
+  #nav .content ul.nav {
     display: none;
   }
 }
+
 header {
   margin-top: 81px;
   color: #F2F2F2;
   text-align: center;
 }
+@media (max-width: 40em) {
+  header {
+    margin-top: 44px;
+  }
+}
 
 .big {
   height: 450px;
+}
+@media (max-width: 40em) {
+  .big {
+    height: 300px;
+  }
 }
 
 .small {
@@ -596,10 +641,18 @@ header {
 #home {
   background: url("../images/header/home-header.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% auto;
 }
 #home .container {
   padding-top: 100px;
+}
+@media (max-width: 40em) {
+  #home {
+    background-size: auto auto;
+  }
+  #home .container {
+    padding-top: 40px;
+  }
 }
 
 #about .container {
@@ -614,10 +667,20 @@ section .title {
   width: 30%;
   border: 0px;
   height: 2px;
-  margin-bottom: 25px;
+  margin: 0 auto;
 }
 section .blank {
   padding: 10px;
+}
+@media (max-width: 40em) {
+  section .blank {
+    display: none;
+  }
+}
+@media (max-width: 40em) {
+  section .container {
+    padding: 0 8px;
+  }
 }
 
 #footer {
@@ -629,7 +692,7 @@ section .blank {
   display: inline-block;
 }
 #footer ul li {
-  display: inline;
+  display: inline-block;
 }
 #footer ul li a {
   color: #212121;
@@ -641,8 +704,27 @@ section .blank {
 #footer ul.social-links li {
   margin: 0 0 0 5px;
 }
+#footer ul.nav-footer {
+  padding-left: 0;
+}
 #footer ul.nav-footer li {
   margin: 0 10px;
+}
+@media (max-width: 40em) {
+  #footer ul.nav-footer li a {
+    margin: 10px 20px;
+  }
+}
+@media (max-width: 40em) {
+  #footer ul.nav-footer li {
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 40em) {
+  #product p {
+    text-align: justify;
+  }
 }
 
 #target button {
@@ -651,10 +733,16 @@ section .blank {
   width: 200px;
 }
 #target ul {
+  padding-left: 0;
   list-style-type: none;
 }
 #target ul li {
   display: inline-block;
+}
+@media (max-width: 40em) {
+  #target ul li {
+    margin-bottom: 5px;
+  }
 }
 
 #webconsole {
@@ -665,6 +753,8 @@ section .blank {
 }
 @media (max-width: 650px) {
   #webconsole {
+    padding-top: 0px;
+    padding-bottom: 0px;
     background-size: 100%;
     background-position: center;
   }
@@ -676,6 +766,14 @@ section .blank {
   #webconsole .container {
     margin-left: 0;
     background: rgba(120, 120, 120, 0.3);
+  }
+  #webconsole .container h3 {
+    margin: 0 0 5px 0;
+    padding-top: 40px;
+  }
+  #webconsole .container .content .bottom p:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 60px;
   }
 }
 #webconsole .title {
@@ -690,8 +788,10 @@ section .blank {
 }
 @media (max-width: 650px) {
   #mobile {
-    background-size: 100%;
+    background-size: 100% auto;
     background-position: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 #mobile .container {
@@ -701,6 +801,14 @@ section .blank {
   #mobile .container {
     margin-right: 0;
     background: rgba(120, 120, 120, 0.3);
+  }
+  #mobile .container h3 {
+    margin: 0 0 5px 0;
+    padding-top: 40px;
+  }
+  #mobile .container .content p:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 60px;
   }
 }
 
@@ -832,4 +940,8 @@ body {
 
 .dark-blue {
   background-color: #0E949A;
+}
+
+hr {
+  margin: 0px;
 }

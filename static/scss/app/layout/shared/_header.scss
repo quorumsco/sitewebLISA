@@ -3,9 +3,15 @@
 		margin-top: $nav-size;
 		color: $header-font-color;
 		text-align: center;
+		@media(max-width: $small-screen){
+			margin-top: $small-nav-size;
+		}
 	}
 	.big {
 		height: 450px;
+		@media(max-width: $small-screen){
+			height: 300px;
+		}
 	}
 	.small {
 		height: 150px;
@@ -13,9 +19,15 @@
 	#home{
 		background: url('../images/header/home-header.jpg');
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: 100% auto;
 		.container{
 			padding-top: 100px;
+		}
+		@media(max-width: $small-screen){
+			background-size: auto auto;
+			.container{
+				padding-top: 40px;
+			}
 		}
 	}
 	#about{

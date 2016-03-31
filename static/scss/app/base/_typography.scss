@@ -1,16 +1,32 @@
 body {
-  font-family: $base-font-family;
+ 	font-family: $base-font-family;
+  	font-size: $base-font-size;
+  	@media(max-width: $small-screen){
+		font-size: $small-font-size;
+	}
 }
 h1{
 	font-size: $header-font-size;
+	@media(max-width: $small-screen){
+		font-size: $header-small-font-size;
+	}
 }
-h2{
+h2 {
 	font-size: $header-font-size - 5;
+	@media(max-width: $small-screen){
+		font-size: $header-small-font-size - 3;
+	}
 }
 h3 {
 	font-size: $base-font-size + 10;	
 	margin-bottom: 5px;
+	@media(max-width: $small-screen){
+		font-size: $small-font-size + 6;
+	}
 }
 h4 {
 	font-size: $base-font-size + 4;	
+	@media(max-width: $small-screen){
+		font-size: $small-font-size + 3;
+	}
 }
