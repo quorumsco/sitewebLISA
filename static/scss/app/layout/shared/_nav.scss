@@ -1,76 +1,135 @@
 @include exports('nav') {
 	#nav {
-		background: #FFF;
 		position: fixed;
+		background-color: transparent;
 		width:100%;
-		border-bottom: 1px solid #EEE;
+		color: $header-font-color;
+		-webkit-transition:.5s;
+  		-moz-transition:.5s;
+  		transition:.5s;
 		.content{
 			.nav-toggle {
 				float: right;
 				display: none;
+				width: 80px; 
+				height: 80px; 
+				background-color: transparent;
+				font-size: 20px;
+				color: $font-color;
 			}
 			ul.nav{
-				float: right;
-				display: inline;
+				display: inline-block;
+				padding: 19px 0;
 				li{
 					display: inline;
-					width: 200px;
+					margin-left: 15px;
 					&:last-child{
 						margin-right: 40px;
 					}
 				}
 				a {
-					width: 200px;
-					padding: 16px 20px 16px 20px;
 					text-decoration: none;
-					color: $font-color;
+					color: $header-font-color;
 				}
-				a:hover {
-					background-color: $nav-hover-color;
-				}
+			}
+			div.bar {
+				float: right;
+				margin-right: 8%;
 			}
 		}
 		.banner{
-			height: 25px;
-			background: #DDD;
-			padding-top: 7px;
-			span{
-				margin-left: 40px;
-				margin-top: 10px;
-			}
+			display: inline-block;
 			button{
-				top: 0;
-				padding: 0 10px;
-				right: 56px;
-				height: 32px;
-				position: absolute;
+				padding: 16px 20px;
+				margin-left:10px;
+				background-color: transparent;
+				border: 1px solid $header-font-color;
+				font-weight: normal;
 			}
 		}
 		.navbar-brand{
-			margin-left: 40px;
+			float: left;
 			display: inline;
+			margin-left: 8%;
 			img{
 				margin-top: 6px;
 				width: 200px;
-				@media(max-width: $small-screen){
-					margin-top: 10px;
-				}
 			}
 		}
-		.dropdown-menu {
+		.hidden-menu {
 			display:none;
 		}
-		@media(max-width: $small-screen){
-			.banner{ 	
+		@media(max-width: 425px){
+			background-color: #FFFFFF;
+			color: $font-color; 
+			div.bar {
 				display: none;
 			}
-			.content {
-				.nav-toggle{
-					display: inline;
+			.content{
+				.nav-toggle {
+					display: inline-block;
 				}
-				ul.nav {
-					display: none;
+			}
+			.navbar-brand{
+				margin-left: 10px;
+				img{
+					width: 180px;
 				}
+			}
+		}
+	}
+	#nav.active {
+		background-color: #FFFFFF;
+		color: $font-color;
+		border-bottom: 1px solid $grey;
+		ul.nav {
+			li {
+				a {
+					color: $font-color;
+				}
+			}		
+		}
+		button {
+			border: none;
+			background-color: $blue;
+			font-weight: bold;
+		}
+	}
+	#nav.show-menu{
+		border-bottom: 1px solid #DDD;
+		div.bar {	
+			display: block;
+			margin: 0;
+			width: 100%;
+			ul {
+				border-bottom: 1px solid #DDD;
+				border-top: 1px solid #DDD;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				li {
+					margin: 0;
+					display: block;
+					padding-left: 20px;
+					border-bottom: 1px solid #DDD;
+					a {
+						display: block;
+						color: $font-color;
+						padding: 20px 0;
+					}
+				}
+			}
+		}
+		.banner {
+			padding: 20px;
+			display: block;
+			text-align: center;
+			span, i {
+				padding: 10px 0;
+			}
+			button {
+				background-color: $blue;
+				margin-bottom: 15px;
 			}
 		}
 	}

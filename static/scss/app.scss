@@ -14,8 +14,8 @@
   src:url('../fonts/ProximaNova-Bold.otf');
 }
 @font-face {
-  font-family: 'ProximaNova-LightItalic';
-  src:url('../fonts/ProximaNova-LightItalic.otf');
+  font-family: 'ProximaNova-Light';
+  src:url('../fonts/ProximaNova-Light.otf');
 }
 @font-face {
   font-family: 'ProximaNova-Regular';
@@ -30,7 +30,7 @@ body.fr :lang(en) {
 body {
 	position: absolute;
 	width: 100%;
-	background: #F2F2F2;
+	background: #FFFFFF;
 	color: $font-color;
 }
 .blue {
@@ -45,12 +45,9 @@ body {
 .green {
   background-color: $green;
 }
-.dark-pink {
-  background-color: $dark-pink;
-}
 .dark-blue {
   background-color: $dark-blue;
 }
-hr {
-  margin: 0px;
+.clearfix {
+  clear: both;
 }

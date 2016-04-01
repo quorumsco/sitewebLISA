@@ -1,13 +1,18 @@
 // Typography
 $base-font-family: 'ProximaNova-Regular';
 $heading-font-family: 'ProximaNova-Bold';
-$font-quote: 'ProximaNova-LightItalic';
+$font-quote: 'ProximaNova-Light';
 
 // Font Sizes
 $base-font-size: 16px;
-$header-font-size: 37px;
-$small-font-size: 13px;
-$header-small-font-size: 25px;
+$header-font-size: 65px;
+$header2-font-size: 40px;
+$header3-font-size: 35px;
+
+$small-font-size: 14px;
+$header-small-font-size: 35px;
+$header2-small-font-size: 25px;
+$heade3r-small-font-size: 25px;
 
 // Line height
 $nav-height: 4.5;
@@ -28,10 +33,9 @@ $base-z-index: 0;*/
 $blue: #47B6FF;
 $green: #6AD932;
 $purple: #8256F5;
-$pink: #F14E6C;
+$pink: #DB47A3;
 $dark-blue: #0E949A;
-$dark-pink: #DC44A3;
-$nav-hover-color: #CCC;
+$grey: #767B84;
 
 // Nav
 $nav-size: 81px;
@@ -39,7 +43,7 @@ $small-nav-size: 44px;
 
 // Font Colors
 $font-color: #212121;
-$body-color: #F2F2F2;
+$white-color: #F2F2F2;
 $header-font-color: #F2F2F2; 
 
 // Border

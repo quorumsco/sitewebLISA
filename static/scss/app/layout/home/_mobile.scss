@@ -1,35 +1,27 @@
 @include exports('mobile') {
 	#mobile{
+		margin-top: 150px;
 		background: url('../images/home/mobile-test.png');
 		background-repeat: no-repeat;
-		background-size: 360px;
-		background-position:95% 20px;
+		background-size: auto 100%;
+		background-position: 15%;
 		@media(max-width: 650px){
-			background-size: 100% auto;
-			background-position: center;
-			padding-top: 0px;
-			padding-bottom: 0px;
-			.container {
-				max-width: 100%;
+
+		}
+		p {
+			color: $grey;
+			i {
+				color: $pink;
+				margin-right: 3px;
 			}
 		}
 		.container{
-			margin-right: 40%; 
+			float:right;
+			width: 40%;
+			text-align: left;
+			margin-right: 8%; 
 			@media(max-width: 650px){
-				margin-right: 0;
-				background: rgba(120,120,120,0.3);
-				h3 {
-					margin: 0 0 5px 0;
-					padding-top: 40px;
-				}
-				.content {
-					p {
-						&:last-child{
-							margin-bottom: 0px;
-							padding-bottom: 60px;
-						}
-					}
-				}
+
 			}
 		}
 	}

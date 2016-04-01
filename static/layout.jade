@@ -12,31 +12,23 @@ html
         link(rel='stylesheet' href='stylesheets/app.css')
     body.fr
         nav#nav
-            .banner
-                span +33 1 79 73 40 04 - info@quorumimpact.com
-                button.blue Get Early Access
             .content
                 a(href='/').navbar-brand
-                    img(src='images/nav/quorum-logo.png' alt='Quorum')
-                ul.nav
-                    li 
-                        a(href='/index.html#product') Product
-                    li 
-                        a(href='/faq.html') FAQ
-                    li
-                        a(href='/contact') Contact
-                ul.dropdown-menu
-                    li 
-                        a(href='/index.html#product') Product
-                    li 
-                        a(href='/faq.html') FAQ
-                    li
-                        a(href='/contact') Contact
-                    hr
-                    span +33 1 79 73 40 04 - info@quorumimpact.com
-                    button Get Early Access
+                    img(src='images/logo/logo-white.svg' alt='Logo Quorum')
                 button.nav-toggle
                     i.fa.fa-bars
+                div.bar
+                    ul.nav
+                        li 
+                            a(href='/index.html#product') Product
+                        li 
+                            a(href='/faq.html') FAQ
+                        li
+                            a(href='/contact') Contact
+                    .banner
+                        i.fa.fa-phone
+                        span  +33 1 79 73 40 04 - info@quorumimpact.com
+                        button Get Early Access
         block content        
         footer#footer
             .container
@@ -70,4 +62,5 @@ html
     script(src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js')
     script(src='javascripts/plugins/animation.gsap.js')
     script(src="javascripts/typed.js")
+    script(src="javascripts/menu.js")
     

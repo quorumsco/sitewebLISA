@@ -1,41 +1,27 @@
 @include exports('webconsole') {
 	#webconsole {
+		margin-top: 100px;
 		background: url('../images/home/webconsole-test.png');
 		background-repeat: no-repeat;
-		background-position: 40px 40px;
-		background-size: 600px;
-		@media(max-width: 650px){
-			padding-top: 0px;
-			padding-bottom: 0px;
-			background-size: 100%;
-			background-position: center;
-			.container {
-				max-width: 100%;
+		background-position: 100%;
+		background-size: 50%;
+		@media(max-width: 425px){
+
+		}
+		p {
+			color: $grey;
+			i {
+				color: $green;
+				margin-right: 3px;
 			}
 		}
 		.container{
-			margin-left: 45%; 
-			@media(max-width: 650px){
-				margin-left: 0;
-				background: rgba(120,120,120,0.3);
-				h3 {
-					margin: 0 0 5px 0;
-					padding-top: 40px;
-				}
-				.content {
-					.bottom {
-						p {
-							&:last-child{
-								margin-bottom: 0px;
-								padding-bottom: 60px;
-							}
-						}
-					}
-				}
+			margin-left: calc(8% + 27px);
+			text-align: left;
+			width: 50%;
+			@media(max-width: 425px){
+
 			}
-		}
-		.title {
-			background-color: $dark-pink;
 		}
 	}
 }

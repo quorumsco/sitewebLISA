@@ -1,4 +1,27 @@
 @include exports('product') {
   	#product {
+  		margin-top: 150px;
+  		.container {
+	  		span.quote{
+	  			color: $grey;
+	  			font-size: 21px;
+	  		}
+	  		h2 {
+	  			p {
+	  				margin: 0;
+	  			}
+	  		}
+	  	}
+  	}
+  	@media(max-width: 425px){
+  		#product {
+  			margin-top: 10px;
+  			h2 {
+  				display: inline-block;
+  				p {
+  					display: inline-block;
+  				}
+  			}
+  		}
   	}
 }
