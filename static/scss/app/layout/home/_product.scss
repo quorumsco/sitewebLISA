@@ -1,10 +1,10 @@
 @include exports('product') {
   	#product {
-  		margin-top: 150px;
+  		margin-top: 122px;
   		.container {
 	  		span.quote{
 	  			color: $grey;
-	  			font-size: 21px;
+	  			font-size: 20px;
 	  		}
 	  		h2 {
 	  			p {
@@ -13,7 +13,7 @@
 	  		}
 	  	}
   	}
-  	@media(max-width: 425px){
+  	@media(max-width: 768px){
   		#product {
   			margin-top: 10px;
   			h2 {

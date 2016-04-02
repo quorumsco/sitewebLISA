@@ -1,9 +1,17 @@
 @include exports('target') {
 	#target {
-		button {
-			margin: 0 10px;
-			height: 200px;
-			width: 200px;
+		.container {
+			ul {
+				li {
+					a {
+						button {
+							margin: 0 10px;
+							height: 200px;
+							width: 200px;
+						}
+					}
+				}
+			}	
 		}
 		@media(max-width: $small-screen){
 			button {

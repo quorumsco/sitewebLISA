@@ -4,7 +4,7 @@ html
     head
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible' content='IE=edge')
-        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name='viewport' content='width=device-width, initial-scale=1 maximum-scale=1')
         title #{pageTitle} - Quorum
         meta(name='description' content='Quorum')
         meta(name='keywords' content='quorum')
@@ -21,18 +21,17 @@ html
                     ul.nav
                         li 
                             a(href='/index.html#product') Product
-                        li 
-                            a(href='/faq.html') FAQ
                         li
-                            a(href='/contact') Contact
+                            a(href='/index.html#contact') Contact
                     .banner
                         i.fa.fa-phone
-                        span  +33 1 79 73 40 04 - info@quorumimpact.com
+                        span  +33 1 79 73 40 04
                         button Get Early Access
         block content        
         footer#footer
             .container
-                span &copy; Quorum 2016 
+                .copyright
+                    span &copy; Quorum 2016 
                 ul.social-links
                     li
                         a(href='//facebook.com/quorumimpact' target="_blank")
@@ -50,11 +49,7 @@ html
                     li
                         a(href='/about.html') About
                     li
-                        a(href='#') Tech
-                    li
                         a(href='#') Blog
-                    li
-                        a(href='#') Get In Touch
                     li
                         a(href='#') Legal
     script(src='//code.jquery.com/jquery-2.1.4.min.js')

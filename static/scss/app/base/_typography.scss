@@ -8,9 +8,14 @@ body {
 h1{
 	font-size: $header-font-size;
 	font-family: $heading-font-family;
-	line-height: 20px;
+	@media(max-width: 768px){
+		font-size: $header-medium-font-size;
+	}
 	@media(max-width: 425px){
 		font-size: $header-small-font-size;
+	}
+	@media(max-width: 320px){
+		font-size: $header-xsmall-font-size;
 	}
 }
 h2 {
@@ -23,7 +28,8 @@ h2 {
 h3 {
 	font-size: $header3-font-size;	
 	font-family: $font-quote;
-	line-height: 20px;
+	font-weight: 600;
+	margin-bottom: 20px;
 	@media(max-width: 425px){
 		font-size: $header3-font-size;
 	}

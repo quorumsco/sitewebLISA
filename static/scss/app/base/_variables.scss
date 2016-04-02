@@ -5,14 +5,18 @@ $font-quote: 'ProximaNova-Light';
 
 // Font Sizes
 $base-font-size: 16px;
-$header-font-size: 65px;
-$header2-font-size: 40px;
-$header3-font-size: 35px;
+$header-font-size: 54px;
+$header2-font-size: 34px;
+$header3-font-size: 34px;
+
+$header-xsmall-font-size: 32px;
 
 $small-font-size: 14px;
 $header-small-font-size: 35px;
 $header2-small-font-size: 25px;
-$heade3r-small-font-size: 25px;
+$header3-small-font-size: 25px;
+
+$header-medium-font-size: 40px;
 
 // Line height
 $nav-height: 4.5;
@@ -30,12 +34,16 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;*/
 
 // Colors
-$blue: #47B6FF;
-$green: #6AD932;
-$purple: #8256F5;
-$pink: #DB47A3;
-$dark-blue: #0E949A;
-$grey: #767B84;
+$blue: #20BFFA;
+$green: #6AD931;
+$purple: #8155F4;
+$pink: #DC44A3;
+$red: #EA3358;
+$turquoise: #00D19B;
+$dark-blue: #0F9499;
+$yellow: #DCFA34;
+$light-grey: #F2F2F2;
+$grey: #9FA4AB;
 
 // Nav
 $nav-size: 81px;
@@ -43,8 +51,7 @@ $small-nav-size: 44px;
 
 // Font Colors
 $font-color: #212121;
-$white-color: #F2F2F2;
-$header-font-color: #F2F2F2; 
+$white-color: $light-grey;
 
 // Border
 

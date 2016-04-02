@@ -3,7 +3,8 @@
 		position: fixed;
 		background-color: transparent;
 		width:100%;
-		color: $header-font-color;
+		color: $white-color;
+		font-size: 13px;
 		-webkit-transition:.5s;
   		-moz-transition:.5s;
   		transition:.5s;
@@ -19,7 +20,7 @@
 			}
 			ul.nav{
 				display: inline-block;
-				padding: 19px 0;
+				padding: 15px 0;
 				li{
 					display: inline;
 					margin-left: 15px;
@@ -29,7 +30,7 @@
 				}
 				a {
 					text-decoration: none;
-					color: $header-font-color;
+					color: $white-color;
 				}
 			}
 			div.bar {
@@ -39,12 +40,20 @@
 		}
 		.banner{
 			display: inline-block;
+			i {
+				padding: 0 5px 0 30px;
+				border-left: 1px solid $white-color;
+			}
 			button{
-				padding: 16px 20px;
+				padding: 16px 27px;
 				margin-left:10px;
 				background-color: transparent;
-				border: 1px solid $header-font-color;
-				font-weight: normal;
+				border: 1px solid $white-color;
+				&:hover {
+					background-color: $red;
+					border: 0px;
+					padding: 16px 28px;
+				}
 			}
 		}
 		.navbar-brand{
@@ -52,36 +61,17 @@
 			display: inline;
 			margin-left: 8%;
 			img{
-				margin-top: 6px;
-				width: 200px;
+				margin-top: 10px;
+				width:143px;
 			}
 		}
 		.hidden-menu {
 			display:none;
 		}
-		@media(max-width: 425px){
-			background-color: #FFFFFF;
-			color: $font-color; 
-			div.bar {
-				display: none;
-			}
-			.content{
-				.nav-toggle {
-					display: inline-block;
-				}
-			}
-			.navbar-brand{
-				margin-left: 10px;
-				img{
-					width: 180px;
-				}
-			}
-		}
 	}
 	#nav.active {
 		background-color: #FFFFFF;
 		color: $font-color;
-		border-bottom: 1px solid $grey;
 		ul.nav {
 			li {
 				a {
@@ -93,6 +83,12 @@
 			border: none;
 			background-color: $blue;
 			font-weight: bold;
+			padding: 16px 28px;
+		}
+		.banner {
+			i {
+				border-color: $font-color;
+			}
 		}
 	}
 	#nav.show-menu{
@@ -130,6 +126,27 @@
 			button {
 				background-color: $blue;
 				margin-bottom: 15px;
+			}
+		}
+	}
+	@media(max-width: 1110px){
+		#nav {	
+			background-color: #FFFFFF;
+			color: $font-color;
+			border-bottom: 1px solid $dark-blue; 
+			div.bar {
+				display: none;
+			}
+			.content{
+				.nav-toggle {
+					display: inline-block;
+				}
+			}
+			.navbar-brand{
+				margin-left: 10px;
+				img{
+					width: 180px;
+				}
 			}
 		}
 	}

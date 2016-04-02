@@ -19,6 +19,11 @@
 			margin: 0 10px;
 			font-family: $heading-font-family;
 		}
+		.list {
+			p {
+				color: $grey;
+			}
+		}
 		p {
 			i {
 				margin-right: 3px;

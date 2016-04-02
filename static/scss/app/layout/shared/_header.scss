@@ -1,15 +1,12 @@
 @include exports('header') {
 	header{
-		color: $header-font-color;
+		color: $white-color;
 		text-align: center;
-		@media(max-width: 425px){
-
-		}
 	}
 	.big {
-		height: 650px;
+		height: 664px;
 		@media(max-width: 425px){
-			height: 300px;
+			height: 350px;
 		}
 	}
 	.small {
@@ -19,18 +16,26 @@
 		}
 	}
 	#home{
-		background: url('../images/header/home-header.jpg');
+		background: url('../images/header/home-header.png');
 		background-repeat: no-repeat;
-		background-size: 100% auto;
+		background-size: auto;
 		text-align: left;
 		.container{
+			h1 {
+				span {
+					display: block;
+				}
+			}
 			margin-left: calc(8% + 27px);
 			padding-top: 180px;
 			.subtitle {
-				font-size: 30px;
-				font-family: $font-quote;
+				font-size: 24px;
+			}
+			button:hover {
+				background-color: $red;
 			}
 		}
+
 		@media(max-width: 425px){
 			background-size: auto auto;
 			.container {
