@@ -112,20 +112,29 @@ block content
                 .left
                     h2 Contact Form
                     form
+                        div.input
+                            input(type="email" placeholder="Your email")
+                            .border-input.green
+                        div.input
+                            input(type="text" placeholder="Your name")
+                            .border-input.green
+                        div.input
+                            textarea(rows="6" placeholder="Your message")
+                            .border-textarea.green
                         p
-                            input(type="text" placeholder="Your email")
-                        p
-                            input(type="text" placeholder="Your email")
-                        p
-                            input(type="text" placeholder="Your email")
-                        p
-                            button(type="submit") Submit
+                            button(type="submit").green Submit
                 .right
                     h2 Contact Info
-                    p +33 1 79 73 40 04 
-                    p info@quorumimpact.com
-                    p 124 avenue de Villiers 75017 PARIS
-                    p 9 rue de Condé 33000 BORDEAUX
+                    p 
+                        i.fa.fa-phone.fa-lg
+                        span +33 1 79 73 40 04 
+                    p 
+                        i.fa.fa-envelope
+                        span info@quorumimpact.com
+                    p 
+                        i.fa.fa-map-marker.fa-lg
+                        span 124 avenue de Villiers 75017 PARIS
+                        span Rue de Condé 33000 BORDEAUX
                     ul
                         li
                             a(href='//facebook.com/quorumimpact' target="_blank")
@@ -139,6 +148,7 @@ block content
                         li
                             a(href='//google.com/+Quorumappsdata' target="_blank")
                                 i.fa.fa-google-plus-square.fa-lg
+            div.clearfix
 
 
 

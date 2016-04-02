@@ -1,0 +1,61 @@
+@include exports('contact') {
+	#contact {
+		text-align: left;
+		.left {
+			float: left;
+			form {
+				input, textarea {
+					width: 450px;
+					border: 0;
+					border-bottom: 2px solid $light-grey;
+					padding: 10px 0;
+					margin-bottom: 10px;
+					outline: none;
+				}
+				.input {
+					position: relative;
+					.border-input, .border-textarea {
+						position:absolute;
+						width: 0;
+						height: 2px;
+						&.active {
+							width: 450px;
+						}
+					}
+					.border-input {
+						bottom: 10px;
+					}
+					.border-textarea {
+						bottom: 13px;
+					}
+				}
+			}
+		}
+		.right {
+			float: left;
+			margin-left: 120px;
+			p {
+				i {
+					color: $green;
+					padding: 15px 23px;
+				}
+				span:nth-child(3) {
+					display: block;
+					margin-left: 62px;
+				}
+			}
+			ul{
+				margin-top: 40px;
+				list-style-type: none;
+				li {
+					display: inline;
+					margin-left: 24px;
+					a {
+						color: $green;
+					}
+				}
+			}
+		}
+
+	}
+}

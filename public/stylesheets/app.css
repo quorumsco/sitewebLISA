@@ -955,6 +955,61 @@ section hr.title {
     margin-bottom: 0px;
   }
 }
+#contact {
+  text-align: left;
+}
+#contact .left {
+  float: left;
+}
+#contact .left form input, #contact .left form textarea {
+  width: 450px;
+  border: 0;
+  border-bottom: 2px solid #F2F2F2;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  outline: none;
+}
+#contact .left form .input {
+  position: relative;
+}
+#contact .left form .input .border-input, #contact .left form .input .border-textarea {
+  position: absolute;
+  width: 0;
+  height: 2px;
+}
+#contact .left form .input .border-input.active, #contact .left form .input .border-textarea.active {
+  width: 450px;
+}
+#contact .left form .input .border-input {
+  bottom: 10px;
+}
+#contact .left form .input .border-textarea {
+  bottom: 13px;
+}
+#contact .right {
+  float: left;
+  margin-left: 120px;
+}
+#contact .right p i {
+  color: #6AD931;
+  padding: 15px 23px;
+}
+#contact .right p span:nth-child(3) {
+  display: block;
+  margin-left: 62px;
+}
+#contact .right ul {
+  margin-top: 40px;
+  list-style-type: none;
+}
+#contact .right ul li {
+  display: inline;
+  margin-left: 24px;
+}
+#contact .right ul li a {
+  color: #6AD931;
+}
+
 #believe p {
   text-align: justify;
 }
