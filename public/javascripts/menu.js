@@ -1,6 +1,6 @@
 $(window).scroll(function(event){
 	//Transition scroll
-	if(window.innerWidth > 1110) {
+	if(window.innerWidth > 1110 && $('#nav').next().hasClass('big')) {
 		var yOffset = window.pageYOffset;
 		var breakpoint = 50;
 		if (yOffset > breakpoint){
@@ -13,6 +13,10 @@ $(window).scroll(function(event){
 	}
 });
 $(document).ready(function(){
+	if($('#nav').next().hasClass('small')) {
+		$('#nav').addClass('active');
+		$('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+	}
 	//Hamburger Menu
 	$('.nav-toggle').on('click', function(){
 		$('nav#nav').toggleClass('show-menu');

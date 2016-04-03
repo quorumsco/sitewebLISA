@@ -1,0 +1,19 @@
+@include exports('jobs') {
+	#jobs{
+		p {
+			text-align: justify;
+		}
+		span {
+			display: block;
+		}
+		button {
+			margin: 20px 0 36px 0;
+		}
+		a {
+			color: $pink;
+		}
+		i {
+			padding: 20px;
+		}
+	}
+}

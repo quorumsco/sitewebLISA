@@ -617,7 +617,7 @@ h3 {
 }
 
 #nav.active {
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   color: #212121;
 }
 #nav.active ul.nav li a {
@@ -747,7 +747,7 @@ header {
 }
 
 #about .container {
-  padding-top: 35px;
+  padding-top: 40px;
 }
 
 section {
@@ -786,6 +786,7 @@ section hr.title {
   background: #8155F4;
   padding: 25px;
   color: #F2F2F2;
+  margin-top: 20px;
 }
 #footer .copyright {
   margin-bottom: 20px;
@@ -1013,128 +1014,113 @@ section hr.title {
 #believe p {
   text-align: justify;
 }
-#believe ul li {
-  display: inline-block;
-  height: 60px;
-  width: 200px;
-  vertical-align: middle;
-  padding: 20px;
-  margin: 5px 20px;
-  border: 1px solid;
+#believe ul {
+  padding-left: 30px;
+  text-align: left;
+  list-style-type: none;
 }
-#believe ul li:nth-child(1) {
-  border-color: #0F9499;
-}
-#believe ul li:nth-child(2) {
-  border-color: #8155F4;
-}
-#believe ul li:nth-child(3) {
-  border-color: #6AD931;
-}
-#believe ul li:nth-child(4) {
-  border-color: #DC44A3;
-}
-#believe ul li:nth-child(5) {
-  border-color: #20BFFA;
-}
-@media (max-width: 640px) {
-  #believe ul li {
-    margin: 5px 0;
-  }
-}
-@media (max-width: 640px) {
-  #believe ul {
-    padding-left: 0;
-  }
+#believe ul li i {
+  color: #20BFFA;
+  padding: 10px;
 }
 
 #team p {
   text-align: justify;
 }
-#team ul {
-  list-style-type: none;
+#team .container .content {
+  padding-bottom: 30px;
 }
-#team ul li {
+#team .container .content img {
+  border-radius: 0px;
+  max-width: 100%;
+}
+#team .container .content a {
+  color: #6AD931;
+}
+#team .container div.member {
+  width: 236px;
   display: inline-block;
-  margin: 20px;
+  margin: 30px 15px;
 }
-@media (max-width: 40em) {
-  #team ul li {
-    display: block;
-  }
-}
-@media (max-width: 40em) {
-  #team ul {
-    padding-left: 0;
-  }
-}
-#team .container .content div {
-  width: 300px;
-  height: 300px;
-  display: inline-block;
-  margin: 0 15px;
-}
-#team .container .content div p {
+#team .container div.member p {
   text-align: center;
 }
-#team .container .content div img {
-  width: 200px;
+#team .container div.member img {
+  max-width: 100%;
   border-radius: 50%;
 }
-@media (max-width: 40em) {
-  #team .container .content div {
-    width: 200px;
-    height: 220px;
-  }
-  #team .container .content div img {
-    width: 150px;
-  }
-}
 
-#findUs .left {
-  width: 40%;
-  display: inline-block;
-  margin-top: 90px;
-  float: left;
-}
-#findUs ul {
-  padding: 0;
+#slider ul {
   list-style-type: none;
+  border-bottom: 1px solid #9FA4AB;
+  width: 800px;
+  margin: 15px auto;
+  padding: 25px 0;
 }
-#findUs ul li {
-  display: inline-block;
-  margin: 0 5px;
+#slider ul li {
+  display: inline;
+  text-align: left;
 }
-#findUs ul li a {
+#slider ul li a {
+  padding: 12px 92px 12px 20px;
+  color: #9FA4AB;
+  text-decoration: none;
+}
+#slider ul li.active:nth-child(1) a {
+  border-color: #20BFFA;
+}
+#slider ul li.active:nth-child(3) a {
+  border-color: #6AD931;
+}
+#slider ul li.active:nth-child(2) a {
+  border-color: #8155F4;
+}
+#slider ul li.active:nth-child(4) a {
+  border-color: #DC44A3;
+}
+#slider ul li.active a {
+  border-left: 2px solid;
   color: #212121;
 }
-#findUs .right {
-  margin: 15px 0 0 4px;
-  width: 50%;
-  display: inline-block;
+
+#slide .content {
+  width: 800px;
+  margin: 0 auto;
 }
-#findUs .right img {
+#slide section {
+  display: none;
+}
+#slide #believe {
   display: block;
-  max-width: 100%;
-  height: auto;
-}
-@media (max-width: 40em) {
-  #findUs .left {
-    margin-top: 10px;
-    float: none;
-    width: 100%;
-  }
-  #findUs .right {
-    margin: 0 auto;
-    width: 100%;
-  }
-  #findUs .right img {
-    margin: 0 auto;
-  }
 }
 
-#job p:nth-child(1) {
+#jobs p {
   text-align: justify;
+}
+#jobs span {
+  display: block;
+}
+#jobs button {
+  margin: 20px 0 36px 0;
+}
+#jobs a {
+  color: #DC44A3;
+}
+#jobs i {
+  padding: 20px;
+}
+
+#skills p {
+  text-align: justify;
+}
+#skills ul {
+  padding-left: 30px;
+  text-align: left;
+  list-style-type: none;
+}
+#skills ul li i {
+  color: #8155F4;
+  padding: 10px;
 }
 
 @font-face {
@@ -1160,7 +1146,7 @@ body.fr :lang(en) {
 body {
   position: absolute;
   width: 100%;
-  background: #FFFFFF;
+  background: #F2F2F2;
   color: #212121;
 }
 
@@ -1174,6 +1160,10 @@ body {
 
 .pink {
   background-color: #DC44A3;
+}
+
+.red {
+  background-color: #EA3358;
 }
 
 .green {

@@ -1,0 +1,58 @@
+@include exports('slider') {
+	#slider{
+		ul {
+			list-style-type: none;
+			border-bottom: 1px solid $grey;
+			width: 800px;
+			margin: 15px auto;
+			padding: 25px 0; 
+			li {
+				display: inline;
+				text-align: left;
+				a {
+					padding: 12px 92px 12px 20px;
+					color: $grey;
+					text-decoration: none;
+				}
+				&.active {
+					&:nth-child(1){
+						a {
+							border-color: $blue;
+						}
+					}
+					&:nth-child(3){
+						a {
+							border-color: $green;
+						}
+					}
+					&:nth-child(2){
+						a {
+							border-color: $purple;
+						}
+					}
+					&:nth-child(4){
+						a {
+							border-color: $pink;
+						}
+					}
+					a {
+						border-left: 2px solid;
+						color: $font-color;
+					}
+				}
+			}
+		}
+	}
+	#slide{
+		.content{
+			width: 800px;
+			margin: 0 auto;
+		}
+		section {
+			display: none;
+		}
+		#believe {
+			display: block;
+		}
+	}
+}

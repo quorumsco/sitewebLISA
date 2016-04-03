@@ -4,39 +4,14 @@
 			text-align: justify;
 		}
 		ul {
+			padding-left: 30px;
+			text-align: left;
+			list-style-type: none;
 			li {
-				display: inline-block;
-				height: 60px;
-				width: 200px;
-				vertical-align: middle;
-				padding: 20px;
-				margin: 5px 20px;
-				border: 1px solid;
-				&:nth-child(1){
-					border-color: $dark-blue;
+				i {
+					color: $blue;
+					padding: 10px;
 				}
-				&:nth-child(2){
-					border-color: $purple;
-				}
-				&:nth-child(3){
-					border-color: $green;
-				}
-				&:nth-child(4){
-					border-color: $pink;
-				}
-				&:nth-child(5){
-					border-color: $blue;
-				}
-			}
-			@media(max-width: 640px){
-				li {
-					margin: 5px 0;
-				}
-			}
-		}
-		@media(max-width: 640px){
-			ul {
-				padding-left:0;
 			}
 		}
 	}

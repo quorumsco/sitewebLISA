@@ -14,40 +14,43 @@
   src:url('../fonts/ProximaNova-Bold.otf');
 }
 @font-face {
-  font-family: 'ProximaNova-Light';
-  src:url('../fonts/ProximaNova-Light.otf');
+    font-family: 'ProximaNova-Light';
+    src:url('../fonts/ProximaNova-Light.otf');
 }
 @font-face {
-  font-family: 'ProximaNova-Regular';
-  src:url('../fonts/ProximaNova-Regular.otf');
+    font-family: 'ProximaNova-Regular';
+    src:url('../fonts/ProximaNova-Regular.otf');
 }
 body.en :lang(fr) {
-  display: none;
+    display: none;
 }
 body.fr :lang(en) {
-  display: none;
+    display: none;
 }
 body {
 	position: absolute;
 	width: 100%;
-	background: #FFFFFF;
+	background: $light-grey;
 	color: $font-color;
 }
 .blue {
-  background-color: $blue;
+    background-color: $blue;
 }
 .purple {
-  background-color: $purple;
+    background-color: $purple;
 }
 .pink {
-  background-color: $pink;
+    background-color: $pink;
+}
+.red {
+    background-color: $red;
 }
 .green {
-  background-color: $green;
+    background-color: $green;
 }
 .dark-blue {
-  background-color: $dark-blue;
+    background-color: $dark-blue;
 }
 .clearfix {
-  clear: both;
+    clear: both;
 }

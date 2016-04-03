@@ -2,107 +2,100 @@ extends ./layout.jade
 block vars
     - var pageTitle = 'About'
 block content
-    header#about.small.green
-        .container
-            h1 About us
+    header#about.small
     main
-        section#believe
+        section#slider
             .container
-                h3 What We Believe In
-                hr.title.dark-pink
-                h4 Data & technology don’t build movements or share passions, people do.
-                p Organizations today are facing problems of unprecedented scale and complexity.  These are the problems we think technology and data can help to solve. This is why we’ve created Quorum; to create positive social change and empower people though technology. But we need to look at the future and these news goals & opportunities without forgetting our core values. 
                 ul
-                    li PRIVACY & CIVIL LIBERTIES 
-                    li EMANCIPATE DATA 
-                    li OPEN SOFWARE
-                    li ACHIEVE OUTCOMES AND GET REAL IMPACT
-                    li TECHNOLOGY HAVE TO ADAPT TO HUMAN, NOT THE OTHER WAY AROUND
-                p Because technology and data can’t be the ultimate goal; it is just a mean to help PEOPLE and organization to optimize their everyday actions and achieve goals.
-        hr
-        section#team
-            .container
-                h3 Team
-                hr.title.dark-blue
-                .content
-                    h4 Collective Intelligence is our DNA. 
-                    p We are veterans of IT firms, we are bankers who write code, campaigners and social sciences experts who build algorithms, nonprofits alumni who all together want to create positive social change. 
-                    h4 Skills
-                    ul
-                        li IT 
-                        li Data Sciences 
-                        li Cognitiv Sciences 
-                        li Social & Political Sciences
-                        li Communication 
-                        li Business Dev
-                    div
-                        img(src="https://image.freepik.com/free-icon/male-user-shadow_318-34042.png")
-                        p Florent Barre
-                        p
-                            i.fa.fa-linkedin-square.fa-lg
-                            i.fa.fa-twitter-square.fa-lg
-                    div
-                        img(src="https://image.freepik.com/free-icon/male-user-shadow_318-34042.png")
-                        p Maxime Beylot
-                        p
-                            i.fa.fa-linkedin-square.fa-lg
-                            i.fa.fa-twitter-square.fa-lg
-                    div
-                        img(src="https://image.freepik.com/free-icon/male-user-shadow_318-34042.png")
-                        p Jean-Baptiste Daniel
-                        p
-                            i.fa.fa-linkedin-square.fa-lg
-                            i.fa.fa-twitter-square.fa-lg
-                    div
-                        img(src="../images/team/loic.png")
-                        p Loic Rakoto
-                        p
-                            i.fa.fa-linkedin-square.fa-lg
-                            i.fa.fa-twitter-square.fa-lg
-                    div
-                        img(src="../images/team/lucien.png")
-                        p Lucien Varacca
-                        p
-                            i.fa.fa-linkedin-square.fa-lg
-                            i.fa.fa-twitter-square.fa-lg
-                    div
-                        img(src="../images/team/lisa.png")
-                        p Lisa Grenier
-                        p
-                            i.fa.fa-linkedin-square.fa-lg
-                            i.fa.fa-twitter-square.fa-lg
-        hr
-        section#findUs
-            .container
-                h3 Find Us
-                hr.title.green
-                .left
-                    p +33 1 79 73 40 04 
-                    p info@quorumimpact.com
-                    p 124 avenue de Villiers 75017 PARIS
-                    p 9 rue de Condé 33000 BORDEAUX
-                    ul
-                        li
-                            a(href='//facebook.com/quorumimpact' target="_blank")
-                                i.fa.fa-facebook-square.fa-lg
-                        li
-                            a(href='//twitter.com/quorumimpact' target="_blank")
-                                i.fa.fa-twitter.fa-lg
-                        li
-                            a(href='//www.linkedin.com/company/10114882' target="_blank")
-                                i.fa.fa-linkedin-square.fa-lg
-                        li
-                            a(href='//google.com/+Quorumappsdata' target="_blank")
-                                i.fa.fa-google-plus-square.fa-lg
-                .right
-                    img(src="http://www.developpez.net/forums/attachments/p166896d1421856637/java/general-java/java-mobiles/android/integrer-personnaliser-carte-type-google-maps/googlemap.gif/")
-        hr
-        section#job
-            .container
-                h3 Jobs
-                hr.title.blue
-                .content
-                    p If you believe in appling cutting edge research to real-world problems, want to keep learning every day to stay ahead of the curve, if you believe in passion and creativity - then get in touch, we may have something for you. 
-                    .middle
-                        button.purple Get In Touch
-                        p Follow us on Linked In to see our latest job offers 
+                    li.active
+                        a(href="#believe") What We Believe In
+                    li
+                        a(href="#skills") Skills 
+                    li
+                        a(href="#team") Team  
+                    li
+                        a(href="#jobs") Jobs  
+        #slide
+            section#believe
+                .container
+                    .content
+                        h2 Data & technology don’t build movements or share passions, people do.
+                        p Organizations today are facing problems of unprecedented scale and complexity.  These are the problems we think technology and data can help to solve. This is why we’ve created Quorum; to create positive social change and empower people though technology. But we need to look at the future and these news goals & opportunities without forgetting our core values. 
+                        ul
+                            li 
+                                i.fa.fa-check
+                                span PRIVACY & CIVIL LIBERTIES 
+                            li 
+                                i.fa.fa-check
+                                span EMANCIPATE DATA 
+                            li 
+                                i.fa.fa-check
+                                span OPEN SOFWARE
+                            li 
+                                i.fa.fa-check
+                                span ACHIEVE OUTCOMES AND GET REAL IMPACT
+                            li 
+                                i.fa.fa-check
+                                span TECHNOLOGY HAVE TO ADAPT TO HUMAN, NOT THE OTHER WAY AROUND
+                        p Because technology and data can’t be the ultimate goal; it is just a mean to help PEOPLE and organization to optimize their everyday actions and achieve goals.
+            section#skills
+                .container
+                    .content
+                        ul
+                            li 
+                                i.fa.fa-check
+                                span IT 
+                            li 
+                                i.fa.fa-check
+                                span Data Sciences 
+                            li 
+                                i.fa.fa-check
+                                span Cognitiv Sciences 
+                            li 
+                                i.fa.fa-check
+                                span Social & Political Sciences
+                            li 
+                                i.fa.fa-check
+                                span Communication 
+                            li 
+                                i.fa.fa-check
+                                span Business Dev
+            section#team
+                .container
+                    .content
+                        h2 Collective Intelligence is our DNA. 
+                        p We are veterans of IT firms, we are bankers who write code, campaigners and social sciences experts who build algorithms, nonprofits alumni who all together want to create positive social change. 
+                        img(src="../images/team/group-small.png")
+                        div.member
+                            img(src="../images/team/florent-small.png")
+                            p Florent Barre
+                            p CEO
+                            p
+                                a(href="")
+                                    i.fa.fa-linkedin-square.fa-lg
+                                a(href="")
+                                    i.fa.fa-twitter-square.fa-lg
+                        div.member
+                            img(src="../images/team/maxime-small.png")
+                            p Maxime Beylot
+                            p CCO
+                            p
+                                a(href="")
+                                    i.fa.fa-linkedin-square.fa-lg
+                        div.member
+                            img(src="../images/team/jean-baptiste-small.png")
+                            p Jean-Baptiste Daniel
+                            p CTO
+                            p
+                                a(href="")
+                                    i.fa.fa-linkedin-square.fa-lg
+                        button.green Blog
+            section#jobs
+                .container
+                    .content
+                        p If you believe in appling cutting edge research to real-world problems, want to keep learning every day to stay ahead of the curve, if you believe in passion and creativity - then get in touch, we may have something for you. 
+                        .middle
+                            button.pink Get In Touch
+                            span Follow us on Linked In to see our latest job offers 
+                            a(href="www.linkedin.com/company/10114882")
+                                i.fa.fa-linkedin-square.fa-2x
