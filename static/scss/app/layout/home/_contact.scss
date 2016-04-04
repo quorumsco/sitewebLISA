@@ -1,26 +1,26 @@
 @include exports('contact') {
 	#contact {
 		text-align: left;
-		.container {
-			padding: 0 15%;
-		}
+		margin-top:60px;
+		margin-left: calc(8% + 27px);
 		.left {
 			float: left;
 			form {
 				input, textarea {
 					width: 450px;
 					border: 0;
-					border-bottom: 1px solid $grey;
+					border-bottom: 2px solid $light-grey;
 					padding: 10px 0;
 					margin-bottom: 10px;
 					outline: none;
-					background-color: transparent;
+					background-color:#F2F2F2;
 				}
-				textarea {
-					resize: none;
+				button:hover {
+					background-color: $red;
 				}
 				.input {
 					position: relative;
+					background-color:#F2F2F2;
 					.border-input, .border-textarea {
 						position:absolute;
 						width: 0;
@@ -31,6 +31,7 @@
 					}
 					.border-input {
 						bottom: 10px;
+						bgcolor:red;
 					}
 					.border-textarea {
 						bottom: 13px;
@@ -40,15 +41,15 @@
 		}
 		.right {
 			float: left;
-			margin-left: 120px;
+			
 			p {
 				i {
-					color: $green;
-					padding: 15px 23px;
+					color: $blue;
+					padding: 12px 3px;
 				}
 				span:nth-child(3) {
 					display: block;
-					margin-left: 62px;
+					margin-left: 22px;
 				}
 			}
 			ul{
@@ -58,12 +59,11 @@
 					display: inline;
 					margin-left: 24px;
 					a {
-						color: $green;
-						text-decoration: none;
+						color: $blue;
 					}
 				}
 			}
 		}
-
+		
 	}
 }

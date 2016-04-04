@@ -494,6 +494,10 @@ button {
   font-weight: bold;
   font-family: "ProximaNova-Bold";
 }
+button button:hover, input[type="button"] button:hover, input[type="reset"] button:hover, input[type="submit"] button:hover,
+button button:hover {
+  background-color: #EA3358;
+}
 
 body {
   font-family: "ProximaNova-Regular";
@@ -556,6 +560,7 @@ h3 {
   -webkit-transition: .5s;
   -moz-transition: .5s;
   transition: .5s;
+  z-index: 1;
 }
 #nav .content .nav-toggle {
   float: right;
@@ -717,7 +722,7 @@ header {
 #home {
   background: url("../images/header/home-header.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   text-align: left;
 }
 #home .container {
@@ -823,7 +828,11 @@ section hr.title {
 }
 
 #product {
-  margin-top: 122px;
+  margin-top: 30px;
+}
+#product .container {
+  margin-left: calc(8% + 27px);
+  margin-right: calc(8% + 27px);
 }
 #product .container span.quote {
   color: #9FA4AB;
@@ -843,6 +852,9 @@ section hr.title {
   #product h2 p {
     display: inline-block;
   }
+}
+#target {
+  margin-top: 60px;
 }
 #target .container ul li a button {
   margin: 0 10px;
@@ -869,7 +881,7 @@ section hr.title {
 }
 
 #webconsole {
-  margin-top: 120px;
+  margin-top: 60px;
   background: url("../images/home/webconsole.png");
   background-repeat: no-repeat;
   background-position: 100%;
@@ -919,11 +931,12 @@ section hr.title {
   }
 }
 #mobile {
-  margin-top: 150px;
+  margin-top: 60px;
   background: url("../images/home/mobile.png");
+  background-margin-left: calc(8% + 27px);
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-position: 15%;
+  background-position: calc(8% + 27px);
 }
 #mobile h3 p {
   margin: 0 0 11px 0;
@@ -944,8 +957,9 @@ section hr.title {
   padding: 10px;
 }
 #mobile .container {
+  margin-left: calc(8% + 27px);
   float: right;
-  width: 45%;
+  width: 40%;
   text-align: left;
   margin-right: 8%;
 }
@@ -974,9 +988,8 @@ section hr.title {
 }
 #contact {
   text-align: left;
-}
-#contact .container {
-  padding: 0 15%;
+  margin-top: 60px;
+  margin-left: calc(8% + 27px);
 }
 #contact .left {
   float: left;
@@ -984,17 +997,18 @@ section hr.title {
 #contact .left form input, #contact .left form textarea {
   width: 450px;
   border: 0;
-  border-bottom: 1px solid #9FA4AB;
+  border-bottom: 2px solid #F2F2F2;
   padding: 10px 0;
   margin-bottom: 10px;
   outline: none;
-  background-color: transparent;
+  background-color: #F2F2F2;
 }
-#contact .left form textarea {
-  resize: none;
+#contact .left form button:hover {
+  background-color: #EA3358;
 }
 #contact .left form .input {
   position: relative;
+  background-color: #F2F2F2;
 }
 #contact .left form .input .border-input, #contact .left form .input .border-textarea {
   position: absolute;
@@ -1006,21 +1020,21 @@ section hr.title {
 }
 #contact .left form .input .border-input {
   bottom: 10px;
+  bgcolor: red;
 }
 #contact .left form .input .border-textarea {
   bottom: 13px;
 }
 #contact .right {
   float: left;
-  margin-left: 120px;
 }
 #contact .right p i {
-  color: #6AD931;
-  padding: 15px 23px;
+  color: #20BFFA;
+  padding: 12px 3px;
 }
 #contact .right p span:nth-child(3) {
   display: block;
-  margin-left: 62px;
+  margin-left: 22px;
 }
 #contact .right ul {
   margin-top: 40px;
@@ -1031,8 +1045,7 @@ section hr.title {
   margin-left: 24px;
 }
 #contact .right ul li a {
-  color: #6AD931;
-  text-decoration: none;
+  color: #20BFFA;
 }
 
 #believe p {

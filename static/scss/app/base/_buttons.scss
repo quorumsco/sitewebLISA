@@ -6,4 +6,7 @@ button {
 	color: $white-color;
 	font-weight: bold;
 	font-family: $heading-font-family;
+	button:hover {
+				background-color: $red;
+			}
 }
