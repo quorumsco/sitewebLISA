@@ -1,16 +1,23 @@
 @include exports('contact') {
 	#contact {
 		text-align: left;
+		.container {
+			padding: 0 15%;
+		}
 		.left {
 			float: left;
 			form {
 				input, textarea {
 					width: 450px;
 					border: 0;
-					border-bottom: 2px solid $light-grey;
+					border-bottom: 1px solid $grey;
 					padding: 10px 0;
 					margin-bottom: 10px;
 					outline: none;
+					background-color: transparent;
+				}
+				textarea {
+					resize: none;
 				}
 				.input {
 					position: relative;
@@ -52,6 +59,7 @@
 					margin-left: 24px;
 					a {
 						color: $green;
+						text-decoration: none;
 					}
 				}
 			}

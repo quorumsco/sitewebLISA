@@ -18,10 +18,18 @@
 			i {
 				color: $green;
 			}
-			p {
-				i {
-					margin-right: 3px;
-				}
+		}
+		.list {
+			div.sentence { 
+				color: $grey;
+				width: 600px;
+				padding: 10px 0;
+				display: inline-block;
+			}
+			div.icon {
+				width: 16px;
+				float: left;
+				padding: 10px;
 			}
 		}
 	}

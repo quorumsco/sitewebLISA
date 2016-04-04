@@ -717,11 +717,11 @@ header {
 #home {
   background: url("../images/header/home-header.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100% auto;
   text-align: left;
 }
 #home .container {
-  margin-left: calc(8% + 27px);
+  margin-left: calc(8% + 17px);
   padding-top: 180px;
 }
 #home .container h1 span {
@@ -783,10 +783,13 @@ section hr.title {
 }
 
 #footer {
-  background: #8155F4;
+  background: #312F38;
   padding: 25px;
-  color: #F2F2F2;
+  color: #9FA4AB;
   margin-top: 20px;
+}
+#footer .container {
+  padding: 0 8%;
 }
 #footer .copyright {
   margin-bottom: 20px;
@@ -799,11 +802,11 @@ section hr.title {
   display: inline-block;
 }
 #footer ul li a {
-  color: #F2F2F2;
+  color: #9FA4AB;
   text-decoration: none;
 }
 #footer ul li a:hover {
-  color: #9FA4AB;
+  color: #F2F2F2;
 }
 #footer ul.social-links {
   margin-left: 20px;
@@ -884,8 +887,16 @@ section hr.title {
 #webconsole .container i {
   color: #6AD931;
 }
-#webconsole .container p i {
-  margin-right: 3px;
+#webconsole .list div.sentence {
+  color: #9FA4AB;
+  width: 600px;
+  padding: 10px 0;
+  display: inline-block;
+}
+#webconsole .list div.icon {
+  width: 16px;
+  float: left;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -921,11 +932,16 @@ section hr.title {
 #mobile i {
   color: #DC44A3;
 }
-#mobile .list p {
+#mobile .list div.sentence {
   color: #9FA4AB;
+  width: 600px;
+  padding: 10px 0;
+  display: inline-block;
 }
-#mobile .list i {
-  margin-right: 3px;
+#mobile .list div.icon {
+  width: 16px;
+  float: left;
+  padding: 10px;
 }
 #mobile .container {
   float: right;
@@ -959,16 +975,23 @@ section hr.title {
 #contact {
   text-align: left;
 }
+#contact .container {
+  padding: 0 15%;
+}
 #contact .left {
   float: left;
 }
 #contact .left form input, #contact .left form textarea {
   width: 450px;
   border: 0;
-  border-bottom: 2px solid #F2F2F2;
+  border-bottom: 1px solid #9FA4AB;
   padding: 10px 0;
   margin-bottom: 10px;
   outline: none;
+  background-color: transparent;
+}
+#contact .left form textarea {
+  resize: none;
 }
 #contact .left form .input {
   position: relative;
@@ -1009,6 +1032,7 @@ section hr.title {
 }
 #contact .right ul li a {
   color: #6AD931;
+  text-decoration: none;
 }
 
 #believe p {
@@ -1036,6 +1060,7 @@ section hr.title {
 }
 #team .container .content a {
   color: #6AD931;
+  text-decoration: none;
 }
 #team .container div.member {
   width: 236px;
@@ -1105,6 +1130,7 @@ section hr.title {
 }
 #jobs a {
   color: #DC44A3;
+  text-decoration: none;
 }
 #jobs i {
   padding: 20px;
@@ -1135,6 +1161,96 @@ section hr.title {
   font-family: 'ProximaNova-Regular';
   src: url("../fonts/ProximaNova-Regular.otf");
 }
+@font-face {
+  font-family: 'quorum';
+  src: url("../fonts/quorum.eot?n9t7a7");
+  src: url("../fonts/quorum.eot?#iefixn9t7a7") format("embedded-opentype"), url("../fonts/quorum.ttf?n9t7a7") format("truetype"), url("../fonts/quorum.woff?n9t7a7") format("woff"), url("../fonts/quorum.svg?n9t7a7#quorum") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+i[class^='icon-'],
+i[class*=' icon-'] {
+  font-family: 'quorum';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 20px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-data:before {
+  content: "\e600";
+}
+
+.icon-dots:before {
+  content: "\e601";
+}
+
+.icon-facebook:before {
+  content: "\e602";
+}
+
+.icon-google:before {
+  content: "\e603";
+}
+
+.icon-human:before {
+  content: "\e604";
+}
+
+.icon-human66:before {
+  content: "\e605";
+}
+
+.icon-increasing:before {
+  content: "\e606";
+}
+
+.icon-linkedin:before {
+  content: "\e607";
+}
+
+.icon-loading:before {
+  content: "\e608";
+}
+
+.icon-meeting:before {
+  content: "\e609";
+}
+
+.icon-megaphone:before {
+  content: "\e60a";
+}
+
+.icon-round:before {
+  content: "\e60b";
+}
+
+.icon-society:before {
+  content: "\e60c";
+}
+
+.icon-touch-pad:before {
+  content: "\e60d";
+}
+
+.icon-town:before {
+  content: "\e60e";
+}
+
+.icon-twitter:before {
+  content: "\e60f";
+}
+
+.icon-vote:before {
+  content: "\e610";
+}
+
 body.en :lang(fr) {
   display: none;
 }
@@ -1144,10 +1260,10 @@ body.fr :lang(en) {
 }
 
 body {
-  position: absolute;
   width: 100%;
   background: #F2F2F2;
   color: #212121;
+  position: relative;
 }
 
 .blue {
