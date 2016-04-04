@@ -494,6 +494,10 @@ button {
   font-weight: bold;
   font-family: "ProximaNova-Bold";
 }
+button button:hover, input[type="button"] button:hover, input[type="reset"] button:hover, input[type="submit"] button:hover,
+button button:hover {
+  background-color: #EA3358;
+}
 
 body {
   font-family: "ProximaNova-Regular";
@@ -556,6 +560,7 @@ h3 {
   -webkit-transition: .5s;
   -moz-transition: .5s;
   transition: .5s;
+  z-index: 1;
 }
 #nav .content .nav-toggle {
   float: right;
@@ -717,11 +722,11 @@ header {
 #home {
   background: url("../images/header/home-header.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   text-align: left;
 }
 #home .container {
-  margin-left: calc(8% + 27px);
+  margin-left: calc(8% + 17px);
   padding-top: 180px;
 }
 #home .container h1 span {
@@ -783,10 +788,13 @@ section hr.title {
 }
 
 #footer {
-  background: #8155F4;
+  background: #312F38;
   padding: 25px;
-  color: #F2F2F2;
+  color: #9FA4AB;
   margin-top: 20px;
+}
+#footer .container {
+  padding: 0 8%;
 }
 #footer .copyright {
   margin-bottom: 20px;
@@ -799,11 +807,11 @@ section hr.title {
   display: inline-block;
 }
 #footer ul li a {
-  color: #F2F2F2;
+  color: #9FA4AB;
   text-decoration: none;
 }
 #footer ul li a:hover {
-  color: #9FA4AB;
+  color: #F2F2F2;
 }
 #footer ul.social-links {
   margin-left: 20px;
@@ -820,7 +828,11 @@ section hr.title {
 }
 
 #product {
-  margin-top: 122px;
+  margin-top: 30px;
+}
+#product .container {
+  margin-left: calc(8% + 27px);
+  margin-right: calc(8% + 27px);
 }
 #product .container span.quote {
   color: #9FA4AB;
@@ -840,6 +852,9 @@ section hr.title {
   #product h2 p {
     display: inline-block;
   }
+}
+#target {
+  margin-top: 60px;
 }
 #target .container ul li a button {
   margin: 0 10px;
@@ -866,7 +881,7 @@ section hr.title {
 }
 
 #webconsole {
-  margin-top: 120px;
+  margin-top: 60px;
   background: url("../images/home/webconsole.png");
   background-repeat: no-repeat;
   background-position: 100%;
@@ -884,8 +899,16 @@ section hr.title {
 #webconsole .container i {
   color: #6AD931;
 }
-#webconsole .container p i {
-  margin-right: 3px;
+#webconsole .list div.sentence {
+  color: #9FA4AB;
+  width: 600px;
+  padding: 10px 0;
+  display: inline-block;
+}
+#webconsole .list div.icon {
+  width: 16px;
+  float: left;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -908,11 +931,12 @@ section hr.title {
   }
 }
 #mobile {
-  margin-top: 150px;
+  margin-top: 60px;
   background: url("../images/home/mobile.png");
+  background-margin-left: calc(8% + 27px);
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-position: 15%;
+  background-position: calc(8% + 27px);
 }
 #mobile h3 p {
   margin: 0 0 11px 0;
@@ -921,15 +945,21 @@ section hr.title {
 #mobile i {
   color: #DC44A3;
 }
-#mobile .list p {
+#mobile .list div.sentence {
   color: #9FA4AB;
+  width: 600px;
+  padding: 10px 0;
+  display: inline-block;
 }
-#mobile .list i {
-  margin-right: 3px;
+#mobile .list div.icon {
+  width: 16px;
+  float: left;
+  padding: 10px;
 }
 #mobile .container {
+  margin-left: calc(8% + 27px);
   float: right;
-  width: 45%;
+  width: 40%;
   text-align: left;
   margin-right: 8%;
 }
@@ -958,6 +988,8 @@ section hr.title {
 }
 #contact {
   text-align: left;
+  margin-top: 60px;
+  margin-left: calc(8% + 27px);
 }
 #contact .left {
   float: left;
@@ -969,9 +1001,14 @@ section hr.title {
   padding: 10px 0;
   margin-bottom: 10px;
   outline: none;
+  background-color: #F2F2F2;
+}
+#contact .left form button:hover {
+  background-color: #EA3358;
 }
 #contact .left form .input {
   position: relative;
+  background-color: #F2F2F2;
 }
 #contact .left form .input .border-input, #contact .left form .input .border-textarea {
   position: absolute;
@@ -983,21 +1020,21 @@ section hr.title {
 }
 #contact .left form .input .border-input {
   bottom: 10px;
+  bgcolor: red;
 }
 #contact .left form .input .border-textarea {
   bottom: 13px;
 }
 #contact .right {
   float: left;
-  margin-left: 120px;
 }
 #contact .right p i {
-  color: #6AD931;
-  padding: 15px 23px;
+  color: #20BFFA;
+  padding: 12px 3px;
 }
 #contact .right p span:nth-child(3) {
   display: block;
-  margin-left: 62px;
+  margin-left: 22px;
 }
 #contact .right ul {
   margin-top: 40px;
@@ -1008,7 +1045,7 @@ section hr.title {
   margin-left: 24px;
 }
 #contact .right ul li a {
-  color: #6AD931;
+  color: #20BFFA;
 }
 
 #believe p {
@@ -1036,6 +1073,7 @@ section hr.title {
 }
 #team .container .content a {
   color: #6AD931;
+  text-decoration: none;
 }
 #team .container div.member {
   width: 236px;
@@ -1105,6 +1143,7 @@ section hr.title {
 }
 #jobs a {
   color: #DC44A3;
+  text-decoration: none;
 }
 #jobs i {
   padding: 20px;
@@ -1135,6 +1174,96 @@ section hr.title {
   font-family: 'ProximaNova-Regular';
   src: url("../fonts/ProximaNova-Regular.otf");
 }
+@font-face {
+  font-family: 'quorum';
+  src: url("../fonts/quorum.eot?n9t7a7");
+  src: url("../fonts/quorum.eot?#iefixn9t7a7") format("embedded-opentype"), url("../fonts/quorum.ttf?n9t7a7") format("truetype"), url("../fonts/quorum.woff?n9t7a7") format("woff"), url("../fonts/quorum.svg?n9t7a7#quorum") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+i[class^='icon-'],
+i[class*=' icon-'] {
+  font-family: 'quorum';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 20px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-data:before {
+  content: "\e600";
+}
+
+.icon-dots:before {
+  content: "\e601";
+}
+
+.icon-facebook:before {
+  content: "\e602";
+}
+
+.icon-google:before {
+  content: "\e603";
+}
+
+.icon-human:before {
+  content: "\e604";
+}
+
+.icon-human66:before {
+  content: "\e605";
+}
+
+.icon-increasing:before {
+  content: "\e606";
+}
+
+.icon-linkedin:before {
+  content: "\e607";
+}
+
+.icon-loading:before {
+  content: "\e608";
+}
+
+.icon-meeting:before {
+  content: "\e609";
+}
+
+.icon-megaphone:before {
+  content: "\e60a";
+}
+
+.icon-round:before {
+  content: "\e60b";
+}
+
+.icon-society:before {
+  content: "\e60c";
+}
+
+.icon-touch-pad:before {
+  content: "\e60d";
+}
+
+.icon-town:before {
+  content: "\e60e";
+}
+
+.icon-twitter:before {
+  content: "\e60f";
+}
+
+.icon-vote:before {
+  content: "\e610";
+}
+
 body.en :lang(fr) {
   display: none;
 }
@@ -1144,10 +1273,10 @@ body.fr :lang(en) {
 }
 
 body {
-  position: absolute;
   width: 100%;
   background: #F2F2F2;
   color: #212121;
+  position: relative;
 }
 
 .blue {

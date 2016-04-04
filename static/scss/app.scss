@@ -21,6 +21,84 @@
     font-family: 'ProximaNova-Regular';
     src:url('../fonts/ProximaNova-Regular.otf');
 }
+@font-face {
+  font-family: 'quorum';
+  src:url('../fonts/quorum.eot?n9t7a7');
+  src:url('../fonts/quorum.eot?#iefixn9t7a7') format('embedded-opentype'),
+  url('../fonts/quorum.ttf?n9t7a7') format('truetype'),
+  url('../fonts/quorum.woff?n9t7a7') format('woff'),
+  url('../fonts/quorum.svg?n9t7a7#quorum') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i[class^='icon-'],
+i[class*=' icon-'] {
+  font-family: 'quorum';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 20px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-data:before {
+  content: "\e600";
+}
+.icon-dots:before {
+  content: "\e601";
+}
+.icon-facebook:before {
+  content: "\e602";
+}
+.icon-google:before {
+  content: "\e603";
+}
+.icon-human:before {
+  content: "\e604";
+}
+.icon-human66:before {
+  content: "\e605";
+}
+.icon-increasing:before {
+  content: "\e606";
+}
+.icon-linkedin:before {
+  content: "\e607";
+}
+.icon-loading:before {
+  content: "\e608";
+}
+.icon-meeting:before {
+  content: "\e609";
+}
+.icon-megaphone:before {
+  content: "\e60a";
+}
+.icon-round:before {
+  content: "\e60b";
+}
+.icon-society:before {
+  content: "\e60c";
+}
+.icon-touch-pad:before {
+  content: "\e60d";
+}
+.icon-town:before {
+  content: "\e60e";
+}
+.icon-twitter:before {
+  content: "\e60f";
+}
+.icon-vote:before {
+  content: "\e610";
+}
+
 body.en :lang(fr) {
     display: none;
 }
@@ -28,10 +106,10 @@ body.fr :lang(en) {
     display: none;
 }
 body {
-	position: absolute;
 	width: 100%;
 	background: $light-grey;
 	color: $font-color;
+  position: relative;
 }
 .blue {
     background-color: $blue;

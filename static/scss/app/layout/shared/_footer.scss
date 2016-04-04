@@ -1,9 +1,12 @@
 @include exports('footer') {
 	#footer {
-  		background: $purple;
+  		background: #312F38;
   		padding: 25px;
-  		color: $light-grey;
+  		color: $grey;
   		margin-top: 20px;
+  		.container {
+  			padding: 0 8%;
+  		}
   		.copyright {
   			margin-bottom: 20px;
   			display: inline-block;
@@ -13,10 +16,10 @@
 			li{
 				display: inline-block;
 				a {
-					color: $light-grey;
+					color: $grey;
 					text-decoration: none;
 					&:hover {
-						color: $grey;
+						color: $light-grey;
 					}
 				}
 			}

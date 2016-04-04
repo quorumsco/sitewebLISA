@@ -17,11 +17,16 @@
 				color: $pink;
 		}
 		.list {
-			p {
+			div.sentence { 
 				color: $grey;
+				width: 600px;
+				padding: 10px 0;
+				display: inline-block;
 			}
-			i {
-				margin-right: 3px;
+			div.icon {
+				width: 16px;
+				float: left;
+				padding: 10px;
 			}
 		}
 		.container{
