@@ -55,6 +55,7 @@
 			display: block;
 		}
 	}
+	//Small Screen <= 425px
 	@media(max-width: $small-screen) {
 		#slider {
 			ul {
@@ -73,6 +74,32 @@
 				width: auto;
 				margin: 0 auto;
 				padding: 0 15px;
+			}
+		}
+	}
+	//Medium Screen <= 768px
+	@media(min-width: $small-screen) and (max-width: $medium-screen) {
+		#slider {
+			ul {
+				border-bottom: none;
+				width: 400px;
+				padding-bottom: 0px;
+				margin-bottom: 0px;
+				li {
+					display: block;
+					padding: 20px;
+				}
+			}
+		}
+		#slide{
+			.container {
+				min-width: 400px;
+				max-width: 700px;
+				.content {
+					width: auto;
+					margin: 0 auto;
+					padding: 0 25px;
+				}
 			}
 		}
 	}
