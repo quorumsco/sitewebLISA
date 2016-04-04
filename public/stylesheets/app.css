@@ -711,7 +711,7 @@ header {
 }
 
 .small {
-  height: 150px;
+  height: 100px;
 }
 @media (max-width: 425px) {
   .small {
@@ -1277,6 +1277,10 @@ body {
   background: #F2F2F2;
   color: #212121;
   position: relative;
+}
+
+main {
+  min-height: 80%;
 }
 
 .blue {

@@ -111,6 +111,11 @@ body {
 	color: $font-color;
   position: relative;
 }
+
+main {
+  min-height: 80%;
+}
+
 .blue {
     background-color: $blue;
 }

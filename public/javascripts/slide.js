@@ -1,10 +1,4 @@
 $(document).ready(function(){
-	$('#footer').css({
-		position: 'absolute',
-		bottom: '0px',
-		left: '0px',
-		right: '0px'
-	});
 	$('#slider a').on('click', function(e){
 		e.preventDefault();
 		//Vars
@@ -16,30 +10,9 @@ $(document).ready(function(){
 			$(this).parent().addClass('active');
 			//Swap
 			$('#'+lastSlide).fadeOut(200, function(){
-				$('#'+slide).fadeIn(500, function(){
-					footerPosition();
-				});			
+				$('#'+slide).fadeIn(500);			
 			});		
 		}
 		
 	});
-
-	//Footer
-	function getPosition(){
-		return $('header').height() + $('main').height();
-	};
-	function footerPosition(){
-		if ($('#footer').position().top > ($('header').height() + $('main').height())) {
-			$('#footer').css({
-				position: 'absolute',
-				bottom: '0px',
-				left: '0px',
-				right: '0px'
-			});	
-		} else {
-			$('#footer').css({
-				position: 'static'
-			});
-		}
-	}
 });
