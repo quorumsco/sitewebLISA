@@ -56,7 +56,7 @@
 		}
 	}
 	//Small Screen <= 425px
-	@media(max-width: $small-screen) and (orientation: portrait){
+	@media(max-width: $small-screen) {
 		#slider {
 			ul {
 				border-bottom: none;
@@ -78,7 +78,7 @@
 		}
 	}
 	//Medium Screen <= 768px
-	@media(min-width: $small-screen) and (max-width: $medium-screen) and (orientation: portrait) {
+	@media(min-width: $small-screen) and (max-width: $medium-screen) {
 		#slider {
 			ul {
 				border-bottom: none;
@@ -103,14 +103,14 @@
 			}
 		}
 	}
-	@media(min-width: 700px) and (max-width: $medium-screen) and (orientation: portrait) {
+	@media(min-width: 700px) and (max-width: $medium-screen) {
 		#slider {
 			.container {
 				min-width: 500px;
 			}
 		}
 	}
-	@media(min-width: $medium-screen +1) and (max-width: $large-screen) and (orientation: portrait) {
+	@media(min-width: 769px) and (max-width: $large-screen) {
 		#slider {
 			ul {
 				width: 750px;

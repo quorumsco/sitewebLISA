@@ -19,7 +19,7 @@
 			font-size: 30px;
 		}
 	}
-	@media(max-width: $small-screen) and (orientation: portrait) {
+	@media(max-width: $small-screen) {
 		#jobs {
 			p {
 				text-align: left;
