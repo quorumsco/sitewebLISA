@@ -48,7 +48,34 @@
 						}
 					}
 					button {
-						margin-top: 30px;
+						margin: 30px auto 0 auto;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: $small-screen) and (max-width: $medium-screen){
+		#team {
+			.container {
+				.content {
+					p {
+						text-align: left;
+					}
+					div.member {
+						margin-bottom: 0px;
+						p {
+							display: inline-block;
+							padding: 0 6px;
+							margin-top: 0px;
+							i {
+								padding: 0 3px;
+							}
+						}
+					}
+					button {
+						margin: 30px auto 0 auto;
+						display: block;
 					}
 				}
 			}
