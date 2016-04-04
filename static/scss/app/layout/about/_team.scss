@@ -29,7 +29,7 @@
 			}
 		}
 	}
-	@media(max-width: $small-screen){
+	@media(max-width: $small-screen) and (orientation: portrait){
 		#team {
 			.container {
 				.content {
@@ -55,7 +55,7 @@
 			}
 		}
 	}
-	@media(min-width: $small-screen) and (max-width: $medium-screen){
+	@media(min-width: $small-screen) and (max-width: $large-screen)  and (orientation: portrait){
 		#team {
 			.container {
 				.content {
