@@ -8,6 +8,16 @@
 			text-align: left;
 			list-style-type: none;
 			li {
+				div.sentence { 
+					width: 560px;
+					padding: 10px 0;
+					display: inline-block;
+					margin-left: 20px;
+					}
+				div.icon {
+					width: 16px;
+					float: left;
+				}
 				i {
 					color: $blue;
 					padding: 10px;
@@ -37,12 +47,56 @@
 			}
 		}
 	}
-	@media(max-width: 320px){
+	@media(max-width: 380px){
 		#believe {
 			ul {
 				li {
 					div.sentence { 
 						width: 240px;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: 381px) and (max-width: 500px){
+		#believe {
+			ul {
+				li {
+					div.sentence { 
+						width: 300px;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: 501px) and (max-width: 600px){
+		#believe {
+			ul {
+				li {
+					div.sentence { 
+						width: 380px;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: 601px) and (max-width: 700px){
+		#believe {
+			ul {
+				li {
+					div.sentence { 
+						width: 480px;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: 701px) and (max-width: $medium-screen){
+		#believe {
+			ul {
+				li {
+					div.sentence { 
+						width: 480px;
 					}
 				}
 			}
