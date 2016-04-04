@@ -15,4 +15,37 @@
 			}
 		}
 	}
+	@media(max-width: $small-screen){
+		#believe {
+			p {
+				text-align: left;
+			}
+			ul {
+				padding-left: 0px;
+				li {
+					div.sentence { 
+						width: 300px;
+						padding: 10px 0;
+						display: inline-block;
+						margin-left: 17px;
+					}
+					div.icon {
+						width: 16px;
+						float: left;
+					}
+				}
+			}
+		}
+	}
+	@media(max-width: 320px){
+		#believe {
+			ul {
+				li {
+					div.sentence { 
+						width: 240px;
+					}
+				}
+			}
+		}
+	}
 }

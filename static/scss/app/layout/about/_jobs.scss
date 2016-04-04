@@ -5,6 +5,7 @@
 		}
 		span {
 			display: block;
+			margin-bottom: 20px;
 		}
 		button {
 			margin: 20px 0 36px 0;
@@ -15,6 +16,14 @@
 		}
 		i {
 			padding: 20px;
+			font-size: 30px;
+		}
+	}
+	@media(max-width: $small-screen) {
+		#jobs {
+			p {
+				text-align: left;
+			}
 		}
 	}
 }

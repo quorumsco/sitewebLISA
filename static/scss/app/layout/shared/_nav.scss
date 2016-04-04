@@ -32,6 +32,9 @@
 				a {
 					text-decoration: none;
 					color: $white-color;
+					&:hover {
+						color: $font-color;
+					}
 				}
 			}
 			div.bar {
@@ -77,6 +80,9 @@
 			li {
 				a {
 					color: $font-color;
+					&:hover {
+						color: $grey;
+					}
 				}
 			}		
 		}
@@ -134,7 +140,6 @@
 		#nav {	
 			background-color: #FFFFFF;
 			color: $font-color;
-			border-bottom: 1px solid $dark-blue; 
 			div.bar {
 				display: none;
 			}
@@ -147,6 +152,14 @@
 				margin-left: 10px;
 				img{
 					width: 180px;
+				}
+			}
+			.banner {
+				i {
+					border: 0px;
+				}
+				button {
+					margin: 25px;
 				}
 			}
 		}

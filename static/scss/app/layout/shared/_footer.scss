@@ -38,4 +38,22 @@
 			}
   		}
   	}
+  	@media(max-width: $small-screen){
+  		#footer{
+  			text-align: center;
+  			.copyright {
+  				width: 100%;
+  			}
+  			ul.nav-footer, ul.social-links {
+  				float: none;
+  				padding-left: 0px;
+  				margin-left: 0px;
+  			}
+  			ul.nav-footer {
+  				li {
+  					margin: 0 20px;
+  				}
+  			}
+  		}
+  	}
 }

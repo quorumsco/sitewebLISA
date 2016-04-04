@@ -55,4 +55,25 @@
 			display: block;
 		}
 	}
+	@media(max-width: $small-screen) {
+		#slider {
+			ul {
+				border-bottom: none;
+				width: 300px;
+				padding-bottom: 0px;
+				margin-bottom: 0px;
+				li {
+					display: block;
+					padding: 20px;
+				}
+			}
+		}
+		#slide{
+			.content{
+				width: auto;
+				margin: 0 auto;
+				padding: 0 15px;
+			}
+		}
+	}
 }
