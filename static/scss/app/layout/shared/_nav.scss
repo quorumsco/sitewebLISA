@@ -24,9 +24,9 @@
 				padding: 15px 0;
 				li{
 					display: inline;
-					margin-left: 15px;
+					margin-left: 25px;
 					&:last-child{
-						margin-right: 40px;
+						margin-right: 25px;
 					}
 				}
 				a {
@@ -39,24 +39,26 @@
 			}
 			div.bar {
 				float: right;
-				margin-right: 8%;
+				margin-right: 12%;
 			}
 		}
 		.banner{
 			display: inline-block;
 			i {
 				padding: 0 5px 0 30px;
-				border-left: 1px solid $white-color;
+				border-left: 1px solid rgba(255, 255, 255, 0.3);
 			}
 			button{
-				padding: 16px 27px;
+				padding: 12px 20px;
 				margin-left:10px;
 				background-color: transparent;
-				border: 1px solid $white-color;
+				border: 1px solid rgba(255, 255, 255, 0.4);
+				letter-spacing : 0.5px;
 				&:hover {
 					background-color: $red;
-					border: 0px;
-					padding: 16px 28px;
+					border: 1px solid rgba(255, 0, 0, 0.4);
+					padding: 12px 24px;
+					letter-spacing : 0.5px;
 				}
 			}
 		}
@@ -89,12 +91,16 @@
 		button {
 			border: none;
 			background-color: $blue;
-			font-weight: bold;
-			padding: 16px 28px;
+			font-weight: normal;
+			padding: 12px 20px;
+			border: 1px solid rgba(255, 255, 255, 0.4);
+			letter-spacing : 0.5px;
 		}
 		.banner {
 			i {
 				border-color: $font-color;
+				padding: 0 5px 0 30px;
+				border-left: 1px solid rgba(255, 255, 255, 0.4);
 			}
 		}
 	}

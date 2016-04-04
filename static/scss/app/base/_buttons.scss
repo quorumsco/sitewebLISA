@@ -4,8 +4,9 @@ button {
 	border: none;
 	border-radius: 2px;
 	color: $white-color;
-	font-weight: bold;
-	font-family: $heading-font-family;
+	font-weight: normal;
+	font-family: $base-font-family;
+	/*letter-spacing : 0.5px;*/
 	button:hover {
 				background-color: $red;
 			}
