@@ -4,7 +4,7 @@
 			text-align: justify;
 		}
 		ul {
-			padding-left: 30px;
+			padding-left: 25px;
 			text-align: left;
 			list-style-type: none;
 			li {
@@ -15,12 +15,8 @@
 					margin-left: 20px;
 					}
 				div.icon {
-					width: 16px;
-					float: left;
-				}
-				i {
-					color: $blue;
 					padding: 10px;
+					float: left;
 				}
 			}
 		}
@@ -40,7 +36,6 @@
 						margin-left: 17px;
 					}
 					div.icon {
-						width: 16px;
 						float: left;
 					}
 				}
@@ -63,7 +58,7 @@
 			ul {
 				li {
 					div.sentence { 
-						width: 300px;
+						width: 290px;
 					}
 				}
 			}

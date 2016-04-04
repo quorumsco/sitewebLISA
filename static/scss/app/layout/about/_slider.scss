@@ -9,10 +9,31 @@
 			li {
 				display: inline;
 				text-align: left;
+
 				a {
 					padding: 12px 92px 12px 20px;
 					color: $grey;
 					text-decoration: none;
+				}
+				&:nth-child(1):hover{
+					a {
+						background-color: rgba(32,191,250,0.2);
+					}
+				}
+				&:nth-child(3):hover{
+					a {
+						background-color: rgba(106,217,49,0.2);
+					}
+				}
+				&:nth-child(2):hover{
+					a {
+						background-color: rgba(129,85,244,0.2);
+					}
+				}
+				&:nth-child(4):hover{
+					a {
+						background-color: rgba(220,68,163,0.2);
+					}
 				}
 				&.active {
 					&:nth-child(1){
