@@ -2,9 +2,22 @@
 	#contact {
 		text-align: left;
 		margin-top:60px;
-		margin-left: calc(8% + 27px);
+		.container {
+		      margin-left: calc(8% + 27px);
+		      margin-right: calc(8% + 27px);
+		  		span.quote{
+		  			color: $grey;
+		  			font-size: 20px;
+		  		}
+	  		h2 {
+	  			p {
+	  				margin: 0;
+	  			}
+	  		}
+	  	}
 		.left {
 			float: left;
+			margin-left:4%;
 			form {
 				input, textarea {
 					width: 450px;
@@ -40,6 +53,7 @@
 			}
 		}
 		.right {
+			margin-left:4%;
 			float: left;
 			
 			p {
