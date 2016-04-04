@@ -1,5 +1,7 @@
 @include exports('team') {
 	#team{
+		background: url('../images/team/Quorum_NB group_Retouche.png');
+		background-size: auto 100%;
 		p {
 			text-align: justify;
 		}

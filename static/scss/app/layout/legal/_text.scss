@@ -1,7 +1,10 @@
-@include exports('product') {
-  	#product {
-  		margin-top: 60px;
+@include exports('text') {
+  	#text {
+  		margin-top: 30px;
   		.container {
+      margin-top: 30px;
+      margin-left: calc(8% + 27px);
+      margin-right: calc(8% + 27px);
 	  		span.quote{
 	  			color: $grey;
 	  			font-size: 20px;
@@ -15,7 +18,7 @@
 	  	}
   	}
   	@media(max-width: 768px){
-  		#product {
+  		#text {
   			margin-top: 10px;
   			h2 {
   				display: inline-block;

@@ -1,7 +1,10 @@
 @include exports('target') {
 	#target {
+	background-color: #f9f9fc;
 	margin-top: 60px;
 		.container {
+			margin-top: 60px;
+			margin-bottom: 60px;
 			ul {
 				li {
 					a {
@@ -10,6 +13,11 @@
 							height: 200px;
 							width: 200px;
 						}
+					}
+					img{
+							margin: 0 10px;
+							height: 200px;
+							width: 200px;
 					}
 				}
 			}	
