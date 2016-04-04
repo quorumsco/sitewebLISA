@@ -1,6 +1,6 @@
 @include exports('webconsole') {
 	#webconsole {
-		margin-top: 120px;
+		margin-top: 60px;
 		background: url('../images/home/webconsole.png');
 		background-repeat: no-repeat;
 		background-position: 100%;
@@ -14,7 +14,7 @@
 		.container{
 			margin-left: calc(8% + 27px);
 			text-align: left;
-			width: 50%;
+			width: 40%;
 			i {
 				color: $green;
 			}

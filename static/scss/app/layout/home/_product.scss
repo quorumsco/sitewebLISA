@@ -1,7 +1,9 @@
 @include exports('product') {
   	#product {
-  		margin-top: 122px;
+  		margin-top: 30px;
   		.container {
+      margin-left: calc(8% + 27px);
+      margin-right: calc(8% + 27px);
 	  		span.quote{
 	  			color: $grey;
 	  			font-size: 20px;

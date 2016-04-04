@@ -1,10 +1,12 @@
 @include exports('mobile') {
 	#mobile{
-		margin-top: 150px;
+		margin-top: 60px;
 		background: url('../images/home/mobile.png');
+		background-margin-left: calc(8% + 27px);
 		background-repeat: no-repeat;
+
 		background-size: auto 100%;
-		background-position: 15%;
+		background-position: calc(8% + 27px);
 		h3 {
 			p {
 				margin: 0 0 11px 0;
@@ -23,8 +25,9 @@
 			}
 		}
 		.container{
+		margin-left: calc(8% + 27px);
 			float:right;
-			width: 45%;
+			width: 40%;
 			text-align: left;
 			margin-right: 8%; 
 		}
