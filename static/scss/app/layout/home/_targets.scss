@@ -3,19 +3,41 @@
 	background-color: #f9f9fc;
 	margin-top: 60px;
 		.container {
+		span.quote{
+	  			color: $grey;
+	  			font-size: 20px;
+	  		}
 			margin-top: 60px;
 			margin-bottom: 60px;
+			h2{
+				
+			}
 			ul {
-				li {
-					a {
-						button {
-							margin: 0 10px;
-							height: 200px;
-							width: 200px;
-						}
+				margin-bottom: 40px;
+				margin-top: 40px;
+				li:first-child {
+					button {
+							background: url('../images/home/agency.svg');
 					}
-					img{
-							margin: 0 10px;
+				}
+				li:nth-child(2) {
+					button {
+							background: url('../images/home/non-profit.svg');
+					}
+				}
+				li:nth-child(3) {
+					button {
+							background: url('../images/home/campaigners.svg');
+					}
+				}
+				li:nth-child(4) {
+					button {
+							background: url('../images/home/individuals.svg');
+					}
+				}
+				li {
+					button {
+							margin: 10px 10px;
 							height: 200px;
 							width: 200px;
 					}

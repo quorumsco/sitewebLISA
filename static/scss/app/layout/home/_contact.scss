@@ -1,10 +1,8 @@
 @include exports('contact') {
 	#contact {
-		text-align: left;
 		margin-top:60px;
+		margin-left:calc(2% + 27px);
 		.container {
-		      margin-left: calc(8% + 27px);
-		      margin-right: calc(8% + 27px);
 		  		span.quote{
 		  			color: $grey;
 		  			font-size: 20px;
@@ -14,70 +12,98 @@
 	  				margin: 0;
 	  			}
 	  		}
-	  	}
-		.left {
-			float: left;
-			margin-left:4%;
-			form {
-				input, textarea {
-					width: 450px;
-					border: 0;
-					border-bottom: 2px solid $light-grey;
-					padding: 10px 0;
-					margin-bottom: 10px;
-					outline: none;
-					background-color:#F2F2F2;
-				}
-				button:hover {
-					background-color: $red;
-				}
-				.input {
-					position: relative;
-					background-color:#F2F2F2;
-					.border-input, .border-textarea {
-						position:absolute;
-						width: 0;
-						height: 2px;
-						&.active {
-							width: 450px;
-						}
-					}
-					.border-input {
-						bottom: 10px;
-						bgcolor:red;
-					}
-					.border-textarea {
-						bottom: 13px;
-					}
-				}
-			}
-		}
-		.right {
-			margin-left:4%;
-			float: left;
-			
-			p {
-				i {
-					color: $blue;
-					padding: 12px 3px;
-				}
-				span:nth-child(3) {
-					display: block;
-					margin-left: 22px;
-				}
-			}
-			ul{
-				margin-top: 40px;
-				list-style-type: none;
+			ul {
 				li {
-					display: inline;
-					margin-left: 24px;
-					a {
-						color: $blue;
-					}
+						width:50%;
+						vertical-align : top;
+						text-align: left;
+						form {
+							input, textarea {
+								width: 350px;
+								
+								border: 0;
+								border-bottom: 2px solid $light-grey;
+								padding: 10px 0;
+								margin-bottom: 10px;
+								outline: none;
+								background-color:#F2F2F2;
+							}
+							button:hover {
+								background-color: $red;
+							}
+							.input {
+								position: relative;
+								background-color:#F2F2F2;
+								.border-input, .border-textarea {
+									position:absolute;
+									width: 0;
+									height: 2px;
+									&.active {
+										width: 450px;
+									}
+								}
+								.border-input {
+									bottom: 10px;
+									bgcolor:red;
+								}
+								.border-textarea {
+									bottom: 13px;
+								}
+							}
+						}
+						p {
+							i {
+								color: $blue;
+								padding: 12px 3px;
+							}
+							span:nth-child(3) {
+								display: block;
+								margin-left: 22px;
+							}
+						}
+						ul{
+							margin-top: 40px;
+							list-style-type: none;
+							li {
+								display: inline;
+								margin-left: 24px;
+								a {
+									color: $blue;
+								}
+							}
+						}
+				}
+			}	
+	  	}
+
+	  	ul{
+			padding-left: 0;
+			list-style-type: none;
+			li{
+				display: inline-block;
+			}
+		}		
+	}
+		@media(max-width: 768px){
+		#contact {
+			margin-top:10px;
+			.container {
+				span.quote{
+		  			color: $grey;
+		  			font-size: 20px;
+		  		}
+				ul {
+					display: list-items;
 				}
 			}
+			ul {
+				padding-left: 0;
+				list-style-type: none;
+				li{
+					display: block;
+				}
+			}
+			
 		}
-		
 	}
 }

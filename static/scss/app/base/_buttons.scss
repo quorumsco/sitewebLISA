@@ -11,3 +11,15 @@ button {
 				background-color: $red;
 			}
 }
+.button1 {
+	padding: 16px 28px;
+	border: none;
+	border-radius: 2px;
+	color: $white-color;
+	font-weight: normal;
+	font-family: $base-font-family;
+	/*letter-spacing : 0.5px;*/
+	button:hover {
+				background-color: $red;
+			}
+}
