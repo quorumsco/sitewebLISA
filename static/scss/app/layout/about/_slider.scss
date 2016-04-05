@@ -11,39 +11,30 @@
 				text-align: left;
 
 				a {
-					padding: 12px 92px 12px 20px;
+					padding: 12px 180px 12px 20px;
 					color: $grey;
 					text-decoration: none;
 				}
 				&:nth-child(1):hover{
 					a {
-						background-color: rgba(32,191,250,0.2);
-					}
-				}
-				&:nth-child(3):hover{
-					a {
-						background-color: rgba(106,217,49,0.2);
+						color: $blue;
 					}
 				}
 				&:nth-child(2):hover{
 					a {
-						background-color: rgba(129,85,244,0.2);
+						color: $purple;
 					}
 				}
-				&:nth-child(4):hover{
+				&:nth-child(3):hover{
 					a {
-						background-color: rgba(220,68,163,0.2);
+						color: $pink;
 					}
 				}
+
 				&.active {
 					&:nth-child(1){
 						a {
 							border-color: $blue;
-						}
-					}
-					&:nth-child(3){
-						a {
-							border-color: $green;
 						}
 					}
 					&:nth-child(2){
@@ -51,7 +42,7 @@
 							border-color: $purple;
 						}
 					}
-					&:nth-child(4){
+					&:nth-child(3){
 						a {
 							border-color: $pink;
 						}
@@ -87,6 +78,9 @@
 				li {
 					display: block;
 					padding: 20px;
+					a {
+						padding-right: 0px;
+					}
 				}
 			}
 		}
@@ -135,6 +129,11 @@
 		#slider {
 			ul {
 				width: 750px;
+				li {
+					a {
+						padding-right: 135px;
+					}
+				}
 			}
 		}
 		#slide{

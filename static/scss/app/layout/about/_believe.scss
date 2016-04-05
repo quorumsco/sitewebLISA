@@ -2,6 +2,9 @@
 	#believe{
 		p {
 			text-align: justify;
+			span {
+				display: block;
+			}
 		}
 		ul {
 			padding-left: 25px;
@@ -69,7 +72,7 @@
 			ul {
 				li {
 					div.sentence { 
-						width: 380px;
+						width: 370px;
 					}
 				}
 			}

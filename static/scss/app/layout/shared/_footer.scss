@@ -3,7 +3,6 @@
   		background: #312F38;
   		padding: 25px;
   		color: $grey;
-  		margin-top: 20px;
   		.container {
   			padding: 0 8%;
   		}
@@ -56,4 +55,16 @@
   			}
   		}
   	}
+    @media(min-width: $small-screen) and (max-width: 767px) {
+        #footer{
+            text-align: center;
+            ul.nav-footer, ul.social-links {
+                float: none;
+                padding-left: 0px;
+            }
+            ul.nav-footer {
+
+            }
+        } 
+    }
 }

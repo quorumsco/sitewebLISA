@@ -17,6 +17,12 @@
 				a {
 					color: $green;
 					text-decoration: none;
+					&:hover {
+						color: $dark-green;
+					}
+				}
+				p:nth-of-type(2) {
+					text-align: center;
 				}
 			}
 			div.member {
@@ -29,6 +35,11 @@
 				img {
 					max-width: 100%;
 					border-radius: 50%;
+				}
+			}
+			button {
+				&:hover {
+					background-color: $dark-green;
 				}
 			}
 		}
@@ -83,6 +94,12 @@
 					}
 				}
 			}
+		}
+	}
+	@media(max-width: 1210px) {
+		#team {
+			background-size: auto 100%;
+			background-position: 50%;
 		}
 	}
 }

@@ -26,4 +26,14 @@ $(document).ready(function(){
 	if(window.innerWidth <= 1110) {
 		$('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
 	}
+
+	//Language
+	$('.flag a').on('click', function(e){
+		e.preventDefault();
+		if($(this).text() == "EN"){
+			$('body').removeClass('fr').addClass('en');
+		} else {
+			$('body').removeClass('en').addClass('fr');
+		}
+	});	
 });
