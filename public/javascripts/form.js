@@ -1,8 +1,10 @@
 $(document).ready(function(){
-    //Border animation
+    //Border animation 
     $('#contact input, #contact textarea').on('focusin', function(){
+        var widthInput = $(this).width();
+        console.log(widthInput);
         $(this).next().animate({
-            width: '450px'
+            width: widthInput+'px'
         }, 300);
     });
     $('#contact input, #contact textarea').on('focusout', function(){

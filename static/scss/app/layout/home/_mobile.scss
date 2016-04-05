@@ -2,7 +2,6 @@
 	#mobile{
 		margin-top: 60px;
 		background: url('../images/home/mobile.svg');
-		background-margin-left: calc(8% + 27px);
 		background-repeat: no-repeat;
 
 		background-size: auto 100%;
@@ -19,7 +18,7 @@
 		.list {
 			div.sentence { 
 				color: $grey;
-				width: 600px;
+				width: 540px;
 				padding: 10px 0;
 				display: inline-block;
 			}
@@ -37,27 +36,123 @@
 			margin-right: 8%; 
 		}
 	}
-	@media(max-width: 768px){
+	@media(max-width: 1024px){
 		#mobile {
 			margin-top: 20px;
-			background: transparent;
-			background-repeat: no-repeat;
-			background-position: 100%;
-			background-size: 100% auto;
-			.container{
-				float: none;
+			background: none;
+			.container {
 				width: 90%;
-				text-align: left;
 				margin: 0 8%;
+				float: none;
 			}
 			p {
 				&:first-child{
 					display: inline-block;
-					color: $font-color;
 				}
 			}
 			h3 {
 				margin-bottom: 0px;
+			}
+
+		}
+	}
+	@media(min-width: 1275px) and (max-width: 1400px){
+		#mobile {
+			background-size: auto 100%;
+			.list {
+				div.sentence { 
+					width: 400px;
+				}
+			}
+		}
+	}
+	@media(min-width: 1110px) and (max-width: 1274px){
+		#mobile {
+			background-size: auto 80%;
+			.list {
+				div.sentence { 
+					width: 400px;
+				}
+			}
+		}
+	}
+	@media(min-width: 1025px) and (max-width: 1109px){
+		#mobile {
+			background-size: auto 70%;
+			.list {
+				div.sentence { 
+					width: 370px;
+				}
+			}
+		}
+	}
+	@media(max-width: 320px) {
+		#mobile {
+			.list {
+				div.sentence {
+					width: 250px;
+				}
+			}
+		}
+	}
+	@media(min-width: 321px) and (max-width: 390px) {
+		#mobile {
+			.list {
+				div.sentence {
+					width: 280px;
+				}
+			}
+		}
+	}
+	@media(min-width: 391px) and (max-width: 425px) {
+		#mobile {
+			.list {
+				div.sentence {
+					width: 300px;
+				}
+			}
+		}
+	}
+	@media(min-width: 426px) and (max-width: 490px) {
+		#mobile {
+			.list {
+				div.sentence {
+					width: 340px;
+				}
+			}
+		}
+	}
+	@media(min-width: 491px) and (max-width: 590px) {
+		#mobile {
+			.list {
+				div.sentence {
+					width: 370px;
+				}
+			}
+		}
+	}
+	@media(min-width: 591px) and (max-width: 700px) {
+		#mobile {
+			.list {
+				div.sentence {
+					width: 380px;
+				}
+			}
+		}
+	}
+	@media(min-width: 701px) and (max-width: 767px) {
+		#mobile {
+			.list {
+				div.sentence {
+					width: 389px;
+				}
+			}
+		}
+	}
+	@media(max-width: $medium-screen) {
+		#mobile {	
+			.container {
+				margin: 0 auto;
 			}
 		}
 	}

@@ -34,13 +34,10 @@
 			}
 		}
 	}
-	@media(max-width: 768px){
+	@media(max-width: 1024px){
 		#webconsole {
 			margin-top: 20px;
-			background: transparent;
-			background-repeat: no-repeat;
-			background-position: 100%;
-			background-size: 100% auto;
+			background: none;
 			.container {
 				width: 90%;
 				margin: 0 8%;
@@ -52,6 +49,107 @@
 			}
 			h3 {
 				margin-bottom: 0px;
+			}
+
+		}
+	}
+	@media(min-width: 1275px) and (max-width: 1400px){
+		#webconsole {
+			background-size: auto 90%;
+			.list {
+				div.sentence { 
+					width: 400px;
+				}
+			}
+		}
+	}
+	@media(min-width: 1110px) and (max-width: 1274px){
+		#webconsole {
+			background-size: auto 70%;
+			.list {
+				div.sentence { 
+					width: 400px;
+				}
+			}
+		}
+	}
+	@media(min-width: 1025px) and (max-width: 1109px){
+		#webconsole {
+			background-size: auto 60%;
+			.list {
+				div.sentence { 
+					width: 400px;
+				}
+			}
+		}
+	}
+	@media(max-width: 320px) {
+		#webconsole {
+			.list {
+				div.sentence {
+					width: 250px;
+				}
+			}
+		}
+	}
+	@media(min-width: 321px) and (max-width: 390px) {
+		#webconsole {
+			.list {
+				div.sentence {
+					width: 280px;
+				}
+			}
+		}
+	}
+	@media(min-width: 391px) and (max-width: 425px) {
+		#webconsole {
+			.list {
+				div.sentence {
+					width: 300px;
+				}
+			}
+		}
+	}
+	@media(min-width: 426px) and (max-width: 490px) {
+		#webconsole {
+			.list {
+				div.sentence {
+					width: 340px;
+				}
+			}
+		}
+	}
+	@media(min-width: 491px) and (max-width: 590px) {
+		#webconsole {
+			.list {
+				div.sentence {
+					width: 370px;
+				}
+			}
+		}
+	}
+	@media(min-width: 591px) and (max-width: 700px) {
+		#webconsole {
+			.list {
+				div.sentence {
+					width: 380px;
+				}
+			}
+		}
+	}
+	@media(min-width: 701px) and (max-width: 767px) {
+		#webconsole {
+			.list {
+				div.sentence {
+					width: 389px;
+				}
+			}
+		}
+	}
+	@media(max-width: $medium-screen) {
+		#webconsole {	
+			.container {
+				margin: 0 auto;
 			}
 		}
 	}

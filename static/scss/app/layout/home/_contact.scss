@@ -1,7 +1,7 @@
 @include exports('contact') {
 	#contact {
-		margin-top:60px;
-		margin-left:calc(2% + 27px);
+		margin-top: 60px;
+		margin-left: 10%;
 		.container {
 		  		span.quote{
 		  			color: $grey;
@@ -84,7 +84,7 @@
 			}
 		}		
 	}
-		@media(max-width: 768px){
+	@media(min-width: 321px) and (max-width: 767px){
 		#contact {
 			margin-top:10px;
 			.container {
@@ -104,6 +104,67 @@
 				}
 			}
 			
+		}
+	}
+	@media(max-width: 320px){
+		#contact {
+			margin-top:10px;
+			.container {
+				ul {
+					li {
+						form {
+							input, textarea {
+								width: 260px;
+							}
+						}
+						width: 100%;
+					}
+
+				}			
+			}
+			ul {
+				padding-left: 0;
+				list-style-type: none;
+				li{
+					display: block;
+				}
+			}
+			
+		}
+	}
+	@media(min-width: 326px) and (max-width: 425px){
+		#contact {
+			.container {
+				ul {
+					li {
+						form {
+							input, textarea {
+								width: 300px;
+							}
+						}
+						width: 100%;
+					}
+
+				}			
+			}
+		}
+	}
+	@media(min-width: 426px) and (max-width: 767px){
+		#contact {
+			.container {
+				ul {
+					li {
+						form {
+							input, textarea {
+								width: 300px;
+							}
+						}
+						width: 100%;
+						margin: 0 auto;
+					}
+
+				}			
+			}
 		}
 	}
 }
