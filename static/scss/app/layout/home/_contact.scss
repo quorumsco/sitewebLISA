@@ -52,25 +52,40 @@
 							}
 						}
 						p {
+							margin-top: 15px;
 							i {
-								color: $blue;
+								color: $grey;
 								padding: 12px 3px;
 							}
 							span:nth-child(3) {
+								background-color:red;
 								display: block;
 								margin-left: 22px;
 							}
 						}
+						p:nth-child(888) {
+
+								i:nth-last{ 
+									display: inline-block;
+								}
+								margin-top: 2px;
+							}
+						p:nth-child(6) {
+								display: block;
+								margin-top: 50px;
+								margin-left: 3px;
+							}
 						ul{
-							margin-top: 40px;
+							margin-top: 10px;
 							list-style-type: none;
 							li {
 								display: inline;
 								margin-left: 24px;
 								a {
-									color: $blue;
+									color: $grey;
+									text-decoration: none;
 									&:hover {
-										color: $dark-blue;
+										color: $blue;
 									}
 								}
 							}
