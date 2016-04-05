@@ -3,21 +3,23 @@ block vars
     - var pageTitle = 'About'
 block content
     header#about.small
-    main
+    main#aboutPage
         section#slider
             .container
-                h2 Data & technology neither build movements nor share passions, people do.
+                h2 About 
+                    span Us
                 ul
                     li.active
                         a(href="#believe") What We Believe In
                     li
-                        a(href="#team") Team  
+                        a(href="#team") Skills & Team  
                     li
                         a(href="#jobs") Jobs  
         #slide
             section#believe
                 .container
                     .content
+                        h3 Data & technology neither build movements nor share passions, people do.
                         p 
                             span Organizations today are facing problems of unprecedented scale and complexity. 
                             span These are the problems we think technology and data can help to solve. This is why we’ve created Quorum: to 
@@ -28,32 +30,41 @@ block content
                         ul
                             li 
                                 div.icon
-                                    object(type="image/svg+xml" data="../images/icons/check-blue.svg")
+                                    img(src="../images/icons/check-blue.svg")
                                 div.sentence
                                     span PRIVACY & CIVIL LIBERTIES 
                             li 
                                 div.icon
-                                    object(type="image/svg+xml" data="../images/icons/check-blue.svg")
+                                    img(src="../images/icons/check-blue.svg")
                                 div.sentence
                                     span EMANCIPATE DATA 
                             li 
                                 div.icon
-                                    object(type="image/svg+xml" data="../images/icons/check-blue.svg")
+                                    img(src="../images/icons/check-blue.svg")
                                 div.sentence
                                     span OPEN SOFWARE
                             li 
                                 div.icon
-                                    object(type="image/svg+xml" data="../images/icons/check-blue.svg")
+                                    img(src="../images/icons/check-blue.svg")
                                 div.sentence
                                     span LET’S MAKE IT DONE : BUILD OUR PRODUCT FOR A PURPOSE
                             li 
                                 div.icon
-                                    object(type="image/svg+xml" data="../images/icons/check-blue.svg")
+                                    img(src="../images/icons/check-blue.svg")
                                 div.sentence
                                     span TECHNOLOGY HAVE TO ADAPT TO HUMAN, NOT THE OTHER WAY AROUND
                         p 
                             b Because technology and data can’t be the ultimate goal. 
-                            span It is just a mean to help people to make their work done and get on their lifes.  Volounteers of NGOs, associations or campaigners are so deeply dedicated to their cause. They deserve theirs tools to optimize everyday actions and focus on what is really important : MOBILISE. and organization to optimize their everyday actions and achieve goals.
+                            span It is just a mean to help people to 
+                                b make their work done 
+                                | and get on their lifes.  
+                                b Volounteers of NGOs
+                                | , 
+                                b associations 
+                                | or  
+                                b campaigners 
+                                | are so deeply dedicated to their cause. They deserve theirs tools to optimize everyday actions and focus on what is really important : 
+                                b MOBILISE. 
             section#team
                 .container
                     .content
@@ -97,7 +108,7 @@ block content
                             span On our blog features the 
                             b articles 
                             span written by Quorum’s team, fellows and friends. 
-                        button.green Go to BLOG
+                        button.purple Go to BLOG
             section#jobs
                 .container
                     .content

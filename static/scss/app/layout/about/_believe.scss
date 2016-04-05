@@ -2,8 +2,12 @@
 	#believe{
 		p {
 			text-align: justify;
+			line-height: 20px;
 			span {
 				display: block;
+				b {
+					color: $blue;
+				}
 			}
 		}
 		ul {

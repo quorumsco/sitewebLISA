@@ -1,5 +1,10 @@
 @include exports('slider') {
 	#slider{
+		h2 {
+			span {
+				color: $green;
+			}
+		}
 		ul {
 			list-style-type: none;
 			border-bottom: 1px solid $grey;
@@ -97,7 +102,7 @@
 		#slider {
 			ul {
 				border-bottom: none;
-				width: 400px;
+				width: 390px;
 				padding-bottom: 0px;
 				margin-bottom: 0px;
 				li {
@@ -147,4 +152,15 @@
 			}
 		}
 	}
+	#aboutPage {
+    	background: url('../images/team/Quorum_NB group_Retouche.png');
+    	background-size: 100% auto;
+    	background-attachment: fixed;
+  	}
+  	@media(max-width: 1024px) {
+  		#aboutPage {
+  			background-size: auto 100%;
+    		background-position: 50%;
+    	}
+  	}
 }

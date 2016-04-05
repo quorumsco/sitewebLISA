@@ -10,9 +10,9 @@
 		}
 	}
 	.small {
-		height: 100px;
+		height: 69px;
 		@media(max-width: 425px){
-			height: 120px;
+			height: 84px;
 		}
 	}
 	#home{
@@ -47,30 +47,5 @@
 			}
 		}
 	}
-	#about{
-		.container{
-			padding-top: 40px;
-		}
-	}
-	#campaigners{
-	
-	}
-	#nonProfits{
-	
-	}
-	#agency{
-	
-	}
-	#individuals{
-	
-	}
-	#contact{
-
-	}
-	#faq{
-	
-	}
-	#getEarlyAccess{
-	
-	}
+	#about {}
 }
