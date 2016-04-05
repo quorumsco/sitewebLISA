@@ -42,7 +42,12 @@
 							width: 200px;
 					}
 				}
-			}	
+			}
+			button.blue {
+				&:hover {
+					background: $red;
+				}
+			}
 		}
 		@media(max-width: $small-screen){
 			button {
