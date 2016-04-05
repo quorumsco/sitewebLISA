@@ -34,7 +34,7 @@
 					text-decoration: none;
 					color: $white-color;
 					&:hover {
-						color: $font-color;
+						color: $grey;
 					}
 				}
 			}
@@ -45,9 +45,9 @@
 		}
 		.banner{
 			display: inline-block;
-			i {
-				padding: 0 5px 0 30px;
-				border-left: 1px solid rgba(255, 255, 255, 0.3);
+			img {
+				padding: 0 5px 0 25px;
+				border-left: 1px solid rgba(255, 255, 255, 0.5);
 			}
 			button{
 				padding: 12px 20px;
@@ -83,9 +83,6 @@
 				margin-top: 10px;
 				width:143px;
 			}
-		}
-		.hidden-menu {
-			display:none;
 		}
 	}
 	#nav.active {
@@ -150,7 +147,7 @@
 			padding: 20px;
 			display: block;
 			text-align: center;
-			span, i {
+			span {
 				padding: 10px 0;
 			}
 			button {
@@ -161,6 +158,7 @@
 				-webkit-filter: invert(100%);
 				-moz-filter: invert(100%);
 				filter: invert(100%);
+				border-left: 0px;
 			}
 		}
 	}
