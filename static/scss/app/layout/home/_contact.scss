@@ -13,7 +13,7 @@
 	  			}
 	  		}
 			ul {
-				li {
+				li:nth-child(1) {
 						width:50%;
 						vertical-align : top;
 						text-align: left;
@@ -52,6 +52,19 @@
 							}
 						}
 						p {
+								margin-top: 1px;
+							}
+							p:nth-child(2) {
+								display: block;
+								margin-top: 5px;
+								margin-left: 3px;
+							}
+				}
+				li:nth-child(2) {
+						width:50%;
+						vertical-align : top;
+						text-align: left;
+						p {
 							margin-top: 15px;
 							i {
 								color: $grey;
@@ -68,12 +81,12 @@
 									display: inline-block;
 								}
 								margin-top: 2px;
-							}
+						}
 						p:nth-child(6) {
 								display: block;
 								margin-top: 50px;
 								margin-left: 3px;
-							}
+						}
 						ul{
 							margin-top: 10px;
 							list-style-type: none;
@@ -90,6 +103,7 @@
 							}
 						}
 				}
+				
 			}	
 	  	}
 
