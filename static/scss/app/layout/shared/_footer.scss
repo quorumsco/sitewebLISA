@@ -44,7 +44,7 @@
   				width: 100%;
   			}
             .container {
-                padding: 0 5%;
+                padding: 0 0;
             }
   			ul.nav-footer, ul.social-links {
   				float: none;
@@ -53,7 +53,7 @@
   			}
   			ul.nav-footer {
   				li {
-  					margin: 0 20px;
+  					margin: 0 12px;
   				}
   			}
   		}
@@ -67,6 +67,15 @@
             }
             ul.nav-footer {
 
+            }
+        } 
+    }
+    @media(min-width: $medium-screen) and (max-width: 818px) {
+        #footer{
+            ul.social-links, ul.social-links  {
+                float: none;
+                margin-left: 0px;
+                padding-left: 20px
             }
         } 
     }

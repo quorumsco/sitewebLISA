@@ -35,6 +35,21 @@
 			text-align: left;
 			margin-right: 8%; 
 		}
+		.sentence {
+			display: inline-block;
+		}
+	}
+	@media(max-width: 351px) {
+		#mobile {
+			.sentence {
+				width: 80%;
+				padding-left: 10px;
+				.part {
+					padding-left: 0px; 
+					margin-left: 0px;
+				}
+			}
+		}
 	}
 	@media(max-width: 1024px){
 		#mobile {

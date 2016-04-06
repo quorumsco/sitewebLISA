@@ -100,10 +100,10 @@ i[class*=' icon-'] {
 }
 
 body.en :lang(fr) {
-    display: none;
+    display: none !important;
 }
 body.fr :lang(en) {
-    display: none;
+    display: none !important;
 }
 body {
 	width: 100%;
