@@ -9,7 +9,7 @@ html
         meta(name='description' content='Quorum')
         meta(name='keywords' content='quorum')
         meta(name='author' content='Lisa Grenier - Quorum')
-        link(rel="icon" href="../images/icons/favicon-32x32.png")
+        link(rel="icon" href="../images/icons/favicon.ico")
         link(rel='stylesheet' href='stylesheets/app.css')
     body.fr
         nav#nav
@@ -27,7 +27,7 @@ html
                     .banner
                         img(src="../images/icons/phone.svg")
                         span  +33 1 79 73 40 04
-                        a(href='http://eepurl.com/bWJkZr')
+                        a(href='http://eepurl.com/bWJkZr' target="_blank")
                             button Get Early Access
         block content        
         footer#footer
@@ -51,14 +51,10 @@ html
                     li
                         a(href='/about.html') About Us
                     li
-                        a(href='https://medium.com/@quorumblog' target="blank") Blog
+                        a(href='https://medium.com/@quorumblog' target="_blank") Blog
                     li
                         a(href='/legals.html') Legal
     script(src='//code.jquery.com/jquery-2.1.4.min.js')
-    script(src='javascripts/TweenMax.js')
-    script(src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js')
-    script(src='javascripts/plugins/animation.gsap.js')
-    script(src="javascripts/typed.js")
     script(src="javascripts/menu.js")
     script(src="javascripts/form.js")   
     block javascript
