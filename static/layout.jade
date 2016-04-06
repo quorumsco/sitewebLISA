@@ -21,14 +21,21 @@ html
                 div.bar
                     ul.nav
                         li 
-                            a(href='/index.html#product') Product
+                            a(href='/index.html#product' lang="fr") Produit
+                            a(href='/index.html#product' lang="en") Product
                         li
-                            a(href='/index.html#contact') Contact Us
+                            a(href='/index.html#contact' lang="fr") Nous contacter
+                            a(href='/index.html#contact' lang="en") Contact Us
                     .banner
                         img(src="../images/icons/phone.svg")
                         span  +33 1 79 73 40 04
                         a(href='http://eepurl.com/bWJkZr' target="_blank")
-                            button Get Early Access
+                            button(lang="fr") S'inscrire
+                            button(lang="en") Get Early Access
+                        span.flag
+                            a(href="#" lang="fr") EN
+                        span.flag
+                            a(href="#" lang="en") FR
         block content        
         footer#footer
             .container
@@ -49,11 +56,15 @@ html
                             i.icon-google
                 ul.nav-footer
                     li
-                        a(href='/about.html') About Us
+                        a(href='/about.html') 
+                            span(lang="fr") L'Équipe
+                            span(lang="en") About Us
                     li
                         a(href='https://medium.com/@quorumblog' target="_blank") Blog
                     li
-                        a(href='/legals.html') Legal
+                        a(href='/legals.html') 
+                            span(lang="fr") Mentions Légales
+                            span(lang="en") Legal
     script(src='//code.jquery.com/jquery-2.1.4.min.js')
     script(src="javascripts/menu.js")
     script(src="javascripts/form.js")   
