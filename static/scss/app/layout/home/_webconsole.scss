@@ -3,9 +3,8 @@
 		margin-top: 10px;
 		background: url('../images/home/desktop2.png');
 		background-repeat: no-repeat;
-		background-position: 90%;
-		background-size: auto 100%;
-
+		background-position: 93% 69%;
+		background-size: auto 80%;
 		h3 {
 			p {
 				margin: 0 0 11px 0;
@@ -15,19 +14,19 @@
 		.container{
 			margin-left: calc(8% + 27px);
 			text-align: left;
-			width: 50%;
+			width: 90%;
 		}
 		.list {
 			div.sentence { 
 				color: $grey;
-				width: 600px;
+				width: 50%;
 				padding: 10px 0;
 				display: inline-block;
 			}
 			div.icon {
-				width: 16px;
+				width: 14px;
 				float: left;
-				padding: 10px;
+				padding: 7px;
 			}
 		}
 		.sentence {
@@ -65,105 +64,67 @@
 
 		}
 	}
-	@media(min-width: 1401px) and (max-width: 1470px){
+	@media(min-width: 1441px) {
 		#webconsole {
-			background-size: auto 90%;
+			h3 {
+				width: 60%;
+			}
+		}
+	}
+	@media(min-width: 1351px) and (max-width: 1440px){
+		#webconsole {
+			background-size: auto 75%;
+			background-position: 90% 80%;
 			.list {
 				div.sentence { 
-					width: 550px;
+					width: 50%;
 				}
 			}
 		}
 	}
-	@media(min-width: 1301px) and (max-width: 1400px){
+	@media(min-width: 1222px) and (max-width: 1350px){
 		#webconsole {
-			background-size: auto 90%;
+			background-size: auto 70%;
+			background-position: 90% 70%;
 			.list {
 				div.sentence { 
-					width: 400px;
+					width: 45%;
 				}
 			}
 		}
 	}
-	@media(min-width: 1110px) and (max-width: 1300px){
+	@media(min-width: 1151px) and (max-width: 1221px){
 		#webconsole {
-			background-size: auto 65%;
+			background-size: auto 70%;
+			background-position: 95% 80%;
 			.list {
 				div.sentence { 
-					width: 400px;
+					width: 38%;
 				}
 			}
 		}
 	}
-	@media(min-width: 1025px) and (max-width: 1109px){
+	@media(min-width: 1025px) and (max-width: 1150px){
 		#webconsole {
 			background-size: auto 60%;
+			background-position: 95% 70%;
 			.list {
 				div.sentence { 
-					width: 390px;
+					width: 38%;
+				}
+			}
+			h3 {
+				p {
+					display: inline-block;
 				}
 			}
 		}
 	}
-	@media(max-width: 351px) {
+	@media(max-width: 767px) {
 		#webconsole {
 			.list {
 				div.sentence {
-					width: 250px;
-				}
-			}
-		}
-	}
-	@media(min-width: 352px) and (max-width: 390px) {
-		#webconsole {
-			.list {
-				div.sentence {
-					width: 280px;
-				}
-			}
-		}
-	}
-	@media(min-width: 391px) and (max-width: 425px) {
-		#webconsole {
-			.list {
-				div.sentence {
-					width: 300px;
-				}
-			}
-		}
-	}
-	@media(min-width: 426px) and (max-width: 490px) {
-		#webconsole {
-			.list {
-				div.sentence {
-					width: 340px;
-				}
-			}
-		}
-	}
-	@media(min-width: 491px) and (max-width: 590px) {
-		#webconsole {
-			.list {
-				div.sentence {
-					width: 370px;
-				}
-			}
-		}
-	}
-	@media(min-width: 591px) and (max-width: 700px) {
-		#webconsole {
-			.list {
-				div.sentence {
-					width: 380px;
-				}
-			}
-		}
-	}
-	@media(min-width: 701px) and (max-width: 767px) {
-		#webconsole {
-			.list {
-				div.sentence {
-					width: 389px;
+					width: 86%;
 				}
 			}
 		}

@@ -1,12 +1,12 @@
 @include exports('contact') {
 	#contact {
 		margin-top: 60px;
-		margin-left: 10%;
 		.container {
-		  		span.quote{
+			width: 90%;
+		  	span.quote{
 		  			color: $grey;
 		  			font-size: 20px;
-		  		}
+		  	}
 	  		h2 {
 	  			p {
 	  				margin: 0;
@@ -17,6 +17,7 @@
 						width:50%;
 						vertical-align : top;
 						text-align: left;
+						margin-right: 10px; 
 						form {
 							input, textarea {
 								width: 350px;
@@ -61,7 +62,7 @@
 							}
 				}
 				li:nth-child(2) {
-						width:50%;
+						width: 43%;
 						vertical-align : top;
 						text-align: left;
 						p {
@@ -125,6 +126,14 @@
 		  		}
 				ul {
 					display: list-items;
+					li:nth-child(1) {
+						form {
+							input, textarea {
+								width: 100%
+							}
+						}
+						width: 100%;
+					}
 				}
 			}
 			ul {
@@ -145,7 +154,7 @@
 					li:nth-child(1) {
 						form {
 							input, textarea {
-								width: 260px;
+								width: 100%
 							}
 						}
 						width: 100%;
@@ -170,14 +179,6 @@
 		#contact {
 			.container {
 				ul {
-					li:nth-child(1) {
-						form {
-							input, textarea {
-								width: 260px;
-							}
-						}
-						width: 90%;
-					}
 					li:nth-child(2) {
 						width: auto;
 					}

@@ -1,14 +1,16 @@
 @include exports('product') {
   	#product {
   		margin-top: 60px;
-      margin-bottom: 60px;
+        margin-bottom: 60px;
   		.container {
-	  		span.quote{
-	  			color: $grey;
-	  			font-size: 20px;
-	  		}
-	  		h2 {
-        margin-top: 70px;
+            margin-top: 70px;
+            margin-left: 8%;
+            margin-right: 8%;
+            span.quote{
+                color: $grey;
+                font-size: 20px;
+            }
+            h2 {
 	  			p {
 	  				margin: 0;
                     display: inline;
@@ -28,6 +30,10 @@
         #product {
             text-align: left;
             padding: 0 10px;
+            .container {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     }
 }

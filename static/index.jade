@@ -160,7 +160,7 @@ block content
             .clearfix
         section#target
             .container
-                h2(lang="fr") Less process, mobilise more : ready to go ?
+                h2(lang="fr") Ready ? Go ?
                 h2(lang="en") Less process, mobilise more : ready to go ?
                 span.quote(lang="fr") Équipes de campagne, associations, syndicats, individus & mouvements, 
                     p nos technologies vous accompagnent sur le terrain.
@@ -185,21 +185,26 @@ block content
             .container
                 ul
                     li
-                        h2 Contact Form
+                        h2(lang="fr") Formulaire de contact
+                        h2(lang="en") Contact Form
                         form(action='//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&id=945bb5e298&c=?', method='post')
                             div.input
-                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Your email address', required='')
+                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Votre adresse mail', required='' lang="fr")
+                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Your email address', required='' lang="en")
+                                .border-input.blue.test
+                            div.input
+                                input#mce-LNAME(name='LNAME' type="text" placeholder="Votre nom" lang="fr")
+                                input#mce-LNAME(name='LNAME' type="text" placeholder="Your name" lang="en")
                                 .border-input.blue
                             div.input
-                                input#mce-LNAME(name='LNAME' type="text" placeholder="Your name")
-                                .border-input.blue
-                            div.input
-                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Your message")
+                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Votre message" lang="fr")
+                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Your message" lang="en")
                                 .border-textarea.blue
                             p
                                 button.blue#mc-embedded-subscribe(type='submit') GO!
                     li
-                        h2 Contact Info
+                        h2(lang="fr") Nous contacter
+                        h2(lang="en") Contact Info
                         p 
                             i.fa.fa-phone.fa-lg
                             span +33 1 79 73 40 04 

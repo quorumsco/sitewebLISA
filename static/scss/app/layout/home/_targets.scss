@@ -62,6 +62,10 @@
 	}
 	@media(max-width: $small-screen){
 		#target {	
+			.container {
+				margin-left: 2%;
+				margin-right: 2%; 
+			}
 			button {
 				height: 100px;
 				margin-top: 10px;
