@@ -30,6 +30,21 @@
 				padding: 10px;
 			}
 		}
+		.sentence {
+			display: inline-block;
+		}
+	}
+	@media(max-width: 351px) {
+		#webconsole {
+			.sentence {
+				width: 80%;
+				padding-left: 10px;
+				.part {
+					padding-left: 0px; 
+					margin-left: 0px;
+				}
+			}
+		}
 	}
 	@media(max-width: 1024px){
 		#webconsole {
@@ -50,7 +65,17 @@
 
 		}
 	}
-	@media(min-width: 1275px) and (max-width: 1400px){
+	@media(min-width: 1401px) and (max-width: 1470px){
+		#webconsole {
+			background-size: auto 90%;
+			.list {
+				div.sentence { 
+					width: 550px;
+				}
+			}
+		}
+	}
+	@media(min-width: 1301px) and (max-width: 1400px){
 		#webconsole {
 			background-size: auto 90%;
 			.list {
@@ -60,9 +85,9 @@
 			}
 		}
 	}
-	@media(min-width: 1110px) and (max-width: 1274px){
+	@media(min-width: 1110px) and (max-width: 1300px){
 		#webconsole {
-			background-size: auto 70%;
+			background-size: auto 65%;
 			.list {
 				div.sentence { 
 					width: 400px;
@@ -75,12 +100,12 @@
 			background-size: auto 60%;
 			.list {
 				div.sentence { 
-					width: 400px;
+					width: 390px;
 				}
 			}
 		}
 	}
-	@media(max-width: 320px) {
+	@media(max-width: 351px) {
 		#webconsole {
 			.list {
 				div.sentence {
@@ -89,7 +114,7 @@
 			}
 		}
 	}
-	@media(min-width: 321px) and (max-width: 390px) {
+	@media(min-width: 352px) and (max-width: 390px) {
 		#webconsole {
 			.list {
 				div.sentence {
