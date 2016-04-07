@@ -4,8 +4,9 @@
         margin-bottom: 60px;
   		.container {
             margin-top: 70px;
-            margin-left: 8%;
-            margin-right: 8%;
+            margin-left: auto; 
+            margin-right: auto;
+            width: 80%;
             span.quote{
                 color: $grey;
                 font-size: 20px;
@@ -34,6 +35,12 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+        }
+    }
+    @media(min-width: 1250px) {
+        .container {
+            margin-left: auto; 
+            margin-right: auto;
         }
     }
 }
