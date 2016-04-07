@@ -6,21 +6,41 @@ block content
     main#aboutPage
         section#slider
             .container
-                h2 About 
+                h2(lang="fr") L'Équi
+                    span pe
+                h2(lang="en") About 
                     span Us
                 ul
                     li.active
-                        a(href="#believe") WHAT WE BELIEVE IN
+                        a(href="#believe" lang="fr") NOTRE VISION ET NOS VALEURS
+                        a(href="#believe" lang="en") WHAT WE BELIEVE IN
                     li
-                        a(href="#team") SKILLS & TEAM  
+                        a(href="#team" lang="fr") COMPÉTENCES ET ÉQUIPE 
+                        a(href="#team" lang="en") SKILLS & TEAM  
                     li
-                        a(href="#jobs") JOBS  
+                        a(href="#jobs" lang="fr") JOBS  
+                        a(href="#jobs" lang="en") JOBS  
         #slide
             section#believe
                 .container
                     .content
-                        h3 "Data & technology neither build movements nor share passions, people do."
-                        p 
+                        h3(lang="fr") "Data et technologie ne construisent pas de grands mouvements, ne débattent pas d’idées et ne partagent pas leur passion ; les êtres humains oui."
+                        h3(lang="en") "Data & technology neither build movements nor share passions, people do."
+                        p(lang="fr")
+                            span Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent. 
+                            span Ces problèmes, nous pensons que la technologie, la data, les algorithmes peuvent aider à les régler.
+                            span Comme ils ont aidé à transformer à grande échelle le secteur financier, marchand ou logistique, nous pensons qu’ils peuvent aussi aider la société a aller mieux, aux hommes à diffuser leurs idées, à créer du mouvement, à se rassembler autour de causes. 
+                            
+                            span Nous pensons enfin que la technologie peut aider les hommes à avoir un impact sociétal fort, grâce au pouvoir d’analyse, de synchronisation et de coordination des technologies.
+                            
+                            span C’est pourquoi nous avons créé Quorum : pour mettre les technologies de la data dans des applications simples et fluides au service d’objectifs réels et concrets.
+
+                            span Mais si nous pensons que la technologie aide à augmenter les capacités des individus et des organisations, elle ne peut être une fin en soi. 
+
+                            span Elle n’est là que pour aider les hommes à accomplir.
+                            span C’est pourquoi la technologie doit disparaitre, dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour améliorer la qualité, l’impact de leurs actions et aller plus loin dans la mobilisation sans jamais oublier les valeurs phares qui nous définissent :
+                        
+                        p(lang="en")
                             span Organizations today are facing problems of unprecedented scale and complexity. 
                             span These are the problems we think technology and data can help to solve. 
                             span This is why we’ve created Quorum : to create 
@@ -32,28 +52,33 @@ block content
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span PRIVACY & CIVIL LIBERTIES 
+                                    span(lang="fr") LA PROTECTION DES DROITS & DE LA VIE PRIVEE  
+                                    span(lang="en") PRIVACY & CIVIL LIBERTIES 
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span EMANCIPATE DATA 
+                                    span(lang="fr") L’EMANCIPATION DE LA DONNEE ET l’OPEN DATA
+                                    span(lang="en") EMANCIPATE DATA 
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span OPEN SOFWARE
+                                    span(lang="fr") LE LOGICIEL LIBRE
+                                    span(lang="en") OPEN SOFWARE
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span LET’S MAKE IT DONE : BUILD OUR PRODUCT FOR A PURPOSE
+                                    span(lang="fr") « LET’S MAKE IT DONE » :  CONSTRUIRE DES OUTILS UTILES QUI REPONDENT A DES OBJECTIFS CONCRETS
+                                    span(lang="en") LET’S MAKE IT DONE : BUILD OUR PRODUCT FOR A PURPOSE
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span TECHNOLOGY HAS TO ADAPT TO HUMAN, NOT THE OTHER WAY AROUND
-                        p 
+                                    span(lang="fr") LA TECHNOLOGIE DOIT S’ADAPTER A l’INDIVIDU, PAS L’INVERSE
+                                    span(lang="en") TECHNOLOGY HAS TO ADAPT TO HUMAN, NOT THE OTHER WAY AROUND
+                        p(lang="en")
                             b Because technology and data can’t be the ultimate goal. 
                             span It is just a mean to help people to 
                                 b make their work done 
@@ -69,9 +94,12 @@ block content
             section#team
                 .container
                     .content
-                        h3 Collective Intelligence is our DNA. 
-                        p 
-
+                        h3(lang="fr") L’INTELLIGENCE COLLECTIVE est notre ADN.
+                        h3(lang="en") Collective Intelligence is our DNA. 
+                        
+                        p(lang="fr") Nous sommes des vétérans de grandes sociétés informatiques, des experts en sciences sociales qui construisent des algorithmes, des anciens volontaires d’ONG qui écrivent des lignes de codes et qui pensent que tous ensemble - si nous mettons en connexion nos cerveaux et nos expériences – nous pouvons créer des outils qui peuvent changer la donne.
+                        
+                        p(lang="en")
                             span We ‘re veterans of 
                             b IT world
                             span , we are bankers who 
@@ -79,7 +107,8 @@ block content
                             span , campaigners who 
                             b build algorithms
                             span , nonprofits alumni who collectively try to find new solutions to solve problems.
-                        h3 Founders
+                        h3(lang="fr") Fondateurs
+                        h3(lang="en") Founders
                         div.member
                             img(src="../images/team/florent-small.png" alt="Florent Barre")
                             p Florent Barre
@@ -103,7 +132,8 @@ block content
                             p
                                 a(href="https://www.linkedin.com/in/jean-baptiste-daniel-68a57a4" target="_blank")
                                     i.icon-linkedin
-                        p
+                        p(lang="fr") Retrouvez sur notre blog les publications de l’équipe Quorum, de nos invites et amis.
+                        p(lang="en")
                             span On our blog features the 
                             b articles 
                             span written by Quorum’s team, fellows and friends.
@@ -112,11 +142,12 @@ block content
             section#jobs
                 .container
                     .content
-                        p If you believe in applying cutting edge research to real-world problems, want to keep learning every day to stay ahead of the curve, if you believe in passion and creativity - then get in touch, we may have something for you. 
+                        p(lang="en") If you believe in applying cutting edge research to real-world problems, want to keep learning every day to stay ahead of the curve, if you believe in passion and creativity - then get in touch, we may have something for you. 
                         .middle
                             a(href="index.html#contact")
-                                button.pink Get In Touch
-                            span Follow us on Linked In to see our latest job offers 
+                                button.pink(lang="fr") Nous contacter
+                                button.pink(lang="en") Get In Touch
+                            span(lang="en") Follow us on Linked In to see our latest job offers 
                             a(href="https://www.linkedin.com/company/10114882" target="_blank")
                                 i.icon-linkedin
 block javascript
