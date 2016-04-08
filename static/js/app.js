@@ -68,21 +68,10 @@ $(document).ready(function(){
         }
     });
     var lang = navigator.language;
-    alert(lang);
     var regex = /^fr/;
-    alert(lang);
-    //if (lang.search(regex))
-    //if (lang.includes(regex))
     if (regex.test(lang))
-
-
-
-
-    //if((lang == "fr")||(lang == "fr-fr")||"fr-be"||"fr-ca"||"fr-lu"||"fr-mc"||"fr-ch") 
 { 
-        alert(lang);
         lang = "fr";
-        alert(lang);
         $('body').attr('class', lang);
     }
     
