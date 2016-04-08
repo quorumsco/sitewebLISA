@@ -5,7 +5,7 @@
 		background-repeat: no-repeat;
 
 		background-size: auto 100%;
-		background-position: calc(8% + 27px);
+		background-position: 15%;
 		h3 {
 			p {
 				margin: 0 0 11px 0;
@@ -29,11 +29,26 @@
 			}
 		}
 		.container{
-		margin-left: calc(8% + 27px);
+			margin-left: calc(8% + 27px);
 			float:right;
-			width: 40%;
+			width: 43%;
 			text-align: left;
 			margin-right: 8%; 
+		}
+		.sentence {
+			display: inline-block;
+		}
+	}
+	@media(max-width: 351px) {
+		#mobile {
+			.sentence {
+				width: 80%;
+				padding-left: 10px;
+				.part {
+					padding-left: 0px; 
+					margin-left: 0px;
+				}
+			}
 		}
 	}
 	@media(max-width: 1024px){
@@ -56,95 +71,34 @@
 
 		}
 	}
-	@media(min-width: 1275px) and (max-width: 1400px){
+	@media(min-width: 1110px) and (max-width: 1400px){
 		#mobile {
-			background-size: auto 100%;
 			.list {
 				div.sentence { 
-					width: 400px;
+					width: 70%;
 				}
 			}
 		}
 	}
-	@media(min-width: 1110px) and (max-width: 1274px){
+	@media(max-width: 1250px){
 		#mobile {
-			background-size: auto 80%;
-			.list {
-				div.sentence { 
-					width: 400px;
-				}
-			}
+			background-position: 4%;
 		}
 	}
 	@media(min-width: 1025px) and (max-width: 1109px){
 		#mobile {
-			background-size: auto 70%;
 			.list {
 				div.sentence { 
-					width: 370px;
+					width: 84%;
 				}
 			}
 		}
 	}
-	@media(max-width: 351px) {
+	@media(max-width: 767px) {
 		#mobile {
 			.list {
 				div.sentence {
-					width: 250px;
-				}
-			}
-		}
-	}
-	@media(min-width: 352px) and (max-width: 390px) {
-		#mobile {
-			.list {
-				div.sentence {
-					width: 280px;
-				}
-			}
-		}
-	}
-	@media(min-width: 391px) and (max-width: 425px) {
-		#mobile {
-			.list {
-				div.sentence {
-					width: 300px;
-				}
-			}
-		}
-	}
-	@media(min-width: 426px) and (max-width: 490px) {
-		#mobile {
-			.list {
-				div.sentence {
-					width: 340px;
-				}
-			}
-		}
-	}
-	@media(min-width: 491px) and (max-width: 590px) {
-		#mobile {
-			.list {
-				div.sentence {
-					width: 370px;
-				}
-			}
-		}
-	}
-	@media(min-width: 591px) and (max-width: 700px) {
-		#mobile {
-			.list {
-				div.sentence {
-					width: 380px;
-				}
-			}
-		}
-	}
-	@media(min-width: 701px) and (max-width: 767px) {
-		#mobile {
-			.list {
-				div.sentence {
-					width: 389px;
+					width: 86%;
 				}
 			}
 		}
