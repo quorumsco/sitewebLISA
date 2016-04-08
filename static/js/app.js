@@ -61,11 +61,19 @@ $(document).ready(function(){
         e.preventDefault();
         if($(this).text() == "EN"){
             $('body').removeClass('fr').addClass('en');
+            language();
         } else {
             $('body').removeClass('en').addClass('fr');
+            language();
         }
-    }); 
-
+    });
+    var lang = navigator.language;
+    if(lang == "en-US") {
+        lang = "en";
+    }
+    $('body').attr('class', lang);
+    console.log(navigator.language);
+    
     //Slider switch - about page
     $('#slider a').on('click', function(e){
         e.preventDefault();
