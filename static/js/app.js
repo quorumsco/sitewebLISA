@@ -68,8 +68,8 @@ $(document).ready(function(){
         }
     });
     var lang = navigator.language;
-    if(lang == "en-US") {
-        lang = "en";
+    if(lang == "fr"|"fr-fr"|"fr-be"|"fr-ca"|"fr-lu"|"fr-mc"|"fr-ch") {
+        lang = "fr";
     }
     $('body').attr('class', lang);
     console.log(navigator.language);
