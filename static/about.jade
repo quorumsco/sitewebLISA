@@ -120,4 +120,8 @@ block content
                             a(href="https://www.linkedin.com/company/10114882" target="_blank")
                                 i.icon-linkedin
 block javascript
-    script(src="javascripts/slide.js")     
+    script(src="javascripts/slide.js") 
+    script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js', data-dojo-config='usePlainJson: true, isDebug: false')
+    script(type='text/javascript').
+      require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us12.list-manage.com","uuid":"8d7c7595072992d8808c7993d","lid":"e5f9b9d368"}) })
+    
