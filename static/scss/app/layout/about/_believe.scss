@@ -1,8 +1,13 @@
 @include exports('believe') {
 	#believe{
+		h3 {
+			font-size: 30px;
+			margin-bottom: 70px;
+		}
 		p {
 			text-align: justify;
-			line-height: 25px;
+			line-height: 35px;
+			margin-bottom: 20px;
 			span {
 				display: block;
 				b {
@@ -10,14 +15,21 @@
 					font-weight: 100;
 				}
 			}
+			&[lang="fr"] {
+				span {
+					margin-bottom: 30px;
+				}
+			}
 		}
 		ul {
 			padding-left: 25px;
 			text-align: left;
 			list-style-type: none;
+			margin-top: 50px;
 			li {
+				margin-bottom: 20px;
 				div.sentence { 
-					width: 560px;
+					width: 90%;
 					padding: 10px 0;
 					display: inline-block;
 					margin-left: 20px;
@@ -50,23 +62,12 @@
 			}
 		}
 	}
-	@media(max-width: 380px){
+	@media(max-width: 500px){
 		#believe {
 			ul {
 				li {
 					div.sentence { 
-						width: 240px;
-					}
-				}
-			}
-		}
-	}
-	@media(min-width: 381px) and (max-width: 500px){
-		#believe {
-			ul {
-				li {
-					div.sentence { 
-						width: 290px;
+						width: 80%;
 					}
 				}
 			}
@@ -77,29 +78,7 @@
 			ul {
 				li {
 					div.sentence { 
-						width: 370px;
-					}
-				}
-			}
-		}
-	}
-	@media(min-width: 601px) and (max-width: 700px){
-		#believe {
-			ul {
-				li {
-					div.sentence { 
-						width: 480px;
-					}
-				}
-			}
-		}
-	}
-	@media(min-width: 701px) and (max-width: $medium-screen){
-		#believe {
-			ul {
-				li {
-					div.sentence { 
-						width: 480px;
+						width: 88%;
 					}
 				}
 			}
