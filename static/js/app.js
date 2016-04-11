@@ -82,4 +82,28 @@ $(document).ready(function(){
             });     
         }
     });
+
+    //Newsletter
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
+    $('#target').on('mouseenter', function(event){
+        if(getCookie('newsletter') != 1){
+            $('#newsletter').show();
+        }
+    });
+    $('#newsletter button').on('click', function() {
+        $('#newsletter').hide();
+        var d = new Date();
+        d.setTime(d.getTime() + (365*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = "newsletter=1;"+ expires;
+    });
 });

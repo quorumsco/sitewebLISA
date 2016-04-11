@@ -75,16 +75,18 @@ html
                         a(href='/legals.html') 
                             span(lang="fr") Mentions Légales
                             span(lang="en") Legal
-    script(type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false")
-    section#newsletter
-        .container
-            div
-                img(src="../images/popup/newsletter.png")
-            div
-                p DON'T MISS THE BEST OF OUR ARTICLES, PUBLICATIONS AND EVENTS !
-                form(action="//mc.us12.list-manage.com/subscribe/form-post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368" accept-charset="UTF-8" method="post" enctype="multipart/form-data" data-dojo-attach-point="formNode" novalidate="")
-                    input#mc-EMAIL(type="email" name="EMAIL" placeholder="Email")
-                    button.blue(type="submit") GO !
+        script(type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false")
+        section#newsletter
+            .container
+                div.banner
+                    button.leave
+                        i.fa.fa-close
+                    img(src="../images/popup/newsletter.png")
+                div
+                    p DON'T MISS THE BEST OF OUR ARTICLES, PUBLICATIONS AND EVENTS !
+                    form(action="//mc.us12.list-manage.com/subscribe/form-post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368" accept-charset="UTF-8" method="post" enctype="multipart/form-data" data-dojo-attach-point="formNode" novalidate="")
+                        input#mc-EMAIL(type="email" name="EMAIL" placeholder="Email")
+                        button.blue(type="submit") GO !
     script(src='//code.jquery.com/jquery-2.1.4.min.js')
     script(src="javascripts/app.js")   
     block javascript
