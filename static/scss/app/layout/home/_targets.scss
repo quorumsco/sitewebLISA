@@ -1,9 +1,10 @@
 @include exports('target') {
 	#target {
-	background-color: #f9f9fc;
-	margin-top: 60px;
+		background-color: #f9f9fc;
+		margin-top: 60px;
+		opacity: 0;
 		.container {
-		span.quote{
+			span.quote{
 	  			color: $grey;
 	  			font-size: 20px;
 	  		}
@@ -79,6 +80,7 @@
 	}
 	@media(max-width: 767px){
 		#target {
+			opacity: 1;
 			span.quote {
 				p {
 					display: inline;

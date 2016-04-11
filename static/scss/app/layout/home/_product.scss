@@ -2,7 +2,8 @@
   	#product {
   		margin-top: 60px;
         margin-bottom: 60px;
-  		.container {
+  		opacity: 0;
+        .container {
             margin-top: 70px;
             margin-left: auto; 
             margin-right: auto;
@@ -22,8 +23,9 @@
 	  		}
 	  	}
   	}
-  	@media(max-width: 768px){
+  	@media(max-width: 767px){
   		#product {
+        opacity: 1;
   			margin-top: 10px;
   			h2 {
   				display: inline-block;
