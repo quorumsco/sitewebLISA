@@ -84,6 +84,11 @@ $(document).ready(function(){
     });
 
     //Newsletter
+    var lang = navigator.language;
+    var regex = /^fr/;
+    if(regex.test(lang)){
+        $('#newsletter form').attr('action', '//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc')
+    }
     function getCookie(cname) {
         var name = cname + "=";
         var ca = document.cookie.split(';');

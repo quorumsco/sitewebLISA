@@ -13,6 +13,7 @@
 		.container {
 			background: #FFF;
 			padding-bottom: 30px;
+			width: 90%;
 			div {
 				&.banner {
 					position: relative;
@@ -43,6 +44,105 @@
 					button {
 						display: block;
 						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+	@media(max-width: 769px) and (orientation: portrait) {
+		#newsletter {
+			.container {
+				margin-top: 18%;
+				max-width: 769px;
+				width: auto;
+				div.banner {
+					img {
+						max-width: 300px;
+						margin-top: 70px;
+					}
+				}
+				div {
+					form {
+						width: 100%;
+						input {
+							width: 80%;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	@media(max-height: 320px) and (orientation: landscape) {
+		#newsletter {
+			padding-top: 0px;
+			.container {
+				margin-top: 0;
+				max-width: 768px;
+				padding: 20px 15px 9px 15px;
+				max-height: 320px;
+				div.banner {
+					img {
+						max-width: 300px;
+						margin-top: 50px;
+					}
+				}
+				div {
+					form {
+						width: 100%;
+					}
+					input {
+						width: 80%;
+					}
+				}
+			}
+		}
+	}
+	@media(min-height: 321px) and (max-height: 350px) and (orientation: landscape) {
+		#newsletter {
+			padding-top: 0px;
+			.container {
+				margin-top: 1.5%;
+				max-width: 768px;
+				padding: 10px 15px 9px 10px;
+				max-height: 350px;
+				div.banner {
+					img {
+						max-width: 300px;
+						margin-top: 50px;
+					}
+				}
+				div {
+					form {
+						width: 100%;
+					}
+					input {
+						width: 80%;
+					}
+				}
+			}
+		}
+	}
+	@media(min-height: 351px) and (max-height: 450px) and (orientation: landscape) {
+		#newsletter {
+			padding-top: 0px;
+			.container {
+				margin-top: 5%;
+				max-width: 768px;
+				padding: 10px 15px 9px 10px;
+				max-height: 350px;
+				div.banner {
+					img {
+						max-width: 300px;
+						margin-top: 50px;
+					}
+				}
+				div {
+					form {
+						width: 100%;
+					}
+					input {
+						width: 80%;
 					}
 				}
 			}
