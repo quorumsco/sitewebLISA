@@ -67,10 +67,14 @@ $(document).ready(function(){
             language();
         }
     });
-    if(navigator.language == 'fr') {
-        $('body').attr('class', 'fr');
+    var lang = navigator.language;
+    var regex = /^fr/;
+    if (regex.test(lang))
+    { 
+        lang = "fr";
+        $('body').attr('class', lang);
     }
-        
+    
     //Slider switch - about page
     $('#slider a').on('click', function(e){
         e.preventDefault();
