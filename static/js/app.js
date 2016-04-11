@@ -67,13 +67,10 @@ $(document).ready(function(){
             language();
         }
     });
-    var lang = navigator.language;
-    if(lang == "en-US") {
-        lang = "en";
+    if(navigator.language == 'fr') {
+        $('body').attr('class', 'fr');
     }
-    $('body').attr('class', lang);
-    console.log(navigator.language);
-    
+        
     //Slider switch - about page
     $('#slider a').on('click', function(e){
         e.preventDefault();
