@@ -75,13 +75,6 @@
 								margin-left: 22px;
 							}
 						}
-						p:nth-child(888) {
-
-								i:nth-last{ 
-									display: inline-block;
-								}
-								margin-top: 2px;
-						}
 						p:nth-child(6) {
 								display: block;
 								margin-top: 50px;
@@ -92,12 +85,15 @@
 							list-style-type: none;
 							li {
 								display: inline;
-								margin-left: 24px;
+								margin-right: 24px;
 								a {
 									color: $grey;
 									text-decoration: none;
 									&:hover {
 										color: $blue;
+									}
+									i {
+										font-size: 35px;
 									}
 								}
 							}
@@ -146,6 +142,7 @@
 						form {
 							input, textarea {
 								width: 260px;
+								resize: none;
 							}
 						}
 						width: 100%;
@@ -174,6 +171,7 @@
 						form {
 							input, textarea {
 								width: 260px;
+								resize: none;
 							}
 						}
 						width: 90%;
