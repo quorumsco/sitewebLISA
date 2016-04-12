@@ -4,81 +4,101 @@ block vars
 block content
     header#home.big
         .container
-            h1 Mobilise beyond 
+            h1(lang="fr") Mobiliser et Gagner 
+                span le terrain
+            h1(lang="en") Mobilise above 
                 span expectations
-            p.subtitle The data-driven app to build & organise big movements from your smartphone.
+            p.subtitle(lang="fr") L'application pour construire de grands mouvements, depuis son smartphone.
+            p.subtitle(lang="en") The data-driven app to build & organise big movements from your smartphone.
             a(href='http://eepurl.com/bWJkZr')
-                button.blue Get Early Access
+                button.blue(lang="fr") S'inscrire et obtenir une démo
+                button.blue(lang="en") Get Early Access
 
     main
         section#product
             .container
-                h2 Build people centered, meaningful and 
+                h2(lang="fr") Créer des actions de terrain organisées et ciblées 
+                    p qui engagent les individus.
+                h2(lang="en") Build people centered, meaningful and 
                     p organized field actions.
-                span.quote Every great cause starts with a simple conversation.
-                span.quote Make every interaction with the people count : 
-                span.quote Organize, Analyse, Target and Engage people using Quorum
+                span.quote(lang="fr") Construire un mouvement commence par une simple conversation.
+                span.quote(lang="en") Every great cause starts with a simple conversation. 
 
+                span.quote(lang="fr")  ORGANISER, CIBLER, ANALYSER et MOTIVER VOS EQUIPES
+                span.quote(lang="en") Make every interaction with the people count :  
+
+                span.quote(lang="fr")  pour que chaque rencontre sur le terrain ait du sens. 
+                span.quote(lang="en") Organize, Analyse, Target and Engage people using Quorum
         section#webconsole
             .container
                 .content
                     img(src="../images/icons/computer.svg")
                     div.sentence
-                        span.part WEB APPLICATION : ORGANISE & ANALYSE
-                    h3 Build, lead and organize your 
+                        span.part(lang="fr") APPLICATION WEB
+                        span.part(lang="en") WEB APPLICATION : ORGANISE & ANALYSE
+                    h3(lang="fr") Organiser et cibler
+                    h3(lang="en") Build, lead and organize your 
                         p team at any scale
                     hr.green.title
+                    
                     .list
-
-
                         div.line
                             div.icon
                                 img(src="../images/icons/check-green.svg")
                             div.sentence
-                                b Create a collective force with your team, at any scale
+                                b(lang="fr") Créer, fédérer et organiser les individus autour de votre mouvement, quelle qu’en soit l’échelle.
+                                b(lang="en") Create a collective force with your team, at any scale
                         div.line
                             div.icon
                                 img(src="../images/icons/check-green.svg")
                             div.sentence
-                                span Analyse : Use data beyond expectations to sharpen your strategy
+                                span(lang="fr") ANALYSER : Dégager du sens des données externes et des données récoltées sur le terrain et affiner vos stratégies
+                                span(lang="en") Analyse : Use data beyond expectations to sharpen your strategy
                         div.line
                             div.icon
                                 img(src="../images/icons/check-green.svg")
                             div.sentence
-                                span Identify swing zones 
+                                span(lang="fr") Identifier les zones prioritaires où agir
+                                span(lang="en") Identify swing zones 
                         div.line
                             div.icon
                                 img(src="../images/icons/check-green.svg")
                             div.sentence
-                                span Get key characteristics about people and territories
+                                span(lang="fr") Disposer de caractéristiques clés sur les individus et les territoires
+                                span(lang="en") Get key characteristics about people and territories
                         div.line
                             div.icon
                                 img(src="../images/icons/check-green.svg")
                             div.sentence
-                                span Track, analyze and predict with data 
+                                span(lang="fr") Construire des relations personnalisées et durables avec les individus
+                                span(lang="en") Track, analyze and predict with data 
                         div.line
                             div.icon
                                 img(src="../images/icons/check-green.svg")
                             div.sentence
-                                span Receive real-time results of your team progressions & actionable insights
+                                span(lang="fr") Suivre la PROGRESSION en temps réel de son action et de ses équipes & adapter sa stratégie
+                                span(lang="en") Receive real-time results of your team progressions & actionable insights
                         div.line
                             div.icon
                                 img(src="../images/icons/check-green.svg")
                             div.sentence
-                                span Build & develop long term & personalized relationships 
+                                span(lang="fr") REMONTEE D’INFORMATION : mieux identifier les préoccupations du terrain
+                                span(lang="en") Build & develop long term & personalized relationships 
                         div.line
                             div.icon
                                 img(src="../images/icons/check-green.svg")
                             div.sentence
-                                span Develop custom survey
-                        
-                        
+                                span(lang="fr") Paramétrer et personnaliser vos questionnaires
+                                span(lang="en") Develop custom survey
         section#mobile
             .container
                 .content
                     img(src="../images/icons/mobile.svg")
-                    span.part MOBILE APPLICATION: ON THE GO
-                    h3 Build big movements from 
+                    div.sentence
+                        span.part(lang="fr") APPLICATION MOBILE
+                        span.part(lang="en") MOBILE APPLICATION : ON THE GO
+                    h3(lang="fr") Sur le terrain : créer une force collective
+                    h3(lang="en") Build big movements from 
                         p your smartphone
                     hr.pink.title
                     .list
@@ -87,8 +107,9 @@ block content
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
                                 span
-                                    b Save hours with instant capture on the field
-                        div.line
+                                    b(lang="fr") GAGNER DU TEMPS en équipant ses équipes sur le terrain
+                                    b(lang="en") Save hours with instant capture on the field
+                        div.line(lang="en")
                             div.icon
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
@@ -97,28 +118,32 @@ block content
                             div.icon
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
-                                span Anytime/Anywhere engage a new person or organization to your movement
+                                span(lang="fr") À chaque instant ENGAGER de nouvelles personnes, de nouveaux soutiens, volontaires ou donateurs
+                                span(lang="en") Engage anytime/anywhere add a new person or organization to your movement
                         div.line
                             div.icon
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
-                                span Anytime/Anywhere log contact, assign tags, set follow-ups, change volunteer status, record donations and adjust support level
+                                span(lang="fr") À chaque instant ajouter ou rafraichir vos bases, assigner des tags, donner un statut aux individus, définir un call-to-action
+                                span(lang="en") Anytime/Anywhere log contact, assign tags, set follow-ups, change volunteer status, record donations and adjust support level
                         div.line
                             div.icon
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
-                                span Integrated Canvassing features
+                                span(lang="fr") Paramétrer et créer des feuilles de route d’action de terrain (porte-à-porte)
+                                span(lang="en") Integrated Canvassing features
                         div.line
                             div.icon
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
-                                span Motivate the team
-                        div.line
+                                span(lang="fr") Motiver vos équipes : ne remplissez plus des formulaires, tenez des conversations avec des individus grâce à des informations claires et fiables.
+                                span(lang="en") Motivate the team
+                        div.line(lang="en")
                             div.icon
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
                                 span Don’t fill contact forms, hold conversation with people thanks to targeted information 
-                        div.line
+                        div.line(lang="en")
                             div.icon
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
@@ -127,42 +152,56 @@ block content
                             div.icon
                                 img(src="../images/icons/check-pink.svg")
                             div.sentence
-                                span Follow your movement and teammates progression
+                                span(lang="fr") Suivre la progression de vos actions, et des autres membres de l’équipe
+                                span(lang="en") Follow your movement and teammates progression
             .clearfix
         section#target
             .container
-                h2 Less process, mobilise more : ready to go ?
-                span.quote Grassroots movements, political campaigns, nonprofits, our tech is your in-field support.
+                h2(lang="fr") Moins de process, mobiliser plus : GO !
+                h2(lang="en") Less process, mobilise more : this is on you...
+                span.quote(lang="fr") Équipes de campagne, associations, syndicats, individus & mouvements, 
+                    p nos technologies vous accompagnent sur le terrain.
+                span.quote(lang="en") Grassroots movements, political campaigns, nonprofits, our tech is your in-field support.
                 ul
                     li
-                        button(disabled) Campaigners & Staff 
+                        button(disabled lang="fr") Equipes de Campagne
+                        button(disabled lang="en") Campaigners & Staff 
                     li
-                        button(disabled) Agencies & Advocacy
+                        button(disabled lang="fr") Consultants & Agences
+                        button(disabled lang="en") Agencies & Advocacy
                     li
-                        button(disabled) Non-Profits & Volunteers
+                        button(disabled lang="fr") ONG & Associations
+                        button(disabled lang="en") Non-Profits & Volunteers
                     li
-                        button(disabled) Individuals & Game Changers
+                        button(disabled lang="fr") Individus & Changemakers
+                        button(disabled lang="en") Individuals & Game Changers
                 a(href='http://eepurl.com/bWJkZr' target="_blank")
-                    button.blue Get Early Access
+                    button.blue(lang="fr") S'inscrire et obtenir une démo
+                    button.blue(lang="en") Get Early Access
         section#contact
             .container
                 ul
                     li
-                        h2 Contact Form
+                        h2(lang="fr") Nous écrire
+                        h2(lang="en") Contact Form
                         form(action='//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&id=945bb5e298&c=?', method='post')
                             div.input
-                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Your email address', required='')
+                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Votre adresse mail', required='' lang="fr")
+                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Your email address', required='' lang="en")
+                                .border-input.blue.test
+                            div.input
+                                input#mce-LNAME(name='LNAME' type="text" placeholder="Votre nom" lang="fr")
+                                input#mce-LNAME(name='LNAME' type="text" placeholder="Your name" lang="en")
                                 .border-input.blue
                             div.input
-                                input#mce-LNAME(name='LNAME' type="text" placeholder="Your name")
-                                .border-input.blue
-                            div.input
-                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Your message")
+                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Votre message" lang="fr")
+                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Your message" lang="en")
                                 .border-textarea.blue
                             p
-                                button.blue#mc-embedded-subscribe(type='submit') GO!
+                                button.blue#mc-embedded-subscribe(type='submit') GO !
                     li
-                        h2 Contact Info
+                        h2(lang="fr") Nous trouver
+                        h2(lang="en") Contact Info
                         p 
                             i.fa.fa-phone.fa-lg
                             span +33 1 79 73 40 04 
@@ -176,7 +215,8 @@ block content
                             i.fa.fa-map-marker.fa-lg
                             span 9 rue de Condé - 33000 BORDEAUX
              
-                        p   Don't miss any of our events, news and publications, follow us :
+                        p(lang="fr") Ne manquez rien de nos évènements, de nos publications et actualités, suivez-nous :
+                        p(lang="en") Don't miss any of our events, news and publications, follow us :
                             ul
                                 li
                                     a(href='//facebook.com/quorumimpact' target="_blank")

@@ -3,9 +3,9 @@
 		margin-top: 60px;
 		background: url('../images/home/mobile4.png');
 		background-repeat: no-repeat;
-
 		background-size: auto 100%;
 		background-position: 15%;
+		opacity: 0;
 		h3 {
 			p {
 				margin: 0 0 11px 0;
@@ -96,6 +96,7 @@
 	}
 	@media(max-width: 767px) {
 		#mobile {
+			opacity: 1;
 			.list {
 				div.sentence {
 					width: 86%;

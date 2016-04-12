@@ -514,7 +514,7 @@ h1 {
   font-size: 54px;
   font-family: "ProximaNova-Bold";
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 40px;
   }
@@ -548,7 +548,7 @@ h3 {
 }
 @media (max-width: 425px) {
   h3 {
-    font-size: 34px;
+    font-size: 25px;
   }
 }
 
@@ -730,6 +730,9 @@ h3 {
   #nav .banner i {
     border: 0px;
   }
+  #nav .banner img {
+    padding-left: 0px;
+  }
   #nav .banner button {
     margin: 25px;
   }
@@ -767,7 +770,7 @@ header {
   text-align: left;
 }
 #home .container {
-  margin-left: calc(8% + 17px);
+  margin: 0 calc(8% + 17px);
   padding-top: 180px;
 }
 #home .container h1 span {
@@ -784,11 +787,14 @@ header {
     background-size: auto auto;
   }
   #home .container {
-    margin-left: 8%;
+    margin: 0 0 0 5%;
     padding-top: 84px;
   }
   #home .container .subtitle {
     font-size: 20px;
+  }
+  #home .container h1 span {
+    display: inline;
   }
 }
 
@@ -871,7 +877,7 @@ section hr.title {
     width: 100%;
   }
   #footer .container {
-    padding: 0 5%;
+    padding: 0 0;
   }
   #footer ul.nav-footer, #footer ul.social-links {
     float: none;
@@ -879,7 +885,7 @@ section hr.title {
     margin-left: 0px;
   }
   #footer ul.nav-footer li {
-    margin: 0 20px;
+    margin: 0 12px;
   }
 }
 @media (min-width: 26.5625em) and (max-width: 767px) {
@@ -891,35 +897,194 @@ section hr.title {
     padding-left: 0px;
   }
 }
+@media (min-width: 48em) and (max-width: 818px) {
+  #footer ul.social-links, #footer ul.social-links {
+    float: none;
+    margin-left: 0px;
+    padding-left: 20px;
+  }
+}
+#newsletter {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  position: fixed;
+  z-index: 1;
+  background: rgba(30, 40, 50, 0.6);
+  padding: 10% 0;
+  display: none;
+}
+#newsletter .container {
+  background: #FFF;
+  padding-bottom: 30px;
+  width: 90%;
+}
+#newsletter .container div.banner {
+  position: relative;
+}
+#newsletter .container div.banner .leave {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  color: #212121;
+}
+#newsletter .container div.banner img {
+  margin-top: 30px;
+  width: 550px;
+}
+#newsletter .container div form {
+  width: 60%;
+  margin: 0 auto;
+}
+#newsletter .container div form input {
+  width: 60%;
+  margin: 20px auto;
+  border: 0px;
+  border-bottom: 2px solid #20BFFA;
+  outline: 0px;
+}
+#newsletter .container div form button {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 769px) and (orientation: portrait) {
+  #newsletter .container {
+    margin-top: 18%;
+    max-width: 769px;
+    width: auto;
+  }
+  #newsletter .container div.banner img {
+    max-width: 300px;
+    margin-top: 70px;
+  }
+  #newsletter .container div form {
+    width: 100%;
+  }
+  #newsletter .container div form input {
+    width: 80%;
+  }
+}
+@media (max-height: 320px) and (orientation: landscape) {
+  #newsletter {
+    padding-top: 0px;
+  }
+  #newsletter .container {
+    margin-top: 0;
+    max-width: 768px;
+    padding: 20px 15px 9px 15px;
+    max-height: 320px;
+  }
+  #newsletter .container div.banner img {
+    max-width: 300px;
+    margin-top: 50px;
+  }
+  #newsletter .container div form {
+    width: 100%;
+  }
+  #newsletter .container div input {
+    width: 80%;
+  }
+}
+@media (min-height: 321px) and (max-height: 350px) and (orientation: landscape) {
+  #newsletter {
+    padding-top: 0px;
+  }
+  #newsletter .container {
+    margin-top: 1.5%;
+    max-width: 768px;
+    padding: 10px 15px 9px 10px;
+    max-height: 350px;
+  }
+  #newsletter .container div.banner img {
+    max-width: 300px;
+    margin-top: 50px;
+  }
+  #newsletter .container div form {
+    width: 100%;
+  }
+  #newsletter .container div input {
+    width: 80%;
+  }
+}
+@media (min-height: 351px) and (max-height: 450px) and (orientation: landscape) {
+  #newsletter {
+    padding-top: 0px;
+  }
+  #newsletter .container {
+    margin-top: 5%;
+    max-width: 768px;
+    padding: 10px 15px 9px 10px;
+    max-height: 350px;
+  }
+  #newsletter .container div.banner img {
+    max-width: 300px;
+    margin-top: 50px;
+  }
+  #newsletter .container div form {
+    width: 100%;
+  }
+  #newsletter .container div input {
+    width: 80%;
+  }
+}
 #product {
   margin-top: 60px;
   margin-bottom: 60px;
+  opacity: 0;
+}
+#product .container {
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 #product .container span.quote {
   color: #9FA4AB;
   font-size: 20px;
 }
-#product .container h2 {
-  margin-top: 70px;
+#product .container span.quote:nth-of-type(1), #product .container span.quote:nth-of-type(2) {
+  display: block;
 }
 #product .container h2 p {
   margin: 0;
+  display: inline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #product {
+    opacity: 1;
     margin-top: 10px;
   }
   #product h2 {
     display: inline-block;
   }
-  #product h2 p {
-    display: inline-block;
+}
+@media (max-width: 425px) {
+  #product {
+    text-align: left;
+    padding: 0 10px;
+  }
+  #product .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1250px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 #target {
   background-color: #f9f9fc;
   margin-top: 60px;
+  opacity: 0;
 }
 #target .container {
   margin-top: 60px;
@@ -956,12 +1121,6 @@ section hr.title {
 #target .container button.blue:hover {
   background: #EA3358;
 }
-@media (max-width: 26.5625em) {
-  #target button {
-    height: 100px;
-    margin-top: 10px;
-  }
-}
 #target ul {
   padding-left: 0;
   list-style-type: none;
@@ -975,12 +1134,35 @@ section hr.title {
   }
 }
 
+@media (max-width: 26.5625em) {
+  #target .container {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  #target button {
+    height: 100px;
+    margin-top: 10px;
+  }
+  #target ul li {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 767px) {
+  #target {
+    opacity: 1;
+  }
+  #target span.quote p {
+    display: inline;
+    margin-top: 0px;
+  }
+}
 #webconsole {
   margin-top: 10px;
   background: url("../images/home/desktop3.png");
   background-repeat: no-repeat;
   background-position: 98%;
   background-size: auto 100%;
+  opacity: 0;
 }
 #webconsole h3 {
   width: 60%;
@@ -1020,6 +1202,32 @@ section hr.title {
     margin-left: 0px;
   }
 }
+@media (max-width: 767px) {
+  #webconsole {
+    opacity: 1;
+  }
+  #webconsole .list div.sentence {
+    width: 86%;
+  }
+}
+@media (max-width: 48em) {
+  #webconsole h3 {
+    width: 100%;
+  }
+  #webconsole .container {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #webconsole h3 {
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  #webconsole .list div.sentence {
+    width: 90%;
+  }
+}
 @media (max-width: 1024px) {
   #webconsole {
     margin-top: 20px;
@@ -1036,33 +1244,25 @@ section hr.title {
     margin-bottom: 11px;
   }
 }
-@media (max-width: 48em) {
-  #webconsole h3 {
-    width: 100%;
-  }
-  #webconsole .container {
-    margin: 0 auto;
-  }
-}
-@media (max-width: 767px) {
-  #webconsole .list div.sentence {
-    width: 86%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  #webconsole h3 {
-    width: 90%;
-  }
-}
-@media (max-width: 1024px) {
-  #webconsole .list div.sentence {
-    width: 90%;
-  }
-}
 @media (min-width: 1025px) and (max-width: 1150px) {
   #webconsole {
     background-size: auto 71%;
     background-position: 100% 76%;
+  }
+  #webconsole h3 {
+    width: 80%;
+  }
+  #webconsole .list div.sentence {
+    width: 38%;
+  }
+  #webconsole h3 p {
+    display: inline-block;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1150px) {
+  #webconsole {
+    background-size: auto 68%;
+    background-position: 100% 70%;
   }
   #webconsole h3 {
     width: 80%;
@@ -1112,12 +1312,25 @@ section hr.title {
     width: 60%;
   }
 }
+@media (max-width: 1024px) {
+  #webconsole {
+    background-size: auto 70%;
+    background-position: 95% 80%;
+  }
+  #webconsole h3 {
+    width: 80%;
+  }
+  #webconsole .list div.sentence {
+    width: 90%;
+  }
+}
 #mobile {
   margin-top: 60px;
   background: url("../images/home/mobile4.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: 15%;
+  opacity: 0;
 }
 #mobile h3 p {
   margin: 0 0 11px 0;
@@ -1191,6 +1404,9 @@ section hr.title {
   }
 }
 @media (max-width: 767px) {
+  #mobile {
+    opacity: 1;
+  }
   #mobile .list div.sentence {
     width: 86%;
   }
@@ -1202,7 +1418,9 @@ section hr.title {
 }
 #contact {
   margin-top: 60px;
-  margin-left: 10%;
+}
+#contact .container {
+  width: 90%;
 }
 #contact .container span.quote {
   color: #9FA4AB;
@@ -1215,6 +1433,7 @@ section hr.title {
   width: 50%;
   vertical-align: top;
   text-align: left;
+  margin-right: 10px;
 }
 #contact .container ul li:nth-child(1) form input, #contact .container ul li:nth-child(1) form textarea {
   width: 350px;
@@ -1256,7 +1475,7 @@ section hr.title {
   margin-left: 3px;
 }
 #contact .container ul li:nth-child(2) {
-  width: 50%;
+  width: 43%;
   vertical-align: top;
   text-align: left;
 }
@@ -1271,16 +1490,8 @@ section hr.title {
   display: block;
   margin-left: 22px;
 }
-#contact .container ul li:nth-child(2) p:nth-child(888) {
-  margin-top: 2px;
-}
-#contact .container ul li:nth-child(2) p:nth-child(888) i:nth-last {
-  display: inline-block;
-}
 #contact .container ul li:nth-child(2) p:nth-child(6) {
   display: block;
-  margin-top: 50px;
-  margin-left: 3px;
 }
 #contact .container ul li:nth-child(2) ul {
   margin-top: 10px;
@@ -1288,7 +1499,7 @@ section hr.title {
 }
 #contact .container ul li:nth-child(2) ul li {
   display: inline;
-  margin-left: 24px;
+  margin-right: 24px;
 }
 #contact .container ul li:nth-child(2) ul li a {
   color: #9FA4AB;
@@ -1296,6 +1507,9 @@ section hr.title {
 }
 #contact .container ul li:nth-child(2) ul li a:hover {
   color: #20BFFA;
+}
+#contact .container ul li:nth-child(2) ul li i {
+  font-size: 32px;
 }
 #contact ul {
   padding-left: 0;
@@ -1316,6 +1530,12 @@ section hr.title {
   #contact .container ul {
     display: list-items;
   }
+  #contact .container ul li:nth-child(1) {
+    width: 100%;
+  }
+  #contact .container ul li:nth-child(1) form input, #contact .container ul li:nth-child(1) form textarea {
+    width: 100%;
+  }
   #contact ul {
     padding-left: 0;
     list-style-type: none;
@@ -1332,7 +1552,7 @@ section hr.title {
     width: 100%;
   }
   #contact .container ul li:nth-child(1) form input, #contact .container ul li:nth-child(1) form textarea {
-    width: 260px;
+    width: 100%;
   }
   #contact .container ul li:nth-child(2) {
     width: auto;
@@ -1346,12 +1566,6 @@ section hr.title {
   }
 }
 @media (min-width: 326px) and (max-width: 425px) {
-  #contact .container ul li:nth-child(1) {
-    width: 90%;
-  }
-  #contact .container ul li:nth-child(1) form input, #contact .container ul li:nth-child(1) form textarea {
-    width: 260px;
-  }
   #contact .container ul li:nth-child(2) {
     width: auto;
   }
@@ -1367,9 +1581,14 @@ section hr.title {
     width: auto;
   }
 }
+#believe h3 {
+  font-size: 30px;
+  margin-bottom: 70px;
+}
 #believe p {
   text-align: justify;
-  line-height: 25px;
+  line-height: 35px;
+  margin-bottom: 20px;
 }
 #believe p span {
   display: block;
@@ -1378,13 +1597,21 @@ section hr.title {
   color: #20BFFA;
   font-weight: 100;
 }
+#believe p[lang="fr"] span {
+  margin-bottom: 30px;
+}
 #believe ul {
   padding-left: 25px;
   text-align: left;
   list-style-type: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#believe ul li {
+  margin-bottom: 20px;
 }
 #believe ul li div.sentence {
-  width: 560px;
+  width: 90%;
   padding: 10px 0;
   display: inline-block;
   margin-left: 20px;
@@ -1411,34 +1638,19 @@ section hr.title {
     float: left;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 500px) {
   #believe ul li div.sentence {
-    width: 240px;
-  }
-}
-@media (min-width: 381px) and (max-width: 500px) {
-  #believe ul li div.sentence {
-    width: 290px;
+    width: 80%;
   }
 }
 @media (min-width: 501px) and (max-width: 600px) {
   #believe ul li div.sentence {
-    width: 370px;
-  }
-}
-@media (min-width: 601px) and (max-width: 700px) {
-  #believe ul li div.sentence {
-    width: 480px;
-  }
-}
-@media (min-width: 701px) and (max-width: 48em) {
-  #believe ul li div.sentence {
-    width: 480px;
+    width: 88%;
   }
 }
 #team p {
   text-align: justify;
-  line-height: 25px;
+  line-height: 35px;
 }
 #team .container .content {
   padding-bottom: 30px;
@@ -1532,9 +1744,12 @@ section hr.title {
   text-align: left;
 }
 #slider ul li a {
-  padding: 12px 140px 12px 20px;
+  padding: 12px 100px 12px 20px;
   color: #9FA4AB;
   text-decoration: none;
+}
+#slider ul li:nth-child(3) a {
+  padding-right: 50px;
 }
 #slider ul li:nth-child(1):hover a {
   color: #20BFFA;
@@ -1544,6 +1759,7 @@ section hr.title {
 }
 #slider ul li:nth-child(3):hover a {
   color: #DC44A3;
+  padding-right: 50px;
 }
 #slider ul li.active:nth-child(1) a {
   border-color: #20BFFA;
@@ -1622,9 +1838,6 @@ section hr.title {
   #slider ul {
     width: 750px;
   }
-  #slider ul li a {
-    padding-right: 125px;
-  }
 
   #slide .container {
     width: 750px;
@@ -1637,7 +1850,7 @@ section hr.title {
 }
 #aboutPage {
   background: url("../images/team/Quorum_NB_group_Retouche5.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -1649,7 +1862,7 @@ section hr.title {
 }
 #jobs p {
   text-align: justify;
-  line-height: 25px;
+  line-height: 35px;
 }
 #jobs span {
   display: block;
@@ -1781,11 +1994,11 @@ i[class*=' icon-'] {
 }
 
 body.en :lang(fr) {
-  display: none;
+  display: none !important;
 }
 
 body.fr :lang(en) {
-  display: none;
+  display: none !important;
 }
 
 body {
@@ -1796,7 +2009,7 @@ body {
 }
 
 main {
-  min-height: 80%;
+  min-height: 88%;
 }
 
 .blue {
@@ -1825,4 +2038,44 @@ main {
 
 .clearfix {
   clear: both;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.animated {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }

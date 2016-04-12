@@ -16,9 +16,14 @@
 				text-align: left;
 
 				a {
-					padding: 12px 140px 12px 20px;
+					padding: 12px 100px 12px 20px;
 					color: $grey;
 					text-decoration: none;
+				}
+				&:nth-child(3){
+					a {
+						padding-right: 50px;
+					}
 				}
 				&:nth-child(1):hover{
 					a {
@@ -33,6 +38,7 @@
 				&:nth-child(3):hover{
 					a {
 						color: $pink;
+						padding-right: 50px;
 					}
 				}
 
@@ -134,11 +140,6 @@
 		#slider {
 			ul {
 				width: 750px;
-				li {
-					a {
-						padding-right: 125px;
-					}
-				}
 			}
 		}
 		#slide{
@@ -154,7 +155,7 @@
 	}
 	#aboutPage {
     	background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
-    	background-size: 100% auto;
+    	background-size: cover;
     	background-attachment: fixed;
   	}
   	@media(max-width: 1024px) {

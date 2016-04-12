@@ -4,7 +4,7 @@ build
 Desktop.ini
 node_modules
 static/vendor
-public/javascript/*
-public/stylesheets/*
+public/javascripts/
+public/stylesheets/
 Gemfile.lock
 .jshintrc

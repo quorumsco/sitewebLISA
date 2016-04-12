@@ -11,7 +11,15 @@ html
         meta(name='author' content='Lisa Grenier - Quorum')
         link(rel="icon" href="../images/icons/favicon.ico")
         link(rel='stylesheet' href='stylesheets/app.css')
-    body.fr
+    body.en
+        script(type="text/javascript").
+            var lang = navigator.language;
+            var regex = /^fr/;
+            if (regex.test(lang))
+            { 
+                lang = "fr";
+                document.body.className = lang;
+            }
         nav#nav
             .content
                 a(href='/').navbar-brand
@@ -21,14 +29,23 @@ html
                 div.bar
                     ul.nav
                         li 
-                            a(href='/index.html#product') Product
+                            a(href='/#product') 
+                                span(lang="fr") Produit
+                                span(lang="en") Product
                         li
-                            a(href='/index.html#contact') Contact Us
+                            a(href='/#contact') 
+                                span(lang="fr") Nous contacter
+                                span(lang="en") Contact Us
                     .banner
                         img(src="../images/icons/phone.svg")
                         span  +33 1 79 73 40 04
                         a(href='http://eepurl.com/bWJkZr' target="_blank")
-                            button Get Early Access
+                            button(lang="fr") S'inscrire
+                            button(lang="en") Get Early Access
+                        span.flag
+                            a(href="#" lang="fr") EN
+                        span.flag
+                            a(href="#" lang="en") FR
         block content        
         footer#footer
             .container
@@ -49,12 +66,28 @@ html
                             i.icon-google
                 ul.nav-footer
                     li
-                        a(href='/about.html') About Us
+                        a(href='/about.html') 
+                            span(lang="fr") Équipe
+                            span(lang="en") About Us
                     li
                         a(href='https://medium.com/@quorumblog' target="_blank") Blog
                     li
-                        a(href='/legals.html') Legal
+                        a(href='/legals.html') 
+                            span(lang="fr") Mentions Légales
+                            span(lang="en") Legal
+        script(type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false")
+        section#newsletter
+            .container
+                div.banner
+                    button.leave
+                        i.fa.fa-close
+                    img(src="../images/popup/newsletter.png")
+                div
+                    p(lang="fr") DON'T MISS THE BEST OF OUR ARTICLES, PUBLICATIONS AND EVENTS !
+                    p(lang="en") DON'T MISS THE BEST OF OUR ARTICLES, PUBLICATIONS AND EVENTS !
+                    form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368" method="post" enctype="multipart/form-data" data-dojo-attach-point="formNode" novalidate="")
+                        input#mce-EMAIL(type="email" name="EMAIL" placeholder="Email")
+                        button.blue(type="submit") GO !
     script(src='//code.jquery.com/jquery-2.1.4.min.js')
-    script(src="javascripts/menu.js")
-    script(src="javascripts/form.js")   
+    script(src="javascripts/app.js")   
     block javascript

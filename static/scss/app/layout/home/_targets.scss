@@ -1,9 +1,10 @@
 @include exports('target') {
 	#target {
-	background-color: #f9f9fc;
-	margin-top: 60px;
+		background-color: #f9f9fc;
+		margin-top: 60px;
+		opacity: 0;
 		.container {
-		span.quote{
+			span.quote{
 	  			color: $grey;
 	  			font-size: 20px;
 	  		}
@@ -49,12 +50,6 @@
 				}
 			}
 		}
-		@media(max-width: $small-screen){
-			button {
-				height: 100px;
-				margin-top: 10px;
-			}
-		}
 		ul{
 			padding-left: 0;
 			list-style-type: none;
@@ -62,6 +57,34 @@
 				display: inline-block;
 				@media(max-width: $small-screen){
 					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+	@media(max-width: $small-screen){
+		#target {	
+			.container {
+				margin-left: 2%;
+				margin-right: 2%; 
+			}
+			button {
+				height: 100px;
+				margin-top: 10px;
+			}
+			ul {
+				li {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+	@media(max-width: 767px){
+		#target {
+			opacity: 1;
+			span.quote {
+				p {
+					display: inline;
+					margin-top: 0px;
 				}
 			}
 		}
