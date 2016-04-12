@@ -14,7 +14,7 @@ $(window).scroll(function(event){
     }
 
     //Animation fade top
-    if(window.innerWidth >= 768) {
+    if(window.innerWidth >= 768 && $('#product').length > 0) {
         var breakpointProduct = $('#product').position().top - 400;
         var breakpointWebconsole = $('#webconsole').position().top - 400;
         var breakpointMobile = $('#mobile').position().top - 400;
