@@ -87,11 +87,13 @@ html
                         i.fa.fa-close
                     img(src="../images/popup/newsletter.png")
                 div
-                    p(lang="fr") DON'T MISS THE BEST OF OUR ARTICLES, PUBLICATIONS AND EVENTS !
+                    p(lang="fr") Ne manquez rien du meilleur de nos publications, actualités et évènements !
                     p(lang="en") DON'T MISS THE BEST OF OUR ARTICLES, PUBLICATIONS AND EVENTS !
                     form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368" method="post" enctype="multipart/form-data" data-dojo-attach-point="formNode" novalidate="")
-                        input#mce-EMAIL(type="email" name="EMAIL" required placeholder="Email")
-                        button.blue(type="submit") GO !
+                        div.input
+                            input#mce-EMAIL(type="email" name="EMAIL" required placeholder="Email")
+                            .border-input.blue
+                            button.blue(type="submit") GO !
     script(type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false")
     script(src='//code.jquery.com/jquery-2.1.4.min.js')
     script(src="javascripts/app.js")   

@@ -36,13 +36,13 @@ $(window).scroll(function(event){
 });
 $(document).ready(function(){
     //Border animation - #contact home page
-    $('#contact input, #contact textarea').on('focusin', function(){
+    $('#contact input, #contact textarea, #newsletter input').on('focusin', function(){
         var widthInput = $(this).width();
         $(this).parent().children('div').animate({
             width: widthInput+'px'
         }, 300);
     });
-    $('#contact input, #contact textarea').on('focusout', function(){
+    $('#contact input, #contact textarea, #newsletter input').on('focusout', function(){
         $(this).parent().children('div').animate({
             width: '0px'
         }, 300);

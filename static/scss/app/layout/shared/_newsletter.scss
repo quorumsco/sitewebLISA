@@ -11,12 +11,13 @@
 		padding: 10% 0;
 		display: none;
 		.container {
-			background: #FFF;
+			background: $light-grey;
 			padding-bottom: 30px;
 			width: 90%;
 			div {
 				&.banner {
 					position: relative;
+					margin-bottom: 50px;
 					.leave {
 						position: absolute;
 						top: 0;
@@ -28,18 +29,34 @@
 					}
 					img {
 						margin-top: 30px;
-						width: 550px;
+						max-width: 300px;
 					}
 				}
 				form {
-					width: 60%;
 					margin: 0 auto;
 					input {
-						width: 60%;
+						background: transparent;
+						width: 100%;
 						margin: 20px auto;
 						border: 0px;
-						border-bottom: 2px solid $blue;
+						border-bottom: 2px solid $light-grey;
 						outline: 0px;
+					}
+					.input {
+						width: 60%;
+						margin: 0 auto;
+						position: relative;
+						.border-input{
+							position: absolute;
+							width: 0px;
+							height: 2px;
+							&.active {
+								width: 450px;
+							}
+						}
+						.border-input {
+							top: 38px;
+						}
 					}
 					button {
 						display: block;
@@ -57,7 +74,6 @@
 				width: auto;
 				div.banner {
 					img {
-						max-width: 300px;
 						margin-top: 70px;
 					}
 				}
@@ -66,6 +82,12 @@
 						width: 100%;
 						input {
 							width: 80%;
+							border-bottom: 2px solid $grey;
+						}
+						.input {
+							.border-input {
+								display: none;
+							}
 						}
 					}
 				}
@@ -83,7 +105,6 @@
 				max-height: 320px;
 				div.banner {
 					img {
-						max-width: 300px;
 						margin-top: 50px;
 					}
 				}
@@ -108,7 +129,6 @@
 				max-height: 350px;
 				div.banner {
 					img {
-						max-width: 300px;
 						margin-top: 50px;
 					}
 				}
@@ -133,7 +153,6 @@
 				max-height: 350px;
 				div.banner {
 					img {
-						max-width: 300px;
 						margin-top: 50px;
 					}
 				}
@@ -143,6 +162,26 @@
 					}
 					input {
 						width: 80%;
+					}
+				}
+			}
+		}
+	}
+	@media(max-height: 450px) and (orientation: landscape) {
+		#newsletter {
+			.container {
+				div {
+					form {
+						width: 100%;
+						input {
+							width: 80%;
+							border-bottom: 2px solid $grey;
+						}
+						.input {
+							.border-input {
+								display: none;
+							}
+						}
 					}
 				}
 			}
