@@ -22,11 +22,12 @@
 						input, textarea {
 							width: 350px;
 							border: 0;
-							border-bottom: 2px solid $light-grey;
+							border-bottom: 2px solid #E0E0E0;
 							padding: 10px 0;
 							margin-bottom: 10px;
 							outline: none;
-							background-color:#F2F2F2;
+							background-color: #F2F2F2;
+							cursor: pointer;
 						}
 						button:hover {
 							background-color: $red;

@@ -15,7 +15,14 @@ html
         meta(property="og:image" content="https://www.quorum-impact.com/public/images/icons/avatar-rs-2.png")
         link(rel="icon" href="../images/icons/favicon.ico")
         link(rel='stylesheet' href='stylesheets/app.css')
+        <!--[if IE 8]>
+        link(rel='stylesheet' href='stylesheets/ie.css')
+        <![endif]-->
+        <!--[if IE 9]>
+        link(rel='stylesheet' href='stylesheets/ie.css')
+        <![endif]-->
     body.en
+
         script(type="text/javascript").
             var lang = navigator.language;
             var regex = /^fr/;
