@@ -10,9 +10,10 @@ block content
                 span expectations
             p.subtitle(lang="fr") L'application pour construire de grands mouvements, depuis son smartphone.
             p.subtitle(lang="en") The data-driven app to build & organise big movements from your smartphone.
-            a(href='http://eepurl.com/bWJkZr')
-                button.blue(lang="fr") S'inscrire et obtenir une démo
-                button.blue(lang="en") Get Early Access
+            a(lang="fr" href="http://eepurl.com/bWGgCL")
+                button.blue S'inscrire et obtenir une démo
+            a(lang="en" href="http://eepurl.com/bWJkZr")
+                button.blue Get Early Access
 
     main
         section#product
@@ -175,27 +176,37 @@ block content
                     li
                         button(disabled lang="fr") Individus & Changemakers
                         button(disabled lang="en") Individuals & Game Changers
-                a(href='http://eepurl.com/bWJkZr' target="_blank")
-                    button.blue(lang="fr") S'inscrire et obtenir une démo
-                    button.blue(lang="en") Get Early Access
+                a(lang="fr" href="http://eepurl.com/bWJkZr" target="_blank")
+                    button.blue S'inscrire et obtenir une démo
+                a(lang="en" href="http://eepurl.com/bWJkZr" target="_blank")
+                    button.blue Get Early Access
         section#contact
             .container
                 ul
                     li
                         h2(lang="fr") Nous écrire
                         h2(lang="en") Contact Form
-                        form(action='//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&id=945bb5e298&c=?', method='post')
+                        form(lang="fr" action='//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&id=945bb5e298&c=?', method='post')
                             div.input
-                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Votre adresse mail', required='' lang="fr")
-                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Your email address', required='' lang="en")
+                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Votre adresse mail', required='')
                                 .border-input.blue.test
                             div.input
-                                input#mce-LNAME(name='LNAME' type="text" placeholder="Votre nom" lang="fr")
-                                input#mce-LNAME(name='LNAME' type="text" placeholder="Your name" lang="en")
+                                input#mce-LNAME(name='LNAME' type="text" placeholder="Votre nom")
+                                .border-input.blue.test
+                            div.input
+                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Votre message")
+                                .border-textarea.blue
+                            p
+                                button.blue#mc-embedded-subscribe(type='submit') GO !
+                        form(lang="en" action='//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&id=945bb5e298&c=?', method='post')
+                            div.input
+                                input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Your email address', required='')
+                                .border-input.blue.test
+                            div.input
+                                input#mce-LNAME(name='LNAME' type="text" placeholder="Your name")
                                 .border-input.blue
                             div.input
-                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Votre message" lang="fr")
-                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Your message" lang="en")
+                                textarea#mce-MMERGE1(name='MMERGE1' rows="6" placeholder="Your message")
                                 .border-textarea.blue
                             p
                                 button.blue#mc-embedded-subscribe(type='submit') GO !

@@ -140,4 +140,9 @@ $(document).ready(function(){
         var expires = "expires="+d.toUTCString();
         document.cookie = "newsletter=1;"+ expires;
     });
+
+    //FAQ toggle
+    $('#faq ul li').on('click', function(){
+        $(this).children().eq(1).slideToggle(500);
+    });
 });
