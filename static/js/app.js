@@ -49,7 +49,7 @@ $(document).ready(function(){
     });
 
     //ScrollTo - home page
-    $('#nav ul.nav a').on('click', function(e){
+    $('#nav').find('ul.nav').find('a').on('click', function(e){
         if($('#contact').length > 0) {
             e.preventDefault();
             console.log($(this).attr('href').substring(1));
@@ -75,31 +75,33 @@ $(document).ready(function(){
 
     //Swith logo && button nav color
     if(window.innerWidth <= 1110) {
-        $('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+        $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
     }
     $(window).resize(function() {
         if(window.innerWidth <= 1110 && $('#nav').next().hasClass('big')) {
-            $('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else if(window.pageYOffset <= 50){
-            $('.navbar-brand img').attr('src', '../images/logo/logo-white.svg');
+            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
     });
 
     //Language
-    $('.flag a').on('click', function(e){
+    $('.flag').find('a').on('click', function(e){
         e.preventDefault();
         if($(this).text() == "EN"){
             $('body').removeClass('fr').addClass('en');
+            $('#newsletter').find('form').attr('action', '//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368')
         } else {
             $('body').removeClass('en').addClass('fr');
+            $('#newsletter').find('form').attr('action', '//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc')
         }
     });
     
     //Slider switch - about page
-    $('#slider a').on('click', function(e){
+    $('#slider').find('a').on('click', function(e){
         e.preventDefault();
         //Vars
-        var lastSlide = $('li.active a').attr('href').substring(1);;            
+        var lastSlide = $('li.active').find('a').attr('href').substring(1);;            
         var slide = $(this).attr('href').substring(1);
         if (lastSlide != slide) {
             //Boder color
@@ -116,7 +118,7 @@ $(document).ready(function(){
     var lang = navigator.language;
     var regex = /^fr/;
     if(regex.test(lang)){
-        $('#newsletter form').attr('action', '//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc')
+        $('#newsletter').find('form').attr('action', '//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc')
     }
     function getCookie(cname) {
         var name = cname + "=";
@@ -133,7 +135,7 @@ $(document).ready(function(){
             $('#newsletter').show();
         }
     });
-    $('#newsletter button').on('click', function() {
+    $('#newsletter').find('button').on('click', function() {
         $('#newsletter').hide();
         var d = new Date();
         d.setTime(d.getTime() + (365*24*60*60*1000));
@@ -142,7 +144,7 @@ $(document).ready(function(){
     });
 
     //FAQ toggle
-    $('#faq ul li').on('click', function(){
+    $('#faq').find('ul').find('li').on('click', function(){
         $(this).children().eq(1).slideToggle(500);
     });
 });

@@ -98,9 +98,14 @@
 				}
 			}
 			h3 {
+				width: 80%;
 				margin-bottom: 11px;
 			}
-
+			.list {
+				div.sentence {
+					width: 90%;
+				}
+			}
 		}
 	}
 	@media(min-width: 1025px) and (max-width: 1150px){
@@ -187,19 +192,4 @@
 			}
 		}
 	}
-	@media(max-width: 1024px) {
-		#webconsole {
-			h3 {
-				width: 80%;
-			}
-			background-size: auto 70%;
-			background-position: 95% 80%;
-			.list {
-				div.sentence {
-					width: 90%;
-				}
-			}
-		}
-	}
-
 }
