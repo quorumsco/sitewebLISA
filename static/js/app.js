@@ -52,7 +52,6 @@ $(document).ready(function(){
     $('#nav ul.nav a').on('click', function(e){
         if($('#contact').length > 0) {
             e.preventDefault();
-            console.log($(this).attr('href').substring(1));
             var divTop = $(this).attr('href').substring(1);
             var divTop = $(divTop).position().top;
             $('html, body').animate({
@@ -87,13 +86,30 @@ $(document).ready(function(){
 
     //Language
     $('.flag a').on('click', function(e){
-        e.preventDefault();
+        //e.preventDefault();
+        var host = "//"+window.location.hostname+":3000";
+        var path = window.location.pathname.substring(4);
         if($(this).text() == "EN"){
-            $('body').removeClass('fr').addClass('en');
+            $(this).attr('href', host+"/en/"+path);
         } else {
-            $('body').removeClass('en').addClass('fr');
+            $(this).attr('href', host+"/fr/"+path);
         }
     });
+
+    //A href with language
+    $.each($('.nav-footer').find('a'), function() {
+        if($(this).attr('href').substring(0,1) == "/") {
+            $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
+        }
+    });
+    if (window.location.pathname.substring(4) != "") {
+        $.each($('.nav').find('a'), function() {
+            if($(this).attr('href').substring(0,1) == "/") {
+                $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
+            }
+        });
+        console.log('pawney');
+    }
     
     //Slider switch - about page
     $('#slider a').on('click', function(e){
