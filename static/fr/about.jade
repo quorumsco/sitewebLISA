@@ -1,32 +1,26 @@
 extends ./layout.jade
 block vars
-    - var pageTitle = 'About'
+    - var pageTitle = 'L Équipe'
 block content
     header#about.small
     main#aboutPage
         section#slider
             .container
-                h2(lang="fr") Équi
+                h2 Équi
                     span pe
-                h2(lang="en") About 
-                    span Us
                 ul
                     li.active
-                        a(href="#believe" lang="fr") VISION ET VALEURS
-                        a(href="#believe" lang="en") WHAT WE BELIEVE IN
+                        a(href="#believe") VISION ET VALEURS
                     li
-                        a(href="#team" lang="fr") COMPÉTENCES ET ÉQUIPE 
-                        a(href="#team" lang="en") SKILLS & TEAM  
+                        a(href="#team") COMPÉTENCES ET ÉQUIPE 
                     li
-                        a(href="#jobs" lang="fr") JOBS  
-                        a(href="#jobs" lang="en") JOBS  
+                        a(href="#jobs") JOBS  
         #slide
             section#believe
                 .container
                     .content
-                        h3(lang="fr").italic "Data et technologie ne construisent pas de grands mouvements, ne débattent pas d’idées et ne partagent pas leur passion ; les êtres humains oui."
-                        h3(lang="en").italic "Data & technology neither build movements nor share passions, people do."
-                        p(lang="fr")
+                        h3.italic "Data et technologie ne construisent pas de grands mouvements, ne débattent pas d’idées et ne partagent pas leur passion ; les êtres humains oui."
+                        p
                             span Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent.
 
                             span Ces problèmes, nous pensons que 
@@ -56,88 +50,52 @@ block content
                             span C’est pourquoi la technologie doit disparaitre, 
                                 strong se rendre invisible
                                 | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit :
-                        
-                        p(lang="en")
-                            span Organizations today are facing problems of unprecedented scale and complexity. 
-                            span These are the problems we think technology and data can help to solve. 
-                            span This is why we’ve created Quorum : to create 
-                                strong positive social change 
-                                | and empower people through technology. 
-                            span But we need to look at the future and these news goals & opportunities without forgetting our core values : 
                         ul
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span(lang="fr") LA 
+                                    span LA 
                                         strong PROTECTION DES DROITS
                                         |  & DE LA VIE PRIVEE  
-                                    span(lang="en") PRIVACY & CIVIL LIBERTIES 
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span(lang="fr") L’EMANCIPATION DE LA DONNEE ET l’
+                                    span L’EMANCIPATION DE LA DONNEE ET l’
                                         strong OPEN DATA
-                                    span(lang="en") EMANCIPATE DATA 
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span(lang="fr") LE LOGICIEL LIBRE
-                                    span(lang="en") OPEN SOFWARE
+                                    span LE LOGICIEL LIBRE
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span(lang="fr") L’AMBITION D’
+                                    span L’AMBITION D’
                                         strong ETRE UTILE 
                                         | : CONSTRUIRE DES OUTILS UTILES QUI REPONDENT A DES OBJECTIFS CONCRETS
-                                    span(lang="en") ACHIEVEMENT : BUILD APPS WITH A PURPOSE
                             li 
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span(lang="fr") LA TECHNOLOGIE DOIT S’ADAPTER A l’INDIVIDU, PAS L’INVERSE
-                                    span(lang="en") TECHNOLOGY HAS TO ADAPT TO HUMAN, NOT THE OTHER WAY AROUND
-                            li(lang="fr")
+                                    span LA TECHNOLOGIE DOIT S’ADAPTER A l’INDIVIDU, PAS L’INVERSE
+                            li
                                 div.icon
                                     img(src="../images/icons/check-blue.svg")
                                 div.sentence
-                                    span(lang="fr") L'
+                                    span L'
                                         strong INNOVATION 
                                         | PERMANENTE
-                        p(lang="en")
-                            strong Because technology and data can’t be the ultimate goal. 
-                            span It is just a mean to help people to 
-                                strong make their work done 
-                                | and get on their lifes.  
-                            span 
-                                strong NGO's Volunteers
-                                | , 
-                                strong associations 
-                                | or  
-                                strong campaigners 
-                                | are so deeply dedicated to their cause : they deserve theirs tools to optimize everyday actions and focus on what is really important : 
-                                strong MOBILISE. 
             section#team
                 .container
                     .content
-                        h3(lang="fr") L’INTELLIGENCE COLLECTIVE est notre ADN.
-                        h3(lang="en") Collective Intelligence is our DNA. 
+                        h3 L’INTELLIGENCE COLLECTIVE est notre ADN.
                         
-                        p(lang="fr") Nous sommes des vétérans de grandes sociétés informatiques, des experts en sciences sociales qui construisent des algorithmes, des anciens volontaires d’ONG qui écrivent des lignes de codes et qui pensent que tous ensemble - si nous parvenons à travailler et à construire des ponts entre nos disciplines – nous pouvons créer des outils qui peuvent changer la donne.
+                        p Nous sommes des vétérans de grandes sociétés informatiques, des experts en sciences sociales qui construisent des algorithmes, des anciens volontaires d’ONG qui écrivent des lignes de codes et qui pensent que tous ensemble - si nous parvenons à travailler et à construire des ponts entre nos disciplines – nous pouvons créer des outils qui peuvent changer la donne.
                         
-                        p(lang="en")
-                            span We ‘re veterans of 
-                            strong IT world
-                            span , we are bankers who 
-                            strong write code
-                            span , campaigners who 
-                            strong build algorithms
-                            span , nonprofits alumni who collectively try to find new solutions to solve problems. Every day we try to talk and think across disciplines, bring people from different skills and make them work together.
-                        h3(lang="fr") Fondateurs
-                        h3(lang="en") Founders
+                        h3 Fondateurs
                         div.member
                             img(src="../images/team/florent-small.png" alt="Florent Barre")
                             p Florent Barre
@@ -161,22 +119,16 @@ block content
                             p
                                 a(href="https://www.linkedin.com/in/jean-baptiste-daniel-68a57a4" target="_blank")
                                     i.icon-linkedin
-                        p(lang="fr") Retrouvez sur notre blog les publications de l’équipe Quorum, de nos invites et amis.
-                        p(lang="en")
-                            span On our blog features the 
-                            strong articles 
-                            span written by Quorum’s team, fellows and friends.
+                        p Retrouvez sur notre blog les publications de l’équipe Quorum, de nos invites et amis.
+
                         a(href="https://medium.com/@quorumblog" target="_blank") 
                             button.purple BLOG
             section#jobs
                 .container
                     .content
-                        p(lang="fr") Si vous êtes un passionné, si vous aimez apprendre plutôt que d’aimer savoir et si vous souhaitez travaillez dans environnement où l’interdisciplinarité est reine, écrivez à l’équipe, on a peut-être quelque chose pour vous. 
-                        p(lang="en") If you believe in applying cutting edge research to real-world problems, want to keep learning every day to stay ahead of the curve, if you believe in passion and creativity - then get in touch, we may have something for you. 
+                        p Si vous êtes un passionné, si vous aimez apprendre plutôt que d’aimer savoir et si vous souhaitez travaillez dans environnement où l’interdisciplinarité est reine, écrivez à l’équipe, on a peut-être quelque chose pour vous.
                         .middle
                             a(href="index.html#contact")
-                                button.pink(lang="fr") Nous contacter
-                                button.pink(lang="en") Get In Touch
-                            span(lang="fr") Suivez-nous sur Linked In pour voir les dernières offres d'emploi 
-                            span(lang="en") Follow us on Linked In to see our latest job offers 
+                                button.pink Nous contacter
+                            span Suivez-nous sur Linked In pour voir les dernières offres d'emploi 
                             a(href="https://www.linkedin.com/company/10114882" target="_blank")

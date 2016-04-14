@@ -1,0 +1,122 @@
+extends ./layout.jade
+block vars
+    - var pageTitle = 'About'
+block content
+    header#about.small
+    main#aboutPage
+        section#slider
+            .container
+                h2 About 
+                    span Us
+                ul
+                    li.active
+                        a(href="#believe") WHAT WE BELIEVE IN
+                    li
+                        a(href="#team") SKILLS & TEAM  
+                    li
+                        a(href="#jobs") JOBS  
+        #slide
+            section#believe
+                .container
+                    .content
+                        h3.italic "Data & technology neither build movements nor share passions, people do."
+                        
+                        p
+                            span Organizations today are facing problems of unprecedented scale and complexity. 
+                            span These are the problems we think technology and data can help to solve. 
+                            span This is why we’ve created Quorum : to create 
+                                strong positive social change 
+                                | and empower people through technology. 
+                            span But we need to look at the future and these news goals & opportunities without forgetting our core values : 
+                        ul
+                            li 
+                                div.icon
+                                    img(src="../images/icons/check-blue.svg" alt="Check")
+                                div.sentence
+                                    span PRIVACY & CIVIL LIBERTIES 
+                            li 
+                                div.icon
+                                    img(src="../images/icons/check-blue.svg" alt="Check")
+                                div.sentence
+                                    span EMANCIPATE DATA 
+                            li 
+                                div.icon
+                                    img(src="../images/icons/check-blue.svg" alt="Check")
+                                div.sentence
+                                    span OPEN SOFWARE
+                            li 
+                                div.icon
+                                    img(src="../images/icons/check-blue.svg" alt="Check")
+                                div.sentence
+                                    span ACHIEVEMENT : BUILD APPS WITH A PURPOSE
+                            li 
+                                div.icon
+                                    img(src="../images/icons/check-blue.svg" alt="Check")
+                                div.sentence
+                                    span TECHNOLOGY HAS TO ADAPT TO HUMAN, NOT THE OTHER WAY AROUND
+                        
+                        p
+                            strong Because technology and data can’t be the ultimate goal. 
+                            span It is just a mean to help people to 
+                                strong make their work done 
+                                | and get on their lifes.  
+                            span 
+                                strong NGO's Volunteers
+                                | , 
+                                strong associations 
+                                | or  
+                                strong campaigners 
+                                | are so deeply dedicated to their cause : they deserve theirs tools to optimize everyday actions and focus on what is really important : 
+                                strong MOBILISE. 
+            section#team
+                .container
+                    .content
+                        h3 Collective Intelligence is our DNA. 
+                        
+                        p
+                            span We ‘re veterans of 
+                            strong IT world
+                            span , we are bankers who 
+                            strong write code
+                            span , campaigners who 
+                            strong build algorithms
+                            span , nonprofits alumni who collectively try to find new solutions to solve problems. Every day we try to talk and think across disciplines, bring people from different skills and make them work together.
+                        h3 Founders
+                        div.member
+                            img(title="Florent Barre" src="../../images/team/florent-small-color.png" alt="Florent Barre")
+                            p Florent Barre
+                            p CEO
+                            p
+                                a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                                    i.icon-linkedin
+                                a(href="https://twitter.com/barreflorent" target="_blank")
+                                    i.icon-twitter
+                        div.member
+                            img(title="Maxime Beylot" src="../../images/team/maxime-small-color.png" alt="Maxime Beylot")
+                            p Maxime Beylot
+                            p CCO
+                            p
+                                a(href="https://www.linkedin.com/in/maxime-beylot-6b00525b" target="_blank")
+                                    i.icon-linkedin
+                        div.member
+                            img(title="Jean-Baptiste Daniel" src="../../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
+                            p Jean-Baptiste Daniel
+                            p CTO
+                            p
+                                a(href="https://www.linkedin.com/in/jean-baptiste-daniel-68a57a4" target="_blank")
+                                    i.icon-linkedin
+                        p
+                            span On our blog features the 
+                            strong articles 
+                            span written by Quorum’s team, fellows and friends.
+                        a(href="https://medium.com/@quorumblog" target="_blank") 
+                            button.purple BLOG
+            section#jobs
+                .container
+                    .content
+                        p If you believe in applying cutting edge research to real-world problems, want to keep learning every day to stay ahead of the curve, if you believe in passion and creativity - then get in touch, we may have something for you. 
+                        .middle
+                            a(href="index.html#contact")
+                                button.pink Get In Touch
+                            span Follow us on Linked In to see our latest job offers 
+                            a(href="https://www.linkedin.com/company/10114882" target="_blank")
