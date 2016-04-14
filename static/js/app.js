@@ -49,7 +49,7 @@ $(document).ready(function(){
     });
 
     //ScrollTo - home page
-    $('#nav ul.nav a').on('click', function(e){
+    $('#nav ul.nav a').not('.link').on('click', function(e){
         if($('#contact').length > 0) {
             e.preventDefault();
             var divTop = $(this).attr('href').substring(1);
@@ -96,20 +96,20 @@ $(document).ready(function(){
         }
     });
 
-    //A href with language
-    $.each($('.nav-footer').find('a'), function() {
+    //a(href) with language EN/FR
+    $.each($('.link'), function() {
         if($(this).attr('href').substring(0,1) == "/") {
             $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
         }
     });
-    if (window.location.pathname.substring(4) != "") {
-        $.each($('.nav').find('a'), function() {
+    if(window.location.pathname.substring(4) != "") {
+        $.each($('ul.nav a').not('.link'), function() {
             if($(this).attr('href').substring(0,1) == "/") {
                 $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
             }
         });
-        console.log('pawney');
     }
+
     
     //Slider switch - about page
     $('#slider a').on('click', function(e){
@@ -158,7 +158,7 @@ $(document).ready(function(){
     });
 
     //FAQ toggle
-    $('#faq ul li').on('click', function(){
-        $(this).children().eq(1).slideToggle(500);
+    $('#faq ul li p:nth-child(1)').on('click', function(){
+        $(this).parent().children().eq(1).slideToggle(500);
     });
 });

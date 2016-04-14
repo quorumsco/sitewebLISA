@@ -7,7 +7,6 @@
 				list-style-type: none;
 				padding-left: 0px;
 				li {
-					padding: 15px;
 					position: relative;
 					&:hover {
 						cursor: pointer;
@@ -17,6 +16,8 @@
 					}
 					p {
 						width: 90%;
+						padding: 30px 20px;
+						margin: 0px;
 					}
 					p:nth-child(1) {
 						i {
@@ -26,7 +27,6 @@
 						}
 					}
 					p:nth-child(2) {
-						margin-top: 40px;
 						display: none;
 						line-height: 20px;
 						span {
