@@ -13,13 +13,13 @@ html
         meta(property="og:type" content="WebSite")
         meta(property="og:url" content="https://www.quorum-impact.com/")
         meta(property="og:image" content="https://www.quorum-impact.com/public/images/icons/avatar-rs-2.png")
-        link(rel="icon" href="../images/icons/favicon.ico")
-        link(rel='stylesheet' href='stylesheets/app.css')
+        link(rel="icon" href="../../images/icons/favicon.ico")
+        link(rel='stylesheet' href='../stylesheets/app.css')
         <!--[if IE 8]>
-        link(rel='stylesheet' href='stylesheets/ie.css')
+        link(rel='stylesheet' href='../stylesheets/ie.css')
         <![endif]-->
         <!--[if IE 9]>
-        link(rel='stylesheet' href='stylesheets/ie.css')
+        link(rel='stylesheet' href='../stylesheets/ie.css')
         <![endif]-->
     body.en
 
@@ -34,7 +34,7 @@ html
         nav#nav
             .content
                 a(href='/').navbar-brand
-                    img(src='images/logo/logo-white.svg' alt='Logo Quorum')
+                    img(src='../../images/logo/logo-white.svg' alt='Logo Quorum')
                 button.nav-toggle
                     i.fa.fa-bars
                 div.bar
@@ -48,7 +48,7 @@ html
                                 span(lang="fr") Nous contacter
                                 span(lang="en") Contact Us
                     .banner
-                        img(src="../images/icons/phone.svg")
+                        img(src="../../images/icons/phone.svg")
                         span  +33 1 79 73 40 04
                         a(lang="fr" href="http://eepurl.com/bWGgCL" target="_blank")
                             button S'inscrire
@@ -101,6 +101,5 @@ html
                             input#mce-EMAIL(type="email" name="EMAIL" required placeholder="Email")
                             .border-input.blue
                             button.blue(type="submit") GO !
-        script(type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false")
         script(src='//code.jquery.com/jquery-2.1.4.min.js')
-        script(src="javascripts/app.js")   
+        script(src="../javascripts/app.js")
