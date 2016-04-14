@@ -99,12 +99,6 @@ i[class*=' icon-'] {
     content: "\e610";
 }
 
-body.en :lang(fr) {
-    display: none !important;
-}
-body.fr :lang(en) {
-    display: none !important;
-}
 body {
 	width: 100%;
 	background: $light-grey;
