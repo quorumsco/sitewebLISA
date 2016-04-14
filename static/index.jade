@@ -186,7 +186,7 @@ block content
                     li
                         h2(lang="fr") Nous écrire
                         h2(lang="en") Contact Form
-                        form(action='//formspree.io/info@quorumapps.com', method='post')
+                        form(action='https://formspree.io/info@quorum-impact.com', method='post')
                             div.input
                                 input(type='email', name="_replyto", placeholder='Email', required)
                                 .border-input.blue
@@ -198,6 +198,7 @@ block content
                                 .border-textarea.blue
                             input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
                             input(type="text" name="_gotcha" style="display:none")
+                            input(type="hidden" name="_next" value="//quorum-impact.com/")
                             p
                                 button.blue(type='submit' value="Send") GO !
                     li
