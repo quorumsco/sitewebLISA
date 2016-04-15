@@ -21,18 +21,24 @@
 					color: $grey;
 					text-decoration: none;
 				}
-				&:nth-child(1):hover{
-					a {
-						color: $blue;
+				&:nth-child(1) {
+					&:hover{
+						a {
+							color: $blue;
+						}
 					}
 				}
-				&:nth-child(2):hover{
-					a {
+				&:nth-child(2) {
+					border-left: 1px solid rgba(136,136,136,0.23);
+					border-right: 1px solid rgba(136,136,136,0.23);
+					&:hover {
+						a {
 						color: $purple;
+						}
 					}
 				}
 				&:nth-child(3):hover{
-					a {
+						a {
 						color: $pink;
 					}
 				}
@@ -45,6 +51,7 @@
 					}
 					&:nth-child(2){
 						border-color: $purple;
+						border-right: 0px;
 					}
 					&:nth-child(3){
 						border-color: $pink;
@@ -80,6 +87,7 @@
 				li {
 					display: block;
 					padding: 20px;
+					width: 86%;
 					a {
 						padding-right: 0px;
 					}
@@ -103,6 +111,7 @@
 				padding-bottom: 0px;
 				margin-bottom: 0px;
 				li {
+					width: 94%;
 					display: block;
 					padding: 20px 0 20px 20px;
 				}
