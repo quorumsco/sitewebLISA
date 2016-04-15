@@ -1,198 +1,184 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function () {
-  var throttle = function (type, name, obj) {
-    var obj = obj || window;
-    var running = false;
-    var func = function () {
-      if (running) {
-        return;
-      }
-      running = true;
-      requestAnimationFrame(function () {
-        obj.dispatchEvent(new CustomEvent(name));
-        running = false;
-      });
-    };
-    obj.addEventListener(type, func);
-  };
+$(window).scroll(function (event) {
+    var yOffset = window.pageYOffset;
 
-  /* init - you can init any event */
-  throttle("scroll", "optimizedScroll");
-})();
-
-//About nav
-$('#aboutNav a').on('click', function (e) {
-  e.preventDefault();
-  console.log('coucou');
-});
-
-// Toogle Menu
-$('.nav-toggle a').first().on('click', function (e) {
-  e.preventDefault();
-  $('#nav').toggleClass('show-menu');
-});
-
-var slide = $('#slide');
-
-$(slide).typed({
-  stringsElement: $('#typed-strings'),
-  typeSpeed: 10,
-  backDelay: 800,
-  backSpeed: -10,
-  contentType: 'html',
-  loop: true,
-  showCursor: true,
-  cursorChar: " |"
-});
-
-// Contact particles animation
-particlesJS('contact', {
-  "particles": {
-    "number": {
-      "value": 150,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#999"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.6,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 2,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#BDBDBD",
-      "opacity": 0.2,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": false,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
+    //Transition scroll
+    if (window.innerWidth > 1110 && $('#nav').next().hasClass('big')) {
+        var breakpoint = 50;
+        if (yOffset > breakpoint) {
+            $('#nav').addClass('active');
+            $('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+        } else {
+            $('#nav').removeClass('active');
+            $('.navbar-brand img').attr('src', '../images/logo/logo-white.svg');
         }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
     }
-  },
-  "retina_detect": true,
-  "config_demo": {
-    "hide_card": false,
-    "background_color": "#4962AD",
-    "background_image": "",
-    "background_position": "50% 50%",
-    "background_repeat": "no-repeat",
-    "background_size": "cover"
-  }
+
+    //Animation fade top
+    if (window.innerWidth >= 768 && $('#product').length > 0) {
+        var breakpointProduct = $('#product').position().top - 400;
+        var breakpointWebconsole = $('#webconsole').position().top - 400;
+        var breakpointMobile = $('#mobile').position().top - 400;
+        var breakpointTarget = $('#target').position().top - 400;
+
+        if (yOffset > breakpointProduct) {
+            $('#product').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointWebconsole) {
+            $('#webconsole').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointMobile) {
+            $('#mobile').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointTarget) {
+            $('#target').addClass('animated fadeInUp');
+        }
+    }
 });
+$(document).ready(function () {
+    //Border animation - #contact home page
+    $('#contact input, #contact textarea, #newsletter input').on('focusin', function () {
+        var widthInput = $(this).width();
+        $(this).parent().children('div').animate({
+            width: widthInput + 'px'
+        }, 300);
+    });
+    $('#contact input, #contact textarea, #newsletter input').on('focusout', function () {
+        $(this).parent().children('div').animate({
+            width: '0px'
+        }, 300);
+    });
 
-// var height = $(slide).height();
+    //Random email/name - #contact home page
+    if ($('#contact').length > 0) {
+        if (window.location.pathname.substring(0, 4) == "/fr/") {
+            var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['philipperickwaert@baronnoir.fr', 'Philippe Rickwaert']];
+            var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
+            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+        } else {
+            var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['frankunderwood@houseofcards.com', 'Franck Underwood'], ['georgewashington@independanceday.com', 'George Washington']];
+            var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
+            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+        }
+    }
+    //ScrollTo - home page
 
-// var translateY = function(value) {
-//     return 'translateY(' + value + 'px)';
-// }
+    $('#nav ul.nav a').not('.link').on('click', function (e) {
+        if ($('#contact').length > 0) {
+            e.preventDefault();
+            var divTop = $(this).attr('href').substring(1);
+            var divTop = $(divTop).position().top;
+            $('html, body').animate({
+                scrollTop: divTop
+            }, 500);
+        }
+    });
 
-// slide.css('transform', translateY(height));
-// slide.css('visibility', 'visible');
+    //White Menu
+    if ($('#nav').next().hasClass('small')) {
+        $('#nav').addClass('active');
+        $('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+    }
 
-// var steps = [];
+    //Hamburger Menu
+    $('.nav-toggle').on('click', function () {
+        $('nav#nav').toggleClass('show-menu');
+    });
 
-// slide.children().each(function() {
-//   steps.push({
-//     height: $(this).height(),
-//     delay: $(this).data('delay')
-//   });
-// });
+    //Swith logo && button nav color
+    if (window.innerWidth <= 1110) {
+        $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
+    }
+    $(window).resize(function () {
+        if (window.innerWidth <= 1110 && $('#nav').next().hasClass('big')) {
+            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
+        } else if (window.pageYOffset <= 50) {
+            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
+        }
+    });
 
-// var animation = $(slide);
-// var level = height;
-// steps.forEach(function(e) {
-//   level -= e.height;
-//   let c = level;
-//   animation = animation
-//     .delay(e.delay + 300)
-//     .queue(function(next) {
-//         slide.css('transform', translateY(c));
-//         next();
-//     });
-// });
+    //Language
+
+    $('.flag a').on('click', function (e) {
+        //e.preventDefault();
+        var host = "//" + window.location.hostname;
+        var path = window.location.pathname.substring(4);
+        if ($(this).text() == "EN") {
+            $(this).attr('href', host + "/en/" + path);
+        } else {
+            $(this).attr('href', host + "/fr/" + path);
+        }
+    });
+
+    //a(href) with language EN/FR
+    $.each($('.link'), function () {
+        if ($(this).attr('href').substring(0, 1) == "/") {
+            $(this).attr('href', window.location.pathname.substring(0, 3) + "" + $(this).attr('href'));
+        }
+    });
+    if (window.location.pathname.substring(4) != "") {
+        $.each($('ul.nav a').not('.link'), function () {
+            if ($(this).attr('href').substring(0, 1) == "/") {
+                $(this).attr('href', window.location.pathname.substring(0, 3) + "" + $(this).attr('href'));
+            }
+        });
+    }
+    $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
+
+    //Slider switch - about page
+    $('#slider').find('a').on('click', function (e) {
+        e.preventDefault();
+        //Vars
+        var lastSlide = $('li.active').find('a').attr('href').substring(1);;
+        var slide = $(this).attr('href').substring(1);
+        if (lastSlide != slide) {
+            //Boder color
+            $('li.active').removeClass('active');
+            $(this).parent().addClass('active');
+            //Swap
+            $('#' + lastSlide).fadeOut(200, function () {
+                $('#' + slide).fadeIn(500);
+            });
+        }
+    });
+
+    //Newsletter
+    var lang = navigator.language;
+    var regex = /^fr/;
+    if (regex.test(lang)) {
+        $('#newsletter').find('form').attr('action', '//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc');
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+    $('#target').on('mouseenter', function (event) {
+        if (getCookie('newsletter') != 1) {
+            $('#newsletter').show();
+        }
+    });
+    $('#newsletter').find('button').on('click', function () {
+        $('#newsletter').hide();
+        var d = new Date();
+        d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = "newsletter=1;" + expires;
+    });
+
+    //FAQ toggle
+
+    $('#faq ul li p:nth-child(1)').on('click', function () {
+        $(this).parent().children().eq(1).slideToggle(500);
+    });
+});
 
 },{}]},{},[1]);
 

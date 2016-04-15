@@ -63,11 +63,8 @@ $(document).ready(function(){
         }
     }
     //ScrollTo - home page
-<<<<<<< HEAD
-    $('#nav').find('ul.nav').find('a').on('click', function(e){
-=======
+
     $('#nav ul.nav a').not('.link').on('click', function(e){
->>>>>>> sitev2
         if($('#contact').length > 0) {
             e.preventDefault();
             var divTop = $(this).attr('href').substring(1);
@@ -106,7 +103,7 @@ $(document).ready(function(){
 
     $('.flag a').on('click', function(e){
         //e.preventDefault();
-        var host = "//"+window.location.hostname+":3000";
+        var host = "//"+window.location.hostname;
         var path = window.location.pathname.substring(4);
         if($(this).text() == "EN"){
             $(this).attr('href', host+"/en/"+path);
@@ -178,12 +175,9 @@ $(document).ready(function(){
     });
 
     //FAQ toggle
-<<<<<<< HEAD
-    $('#faq').find('ul').find('li').on('click', function(){
-        $(this).children().eq(1).slideToggle(500);
-=======
+
     $('#faq ul li p:nth-child(1)').on('click', function(){
         $(this).parent().children().eq(1).slideToggle(500);
->>>>>>> sitev2
+
     });
 });
