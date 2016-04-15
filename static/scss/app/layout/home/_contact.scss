@@ -95,6 +95,13 @@
 							i {
 								font-size: 32px;
 							}
+							img {
+								-webkit-filter: grayscale(1);
+								width: 32px;
+								&:hover {
+									-webkit-filter: grayscale(0);
+								}
+							}
 						}
 					}
 				}
