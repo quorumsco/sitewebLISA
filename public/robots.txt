@@ -1,1 +1,4 @@
 User-agent: *
+Disallow: /fr/legals.html
+Disallow: /en/legals.html
+Sitemap: https://quorum-impact.com/sitemap.xml

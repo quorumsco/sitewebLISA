@@ -108,6 +108,20 @@ var cp = function() {
       .pipe(browserSync.reload({stream: true}));
   });
 
+  gulp.task('jade_en', function() {
+    return gulp.src('static/en/*.jade')
+      .pipe(jade())
+      .pipe(gulp.dest('public/en'))
+      .pipe(browserSync.reload({stream: true}));
+  });
+
+  gulp.task('jade_fr', function() {
+    return gulp.src('static/fr/*.jade')
+      .pipe(jade())
+      .pipe(gulp.dest('public/fr'))
+      .pipe(browserSync.reload({stream: true}));
+  });
+
   gulp.task('jade', function() {
     return gulp.src('static/*.jade')
       .pipe(jade())
@@ -115,8 +129,8 @@ var cp = function() {
       .pipe(browserSync.reload({stream: true}));
   });
 
-  gulp.task('prod', ['jade', 'images', 'fonts', 'css-prod', 'js-prod']);
-  gulp.task('dev', ['jade', 'images', 'fonts', 'css', 'js']);
+  gulp.task('prod', ['jade', 'jade_fr', 'jade_en', 'images', 'fonts', 'css-prod', 'js-prod']);
+  gulp.task('dev', ['jade', 'jade_fr', 'jade_en', 'images', 'fonts', 'css', 'js']);
 
   gulp.task('watch', ['dev'], function() {
     browserSync({server: {baseDir: 'public'}, ui: false, open: false});
@@ -124,6 +138,8 @@ var cp = function() {
     gulp.watch('static/js/**/*', ['js']);
     gulp.watch('static/images/**/*', ['images']);
     gulp.watch('static/*.html', ['html']);
+    gulp.watch('static/fr/*.jade', ['jade_fr']);
+    gulp.watch('static/en/*.jade', ['jade_en']);
     gulp.watch('static/*.jade', ['jade']);
   });
 

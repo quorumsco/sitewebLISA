@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang="fr")
     block vars
     head
         meta(charset='utf-8')
@@ -12,7 +12,8 @@ html
         meta(property="og:title" content="Quorum")
         meta(property="og:type" content="WebSite")
         meta(property="og:url" content="https://www.quorum-impact.com/")
-        meta(property="og:image" content="https://www.quorum-impact.com/public/images/icons/avatar-rs-2.png")
+        meta(property="og:image" content="https://www.quorum-impact.com/images/icons/avatar-rs-2.png")
+        link(rel="alternate" hreflang="en" href="https://www.quorum-impact.com/en")
         link(rel="icon" href="../../images/icons/favicon.ico")
         link(rel='stylesheet' href='../stylesheets/app.css')
         <!--[if IE 8]>
@@ -21,16 +22,7 @@ html
         <!--[if IE 9]>
         link(rel='stylesheet' href='../stylesheets/ie.css')
         <![endif]-->
-    body.en
-
-        script(type="text/javascript").
-            var lang = navigator.language;
-            var regex = /^fr/;
-            if (regex.test(lang))
-            { 
-                lang = "fr";
-                document.body.className = lang;
-            }
+    body
         nav#nav
             .content
                 a(href='/').navbar-brand
@@ -41,23 +33,17 @@ html
                     ul.nav
                         li 
                             a(href='/#product') 
-                                span(lang="fr") Produit
-                                span(lang="en") Product
+                                span Produit
                         li
                             a(href='/#contact') 
-                                span(lang="fr") Nous contacter
-                                span(lang="en") Contact Us
+                                span Nous contacter
                     .banner
                         img(src="../../images/icons/phone.svg")
                         span  +33 1 79 73 40 04
-                        a(lang="fr" href="http://eepurl.com/bWGgCL" target="_blank")
+                        a(href="http://eepurl.com/bWGgCL" target="_blank")
                             button S'inscrire
-                        a(lang="en" href="http://eepurl.com/bWJkZr" target="_blank")
-                            button Get Early Access
                         span.flag
-                            a(href="" lang="fr") EN
-                        span.flag
-                            a(href="#" lang="en") FR
+                            a(href="") EN
         block content        
         footer#footer
             .container
@@ -78,15 +64,13 @@ html
                             i.icon-google
                 ul.nav-footer
                     li
-                        a(href='/about.html') 
-                            span(lang="fr") Équipe
-                            span(lang="en") About Us
+                        a.link(href='/about.html') 
+                            span Équipe
                     li
                         a(href='https://medium.com/@quorumblog' target="_blank") Blog
                     li
-                        a(href='/legals.html') 
-                            span(lang="fr") Mentions Légales
-                            span(lang="en") Legal
+                        a.link(href='/legals.html') 
+                            span Mentions Légales
         section#newsletter
             .container
                 div.banner
@@ -94,8 +78,7 @@ html
                         i.fa.fa-close
                     img(src="../images/popup/newsletter.png")
                 div
-                    p(lang="fr") Ne manquez rien du meilleur de nos publications, actualités et évènements !
-                    p(lang="en") DON'T MISS THE BEST OF OUR ARTICLES, PUBLICATIONS AND EVENTS !
+                    p Ne manquez rien du meilleur de nos publications, actualités et évènements !
                     form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368" method="post" enctype="multipart/form-data" data-dojo-attach-point="formNode" novalidate="")
                         div.input
                             input#mce-EMAIL(type="email" name="EMAIL" required placeholder="Email")

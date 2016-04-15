@@ -12,55 +12,55 @@
 			margin: 15px auto;
 			padding: 25px 0; 
 			li {
-				display: inline;
-				text-align: left;
-
+				display: inline-block;
+				text-align: center;
+				width: 33%;
+				background: rgba(200,200,200,0.4);
+				border-left: 2px solid transparent;
 				a {
-					padding: 12px 100px 12px 20px;
+					padding: 20px 0;
 					color: $grey;
 					text-decoration: none;
+					display: inline-block;
+					width: 100%;
 				}
-				&:nth-child(3){
-					a {
-						padding-right: 50px;
+				&:nth-child(1) {
+					&:hover{
+						a {
+							color: $blue;
+						}
 					}
 				}
-				&:nth-child(1):hover{
-					a {
-						color: $blue;
-					}
-				}
-				&:nth-child(2):hover{
-					a {
+				&:nth-child(2) {
+					border-left: 1px solid rgba(136,136,136,0.23);
+					border-right: 1px solid rgba(136,136,136,0.23);
+					&:hover {
+						a {
 						color: $purple;
+						}
 					}
 				}
 				&:nth-child(3):hover{
-					a {
+						a {
 						color: $pink;
-						padding-right: 50px;
 					}
 				}
 
 				&.active {
+					background: transparent;
 					&:nth-child(1){
-						a {
-							border-color: $blue;
-						}
+						border-color: $blue;
 					}
 					&:nth-child(2){
-						a {
-							border-color: $purple;
-						}
+						border-left: 2px solid $purple;
+						border-right: 0px;
 					}
 					&:nth-child(3){
-						a {
-							border-color: $pink;
-						}
+						border-color: $pink;
 					}
 					a {
-						border-left: 2px solid;
 						color: $font-color;
+						font-weight: bold;
 					}
 				}
 			}
@@ -88,10 +88,14 @@
 				margin-bottom: 0px;
 				li {
 					display: block;
-					padding: 20px;
+					width: 99%;
 					a {
 						padding-right: 0px;
 					}
+					&:nth-child(2) {
+						border-left: 2px solid transparent;
+						border-right: 0px;
+					} 
 				}
 			}
 		}
@@ -112,8 +116,15 @@
 				padding-bottom: 0px;
 				margin-bottom: 0px;
 				li {
+					width: 94%;
 					display: block;
-					padding: 20px 0 20px 20px;
+					&:nth-child(2) {
+						border-right: 0px;
+						border-left: 2px solid transparent; 
+						&.active {
+							border-left: 2px solid $purple; 		
+						}
+					}
 				}
 			}
 		}

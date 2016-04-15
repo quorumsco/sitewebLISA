@@ -1,0 +1,196 @@
+extends ./layout.jade
+block vars
+    - var pageTitle = 'Home'
+block content
+    header#home.big
+        .container
+
+            h1 Mobilise above 
+                span expectations
+            p.subtitle The data-driven app to build & organise big movements from your smartphone.
+
+            a(href="http://eepurl.com/bWJkZr" target="_blank")
+                button.blue Get Early Access
+
+    main
+        section#product
+            .container
+                h2 Build people centered, meaningful and 
+                    p organized field actions.
+
+                span.quote Every great cause starts with a simple conversation. 
+                span.quote Make every interaction with the people count :  
+                span.quote Organize, Analyse, Target and Engage people using Quorum
+        section#webconsole
+            .container
+                .content
+                    img(src="../images/icons/computer.svg")
+                    div.sentence
+                        span.part WEB APPLICATION : ORGANISE & ANALYSE
+                    h3 Build, lead and organize your 
+                        p team at any scale
+                    hr.green.title
+                    
+                    .list
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg")
+                            div.sentence
+                                b Create a collective force with your team, at any scale
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg")
+                            div.sentence
+                                span Analyse : Use data beyond expectations to sharpen your strategy
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg")
+                            div.sentence
+                                span Identify swing zones 
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg")
+                            div.sentence
+                                span Get key characteristics about people and territories
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg")
+                            div.sentence
+                                span Track, analyze and predict with data 
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg")
+                            div.sentence
+                                span Receive real-time results of your team progressions & actionable insights
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg")
+                            div.sentence
+                                span Build & develop long term & personalized relationships 
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg")
+                            div.sentence
+                                span Develop custom survey
+        section#mobile
+            .container
+                .content
+                    img(src="../images/icons/mobile.svg")
+                    div.sentence
+                        span.part MOBILE APPLICATION : ON THE GO
+                    h3 Build big movements from 
+                        p your smartphone
+                    hr.pink.title
+                    .list
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span
+                                    b Save hours with instant capture on the field
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span Anytime/Anywhere add information about your cause for your team
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span Engage anytime/anywhere add a new person or organization to your movement
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span Anytime/Anywhere log contact, assign tags, set follow-ups, change volunteer status, record donations and adjust support level
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span Integrated Canvassing features
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span Motivate the team
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span Don’t fill contact forms, hold conversation with people thanks to targeted information 
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span Find teammates to drive action together
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg")
+                            div.sentence
+                                span Follow your movement and teammates progression
+            .clearfix
+        section#target
+            .container
+                h2 Less process, mobilise more : it's on you...
+                span.quote Grassroots movements, political campaigns, nonprofits, our tech is your in-field support.
+                ul
+                    li
+                        button(disabled) Campaigners & Staff 
+                    li
+                        button(disabled) Agencies & Advocacy
+                    li
+                        button(disabled) Non-Profits & Volunteers
+                    li
+                        button(disabled) Individuals & Game Changers
+                a(href="http://eepurl.com/bWJkZr" target="_blank")
+                    button.blue Get Early Access
+        section#contact
+            .container
+                ul
+                    li
+                        h2 Contact Form
+                        form(action='https://formspree.io/info@quorum-impact.com', method='post')
+                            div.input
+                                input(type='email', name="_replyto", placeholder='Email', required)
+                                .border-input.blue
+                            div.input
+                                input(name='name' type="text" placeholder="Name/Nom")
+                                .border-input.blue
+                            div.input
+                                textarea(name='message' rows="6" placeholder="Message", required)
+                                .border-textarea.blue
+                            input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
+                            input(type="text" name="_gotcha" style="display:none")
+                            input(type="hidden" name="_next" value="//quorum-impact.com/")
+                            p
+                                button.blue(type='submit' value="Send") GO !
+                    li
+                        h2 Contact Info
+                        p 
+                            i.fa.fa-phone.fa-lg
+                            span +33 1 79 73 40 04 
+                        p 
+                            i.fa.fa-envelope
+                            span info@quorum-impact.com
+                        p 
+                            i.fa.fa-map-marker.fa-lg
+                            span 124 avenue de Villiers - 75017 PARIS
+                        p
+                            i.fa.fa-map-marker.fa-lg
+                            span 9 rue de Condé - 33000 BORDEAUX
+             
+                        p Don't miss any of our events, news and publications, follow us :
+                            ul
+                                li
+                                    a(href='//facebook.com/quorumimpact' target="_blank")
+                                        i.icon-facebook
+                                li
+                                    a(href='//twitter.com/quorumimpact' target="_blank")
+                                        i.icon-twitter
+                                li
+                                    a(href='//www.linkedin.com/company/10114882' target="_blank")
+                                        i.icon-linkedin
+                                li
+                                    a(href='//google.com/+Quorumappsdata' target="_blank")
+                                        i.icon-google
+            div.clearfix

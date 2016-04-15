@@ -1,0 +1,40 @@
+@include exports('faq') {
+	#faq{
+		.container {
+			width: 80%;
+			ul {
+				text-align: justify;
+				list-style-type: none;
+				padding-left: 0px;
+				li {
+					position: relative;
+					&:hover {
+						cursor: pointer;
+					}
+					&:nth-child(odd) {
+						background: rgba(129,44,244,0.1);
+					}
+					p {
+						width: 90%;
+						padding: 30px 20px;
+						margin: 0px;
+					}
+					p:nth-child(1) {
+						i {
+							position: absolute;
+							top: 34px;
+							right: 22px;
+						}
+					}
+					p:nth-child(2) {
+						display: none;
+						line-height: 20px;
+						span {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

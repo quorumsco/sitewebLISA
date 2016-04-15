@@ -48,11 +48,28 @@ $(document).ready(function(){
         }, 300);
     });
 
+    //Random email/name - #contact home page
+    if($('#contact').length > 0) {
+        if(window.location.pathname.substring(0, 4) == "/fr/") {
+            var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['philipperickwaert@baronnoir.fr', 'Philippe Rickwaert']];
+            var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
+            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+        } else {
+            var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['frankunderwood@houseofcards.com', 'Franck Underwood'], ['georgewashington@independanceday.com', 'George Washington']];
+            var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
+            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+        }
+    }
     //ScrollTo - home page
+<<<<<<< HEAD
     $('#nav').find('ul.nav').find('a').on('click', function(e){
+=======
+    $('#nav ul.nav a').not('.link').on('click', function(e){
+>>>>>>> sitev2
         if($('#contact').length > 0) {
             e.preventDefault();
-            console.log($(this).attr('href').substring(1));
             var divTop = $(this).attr('href').substring(1);
             var divTop = $(divTop).position().top;
             $('html, body').animate({
@@ -86,16 +103,33 @@ $(document).ready(function(){
     });
 
     //Language
-    $('.flag').find('a').on('click', function(e){
-        e.preventDefault();
+
+    $('.flag a').on('click', function(e){
+        //e.preventDefault();
+        var host = "//"+window.location.hostname+":3000";
+        var path = window.location.pathname.substring(4);
         if($(this).text() == "EN"){
-            $('body').removeClass('fr').addClass('en');
-            $('#newsletter').find('form').attr('action', '//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368')
+            $(this).attr('href', host+"/en/"+path);
         } else {
-            $('body').removeClass('en').addClass('fr');
-            $('#newsletter').find('form').attr('action', '//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc')
+            $(this).attr('href', host+"/fr/"+path);
         }
     });
+
+    //a(href) with language EN/FR
+    $.each($('.link'), function() {
+        if($(this).attr('href').substring(0,1) == "/") {
+            $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
+        }
+    });
+    if(window.location.pathname.substring(4) != "") {
+        $.each($('ul.nav a').not('.link'), function() {
+            if($(this).attr('href').substring(0,1) == "/") {
+                $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
+            }
+        });
+    }
+    $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
+
     
     //Slider switch - about page
     $('#slider').find('a').on('click', function(e){
@@ -144,7 +178,12 @@ $(document).ready(function(){
     });
 
     //FAQ toggle
+<<<<<<< HEAD
     $('#faq').find('ul').find('li').on('click', function(){
         $(this).children().eq(1).slideToggle(500);
+=======
+    $('#faq ul li p:nth-child(1)').on('click', function(){
+        $(this).parent().children().eq(1).slideToggle(500);
+>>>>>>> sitev2
     });
 });
