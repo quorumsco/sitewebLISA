@@ -15,11 +15,14 @@
 				display: inline-block;
 				text-align: center;
 				width: 33%;
-				padding: 20px 0;
 				background: rgba(200,200,200,0.4);
+				border-left: 2px solid transparent;
 				a {
+					padding: 20px 0;
 					color: $grey;
 					text-decoration: none;
+					display: inline-block;
+					width: 100%;
 				}
 				&:nth-child(1) {
 					&:hover{
@@ -44,13 +47,12 @@
 				}
 
 				&.active {
-					border-left: 2px solid;
 					background: transparent;
 					&:nth-child(1){
 						border-color: $blue;
 					}
 					&:nth-child(2){
-						border-color: $purple;
+						border-left: 2px solid $purple;
 						border-right: 0px;
 					}
 					&:nth-child(3){
@@ -86,11 +88,14 @@
 				margin-bottom: 0px;
 				li {
 					display: block;
-					padding: 20px;
-					width: 86%;
+					width: 99%;
 					a {
 						padding-right: 0px;
 					}
+					&:nth-child(2) {
+						border-left: 2px solid transparent;
+						border-right: 0px;
+					} 
 				}
 			}
 		}
@@ -113,7 +118,13 @@
 				li {
 					width: 94%;
 					display: block;
-					padding: 20px 0 20px 20px;
+					&:nth-child(2) {
+						border-right: 0px;
+						border-left: 2px solid transparent; 
+						&.active {
+							border-left: 2px solid $purple; 		
+						}
+					}
 				}
 			}
 		}

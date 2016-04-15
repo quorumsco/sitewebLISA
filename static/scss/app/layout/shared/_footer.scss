@@ -28,17 +28,6 @@
 				li{
 					margin: 0 10px;
 				}
-                img {
-                    -webkit-filter: grayscale(1);
-                    -moz-filter: grayscale(1);
-                    filter: grayscale(1);
-                    width: 20px;
-                    &:hover {
-                        -webkit-filter: grayscale(1) brightness(1.5);
-                        -moz-filter: grayscale(1) brightness(1.5);
-                        filter: grayscale(1) brightness(1.5);
-                    }
-                }
 			}
 			&.nav-footer{
 				float: right;
@@ -75,9 +64,6 @@
             ul.nav-footer, ul.social-links {
                 float: none;
                 padding-left: 0px;
-            }
-            ul.nav-footer {
-
             }
         } 
     }
