@@ -109,6 +109,8 @@ $(document).ready(function(){
             }
         });
     }
+    console.log(window.location.pathname.substring(0, 4));
+    $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
 
     
     //Slider switch - about page
