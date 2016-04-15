@@ -48,6 +48,20 @@ $(document).ready(function(){
         }, 300);
     });
 
+    //Random email/name - #contact home page
+    if($('#contact').length > 0) {
+        if(window.location.pathname.substring(0, 4) == "/fr/") {
+            var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['philipperickwaert@baronnoir.fr', 'Philippe Rickwaert']];
+            var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
+            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+        } else {
+            var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['frankunderwood@houseofcards.com', 'Franck Underwood'], ['georgewashington@independanceday.com', 'George Washington']];
+            var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
+            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+        }
+    }
     //ScrollTo - home page
     $('#nav ul.nav a').not('.link').on('click', function(e){
         if($('#contact').length > 0) {
@@ -109,7 +123,6 @@ $(document).ready(function(){
             }
         });
     }
-    console.log(window.location.pathname.substring(0, 4));
     $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
 
     
