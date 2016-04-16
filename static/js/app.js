@@ -1,3 +1,4 @@
+
 $(window).scroll(function(event){
     var yOffset = window.pageYOffset;
 
@@ -180,4 +181,30 @@ $(document).ready(function(){
         $(this).parent().children().eq(1).slideToggle(500);
 
     });
+    //donut chart
+    var chart = c3.generate({
+    data: {
+        columns: [
+            ['Information Technology', 30],
+            ['Social & Cognitive Sciences', 20] ,
+            ['Data Sciences', 20],
+            ['Field & Customer Officers', 20],
+            ['Data Vizualisation', 5],
+            ['Communication Officers', 5]
+        ],
+        type: 'donut'
+    },
+    donut: {
+        label: {
+            format: function (value, ratio, id) {
+                return "";
+            }
+        }
+    },
+    color: {
+        pattern: ['#EB3459', '#00D19C', '#8255F5', '#DDFB34', '#20BFFB', '#DC45A3']
+    }
+});
+
+
 });
