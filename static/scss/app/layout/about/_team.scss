@@ -29,6 +29,15 @@
 					text-align: center;
 				}
 			}
+			div.chart {
+				maw-width: 1280px;
+				height: 236px;
+				margin: 2% 2%
+				svg{
+					maw-width: 800px;
+				}
+
+			}
 			div.member {
 				p { 
 					text-align: center; 
