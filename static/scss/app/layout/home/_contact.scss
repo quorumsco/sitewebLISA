@@ -126,6 +126,9 @@
 						}
 						width: 100%;
 					}
+					li:nth-child(2) {
+						margin-top: 100px;
+					}
 				}
 			}
 			ul {
@@ -153,6 +156,7 @@
 					}
 					li:nth-child(2) {
 						width: auto;
+						margin-top: 70px;
 					}
 
 				}			

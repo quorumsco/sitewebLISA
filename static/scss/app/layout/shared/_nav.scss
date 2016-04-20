@@ -16,7 +16,7 @@
 				width: 80px; 
 				height: 80px; 
 				background-color: transparent;
-				font-size: 20px;
+				font-size: 22px;
 				color: $font-color;
 				border:0px;
 			}
@@ -55,6 +55,7 @@
 				background-color: transparent;
 				border: 1px solid rgba(255, 255, 255, 0.4);
 				letter-spacing : 0.5px;
+				font-size: 14px;
 				&:hover {
 					background-color: $red;
 					border: 1px solid rgba(255, 0, 0, 0.4);
@@ -106,6 +107,7 @@
 			padding: 12px 20px;
 			border: 1px solid rgba(255, 255, 255, 0.4);
 			letter-spacing : 0.5px;
+			font-weight: bold;
 		}
 		.banner {
 			i {
@@ -155,6 +157,12 @@
 			button {
 				background-color: $blue;
 				margin-bottom: 15px;
+				font-size: 14px;
+				font-weight: bold;
+				&:hover {
+					background-color: $red;
+					letter-spacing : 0.5px;
+				}
 			}
 			img {
 				-webkit-filter: invert(100%);
@@ -176,10 +184,13 @@
 					display: inline-block;
 				}
 			}
-			.navbar-brand{
-				margin-left: 10px;
+			a.navbar-brand{
+				margin-left: 0px;
+				padding-left: 10px;
+				padding-bottom: 10px;
 				img{
 					width: 180px;
+					margin-top: 12px;
 				}
 			}
 			.banner {

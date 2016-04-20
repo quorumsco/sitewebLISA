@@ -8,6 +8,7 @@
 	  			color: $grey;
 	  			font-size: 20px;
 	  		}
+	  		width: 95%;
 			margin-top: 60px;
 			margin-bottom: 60px;
 			h2{
@@ -55,18 +56,11 @@
 			list-style-type: none;
 			li{
 				display: inline-block;
-				@media(max-width: $small-screen){
-					margin-bottom: 5px;
-				}
 			}
 		}
 	}
 	@media(max-width: $small-screen){
-		#target {	
-			.container {
-				margin-left: 2%;
-				margin-right: 2%; 
-			}
+		#target {
 			button {
 				height: 100px;
 				margin-top: 10px;
@@ -85,6 +79,24 @@
 				p {
 					display: inline;
 					margin-top: 0px;
+				}
+			}
+		}
+	}
+	@media(max-width: 425px){
+		#target {
+			.container {
+				ul {
+					li{
+						button{
+							font-size: 18px;
+						}
+					}
+				}
+				a {
+					button {
+							font-size: 16px;
+					}
 				}
 			}
 		}

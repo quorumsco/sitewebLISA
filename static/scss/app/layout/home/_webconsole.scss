@@ -48,8 +48,19 @@
 			}
 		}
 	}
+	@media(max-width: $small-screen) {
+		#webconsole {
+			div.container {
+				margin: 0 auto;
+				width: calc(100% - 20px);
+			}
+		}
+	}
 	@media(max-width: 767px) {
 		#webconsole {
+			.container {
+				max-width: 760px;	
+			}
 			opacity: 1;
 			.list {
 				div.sentence {
@@ -72,6 +83,9 @@
 		#webconsole {
 			h3 {
 				width: 90%;
+			}
+			.container {
+				max-width: 1000px;
 			}
 		}
 	}

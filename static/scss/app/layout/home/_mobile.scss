@@ -18,7 +18,7 @@
 		.list {
 			div.sentence { 
 				color: $grey;
-				width: 540px;
+				width: 50%;
 				padding: 10px 0;
 				display: inline-block;
 			}
@@ -60,6 +60,11 @@
 				margin: 0 8%;
 				float: none;
 			}
+			.list {
+				div.sentence {
+					width: 90%;
+				}
+			}
 			p {
 				&:first-child{
 					display: inline-block;
@@ -94,9 +99,19 @@
 			}
 		}
 	}
+	@media(min-width: 768px) and (max-width: 1024px) {
+		#mobile {
+			.container {
+				max-width: 1000px;
+			}
+		}
+	}
 	@media(max-width: 767px) {
 		#mobile {
 			opacity: 1;
+			.container {
+				max-width: 760px;
+			}
 			.list {
 				div.sentence {
 					width: 86%;
@@ -108,6 +123,14 @@
 		#mobile {	
 			.container {
 				margin: 0 auto;
+			}
+		}
+	}
+	@media(max-width: $small-screen) {
+		#mobile {	
+			div.container {
+				margin: 0 auto;
+				width: calc(100% - 20px);
 			}
 		}
 	}
