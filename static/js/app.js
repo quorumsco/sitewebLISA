@@ -67,6 +67,61 @@ $(document).ready(function(){
             $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
             $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
         }
+        //Custom error message - #contact input - home page
+        function validEmail(email) {
+            var emailRegex = /\S+@\S+\.\S+/;
+            return emailRegex.test(email);
+        }
+        function validName(name) {
+            var nameRegex = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s-]{3,60}$/;
+            return nameRegex.test(name)
+        }
+        function validMessage(message) {
+            var messageRegex = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]{0,300}$/;
+            return massageRegex.test(message)
+        }
+        $('#contact form button').on('click', function() {
+            if(window.location.pathname.substring(0, 4) == "/fr/") {
+                if(!validEmail($('#contact [name="_replyto"]').val())){
+                    $('#contact [name="_replyto"]')[0].setCustomValidity("Veuillez renseigner un email valide.");
+                } else {
+                    $('#contact [name="_replyto"]')[0].setCustomValidity("");
+                }
+                if(!validName($('#contact [name="name"]').val())){
+                    $('#contact [name="name"]')[0].setCustomValidity("Veuillez renseigner un nom et prénom valides. Lettres et nombres uniquement, entre 3 et 60 caractères.");
+                } else {
+                    $('#contact [name="name"]')[0].setCustomValidity("");
+                }
+                if(!validMessage($('#contact [name="message"]').val())){
+                    $('#contact [name="message"]')[0].setCustomValidity("Veuillez renseigner un message valide. 300 caractères maximum");
+                }
+            } else {
+                if(!validEmail($('#contact [name="_replyto"]').val())){
+                    $('#contact [name="_replyto"]')[0].setCustomValidity("Set a valid email.");
+                } else {
+                    $('#contact [name="_replyto"]')[0].setCustomValidity("");
+                }
+                if(!validName($('#contact [name="name"]').val())){
+                    $('#contact [name="name"]')[0].setCustomValidity("Set a valid name. Only letters and numbers, between 3 & 60 characters.");
+                } else {
+                    $('#contact [name="name"]')[0].setCustomValidity("");
+                }
+                if(!validMessage($('#contact [name="message"]').val())){
+                    $('#contact [name="message"]')[0].setCustomValidity("Set a valid message. 300 characters maximum");
+                }
+            }
+        });
+        $('#contact form input, #contact form textarea').on('change', function() {
+            if(validEmail($('#contact [name="_replyto"]').val())){
+                $('#contact [name="_replyto"]')[0].setCustomValidity("");
+            }
+            if(!validName($('#contact [name="name"]').val())){
+                $('#contact [name="name"]')[0].setCustomValidity("");
+            }
+            if(!validMessage($('#contact [name="message"]').val())){
+                $('#contact [name="message"]')[0].setCustomValidity("");
+            }
+        });
     }
 
     //ScrollTo - home page
