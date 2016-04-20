@@ -74,6 +74,7 @@ $(document).ready(function(){
         if($('#contact').length > 0) {
             e.preventDefault();
             var name = $(this).attr('href').substring(1);
+            //Gestion du scrollTo en boucle
             if(clickScrollTo != name){
                 console.log(name);
                 clickScrollTo = name;
@@ -153,8 +154,8 @@ $(document).ready(function(){
             $('li.active').removeClass('active');
             $(this).parent().addClass('active');
             //Swap
-            $('#'+lastSlide).fadeOut(200, function(){
-                $('#'+slide).fadeIn(500);           
+            $('#'+lastSlide).fadeOut(0, function(){
+                $('#'+slide).fadeIn(400);           
             });     
         }
     });
