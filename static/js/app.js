@@ -1,10 +1,10 @@
-//Gestion du scrollTo en boucle
+//Loop scrollTo management
 var clickScrollTo = null;
 
 $(window).scroll(function(event){
     var yOffset = window.pageYOffset;
     
-    //Gestion du scrollTo en boucle
+    //Loop scrollTo management
     clickScrollTo = null;
 
     //Transition scroll
@@ -129,7 +129,7 @@ $(document).ready(function(){
         if($('#contact').length > 0) {
             e.preventDefault();
             var name = $(this).attr('href').substring(1);
-            //Gestion du scrollTo en boucle
+            //Loop scrollTo management
             if(clickScrollTo != name){
                 console.log(name);
                 clickScrollTo = name;
@@ -170,7 +170,6 @@ $(document).ready(function(){
     });
 
     //Language
-
     $('.flag a').on('click', function(e){
         //e.preventDefault();
         var host = "//"+window.location.hostname;
@@ -196,7 +195,6 @@ $(document).ready(function(){
         });
     }
     $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
-
     
     //Slider switch - about page
     $('#slider').find('a').on('click', function(e){

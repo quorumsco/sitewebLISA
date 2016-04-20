@@ -1,6 +1,7 @@
 @include exports('contact') {
 	#contact {
 		margin-top: 60px;
+		padding-bottom: 50px;
 		.container {
 			width: 90%;
 		  	span.quote{
@@ -20,7 +21,7 @@
 					margin-right: 10px; 
 					form {
 						input, textarea {
-							width: 350px;
+							width: calc(310px + 4%);
 							border: 0;
 							border-bottom: 2px solid #E0E0E0;
 							padding: 10px 0;
@@ -61,7 +62,7 @@
 						}
 				}
 				li:nth-child(2) {
-					width: 43%;
+					width: 46%;
 					vertical-align : top;
 					text-align: left;
 					p {
@@ -116,7 +117,7 @@
 		  			font-size: 20px;
 		  		}
 				ul {
-					display: list-items;
+					display: list-item;
 					li:nth-child(1) {
 						form {
 							input, textarea {
@@ -183,15 +184,19 @@
 			.container {
 				ul {
 					li:nth-child(1) {
+						text-align: center;
 						form {
 							input, textarea {
-								width: 300px;
+								width: 100%;
 							}
 						}
-						width: 90%;
+						width: 100%;
 					}
 					li:nth-child(2) {
 						width: auto;
+						h2 {
+							text-align: center;
+						}
 					}
 
 				}			
