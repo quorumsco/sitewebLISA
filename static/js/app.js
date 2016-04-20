@@ -92,10 +92,14 @@ $(document).ready(function(){
         $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
     }
     $(window).resize(function() {
+        console.log(window.innerWidth);
         if(window.innerWidth <= 1110 && $('#nav').next().hasClass('big')) {
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else if(window.pageYOffset <= 50){
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
+        } 
+        if(window.innerWidth > 1110) {
+            $('#nav').removeClass('show-menu');
         }
     });
 
