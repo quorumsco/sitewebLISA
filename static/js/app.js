@@ -78,7 +78,7 @@ $(document).ready(function(){
         }
         function validMessage(message) {
             var messageRegex = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]{0,300}$/;
-            return massageRegex.test(message)
+            return messageRegex.test(message)
         }
         $('#contact form button').on('click', function() {
             if(window.location.pathname.substring(0, 4) == "/fr/") {
