@@ -12,10 +12,10 @@ $(window).scroll(function(event){
         var breakpoint = 50;
         if (yOffset > breakpoint){
             $('#nav').addClass('active');
-            $('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         }else{
             $('#nav').removeClass('active');
-            $('.navbar-brand img').attr('src', '../images/logo/logo-white.svg');
+            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
     }
 
@@ -59,13 +59,13 @@ $(document).ready(function(){
         if(window.location.pathname.substring(0, 4) == "/fr/") {
             var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['p.rickwaert@hotmail.fr', 'Philippe Rickwaert']];
             var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
-            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
-            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+            $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
         } else {
             var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['franck.underwood@gmail.com', 'Franck Underwood'], ['georges.washington@gmail.com', 'Georges Washington']];
             var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
-            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
-            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+            $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
         }
         //Custom error message - #contact input - home page
         function validEmail(email) {
@@ -80,52 +80,52 @@ $(document).ready(function(){
             var messageRegex = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]{0,300}$/;
             return messageRegex.test(message)
         }
-        $('#contact form button').on('click', function() {
+        $('#contact').find('form').find('button').on('click', function() {
             if(window.location.pathname.substring(0, 4) == "/fr/") {
-                if(!validEmail($('#contact [name="_replyto"]').val())){
-                    $('#contact [name="_replyto"]')[0].setCustomValidity("Veuillez renseigner un email valide.");
+                if(!validEmail($('#contact').find('[name="_replyto"]').val())){
+                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("Veuillez renseigner un email valide.");
                 } else {
-                    $('#contact [name="_replyto"]')[0].setCustomValidity("");
+                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
                 }
-                if(!validName($('#contact [name="name"]').val())){
-                    $('#contact [name="name"]')[0].setCustomValidity("Veuillez renseigner un nom et prénom valides. Lettres et nombres uniquement, entre 3 et 60 caractères.");
+                if(!validName($('#contact').find('[name="name"]').val())){
+                    $('#contact').find('[name="name"]')[0].setCustomValidity("Veuillez renseigner un nom et prénom valides. Lettres et nombres uniquement, entre 3 et 60 caractères.");
                 } else {
-                    $('#contact [name="name"]')[0].setCustomValidity("");
+                    $('#contact').find('[name="name"]')[0].setCustomValidity("");
                 }
-                if(!validMessage($('#contact [name="message"]').val())){
-                    $('#contact [name="message"]')[0].setCustomValidity("Veuillez renseigner un message valide. 300 caractères maximum");
+                if(!validMessage($('#contact').find('[name="message"]').val())){
+                    $('#contact').find('[name="message"]')[0].setCustomValidity("Veuillez renseigner un message valide. 300 caractères maximum");
                 }
             } else {
-                if(!validEmail($('#contact [name="_replyto"]').val())){
-                    $('#contact [name="_replyto"]')[0].setCustomValidity("Set a valid email.");
+                if(!validEmail($('#contact').find('[name="_replyto"]').val())){
+                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("Set a valid email.");
                 } else {
-                    $('#contact [name="_replyto"]')[0].setCustomValidity("");
+                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
                 }
-                if(!validName($('#contact [name="name"]').val())){
-                    $('#contact [name="name"]')[0].setCustomValidity("Set a valid name. Only letters and numbers, between 3 & 60 characters.");
+                if(!validName($('#contact').find('[name="name"]').val())){
+                    $('#contact').find('[name="name"]')[0].setCustomValidity("Set a valid name. Only letters and numbers, between 3 & 60 characters.");
                 } else {
-                    $('#contact [name="name"]')[0].setCustomValidity("");
+                    $('#contact').find('[name="name"]')[0].setCustomValidity("");
                 }
-                if(!validMessage($('#contact [name="message"]').val())){
-                    $('#contact [name="message"]')[0].setCustomValidity("Set a valid message. 300 characters maximum");
+                if(!validMessage($('#contact').find('[name="message"]').val())){
+                    $('#contact').find('[name="message"]')[0].setCustomValidity("Set a valid message. 300 characters maximum");
                 }
             }
         });
         $('#contact form input, #contact form textarea').on('change', function() {
-            if(validEmail($('#contact [name="_replyto"]').val())){
-                $('#contact [name="_replyto"]')[0].setCustomValidity("");
+            if(validEmail($('#contact').find('[name="_replyto"]').val())){
+                $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
             }
-            if(!validName($('#contact [name="name"]').val())){
-                $('#contact [name="name"]')[0].setCustomValidity("");
+            if(!validName($('#contact').find('[name="name"]').val())){
+                $('#contact').find('[name="name"]')[0].setCustomValidity("");
             }
-            if(!validMessage($('#contact [name="message"]').val())){
-                $('#contact [name="message"]')[0].setCustomValidity("");
+            if(!validMessage($('#contact').find('[name="message"]').val())){
+                $('#contact').find('[name="message"]')[0].setCustomValidity("");
             }
         });
     }
 
     //ScrollTo - home page
-    $('#nav ul.nav a').not('.link').on('click', function(e){
+    $('#nav').find('ul.nav').find('a').not('.link').on('click', function(e){
         if($('#contact').length > 0) {
             e.preventDefault();
             var name = $(this).attr('href').substring(1);
@@ -145,7 +145,7 @@ $(document).ready(function(){
     //White Menu
     if($('#nav').next().hasClass('small')) {
         $('#nav').addClass('active');
-        $('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+        $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
     }
 
     //Hamburger Menu
@@ -166,11 +166,12 @@ $(document).ready(function(){
         } 
         if(window.innerWidth > 1110) {
             $('#nav').removeClass('show-menu');
+            $('#nav').removeClass('active');
         }
     });
 
     //Language
-    $('.flag a').on('click', function(e){
+    $('.flag').find('a').on('click', function(e){
         //e.preventDefault();
         var host = "//"+window.location.hostname;
         var path = window.location.pathname.substring(4);
@@ -188,7 +189,7 @@ $(document).ready(function(){
         }
     });
     if(window.location.pathname.substring(4) != "") {
-        $.each($('ul.nav a').not('.link'), function() {
+        $.each($('ul.nav').find('a').not('.link'), function() {
             if($(this).attr('href').substring(0,1) == "/") {
                 $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
             }
@@ -243,7 +244,7 @@ $(document).ready(function(){
     });
 
     //FAQ toggle
-    $('#faq ul li p:nth-child(1)').on('click', function(){
+    $('#faq').find('ul').find('li').find('p:nth-child(1)').on('click', function(){
         $(this).parent().children().eq(1).slideToggle(500);
 
     });
