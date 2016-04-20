@@ -1,5 +1,11 @@
+//Gestion du scrollTo en boucle
+var clickScrollTo = null;
+
 $(window).scroll(function(event){
     var yOffset = window.pageYOffset;
+    
+    //Gestion du scrollTo en boucle
+    clickScrollTo = null;
 
     //Transition scroll
     if(window.innerWidth > 1110 && $('#nav').next().hasClass('big')) {
@@ -62,17 +68,21 @@ $(document).ready(function(){
             $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
         }
     }
-    //ScrollTo - home page
 
+    //ScrollTo - home page
     $('#nav ul.nav a').not('.link').on('click', function(e){
         if($('#contact').length > 0) {
             e.preventDefault();
-            var divTop = $(this).attr('href').substring(1);
-            var divTop = $(divTop).position().top;
-            $('html, body').animate({
-                    scrollTop: divTop
-                }, 500
-            );
+            var name = $(this).attr('href').substring(1);
+            if(clickScrollTo != name){
+                console.log(name);
+                clickScrollTo = name;
+                var divTop = $(name).position().top;
+                $('html, body').animate({
+                        scrollTop: divTop
+                    }, 500
+                );
+            }
         }
     });
 
