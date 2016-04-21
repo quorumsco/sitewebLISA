@@ -1,16 +1,22 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+//Loop scrollTo management
+var clickScrollTo = null;
+
 $(window).scroll(function (event) {
     var yOffset = window.pageYOffset;
+
+    //Loop scrollTo management
+    clickScrollTo = null;
 
     //Transition scroll
     if (window.innerWidth > 1110 && $('#nav').next().hasClass('big')) {
         var breakpoint = 50;
         if (yOffset > breakpoint) {
             $('#nav').addClass('active');
-            $('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else {
             $('#nav').removeClass('active');
-            $('.navbar-brand img').attr('src', '../images/logo/logo-white.svg');
+            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
     }
 
@@ -52,34 +58,94 @@ $(document).ready(function () {
     //Random email/name - #contact home page
     if ($('#contact').length > 0) {
         if (window.location.pathname.substring(0, 4) == "/fr/") {
-            var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['philipperickwaert@baronnoir.fr', 'Philippe Rickwaert']];
+            var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['p.rickwaert@hotmail.fr', 'Philippe Rickwaert']];
             var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
-            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
-            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+            $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
         } else {
-            var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['frankunderwood@houseofcards.com', 'Franck Underwood'], ['georgewashington@independanceday.com', 'George Washington']];
+            var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['franck.underwood@gmail.com', 'Franck Underwood'], ['georges.washington@gmail.com', 'Georges Washington']];
             var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
-            $('#contact [name="_replyto"]').attr('placeholder', chosenOne[0]);
-            $('#contact [name="name"]').attr('placeholder', chosenOne[1]);
+            $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
         }
+        //Custom error message - #contact input - home page
+        function validEmail(email) {
+            var emailRegex = /\S+@\S+\.\S+/;
+            return emailRegex.test(email);
+        }
+        function validName(name) {
+            var nameRegex = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\s-]{3,60}$/;
+            return nameRegex.test(name);
+        }
+        function validMessage(message) {
+            var messageRegex = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]{0,300}$/;
+            return messageRegex.test(message);
+        }
+        $('#contact').find('form').find('button').on('click', function () {
+            if (window.location.pathname.substring(0, 4) == "/fr/") {
+                if (!validEmail($('#contact').find('[name="_replyto"]').val())) {
+                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("Veuillez renseigner un email valide.");
+                } else {
+                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
+                }
+                if (!validName($('#contact').find('[name="name"]').val())) {
+                    $('#contact').find('[name="name"]')[0].setCustomValidity("Veuillez renseigner un nom et prénom valides. Lettres et nombres uniquement, entre 3 et 60 caractères.");
+                } else {
+                    $('#contact').find('[name="name"]')[0].setCustomValidity("");
+                }
+                if (!validMessage($('#contact').find('[name="message"]').val())) {
+                    $('#contact').find('[name="message"]')[0].setCustomValidity("Veuillez renseigner un message valide. 300 caractères maximum");
+                }
+            } else {
+                if (!validEmail($('#contact').find('[name="_replyto"]').val())) {
+                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("Set a valid email.");
+                } else {
+                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
+                }
+                if (!validName($('#contact').find('[name="name"]').val())) {
+                    $('#contact').find('[name="name"]')[0].setCustomValidity("Set a valid name. Only letters and numbers, between 3 & 60 characters.");
+                } else {
+                    $('#contact').find('[name="name"]')[0].setCustomValidity("");
+                }
+                if (!validMessage($('#contact').find('[name="message"]').val())) {
+                    $('#contact').find('[name="message"]')[0].setCustomValidity("Set a valid message. 300 characters maximum");
+                }
+            }
+        });
+        $('#contact form input, #contact form textarea').on('change', function () {
+            if (validEmail($('#contact').find('[name="_replyto"]').val())) {
+                $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
+            }
+            if (!validName($('#contact').find('[name="name"]').val())) {
+                $('#contact').find('[name="name"]')[0].setCustomValidity("");
+            }
+            if (!validMessage($('#contact').find('[name="message"]').val())) {
+                $('#contact').find('[name="message"]')[0].setCustomValidity("");
+            }
+        });
     }
-    //ScrollTo - home page
 
-    $('#nav ul.nav a').not('.link').on('click', function (e) {
+    //ScrollTo - home page
+    $('#nav').find('ul.nav').find('a').not('.link').on('click', function (e) {
         if ($('#contact').length > 0) {
             e.preventDefault();
-            var divTop = $(this).attr('href').substring(1);
-            var divTop = $(divTop).position().top;
-            $('html, body').animate({
-                scrollTop: divTop
-            }, 500);
+            var name = $(this).attr('href').substring(1);
+            //Loop scrollTo management
+            if (clickScrollTo != name) {
+                console.log(name);
+                clickScrollTo = name;
+                var divTop = $(name).position().top;
+                $('html, body').animate({
+                    scrollTop: divTop
+                }, 500);
+            }
         }
     });
 
     //White Menu
     if ($('#nav').next().hasClass('small')) {
         $('#nav').addClass('active');
-        $('.navbar-brand img').attr('src', '../images/logo/logo-color.svg');
+        $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
     }
 
     //Hamburger Menu
@@ -92,16 +158,20 @@ $(document).ready(function () {
         $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
     }
     $(window).resize(function () {
+        console.log(window.innerWidth);
         if (window.innerWidth <= 1110 && $('#nav').next().hasClass('big')) {
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
-        } else if (window.pageYOffset <= 50) {
+        } else if (window.pageYOffset <= 50 && $('#nav').next().hasClass('big')) {
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
+        }
+        if (window.innerWidth > 1110) {
+            $('#nav').removeClass('show-menu');
+            $('#nav').removeClass('active');
         }
     });
 
     //Language
-
-    $('.flag a').on('click', function (e) {
+    $('.flag').find('a').on('click', function (e) {
         //e.preventDefault();
         var host = "//" + window.location.hostname;
         var path = window.location.pathname.substring(4);
@@ -119,7 +189,7 @@ $(document).ready(function () {
         }
     });
     if (window.location.pathname.substring(4) != "") {
-        $.each($('ul.nav a').not('.link'), function () {
+        $.each($('ul.nav').find('a').not('.link'), function () {
             if ($(this).attr('href').substring(0, 1) == "/") {
                 $(this).attr('href', window.location.pathname.substring(0, 3) + "" + $(this).attr('href'));
             }
@@ -138,8 +208,27 @@ $(document).ready(function () {
             $('li.active').removeClass('active');
             $(this).parent().addClass('active');
             //Swap
-            $('#' + lastSlide).fadeOut(200, function () {
-                $('#' + slide).fadeIn(500);
+            $('#' + lastSlide).fadeOut(0, function () {
+                $('#' + slide).fadeIn(400);
+                //donut chart
+                if (slide == "team") {
+                    var chart = c3.generate({
+                        data: {
+                            columns: [['Information Technology', 30], ['Social & Cognitive Sciences', 20], ['Data Sciences', 20], ['Field & Customer Officers', 20], ['Data Vizualisation', 5], ['Communication Officers', 5]],
+                            type: 'donut'
+                        },
+                        donut: {
+                            label: {
+                                format: function (value, ratio, id) {
+                                    return "";
+                                }
+                            }
+                        },
+                        color: {
+                            pattern: ['#EB3459', '#00D19C', '#8255F5', '#DDFB34', '#20BFFB', '#DC45A3']
+                        }
+                    });
+                }
             });
         }
     });
@@ -174,8 +263,7 @@ $(document).ready(function () {
     });
 
     //FAQ toggle
-
-    $('#faq ul li p:nth-child(1)').on('click', function () {
+    $('#faq').find('ul').find('li').find('p:nth-child(1)').on('click', function () {
         $(this).parent().children().eq(1).slideToggle(500);
     });
 });
