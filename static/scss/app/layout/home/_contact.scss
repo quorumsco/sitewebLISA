@@ -207,4 +207,26 @@
 			}
 		}
 	}
+	@media(min-width: 1600px) {
+		#contact {
+			.container {
+				max-width: 1000px;
+			}
+		}
+	}
+	@media(min-width: 1024px) {
+		#contact {
+			.container {
+				ul{
+					li:nth-child(1){
+						form {
+							input, textarea {
+								width: 450px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

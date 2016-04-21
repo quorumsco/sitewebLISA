@@ -18,7 +18,7 @@
 		.list {
 			div.sentence { 
 				color: $grey;
-				width: 50%;
+				width: 90%;
 				padding: 10px 0;
 				display: inline-block;
 			}
@@ -80,7 +80,7 @@
 		#mobile {
 			.list {
 				div.sentence { 
-					width: 70%;
+					width: 90%;
 				}
 			}
 		}
@@ -131,6 +131,25 @@
 			div.container {
 				margin: 0 auto;
 				width: calc(100% - 20px);
+			}
+		}
+	}
+	@media(min-width: 1600px) and (max-width: 2300px) {
+		#mobile {	
+			background-position: 20%;
+			.container {
+				margin-left: auto;
+				width: 41%;
+				margin-right: 3%;
+			}
+		}
+	}
+	@media(min-width: 2301px) {
+		#mobile {	
+			background-position: 25%;
+			.container {
+				margin-left: 20%;
+				width: auto;
 			}
 		}
 	}

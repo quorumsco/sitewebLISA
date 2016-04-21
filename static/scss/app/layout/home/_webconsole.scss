@@ -208,4 +208,21 @@
 			}
 		}
 	}
+	@media(min-width: 1600px) and (max-width: 2300px) {
+		#webconsole {	
+			background-position: 87%;
+			.container {
+				margin-left: 15%;
+			}
+		}
+	}
+	@media(min-width: 2301px) {
+		#webconsole {	
+			background-position: 77%;
+			.container {
+				margin-left: 20%;
+				width: auto;
+			}
+		}
+	}
 }
