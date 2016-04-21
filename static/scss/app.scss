@@ -110,6 +110,9 @@ main {
     min-height: 88%;
 }
 
+button.blue, button.red, button.purple {
+    font-weight: bold;
+}
 .blue {
     background-color: $blue;
 }

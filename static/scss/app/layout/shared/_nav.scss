@@ -57,6 +57,7 @@
 				border: 1px solid rgba(255, 255, 255, 0.4);
 				letter-spacing : 0.5px;
 				font-size: 14px;
+				font-weight: bold;
 				&:hover {
 					background-color: $red;
 					border: 1px solid rgba(255, 0, 0, 0.4);
@@ -159,7 +160,6 @@
 				background-color: $blue;
 				margin-bottom: 15px;
 				font-size: 14px;
-				font-weight: bold;
 				&:hover {
 					background-color: $red;
 					letter-spacing : 0.5px;
