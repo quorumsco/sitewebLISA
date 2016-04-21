@@ -21,6 +21,11 @@
 				width: 90%;
 				padding: 10px 0;
 				display: inline-block;
+				strong {
+					padding: 1px 3px;
+					background: $pink;
+					color: white;
+				}
 			}
 			div.icon {
 				width: 16px;
