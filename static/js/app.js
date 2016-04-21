@@ -209,7 +209,33 @@ $(document).ready(function(){
             $(this).parent().addClass('active');
             //Swap
             $('#'+lastSlide).fadeOut(0, function(){
-                $('#'+slide).fadeIn(400);           
+                $('#'+slide).fadeIn(400);
+                                //donut chart
+                if (slide == "team"){
+                        var chart = c3.generate({
+                            data: {
+                                columns: [
+                                    ['Information Technology', 30],
+                                    ['Social & Cognitive Sciences', 20] ,
+                                    ['Data Sciences', 20],
+                                    ['Field & Customer Officers', 20],
+                                    ['Data Vizualisation', 5],
+                                    ['Communication Officers', 5]
+                                ],
+                                type: 'donut'
+                            },
+                            donut: {
+                                label: {
+                                    format: function (value, ratio, id) {
+                                        return "";
+                                    }
+                                }
+                            },
+                            color: {
+                                pattern: ['#EB3459', '#00D19C', '#8255F5', '#DDFB34', '#20BFFB', '#DC45A3']
+                            }
+                        });
+                }           
             });     
         }
     });
