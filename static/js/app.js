@@ -224,6 +224,9 @@ $(document).ready(function(){
                                 ],
                                 type: 'donut'
                             },
+                            legend: {
+                                    position: 'right'
+                            },
                             donut: {
                                 label: {
                                     format: function (value, ratio, id) {
@@ -232,7 +235,9 @@ $(document).ready(function(){
                                 }
                             },
                             color: {
-                                pattern: ['#EB3459', '#00D19C', '#8255F5', '#DDFB34', '#20BFFB', '#DC45A3']
+                                //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
+                                pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
+                                //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
                             }
                         });
                 }           
