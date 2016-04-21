@@ -4,27 +4,38 @@
 			font-size: 30px;
 			margin-bottom: 70px;
 		}
-		p {
-			text-align: justify;
-			line-height: 35px;
-			margin-bottom: 20px;
-			span {
-				display: block;
-				b {
-					color: $blue;
-					font-weight: 100;
-				}
-				&.margin-top {
-					margin-top: 30px;
-				}
-				&.margin-bottom {
-					margin-bottom: 30px;
+		div.believe-part {
+			&:nth-child(2) {
+				img {
+					margin-top: 60px;
 				}
 			}
-			&[lang="fr"] {
-				span {
-					margin-bottom: 30px;
+			&:nth-child(3) {
+				margin: 40px 0;
+				img {
+					margin-top: 77px;
 				}
+			}
+			&:nth-child(4) {
+				img {
+					margin-top: 40px;
+				}
+			}
+			p {
+				display: inline-block;
+				text-align: justify;
+				line-height: 35px;
+				margin-bottom: 20px;
+				width: calc(100% - 300px);
+				span {
+					display: block;
+				}
+			}
+			img {
+				width: 200px;
+				display: inline-block;
+				float: left;
+				border-radius: 50%;
 			}
 		}
 		strong {
