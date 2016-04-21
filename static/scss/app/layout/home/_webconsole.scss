@@ -25,6 +25,11 @@
 				width: 50%;
 				padding: 10px 0;
 				display: inline-block;
+				strong.highlight {
+					padding: 1px 3px;
+					background: $green;
+					color: white;
+				}
 			}
 			div.icon {
 				width: 14px;
