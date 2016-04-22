@@ -67,13 +67,14 @@
 			}
 			.flag {
 				position: absolute;
-				right: 80px;
-				top:30px;
+				right: 67px;
+				top: 22px;
 				a {
 					text-decoration: none;
 					color: inherit;
-					&:hover {
-						color: $grey;
+					img {
+						border-left: none;
+						width: 28px;
 					}
 				}
 			}

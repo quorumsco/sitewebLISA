@@ -175,7 +175,7 @@ $(document).ready(function(){
         //e.preventDefault();
         var host = "//"+window.location.hostname;
         var path = window.location.pathname.substring(4);
-        if($(this).text() == "EN"){
+        if($(this).children('img').attr('alt') == "EN"){
             $(this).attr('href', host+"/en/"+path);
         } else {
             $(this).attr('href', host+"/fr/"+path);
