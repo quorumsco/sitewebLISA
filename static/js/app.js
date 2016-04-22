@@ -40,7 +40,7 @@ $(window).scroll(function(event){
         }
     }
     //Animation fade believe
-    if(window.innerWidth > 425 && $('#believe').length > 0) {
+    if(window.innerWidth > 425 && $('#believe').length > 0 && $('html').attr('lang') == 'fr') {
         var breakpointSecond = $('.believe-fr:nth-child(3)').position().top - 700;
         var breakpointThird = $('.believe-fr:nth-child(4)').position().top - 600;
         var breakpointList = $('#believe ul').position().top - 500;
