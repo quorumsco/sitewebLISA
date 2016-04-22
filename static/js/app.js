@@ -230,6 +230,11 @@ $(document).ready(function(){
                 $('#'+slide).fadeIn(400);
                                 //donut chart
                 if (slide == "team"){
+                    if(window.innerWidth < 500){
+                        var legendPosition = 'bottom';
+                    } else {
+                        var legendPosition = 'right';
+                    }
                         var chart = c3.generate({
                             data: {
                                 columns: [
@@ -243,7 +248,7 @@ $(document).ready(function(){
                                 type: 'donut'
                             },
                             legend: {
-                                    position: 'right'
+                                    position: legendPosition
                             },
                             donut: {
                                 label: {
