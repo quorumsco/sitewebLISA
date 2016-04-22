@@ -19,7 +19,7 @@ $(window).scroll(function(event){
         }
     }
 
-    //Animation fade top
+    //Animation fade home
     if(window.innerWidth >= 768 && $('#product').length > 0) {
         var breakpointProduct = $('#product').position().top - 400;
         var breakpointWebconsole = $('#webconsole').position().top - 400;
@@ -39,8 +39,26 @@ $(window).scroll(function(event){
             $('#target').addClass('animated fadeInUp');
         }
     }
+    //Animation fade believe
+    if(window.innerWidth > 425 && $('#believe').length > 0) {
+        var breakpointSecond = $('.believe-fr:nth-child(3)').position().top - 700;
+        var breakpointThird = $('.believe-fr:nth-child(4)').position().top - 600;
+        var breakpointList = $('#believe ul').position().top - 500;
+
+        if (yOffset > breakpointSecond){
+            $('.believe-fr:nth-child(3)').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointThird){
+            $('.believe-fr:nth-child(4)').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointList){
+            $('#believe ul').addClass('animated fadeInUp');
+        }
+    }
 });
 $(document).ready(function(){
+    //Animation fade believe
+    $('.believe-fr:nth-child(2)').addClass('animated fadeInUp');
     //Border animation - #contact home page
     $('#contact input, #contact textarea, #newsletter input').on('focusin', function(){
         var widthInput = $(this).width();

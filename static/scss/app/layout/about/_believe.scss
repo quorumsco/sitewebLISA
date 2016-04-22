@@ -75,6 +75,13 @@
 			}
 		}
 	}
+	@media(min-width: 425px) {
+		#believe {
+			.believe-fr, ul {
+				opacity: 0; 
+			}
+		}
+	}
 	@media(max-width: $small-screen){
 		#believe {
 			p {
