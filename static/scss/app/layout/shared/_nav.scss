@@ -21,6 +21,9 @@
 				border: 0px;
 				outline: 0px;
 			}
+			a {
+					color: $white-color;
+				}
 			ul.nav{
 				display: inline-block;
 				padding: 15px 0;
@@ -46,6 +49,9 @@
 		}
 		.banner{
 			display: inline-block;
+			a{
+				text-decoration: none;
+			}
 			img {
 				padding: 0 5px 0 25px;
 				border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -102,6 +108,9 @@
 					color: $font-color;
 				}
 			}		
+		}
+		a {
+			color: $font-color;
 		}
 		button {
 			border: none;

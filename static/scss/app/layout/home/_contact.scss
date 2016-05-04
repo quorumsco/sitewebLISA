@@ -4,10 +4,7 @@
 		padding-bottom: 50px;
 		.container {
 			width: 90%;
-		  	span.quote{
-		  			color: $grey;
-		  			font-size: 20px;
-		  	}
+
 	  		h2 {
 	  			p {
 	  				margin: 0;
@@ -69,15 +66,15 @@
 						margin-top: 15px;
 						i {
 							color: $grey;
-							padding: 12px 3px;
+							padding: 12px 5px;
 						}
-						span:nth-child(3) {
-							display: block;
-							margin-left: 22px;
+						a {
+							text-decoration: none;
+							color: $font-color;
 						}
-					}
-					p:nth-child(6) {
-						display: block;
+						.fa-map-marker {
+							margin-right: 12px;
+						}
 					}
 					ul{
 						margin-top: 10px;
@@ -89,7 +86,7 @@
 								color: $grey;
 								text-decoration: none;
 								&:hover {
-									color: $blue;
+									color: $red;
 								}
 							}
 							i {

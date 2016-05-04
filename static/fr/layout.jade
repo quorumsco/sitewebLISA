@@ -43,8 +43,9 @@ html(lang="fr")
                             a(href='/#contact') 
                                 span Nous contacter
                     .banner
-                        img(src="../../images/icons/phone.svg")
-                        span  +33 1 79 73 40 04
+                        a(href="tel:+33179734004")
+                            img(src="../../images/icons/phone.svg")
+                            span +33 1 79 73 40 04
                         a(href="http://eepurl.com/bWGgCL" target="_blank")
                             button S'inscrire
                         span.flag
@@ -87,12 +88,13 @@ html(lang="fr")
                         i.fa.fa-close
                     img(src="../images/popup/newsletter.png")
                 div
-                    p Ne manquez rien du meilleur de nos publications, actualités et évènements !
+                    p Ne manquez rien du meilleur de nos publications, actualités et événements !
                     form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368" method="post" enctype="multipart/form-data" data-dojo-attach-point="formNode" novalidate="")
                         div.input
-                            input#mce-EMAIL(type="email" name="EMAIL" required placeholder="Email")
+                            input#mce-EMAIL(type="email" name="EMAIL" required placeholder="Email") 
                             .border-input.blue
-                            button.blue(type="submit") GO !
+                            button.blue(type="submit") GO
+                                    
         script(src='//code.jquery.com/jquery-2.1.4.min.js')
         script(src="https://d3js.org/d3.v3.min.js" charset="utf-8")
         script(src="../javascripts/c3.min.js")
