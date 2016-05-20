@@ -1,99 +1,110 @@
 extends ./layout.jade
 block vars
-    - var pageTitle = 'Équipe'
+    - var pageTitle = 'Qui sommes-nous ?'
 block content
     header#about.small
     main#aboutPage
         section#slider
-            .container
-                h2 Équi
-                    span pe
-                ul
-                    li.active
-                        a(href="#believe") VISION ET VALEURS
-                    li
-                        a(href="#team") COMPÉTENCES ET ÉQUIPE 
-                    li
-                        a(href="#jobs") JOBS  
+            .pony
+                h2 Qui sommes - 
+                    span nous ?
+                h3 "La technologie ne construit pas de grands mouvements, ne débat pas d’idées et ne partage pas sa passion ; les êtres humains oui"
+
+                a(href="index.html#contact")
+                    button.blue SAY "HELLO" FROM THE OTHER SIDE
+            ul
+                li.active
+                    a(href="#believe") COMPÉTENCES
+                li
+                    a(href="#team") QUORUMIENS
+                li
+                    a(href="#jobs") EMPLOIS
         #slide
             section#believe
-                .container
-                    .content
-                        h3.italic "La technologie ne construit pas de grands mouvements, ne débat pas d’idées et ne partage pas sa passion ; les êtres humains oui."
-                        div.believe-fr
-                            img(src="../../images/believe/people-test.jpg")
-                            p
-                                span Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent.
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/eeyVIMP8lfE" frameborder="0" allowfullscreen></iframe>
 
-                                span Ces problèmes, nous pensons que 
-                                    strong la technologie, l’intelligence artificielle et le traitement des données
-                                    |  peuvent aider à les surmonter.
+                ul.bullet
+                    li 
+                        //- div.icon
+                            img(src="../images/icons/check-blue.svg" alt="Check")
+                        div.sentence
+                            span LA 
+                                strong PROTECTION DES DROITS
+                                |  & DE LA VIE PRIVEE  
+                    li 
+                        //- div.icon
+                            img(src="../images/icons/check-blue.svg" alt="Check")
+                        div.sentence
+                            span L’EMANCIPATION DE LA DONNEE ET l’
+                                strong OPEN DATA
+                    li 
+                        //- div.icon
+                            img(src="../images/icons/check-blue.svg" alt="Check")
+                        div.sentence
+                            span LE LOGICIEL LIBRE
+                    li 
+                        //- div.icon
+                            img(src="../images/icons/check-blue.svg" alt="Check")
+                        div.sentence
+                            span L’AMBITION D’
+                                strong ETRE UTILE 
+                                | : CONSTRUIRE DES OUTILS UTILES QUI REPONDENT A DES OBJECTIFS CONCRETS
+                    li 
+                        //- div.icon
+                            img(src="../images/icons/check-blue.svg" alt="Check")
+                        div.sentence
+                            span LA TECHNOLOGIE DOIT S’ADAPTER A l’INDIVIDU, PAS L’INVERSE
+                    li
+                        //- div.icon
+                            img(src="../images/icons/check-blue.svg" alt="Check")
+                        div.sentence
+                            span L'
+                                strong INNOVATION 
+                                | PERMANENTE
 
-                                span Comme ils ont aidé à transformer à grande échelle le secteur financier, marchand ou logistique, nous pensons qu’ils peuvent aussi aider la société à aller mieux, aux hommes à diffuser leurs idées, à 
-                                    strong créer du mouvement
-                                    |  , à se rassembler autour de causes.
-                        div.believe-fr
-                            img(src="../../images/believe/technology-test.jpg")
-                            p
-                                span Nous pensons que la technologie peut aider les hommes à avoir un 
-                                    strong impact sociétal fort
-                                    | , grâce au pouvoir d’analyse, de synchronisation et de coordination de ces outils.
+                .content
+                    ul#skills
+                        li
+                            button.button1skills(href='#skills1')
+                        li
+                            button.button2skills(href='#skills2')
+                        li
+                            button.button3skills(href='#skills3')
+                    
+                    div#skills1.believe-fr
+                              
+                        p
+                            span Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent.
 
-                                span C’est pourquoi nous avons créé 
-                                    strong Quorum
-                                    |  : pour mettre les technologies dans des applications simples et fluides, dédiées aux utilisateurs et au service d’objectifs 
-                                    strong réels et concrets
-                                    |  .
+                            span Ces problèmes, nous pensons que 
+                                strong la technologie, l’intelligence artificielle et le traitement des données
+                                |  peuvent aider à les surmonter.
 
-                                span Mais si nous pensons que la technologie permet d'augmenter les capacités des individus et des organisations, elle ne peut être une fin en soi.
-                        div.believe-fr
-                            img(src="../../images/believe/talk-test.jpg")
-                            p
-                                span Elle n’est là que pour aider les 
-                                    strong hommes à accomplir
-                                    | . Son accompagnement restera toujours limité par son utilisation.
-                                span C’est pourquoi la technologie doit disparaitre, 
-                                    strong se rendre invisible
-                                    | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit :
-                        
-                        ul.bullet
-                            li 
-                                div.icon
-                                    img(src="../images/icons/check-blue.svg" alt="Check")
-                                div.sentence
-                                    span LA 
-                                        strong PROTECTION DES DROITS
-                                        |  & DE LA VIE PRIVEE  
-                            li 
-                                div.icon
-                                    img(src="../images/icons/check-blue.svg" alt="Check")
-                                div.sentence
-                                    span L’EMANCIPATION DE LA DONNEE ET l’
-                                        strong OPEN DATA
-                            li 
-                                div.icon
-                                    img(src="../images/icons/check-blue.svg" alt="Check")
-                                div.sentence
-                                    span LE LOGICIEL LIBRE
-                            li 
-                                div.icon
-                                    img(src="../images/icons/check-blue.svg" alt="Check")
-                                div.sentence
-                                    span L’AMBITION D’
-                                        strong ETRE UTILE 
-                                        | : CONSTRUIRE DES OUTILS UTILES QUI REPONDENT A DES OBJECTIFS CONCRETS
-                            li 
-                                div.icon
-                                    img(src="../images/icons/check-blue.svg" alt="Check")
-                                div.sentence
-                                    span LA TECHNOLOGIE DOIT S’ADAPTER A l’INDIVIDU, PAS L’INVERSE
-                            li
-                                div.icon
-                                    img(src="../images/icons/check-blue.svg" alt="Check")
-                                div.sentence
-                                    span L'
-                                        strong INNOVATION 
-                                        | PERMANENTE
+                            span Comme ils ont aidé à transformer à grande échelle le secteur financier, marchand ou logistique, nous pensons qu’ils peuvent aussi aider la société à aller mieux, aux hommes à diffuser leurs idées, à 
+                                strong créer du mouvement
+                                |  , à se rassembler autour de causes.
+                    
+                    div#skills2.believe-fr.hide
+                        p
+                            span Nous pensons que la technologie peut aider les hommes à avoir un 
+                                strong impact sociétal fort
+                                | , grâce au pouvoir d’analyse, de synchronisation et de coordination de ces outils.
+
+                            span C’est pourquoi nous avons créé 
+                                strong Quorum
+                                |  : pour mettre les technologies dans des applications simples et fluides, dédiées aux utilisateurs et au service d’objectifs 
+                                strong réels et concrets
+                                |  .
+
+                            span Mais si nous pensons que la technologie permet d'augmenter les capacités des individus et des organisations, elle ne peut être une fin en soi.
+                    div#skills3.believe-fr.hide
+                        p
+                            span Elle n’est là que pour aider les 
+                                strong hommes à accomplir
+                                | . Son accompagnement restera toujours limité par son utilisation.
+                            span C’est pourquoi la technologie doit disparaitre, 
+                                strong se rendre invisible
+                                | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit :
             section#team
                 .container
                     .content

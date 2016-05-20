@@ -1,29 +1,51 @@
 @include exports('slider') {
 	#slider{
-		h2 {
-			span {
-				color: $green;
+		padding: 0;
+
+		.pony{
+			background: url('../images/header/home-header2.jpg');
+			background-attachment: fixed;
+			background-position: center;		
+			height: calc(100vh - 69px);
+			width: 100vw;
+
+			h2{
+				padding: 10vh 0;
+				margin: 0;
+				color: $light-grey;
+
+				span {
+					color: $blue;
+				}
 			}
+			h3{
+				padding: 15vh 0 20vh 0;
+				color: $light-grey;
+			}
+				
+
 		}
+
 		ul {
 			list-style-type: none;
-			border-bottom: 1px solid $grey;
-			width: 800px;
-			margin: 15px auto;
-			padding: 25px 0; 
+			width: 90vw;
+			margin: 18px auto;
+			padding: 14vh 0; 
 			li {
 				display: inline-block;
 				text-align: center;
-				width: 33%;
-				background: rgba(200,200,200,0.4);
-				border-left: 2px solid transparent;
+				width: 25%;
+				/* marge */
+				margin: 10px;
 				a {
-					padding: 20px 0;
+					padding: 10px 0;
+					margin: 10px;
 					color: $grey;
 					text-decoration: none;
 					display: inline-block;
 					width: 100%;
 					outline: 0;
+					border: solid 1px;
 				}
 				&:nth-child(1) {
 					&:hover{
@@ -33,11 +55,10 @@
 					}
 				}
 				&:nth-child(2) {
-					border-left: 1px solid rgba(136,136,136,0.23);
-					border-right: 1px solid rgba(136,136,136,0.23);
+
 					&:hover {
 						a {
-						color: $purple;
+						color: $turquoise;
 						}
 					}
 				}
@@ -53,7 +74,6 @@
 						border-color: $blue;
 					}
 					&:nth-child(2){
-						border-left: 2px solid $purple;
 						border-right: 0px;
 					}
 					&:nth-child(3){
