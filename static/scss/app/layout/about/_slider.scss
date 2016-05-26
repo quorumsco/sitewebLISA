@@ -1,42 +1,67 @@
 @include exports('slider') {
-	#slider{
-		padding: 0;
-
-		.pony{
-			background: url('../images/header/home-header2.jpg');
-			background-attachment: fixed;
-			background-position: center;		
-			height: calc(100vh - 69px);
-			width: 100vw;
-
-			h2{
-				padding: 10vh 0;
-				margin: 0;
-				color: $light-grey;
-
-				span {
-					color: $blue;
+	#aboutPage{
+		.goTop {
+			position: fixed;
+			bottom: 10vh;
+			right: 5vw;
+			z-index: 50000;
+			a {
+				font-size: 5em;
+				color: $red;
+				&:hover {
+					color: $pink;
 				}
 			}
-			h3{
-				padding: 15vh 0 20vh 0;
-				color: $light-grey;
+		}
+		.appearTop {
+			display:none;
+		}
+	}
+	#slider {
+		padding: 0;
+		background: url('../images/header/home-header2.jpg');
+		background-attachment: fixed;
+		background-position: center;		
+		height: calc(100vh - 69px);
+		width: 100vw;
+
+		.fontTitle {
+			padding: 5vh 0;
+			text-align: center;
+			color: $light-grey;
+	
+			span {
+				color: $turquoise;
 			}
-				
+		}
+
+		.textOnScroll {
+			margin: 5vh auto;
+			width: 60vw;
+			height: 50vh;
+			text-align: justify;
+			overflow: hidden;
+			font-size: 2em;
+			.hidden {
+				display: none;
+			}
 
 		}
 
+	}
+
+	#slide {
 		ul {
 			list-style-type: none;
-			width: 90vw;
+			width: 90%;
 			margin: 18px auto;
-			padding: 14vh 0; 
+			padding: 14vh 0 0 0;
+			text-align: center; 
 			li {
 				display: inline-block;
 				text-align: center;
 				width: 25%;
-				/* marge */
-				margin: 10px;
+				margin: 12px;
 				a {
 					padding: 10px 0;
 					margin: 10px;
@@ -50,7 +75,7 @@
 				&:nth-child(1) {
 					&:hover{
 						a {
-							color: $blue;
+							color: $dark-blue;
 						}
 					}
 				}
@@ -58,13 +83,13 @@
 
 					&:hover {
 						a {
-						color: $turquoise;
+						color: $green;
 						}
 					}
 				}
 				&:nth-child(3):hover{
 						a {
-						color: $pink;
+						color: $purple;
 					}
 				}
 
@@ -79,14 +104,11 @@
 					&:nth-child(3){
 						border-color: $pink;
 					}
-					a {
-						color: $font-color;
-						font-weight: bold;
-					}
 				}
 			}
 		}
 	}
+
 	#slide{
 		.content{
 			width: 800px;
@@ -126,7 +148,7 @@
 				margin: 0 auto;
 				padding: 0 15px;
 			}
-		}
+		
 	}
 	//Medium Screen <= 768px
 	@media(min-width: $small-screen) and (max-width: $medium-screen) {
@@ -196,4 +218,4 @@
     		background-position: 50%;
     	}
   	}
-}
+}}

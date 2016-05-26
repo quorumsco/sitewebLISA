@@ -1,121 +1,254 @@
 @include exports('team') {
 	#team{
-		p {
-			line-height: 35px;
-			text-align: justify;
+		span{
+			color: $purple;
 		}
 		.container{
 			.content {
-				b {
-					color: $purple;
-					font-weight: 100;
-				}
-				img {
-					border-radius: 0px;
-					max-width: 100%;
-				}
-				padding-bottom: 30px;
+
+				
+			}
+		.member {
+
+
+			width: 35%;
+			display: inline-block;
+			margin: 5vh 7.5%;
+
+			p { 
+				text-align: center; 
+				line-height: 15px;
+			}
+			div {
+				text-align: center;
+
 				a {
 					color: $purple;
 					text-decoration: none;
 					i {
 						font-size: 32px;
-						margin: 0 15px;
+						margin: 0 5px;
 					}
 					&:hover {
 						color: $red;
 					}
 				}
-				p:nth-of-type(2) {
-					text-align: center;
+			}
+
+			img {
+				max-width: 100%;
+				margin-bottom: 10px; 
+				-webkit-filter: grayscale(1);
+				-o-filter: grayscale(1);
+				-moz-filter: grayscale(1);
+				-ms-filter: grayscale(1);
+				filter: grayscale(1);
+				&:hover {
+					-webkit-filter: grayscale(0);
+					-o-filter: grayscale(0);
+					-moz-filter: grayscale(0);
+					-ms-filter: grayscale(0);
+					filter: grayscale(0);
 				}
 			}
-			div.member {
-				p { 
-					text-align: center; 
-					line-height: 15px;
-					&:nth-child(4) {
-						height: 25px;
-					}
-				}
-				width: 236px;
-				display: inline-block;
-				margin: 30px 15px;
-				img {
-					max-width: 100%;
-					border-radius: 50%;
-					margin-bottom: 10px; 
-					-webkit-filter: grayscale(1);
-					-o-filter: grayscale(1);
-					-moz-filter: grayscale(1);
-					-ms-filter: grayscale(1);
-					filter: grayscale(1);
-					&:hover {
-						-webkit-filter: grayscale(0);
-						-o-filter: grayscale(0);
-						-moz-filter: grayscale(0);
-						-ms-filter: grayscale(0);
-						filter: grayscale(0);
-					}
+			.hidden{
+				display:none;
+			}
+
+			}
+		}
+	}
+
+	#jobs{
+		span {
+			color: $pink;
+		}
+	
+		p {
+			margin: auto;
+			width: 50vw;
+			text-align: justify;
+			line-height: 45px;
+			&:hover {
+				strong {
+					color: $pink;
 				}
 			}
+		}
+		a{
+			text-decoration: none;
+			display: block;
 			button {
+				background-color: $pink;
+				display: block;
+				margin: 5vh auto;
 				&:hover {
 					background-color: $red;
 				}
 			}
 		}
+		
+
+		i {
+			display: block;
+			font-size: 32px;
+			text-align: center;
+			color: $pink;
+			margin: 5vh auto;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
+		.linkedIn {
+			text-align: center;
+			}
+
 	}
+
 	@media(max-width: $small-screen) {
-		#team {
-			.container {
-				.content {
-					p {
-						text-align: left;
-					}
-					div.member {
-						margin-bottom: 0px;
-						p {
-							display: inline-block;
-							padding: 0 6px;
-							margin-top: 0px;
-							i {
-								padding: 0 3px;
-							}
-						}
-					}
-					button {
-						margin: 30px auto 0 auto;
-						display: block;
-					}
-				}
+		#jobs {
+			p {
+				text-align: left;
 			}
 		}
 	}
-	@media(min-width: $small-screen) and (max-width: $large-screen) {
-		#team {
-			.container {
-				.content {
-					p {
-						text-align: left;
-					}
-					div.member {
-						margin-bottom: 0px;
-						p {
-							display: inline-block;
-							padding: 0 6px;
-							margin-top: 0px;
-							i {
-								padding: 0 3px;
+
+	#sayhello {
+		margin-top: 60px;
+		padding-bottom: 30px;
+		span {
+			color: $blue;
+		}
+		.container {
+			width: 90%;
+
+	  		h2 {
+	  			p {
+	  				margin: 0;
+	  			}
+	  		}
+			ul {
+				li:nth-child(1) {
+					vertical-align : top;
+					margin-right: 10px; 
+					form {
+						input, textarea {
+							width: 42vw;
+							border: 0;
+							border-bottom: 2px solid #E0E0E0;
+							padding: 10px 0;
+							margin-bottom: 10px;
+							outline: none;
+							background-color: #F2F2F2;
+							cursor: pointer;
+						}
+						.red {
+							margin-left: 50px;
+
+						}
+						button:hover {
+							background-color: $red;
+						}
+						.input {
+							position: relative;
+							background-color:#F2F2F2;
+							.border-input, .border-textarea {
+								position:absolute;
+								width: 0;
+								height: 2px;
+								&.active {
+									width: 450px;
+								}
+							}
+							.border-input {
+								bottom: 10px;
+							}
+							.border-textarea {
+								bottom: 13px;
 							}
 						}
 					}
-					button {
-						margin: 30px auto 0 auto;
-						display: block;
+					p {
+							margin-top: 1px;
+						}
+						p:nth-child(2) {
+							display: block;
+							margin-top: 5px;
+							margin-left: 3px;
+						}
+				}
+				li:nth-child(2) {
+					p {
+
+						margin: 8vh auto;
+						width: 50vw;
+						color: $font-color;
+						i {
+							color: $grey;
+							padding: 12px 5px;
+						}
+						a {
+							text-decoration: none;
+							color: $font-color;
+						}
+						.fa-map-marker {
+							margin-right: 12px;
+						}
+					}
+					ul{
+						margin-top: 10px;
+						list-style-type: none;
+						li {
+							display: inline;
+							margin-right: 24px;
+							a {
+								color: $grey;
+								text-decoration: none;
+								&:hover {
+									color: $red;
+								}
+							}
+							i {
+								font-size: 30px;
+							}
+						}
 					}
 				}
+			}	
+	  	}
+	  	ul{
+			padding-left: 0;
+			list-style-type: none;
+			li{
+				display: inline-block;
+			}
+		}		
+	}
+	#sayhello{
+		button {
+			background-color: $blue;
+			margin: 4vh auto;
+			padding: 1vh 2vw;
+			&:hover {
+				background-color: $red;
 			}
 		}
+		p {
+			margin: auto;
+			width: 50vw;
+			color: $font-color;
+		}
+
+		i:hover {
+			color: $red;
+		}
+		ul {
+			width: 100%;
+			text-align: center;
+
+		}
+
 	}
 }

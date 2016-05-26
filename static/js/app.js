@@ -39,51 +39,42 @@ $(window).scroll(function(event){
             $('#target').addClass('animated fadeInUp');
         }
     }
-    //Animation fade believe
-    /*if(window.innerWidth > 425 && $('#believe').length > 0 && $('html').attr('lang') == 'fr') {
-        var breakpointSecond = $('.believe-fr:nth-child(3)').position().top - 700;
-        var breakpointThird = $('.believe-fr:nth-child(4)').position().top - 600;
-        var breakpointList = $('#believe ul.bullet').position().top - 500;
-
-        if (yOffset > breakpointSecond){
-            $('.believe-fr:nth-child(3)').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointThird){
-            $('.believe-fr:nth-child(4)').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointList){
-            $('#believe ul').addClass('animated fadeInUp');
-        }
-    }*/
 });
+
+//tests animation quentin
+
+/*$("#believe").on('click', function() {
+    $("li").fadeIn();
+    console.log('coucou');
+});*/
+
 $(document).ready(function(){
     //Animation fade believe
     ///$('.believe-fr:nth-child(2)').addClass('animated fadeInUp');
     //Border animation - #contact home page
-    $('#contact input, #contact textarea, #newsletter input').on('focusin', function(){
+    $('#sayhello input, #sayhello textarea, #contact input, #contact textarea, #newsletter input').on('focusin', function(){
         var widthInput = $(this).width();
         $(this).parent().children('div').animate({
             width: widthInput+'px'
         }, 300);
     });
-    $('#contact input, #contact textarea, #newsletter input').on('focusout', function(){
+    $('#sayhello input, #sayhello textarea, #contact input, #contact textarea, #newsletter input').on('focusout', function(){
         $(this).parent().children('div').animate({
             width: '0px'
         }, 300);
     });
-
     //Random email/name - #contact home page
-    if($('#contact').length > 0) {
+    if($('#sayhello, #contact').length > 0) {
         if(window.location.pathname.substring(0, 4) == "/fr/") {
             var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['p.rickwaert@hotmail.fr', 'Philippe Rickwaert']];
             var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
-            $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
-            $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
+            $('#sayhello, #contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#sayhello, #contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
         } else {
             var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['franck.underwood@gmail.com', 'Franck Underwood'], ['georges.washington@gmail.com', 'Georges Washington']];
             var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
-            $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
-            $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
+            $('#sayhello, #contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
+            $('#sayhello, #contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
         }
         //Custom error message - #contact input - home page
         function validEmail(email) {
@@ -98,46 +89,46 @@ $(document).ready(function(){
             var messageRegex = /^[a-zA-Z0-9áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]{0,300}$/;
             return messageRegex.test(message)
         }
-        $('#contact').find('form').find('button').on('click', function() {
+        $('#sayhello, #contact').find('form').find('button').on('click', function() {
             if(window.location.pathname.substring(0, 4) == "/fr/") {
-                if(!validEmail($('#contact').find('[name="_replyto"]').val())){
-                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("Veuillez renseigner un email valide.");
+                if(!validEmail($('#sayhello, #contact').find('[name="_replyto"]').val())){
+                    $('#sayhello, #contact').find('[name="_replyto"]')[0].setCustomValidity("Veuillez renseigner un email valide.");
                 } else {
-                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
+                    $('#sayhello, #contact').find('[name="_replyto"]')[0].setCustomValidity("");
                 }
-                if(!validName($('#contact').find('[name="name"]').val())){
-                    $('#contact').find('[name="name"]')[0].setCustomValidity("Veuillez renseigner un nom et prénom valides. Lettres et nombres uniquement, entre 3 et 60 caractères.");
+                if(!validName($('#sayhello, #contact').find('[name="name"]').val())){
+                    $('#sayhello, #contact').find('[name="name"]')[0].setCustomValidity("Veuillez renseigner un nom et prénom valides. Lettres et nombres uniquement, entre 3 et 60 caractères.");
                 } else {
-                    $('#contact').find('[name="name"]')[0].setCustomValidity("");
+                    $('#sayhello, #contact').find('[name="name"]')[0].setCustomValidity("");
                 }
-                if(!validMessage($('#contact').find('[name="message"]').val())){
-                    $('#contact').find('[name="message"]')[0].setCustomValidity("Veuillez renseigner un message valide. 300 caractères maximum");
+                if(!validMessage($('#sayhello, #contact').find('[name="message"]').val())){
+                    $('#sayhello, #contact').find('[name="message"]')[0].setCustomValidity("Veuillez renseigner un message valide. 300 caractères maximum");
                 }
             } else {
-                if(!validEmail($('#contact').find('[name="_replyto"]').val())){
-                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("Set a valid email.");
+                if(!validEmail($('#sayhello, #contact').find('[name="_replyto"]').val())){
+                    $('#sayhello, #contact').find('[name="_replyto"]')[0].setCustomValidity("Set a valid email.");
                 } else {
-                    $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
+                    $('#sayhello, #contact').find('[name="_replyto"]')[0].setCustomValidity("");
                 }
-                if(!validName($('#contact').find('[name="name"]').val())){
-                    $('#contact').find('[name="name"]')[0].setCustomValidity("Set a valid name. Only letters and numbers, between 3 & 60 characters.");
+                if(!validName($('#sayhello, #contact').find('[name="name"]').val())){
+                    $('#sayhello, #contact').find('[name="name"]')[0].setCustomValidity("Set a valid name. Only letters and numbers, between 3 & 60 characters.");
                 } else {
-                    $('#contact').find('[name="name"]')[0].setCustomValidity("");
+                    $('#sayhello, #contact').find('[name="name"]')[0].setCustomValidity("");
                 }
-                if(!validMessage($('#contact').find('[name="message"]').val())){
-                    $('#contact').find('[name="message"]')[0].setCustomValidity("Set a valid message. 300 characters maximum");
+                if(!validMessage($('#sayhello, #contact').find('[name="message"]').val())){
+                    $('#sayhello, #contact').find('[name="message"]')[0].setCustomValidity("Set a valid message. 300 characters maximum");
                 }
             }
         });
-        $('#contact form input, #contact form textarea').on('change', function() {
-            if(validEmail($('#contact').find('[name="_replyto"]').val())){
-                $('#contact').find('[name="_replyto"]')[0].setCustomValidity("");
+        $('#sayhello form input, #sayhello form textarea,  #contact form input, #contact form textarea').on('change', function() {
+            if(validEmail($('#sayhello, #contact').find('[name="_replyto"]').val())){
+                $('#sayhello, #contact').find('[name="_replyto"]')[0].setCustomValidity("");
             }
-            if(!validName($('#contact').find('[name="name"]').val())){
-                $('#contact').find('[name="name"]')[0].setCustomValidity("");
+            if(!validName($('#sayhello, #contact').find('[name="name"]').val())){
+                $('#sayhello, #contact').find('[name="name"]')[0].setCustomValidity("");
             }
-            if(!validMessage($('#contact').find('[name="message"]').val())){
-                $('#contact').find('[name="message"]')[0].setCustomValidity("");
+            if(!validMessage($('#sayhello, #contact').find('[name="message"]').val())){
+                $('#sayhello, #contact').find('[name="message"]')[0].setCustomValidity("");
             }
         });
     }
@@ -210,23 +201,9 @@ $(document).ready(function(){
                 $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
             }
         });
-    }
-    $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
-    
-    //Slider switch - about page
-    $('#slider').find('a').on('click', function(e){
-        e.preventDefault();
-        //Vars
-        var lastSlide = $('li.active').find('a').attr('href').substring(1);;            
-        var slide = $(this).attr('href').substring(1);
-        if (lastSlide != slide) {
-            //Boder color
-            $('li.active').removeClass('active');
-            $(this).parent().addClass('active');
-            //Swap
-            $('#'+lastSlide).fadeOut(0, function(){
-                $('#'+slide).fadeIn(400);
-                                //donut chart
+    }    
+    //Slider switch - about page 
+                //donut chart
                 if (slide == "team"){
                     if(window.innerWidth < 500){
                         var legendPosition = 'bottom';
@@ -262,15 +239,29 @@ $(document).ready(function(){
                             }
                         });
                 }           
-            });     
-        }
+
+
+    // TEAM
+    $('#team').find('.container').find('.content').find('.member').on('mouseenter', function() {
+      $(this).find('img').toggleClass('hidden');
     });
 
-    //Slider skills
-    $('#skills').find('li').find('button').on('click', function(){
-       $('.believe-fr').hide();
-       $($(this).attr('href')).fadeIn(1600);
+    // page about - text on scroll
+    $('#slider').find('.textOnScroll').on('click',function() {
+        $(this).find('span').toggleClass('hidden');
     });
+
+    // Arrow floating go back top
+// FAILLLL
+console.log($(window.pageYOffset));
+
+    if($(window.pageYOffset) > 917) {
+        $('#aboutPage').removeClass('appearTop');
+        console.log('coucou');
+
+    };
+
+
 
     //Newsletter
     var lang = navigator.language;
@@ -307,4 +298,3 @@ $(document).ready(function(){
 
     });
 });
-

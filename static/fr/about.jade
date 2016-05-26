@@ -1,154 +1,282 @@
 extends ./layout.jade
 block vars
-    - var pageTitle = 'Qui sommes-nous ?'
+    - var pageTitle = 'Équipe'
 block content
     header#about.small
     main#aboutPage
-        section#slider
-            .pony
-                h2 Qui sommes - 
-                    span nous ?
-                h3 "La technologie ne construit pas de grands mouvements, ne débat pas d’idées et ne partage pas sa passion ; les êtres humains oui"
+        .goTop.appearTop
+            a(href="#slider")
+                i.fa.fa-arrow-circle-o-up
 
-                a(href="index.html#contact")
-                    button.blue SAY "HELLO" FROM THE OTHER SIDE
+
+        #slider
+            .fontTitle
+                h1 MEET THE 
+                    span TEAM
+
+            .textOnScroll            
+                p
+                    span Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent. 
+
+                    span.hidden Ces problèmes, nous pensons que 
+                        strong la technologie, l’intelligence artificielle et le traitement des données
+                        |  peuvent aider à les surmonter.
+
+                    span.hidden Comme ils ont aidé à transformer à grande échelle le secteur financier, marchand ou logistique, nous pensons qu’ils peuvent aussi aider la société à aller mieux, aux hommes à diffuser leurs idées, à 
+                        strong créer du mouvement
+                        |  , à se rassembler autour de causes.
+
+                    span.hidden Nous pensons que la technologie peut aider les hommes à avoir un 
+                        strong impact sociétal fort
+                        | , grâce au pouvoir d’analyse, de synchronisation et de coordination de ces outils.
+
+                    span.hidden C’est pourquoi nous avons créé 
+                        strong Quorum
+                        |  : pour mettre les technologies dans des applications simples et fluides, dédiées aux utilisateurs et au service d’objectifs 
+                        strong réels et concrets
+                        |  .
+
+                    span.hidden Mais si nous pensons que la technologie permet d'augmenter les capacités des individus et des organisations, elle ne peut être une fin en soi.
+
+                    span.hidden Elle n’est là que pour aider les 
+                        strong hommes à accomplir
+                        | . Son accompagnement restera toujours limité par son utilisation.
+                    span.hidden C’est pourquoi la technologie doit disparaitre, 
+                        strong se rendre invisible
+                        | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit
+              
+        #slide
             ul
                 li.active
-                    a(href="#believe") COMPÉTENCES
+                    a(href="#believe") WHAT WE BELIEVE IN
                 li
-                    a(href="#team") QUORUMIENS
+                    a(href="#skills") HOW WE DO IT 
                 li
-                    a(href="#jobs") EMPLOIS
-        #slide
-            section#believe
-                <iframe width="420" height="315" src="https://www.youtube.com/embed/eeyVIMP8lfE" frameborder="0" allowfullscreen></iframe>
+                    a(href="#team") QUORUM’S FACES
 
-                ul.bullet
-                    li 
-                        //- div.icon
-                            img(src="../images/icons/check-blue.svg" alt="Check")
-                        div.sentence
-                            span LA 
-                                strong PROTECTION DES DROITS
-                                |  & DE LA VIE PRIVEE  
-                    li 
-                        //- div.icon
-                            img(src="../images/icons/check-blue.svg" alt="Check")
-                        div.sentence
-                            span L’EMANCIPATION DE LA DONNEE ET l’
-                                strong OPEN DATA
-                    li 
-                        //- div.icon
-                            img(src="../images/icons/check-blue.svg" alt="Check")
-                        div.sentence
-                            span LE LOGICIEL LIBRE
-                    li 
-                        //- div.icon
-                            img(src="../images/icons/check-blue.svg" alt="Check")
-                        div.sentence
-                            span L’AMBITION D’
-                                strong ETRE UTILE 
-                                | : CONSTRUIRE DES OUTILS UTILES QUI REPONDENT A DES OBJECTIFS CONCRETS
-                    li 
-                        //- div.icon
-                            img(src="../images/icons/check-blue.svg" alt="Check")
-                        div.sentence
-                            span LA TECHNOLOGIE DOIT S’ADAPTER A l’INDIVIDU, PAS L’INVERSE
-                    li
-                        //- div.icon
-                            img(src="../images/icons/check-blue.svg" alt="Check")
-                        div.sentence
-                            span L'
-                                strong INNOVATION 
-                                | PERMANENTE
-
+        #believe
+            .container
                 .content
-                    ul#skills
-                        li
-                            button.button1skills(href='#skills1')
-                        li
-                            button.button2skills(href='#skills2')
-                        li
-                            button.button3skills(href='#skills3')
+
+                    h2 WHAT WE 
+                        span BELIEVE 
+                        | IN
+
+                    h3.italic "La technologie ne construit pas de grands mouvements, ne débat pas d’idées et ne partage pas sa passion ; les êtres humains oui."
                     
-                    div#skills1.believe-fr
-                              
-                        p
-                            span Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent.
+                    ul
 
-                            span Ces problèmes, nous pensons que 
-                                strong la technologie, l’intelligence artificielle et le traitement des données
-                                |  peuvent aider à les surmonter.
-
-                            span Comme ils ont aidé à transformer à grande échelle le secteur financier, marchand ou logistique, nous pensons qu’ils peuvent aussi aider la société à aller mieux, aux hommes à diffuser leurs idées, à 
-                                strong créer du mouvement
-                                |  , à se rassembler autour de causes.
-                    
-                    div#skills2.believe-fr.hide
-                        p
-                            span Nous pensons que la technologie peut aider les hommes à avoir un 
-                                strong impact sociétal fort
-                                | , grâce au pouvoir d’analyse, de synchronisation et de coordination de ces outils.
-
-                            span C’est pourquoi nous avons créé 
-                                strong Quorum
-                                |  : pour mettre les technologies dans des applications simples et fluides, dédiées aux utilisateurs et au service d’objectifs 
-                                strong réels et concrets
-                                |  .
-
-                            span Mais si nous pensons que la technologie permet d'augmenter les capacités des individus et des organisations, elle ne peut être une fin en soi.
-                    div#skills3.believe-fr.hide
-                        p
-                            span Elle n’est là que pour aider les 
-                                strong hommes à accomplir
-                                | . Son accompagnement restera toujours limité par son utilisation.
-                            span C’est pourquoi la technologie doit disparaitre, 
-                                strong se rendre invisible
-                                | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit :
-            section#team
-                .container
-                    .content
-                        h3 L’INTELLIGENCE COLLECTIVE est notre ADN.
+                        li 
+                            div.sentence
+                                span LE LOGICIEL 
+                                    strong LIBRE
+                        li
+                            div.sentence
+                                span L'
+                                    strong INNOVATION 
+                                    | PERMANENTE
+                       
+                        li 
+                            div.sentence
+                                span LA 
+                                    strong PROTECTION DES DROITS
+                                    |  & DE LA VIE PRIVEE  
+                        li 
+                            div.sentence
+                                span L’EMANCIPATION DE LA DONNEE ET l’
+                                    strong OPEN DATA
                         
-                        p Nous sommes des vétérans de grandes sociétés informatiques, des experts en sciences sociales qui construisent des algorithmes, des anciens volontaires d’ONG qui écrivent des lignes de codes et qui pensent que tous ensemble - si nous parvenons à travailler et à construire des ponts entre nos disciplines – nous pouvons créer des outils qui peuvent changer la donne.
-                        #chart
-                        h3 Fondateurs
-                        div.member
-                            img(title="Florent Barre" src="../images/team/florent-small-color.png" alt="Florent Barre")
-                            p Florent Barre
-                            p CEO
-                            p Chief of Executive Officer
-                            p
-                                a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                        li 
+                            div.sentence
+                                span LA TECHNOLOGIE DOIT 
+                                    strong S’ADAPTER 
+                                    | A l’INDIVIDU, PAS L’INVERSE
+                         li
+                            div.sentence
+                                span L’AMBITION D’
+                                    strong ETRE UTILE 
+                                    | : CONSTRUIRE DES OUTILS UTILES QUI REPONDENT A DES OBJECTIFS CONCRETS
+        #skills
+            
+            .container
+                .content
+                    h2 HOW WE 
+                        span DO IT
+                    h3 L’INTELLIGENCE COLLECTIVE est notre ADN.
+                    
+                    p Nous sommes des 
+                        strong vétérans de grandes sociétés informatiques, 
+                        | des 
+                        strong experts en sciences sociales 
+                        | qui construisent des algorithmes, des anciens 
+                        strong volontaires d’ONG 
+                        | qui écrivent des lignes de codes et qui pensent que tous ensemble - si nous parvenons à travailler et à construire des ponts entre nos disciplines – nous pouvons créer des outils qui peuvent changer la donne.
+
+        #team
+            .container
+                .content
+                    h2 QUORUM
+                        span 'S 
+                        | FACE
+                        span S
+                    .member
+                        
+                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, percutions")
+                        img(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, marketeuse")    
+                        p Alice Le Corre
+                        p Marketeuse
+                
+                        div
+                            a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                                i.icon-linkedin
+                            a(href="https://twitter.com/barreflorent" target="_blank")
+                                i.icon-twitter
+                    .member
+                        img.hidden(title="Lisa Grenier" src="../images/team/florent-small-color.png" alt="Lisa Grenier, developpeuse")
+                        img(title="Lisa Grenier" src="../images/team/florent-small-color.png" alt="Lisa Grenier, developpeuse")
+                        
+                        p Lisa Grenier
+                        p Developpeuse
+                        div
+                            a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                                i.icon-linkedin
+                            a(href="https://twitter.com/barreflorent" target="_blank")
+                                i.icon-twitter
+
+                    .member
+                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
+                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
+                        p YOU
+                        p with your skills
+                        div
+                            a(href="#jobs")
+                                i.fa.fa-paper-plane-o
+                    .member
+                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
+                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
+                        p Loïc
+                        p CEO
+                        div                      
+                            a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                                i.icon-linkedin
+                            a(href="https://twitter.com/barreflorent" target="_blank")
+                                i.icon-twitter
+                    .member
+                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
+                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
+                        p Lucien
+                        p CEO
+                        div                        
+                            a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                                i.icon-linkedin
+                            a(href="https://twitter.com/barreflorent" target="_blank")
+                                i.icon-twitter
+                    .member
+                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
+                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
+                        p Florent Barre
+                        p Chief of Executive Officer
+                        div
+                            a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                                i.icon-linkedin
+                            a(href="https://twitter.com/barreflorent" target="_blank")
+                                i.icon-twitter
+                    
+                    .member
+                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
+                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
+                        p Florent Barre
+                        p CEO
+                        div
+                            a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                                i.icon-linkedin
+                            a(href="https://twitter.com/barreflorent" target="_blank")
+                                i.icon-twitter
+                    .member
+                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
+                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
+                        p Florent Barre
+                        p CEO
+                        div
+                            a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
+                                i.icon-linkedin
+                            a(href="https://twitter.com/barreflorent" target="_blank")
+                                i.icon-twitter
+                    .member
+                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
+                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
+                        p Maxime Beylot
+                        p CCO
+                        div
+                            a(href="https://www.linkedin.com/in/maxime-beylot-6b00525b" target="_blank")
                                     i.icon-linkedin
-                                a(href="https://twitter.com/barreflorent" target="_blank")
-                                    i.icon-twitter
-                        div.member
-                            img(title="Maxime Beylot" src="../images/team/maxime-small-color.png" alt="Maxime Beylot")
-                            p Maxime Beylot
-                            p CCO
-                            p Chief of Customer and Field Officer
-                            p
-                                a(href="https://www.linkedin.com/in/maxime-beylot-6b00525b" target="_blank")
-                                    i.icon-linkedin
-                        div.member
-                            img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
-                            p Jean-Baptiste Daniel
-                            p CTO
-                            p Chief of Technology Officer
-                            p
-                                a(href="https://www.linkedin.com/in/jean-baptiste-daniel-68a57a4" target="_blank")
-                                    i.icon-linkedin
-                        p Retrouvez sur notre blog les publications de l’équipe Quorum, de nos invites et amis.
-                        a(href="https://medium.com/@quorumblog" target="_blank") 
-                            button.purple BLOG
-            section#jobs
-                .container
-                    .content
-                        p Nous cherchons des gens, créatifs, innovant, curieux, ambitieux et ultra mobiles adaptés à notre monde qui est un monde d’acceleration; et cela quelque soit leur background. Des profils qui comme chaque membre de l’équipe vivent dans un désir omniprésent d’agir.
-                        .middle
-                            a(href="index.html#contact")
-                                button.pink POSTULER
-                            span Suivez-nous sur Linked In pour voir nos dernières offres d'emploi
-                                a(href="https://www.linkedin.com/company/10114882" target="_blank")
-                                    i.fa.fa-linkedin-square
+                    
+        #jobs
+            .container
+                .content
+                    h2 JOB
+                        span S
+                    p Nous cherchons des gens, 
+                        strong créatifs, innovant, curieux, ambitieux 
+                        | et ultra 
+                        strong mobiles 
+                        | adaptés à notre monde qui est un monde d’acceleration; et cela quelque soit leur background. Des profils qui comme chaque membre de l’équipe vivent dans un 
+                        strong désir omniprésent d’agir.
+
+                    a(href="#sayhello")
+                        button POSTULER
+
+                    p.linkedIn Suivez-nous sur 
+                        strong Linked In 
+                        | pour voir nos dernières offres d'emploi
+          
+
+                    
+                    a(href="https://www.linkedin.com/company/10114882" target="_blank")
+                        i.fa.fa-linkedin-square
+
+        #sayhello
+            .container
+                .content
+                    h2 SAY HEL
+                        span LO
+                    ul
+                        li
+                            form(action='https://formspree.io/info@quorum-impact.com', method='post')
+                                div.input
+                                    input(type='email', name="_replyto", placeholder='Email', required)
+                                    .border-input.red
+                                div.input
+                                    input(name='name' type="text" placeholder="Name/Nom")
+                                    .border-input.red
+                                div.input
+                                    textarea(name='message' rows="6" placeholder="Message", required)
+                                    .border-textarea.red
+                                input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
+                                input(type="text" name="_gotcha" style="display:none")
+                                input(type="hidden" name="_next" value="//quorum-impact.com/")
+                                p
+                                    button(type='submit' value="Send") GO !
+                        li
+                                                     
+                            ul
+                                li
+                                    a(href='//facebook.com/quorumimpact' target="_blank")
+                                        i.fa.fa-facebook-square
+                                li
+                                    a(href='//twitter.com/quorumimpact' target="_blank")
+                                        i.fa.fa-twitter-square
+                                li
+                                    a(href='//linkedin.com/company/10114882' target="_blank")
+                                        i.fa.fa-linkedin-square
+                                li
+                                    a(href='//google.com/+Quorumappsdata' target="_blank")
+                                        i.fa.fa-google-plus-square
+                                li
+                                    a(href='//instagram.com/quorumteam/' target="_blank")
+                                        i.fa.fa-instagram
+                                li
+                                    p Retrouvez sur notre blog les publications de l’équipe Quorum, de nos invites et amis.
+                                    a(href="https://medium.com/@quorumblog" target="_blank")
+                                        button BLOG
+                    
