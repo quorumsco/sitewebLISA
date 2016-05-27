@@ -5,10 +5,8 @@ block content
     header#about.small
     main#aboutPage
         .goTop.appearTop
-            a(href="#slider")
+            a(href="#aboutPage")
                 i.fa.fa-arrow-circle-o-up
-
-
         #slider
             .fontTitle
                 h1 MEET THE 
@@ -53,6 +51,10 @@ block content
                     a(href="#skills") HOW WE DO IT 
                 li
                     a(href="#team") QUORUM’S FACES
+                li
+                    a(href="#sayhello") SAY HELLO
+                
+
 
         #believe
             .container
@@ -102,7 +104,7 @@ block content
                 .content
                     h2 HOW WE 
                         span DO IT
-                    h3 L’INTELLIGENCE COLLECTIVE est notre ADN.
+                    h3 L’intelligence collective est notre ADN.
                     
                     p Nous sommes des 
                         strong vétérans de grandes sociétés informatiques, 
@@ -111,6 +113,8 @@ block content
                         | qui construisent des algorithmes, des anciens 
                         strong volontaires d’ONG 
                         | qui écrivent des lignes de codes et qui pensent que tous ensemble - si nous parvenons à travailler et à construire des ponts entre nos disciplines – nous pouvons créer des outils qui peuvent changer la donne.
+                        //- graphique
+                    #chart 
 
         #team
             .container
@@ -121,10 +125,12 @@ block content
                         span S
                     .member
                         
-                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, percutions")
-                        img(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, marketeuse")    
-                        p Alice Le Corre
-                        p Marketeuse
+                        img.hidden(title="Alice marketeuse" src="../images/team/florent-small-color.png" alt="picture Alice in a field")
+                        img(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, marketeuse")
+                        .descriptionPerson 
+                            p Alice
+                            p Marketeuse
+                            p.hidden Adepte des salades niçoises
                 
                         div
                             a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
@@ -134,9 +140,10 @@ block content
                     .member
                         img.hidden(title="Lisa Grenier" src="../images/team/florent-small-color.png" alt="Lisa Grenier, developpeuse")
                         img(title="Lisa Grenier" src="../images/team/florent-small-color.png" alt="Lisa Grenier, developpeuse")
-                        
-                        p Lisa Grenier
-                        p Developpeuse
+                        .descriptionPerson                         
+                            p Lisa
+                            p Developpeuse
+                            p.hidden Geek à ses heures
                         div
                             a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
                                 i.icon-linkedin
@@ -146,16 +153,20 @@ block content
                     .member
                         img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
                         img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
-                        p YOU
-                        p with your skills
+                        .descriptionPerson
+                            p YOU
+                            p with your skills
+                            p.hidden Viens, on est bien
                         div
                             a(href="#jobs")
                                 i.fa.fa-paper-plane-o
                     .member
-                        img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
-                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
-                        p Loïc
-                        p CEO
+                        img.hidden(title="Loïc data scientist" src="../images/team/florent-small-color.png" alt="Loïc data scientist image normal")
+                        img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Loïc data scientist image fun")
+                        .descriptionPerson
+                            p Loïc
+                            p Data Scientist
+                            p.hidden American Sandwiches Scientist
                         div                      
                             a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
                                 i.icon-linkedin
@@ -164,8 +175,10 @@ block content
                     .member
                         img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
                         img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
-                        p Lucien
-                        p CEO
+                        .descriptionPerson
+                            p Lucien
+                            p CEO
+                            p.hidden Brain crawler
                         div                        
                             a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
                                 i.icon-linkedin
@@ -174,8 +187,10 @@ block content
                     .member
                         img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
                         img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
-                        p Florent Barre
-                        p Chief of Executive Officer
+                        .descriptionPerson
+                            p Florent Barre
+                            p Chief Executive Officer
+                            p.hidden Houblonphile
                         div
                             a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
                                 i.icon-linkedin
@@ -185,8 +200,10 @@ block content
                     .member
                         img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
                         img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
-                        p Florent Barre
-                        p CEO
+                        .descriptionPerson
+                            p Jean-Baptiste Daniel
+                            p Chief Executive Officer
+                            p.hidden Surf sur Git comme sur les vagues
                         div
                             a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
                                 i.icon-linkedin
@@ -195,8 +212,10 @@ block content
                     .member
                         img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
                         img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
-                        p Florent Barre
-                        p CEO
+                        .descriptionPerson
+                            p Maxime Beylot
+                            p Chief Customer Officer
+                            p.hidden Social man
                         div
                             a(href="https://www.linkedin.com/in/florentbarre" target="_blank")
                                 i.icon-linkedin
@@ -205,8 +224,10 @@ block content
                     .member
                         img.hidden(title="Alice Le Corre" src="../images/team/florent-small-color.png" alt="Alice Le Corre, danseuse")
                         img(title="Jean-Baptiste Daniel" src="../images/team/jean-baptiste-small-color.png" alt="Jean-Baptiste Daniel")
-                        p Maxime Beylot
-                        p CCO
+                        .descriptionPerson
+                            p Pierre
+                            p Référénceur
+                            p.hidden coucou
                         div
                             a(href="https://www.linkedin.com/in/maxime-beylot-6b00525b" target="_blank")
                                     i.icon-linkedin
@@ -275,8 +296,11 @@ block content
                                 li
                                     a(href='//instagram.com/quorumteam/' target="_blank")
                                         i.fa.fa-instagram
-                                li
-                                    p Retrouvez sur notre blog les publications de l’équipe Quorum, de nos invites et amis.
-                                    a(href="https://medium.com/@quorumblog" target="_blank")
-                                        button BLOG
+                                
+                                p Retrouvez sur notre blog les 
+                                    strong publications 
+                                    | de l’équipe Quorum, de nos invites et amis.
+                                   
+                                a(href="https://medium.com/@quorumblog" target="_blank")
+                                    button BLOG
                     

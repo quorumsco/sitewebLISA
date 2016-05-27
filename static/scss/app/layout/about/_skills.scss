@@ -1,8 +1,14 @@
 @include exports('skills') {
 	#skills{
+		opacity: 0;
+		background-color: #ffffff;
+		h2 {
+			padding-bottom: 6vh;
+		}
 		h3 {
 			text-align: center;
-			margin-bottom: 8vh;
+			margin: 0 auto 8vh auto;
+			font-size: $header3-small-font-size;
 		}
 		span {
 			color: $green;
@@ -11,67 +17,16 @@
 			line-height: 45px;
 			text-align: justify;
 			width: 50vw;
-			margin: auto;
-		}
-		
-			
-			button {
-				&:hover {
-					background-color: $red;
+			margin: 0 auto 5vh auto;
+			&:hover{
+				strong {
+					color: $green;
 				}
+
 			}
 		}
-		
-	@media(max-width: $small-screen) {
-		#team {
-			.container {
-				.content {
-					p {
-						text-align: left;
-					}
-					div.member {
-						margin-bottom: 0px;
-						p {
-							display: inline-block;
-							padding: 0 6px;
-							margin-top: 0px;
-							i {
-								padding: 0 3px;
-							}
-						}
-					}
-					button {
-						margin: 30px auto 0 auto;
-						display: block;
-					}
-				}
-			}
-		}
-	}
-	@media(min-width: $small-screen) and (max-width: $large-screen) {
-		#team {
-			.container {
-				.content {
-					p {
-						text-align: left;
-					}
-					div.member {
-						margin-bottom: 0px;
-						p {
-							display: inline-block;
-							padding: 0 6px;
-							margin-top: 0px;
-							i {
-								padding: 0 3px;
-							}
-						}
-					}
-					button {
-						margin: 30px auto 0 auto;
-						display: block;
-					}
-				}
-			}
+		#chart {
+			padding-bottom: 5vh;
 		}
 	}
 }

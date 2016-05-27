@@ -7,7 +7,7 @@ $(window).scroll(function(event){
     //Loop scrollTo management
     clickScrollTo = null;
 
-    //Transition scroll
+    //Transition scroll header
     if(window.innerWidth > 1110 && $('#nav').next().hasClass('big')) {
         var breakpoint = 50;
         if (yOffset > breakpoint){
@@ -39,14 +39,39 @@ $(window).scroll(function(event){
             $('#target').addClass('animated fadeInUp');
         }
     }
+
+   // animation fade page about
+    if(window.innerWidth >= 768) {
+        var breakpointSlide = $('#slide').position().top - 600;
+        var breakpointBelieve = $('#believe').position().top - 50;
+        var breakpointSkills = $('#skills').position().top - 200;
+        var breakpointTeam = $('#team').position().top - 300;
+        var breakpointJobs = $('#jobs').position().top - 150;
+        var breakpointSayhello = $('#sayhello').position().top - 50;
+
+        if (yOffset > breakpointSlide){
+            $('#slide').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointBelieve){
+            $('#believe').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointSkills){
+            $('#skills').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointTeam){
+            $('#team').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointJobs){
+            $('#jobs').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointSayhello){
+            $('#sayhello').addClass('animated fadeInUp');
+        }
+    }
+
+
 });
 
-//tests animation quentin
-
-/*$("#believe").on('click', function() {
-    $("li").fadeIn();
-    console.log('coucou');
-});*/
 
 $(document).ready(function(){
     //Animation fade believe
@@ -132,25 +157,6 @@ $(document).ready(function(){
             }
         });
     }
-
-    //ScrollTo - home page
-    $('#nav').find('ul.nav').find('a').not('.link').on('click', function(e){
-        if($('#contact').length > 0) {
-            e.preventDefault();
-            var name = $(this).attr('href').substring(1);
-            //Loop scrollTo management
-            if(clickScrollTo != name){
-                console.log(name);
-                clickScrollTo = name;
-                var divTop = $(name).position().top;
-                $('html, body').animate({
-                        scrollTop: divTop
-                    }, 500
-                );
-            }
-        }
-    });
-
     //White Menu
     if($('#nav').next().hasClass('small')) {
         $('#nav').addClass('active');
@@ -202,64 +208,64 @@ $(document).ready(function(){
             }
         });
     }    
-    //Slider switch - about page 
-                //donut chart
-                if (slide == "team"){
-                    if(window.innerWidth < 500){
-                        var legendPosition = 'bottom';
-                    } else {
-                        var legendPosition = 'right';
+//donut chart
+
+    if(window.innerWidth < 500){
+        var legendPosition = 'bottom';
+    } else {
+        var legendPosition = 'right';
+    }
+        var chart = c3.generate({
+            data: {
+                columns: [
+                    ['Information Technology', 30],
+                    ['Social & Cognitive Sciences', 20] ,
+                    ['Data Sciences', 20],
+                    ['Field & Customer Officers', 20],
+                    ['Data Vizualisation', 5],
+                    ['Communication Officers', 5]
+                ],
+                type: 'donut'
+            },
+            legend: {
+                    position: legendPosition
+            },
+            donut: {
+                label: {
+                    format: function (value, ratio, id) {
+                        return "";
                     }
-                        var chart = c3.generate({
-                            data: {
-                                columns: [
-                                    ['Information Technology', 30],
-                                    ['Social & Cognitive Sciences', 20] ,
-                                    ['Data Sciences', 20],
-                                    ['Field & Customer Officers', 20],
-                                    ['Data Vizualisation', 5],
-                                    ['Communication Officers', 5]
-                                ],
-                                type: 'donut'
-                            },
-                            legend: {
-                                    position: legendPosition
-                            },
-                            donut: {
-                                label: {
-                                    format: function (value, ratio, id) {
-                                        return "";
-                                    }
-                                }
-                            },
-                            color: {
-                                //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
-                                pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
-                                //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
-                            }
-                        });
-                }           
+                }
+            },
+            color: {
+                //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
+                pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
+                //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
+            }
+        });        
 
 
     // TEAM
     $('#team').find('.container').find('.content').find('.member').on('mouseenter', function() {
       $(this).find('img').toggleClass('hidden');
+      $(this).find('p').toggleClass('hidden');
     });
 
     // page about - text on scroll
     $('#slider').find('.textOnScroll').on('click',function() {
-        $(this).find('span').toggleClass('hidden');
+        $(this).find('first-child(span)').toggleClass('hidden');
     });
 
     // Arrow floating go back top
 // FAILLLL
-console.log($(window.pageYOffset));
+console.log(window.pageYOffset);
+$('#aboutPage').scroll(function(){
+    var yOffsetButtonBack = window.pageYOffset;
 
-    if($(window.pageYOffset) > 917) {
+   if (yOffsetButtonBack > 917){
         $('#aboutPage').removeClass('appearTop');
-        console.log('coucou');
-
-    };
+    }
+});
 
 
 

@@ -1,5 +1,6 @@
 @include exports('team') {
 	#team{
+		opacity: 0;
 		span{
 			color: $purple;
 		}
@@ -15,9 +16,11 @@
 			display: inline-block;
 			margin: 5vh 7.5%;
 
-			p { 
+			.descriptionPerson { 
 				text-align: center; 
 				line-height: 15px;
+				overflow: visible;
+				height: 56px;
 			}
 			div {
 				text-align: center;
@@ -26,7 +29,6 @@
 					color: $purple;
 					text-decoration: none;
 					i {
-						font-size: 32px;
 						margin: 0 5px;
 					}
 					&:hover {
@@ -35,7 +37,7 @@
 				}
 			}
 
-			img {
+			img { //passage noir et blanc
 				max-width: 100%;
 				margin-bottom: 10px; 
 				-webkit-filter: grayscale(1);
@@ -58,8 +60,65 @@
 			}
 		}
 	}
+	@media(max-width: $small-screen) {
+		#team {
+			.container {
+				.content {
 
-	#jobs{
+					div.member {
+						margin-bottom: 0px;
+						p {
+							padding: 0 6px;
+							margin-top: 0px;
+							overflow: visible;
+							height: 16px;
+							i {
+								padding: 0 3px;
+							}
+						}
+					}
+					button {
+						margin: 30px auto 0 auto;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: $small-screen) and (max-width: $large-screen) {
+		#team {
+			.container {
+				.content {
+
+					div.member {
+						margin-bottom: 0px;
+						p {
+							padding: 0 6px;
+							margin-top: 0px;
+							overflow: visible;
+							height: 16px;
+							i {
+								padding: 0 3px;
+							}
+						}
+					}
+					button {
+						margin: 30px auto 0 auto;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	#jobs{ // postuler
+		opacity: 0;
+		background-image: url('../images/team/Quorum_NB_group_Retouche5.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+
+
 		span {
 			color: $pink;
 		}
@@ -94,7 +153,7 @@
 			font-size: 32px;
 			text-align: center;
 			color: $pink;
-			margin: 5vh auto;
+			padding: 20px 0 90px 0;
 
 			&:hover {
 				color: $red;
@@ -107,57 +166,68 @@
 
 	}
 
-	@media(max-width: $small-screen) {
-		#jobs {
-			p {
-				text-align: left;
-			}
-		}
-	}
-
 	#sayhello {
-		margin-top: 60px;
+		opacity: 0;
+		h2{
+			margin: 0;
+		}
 		padding-bottom: 30px;
+		padding: 0;
+		background: url('../images/header/home-header2.jpg');
+		background-attachment: fixed;
+		background-position: center;		
+		width: 100vw;
 		span {
 			color: $blue;
 		}
 		.container {
 			width: 90%;
-
-	  		h2 {
-	  			p {
-	  				margin: 0;
-	  			}
-	  		}
+			color: $light-grey;
+  		
 			ul {
-				li:nth-child(1) {
+				padding: 0;
+				list-style-type: none;
+				margin: 0;
+				li{
+					display: inline-block;
+				}
+				li:nth-child(1) { // formulaire
 					vertical-align : top;
-					margin-right: 10px; 
 					form {
 						input, textarea {
 							width: 42vw;
 							border: 0;
-							border-bottom: 2px solid #E0E0E0;
+							border-bottom: 1px solid #E0E0E0;
 							padding: 10px 0;
 							margin-bottom: 10px;
 							outline: none;
-							background-color: #F2F2F2;
+							background-color: transparent;
 							cursor: pointer;
+							-webkit-input-placeholder: $light-grey;
+							-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+							   color: $light-grey;
+							   opacity: 1;
+							}
+							-moz-placeholder { /* Mozilla Firefox 19+ */
+							   color: $light-grey;
+							   opacity: 1;
+							}
+							:-ms-input-placeholder { /* Internet Explorer 10+ */
+							   color: $light-grey;
+							}
+
 						}
 						.red {
 							margin-left: 50px;
 
 						}
-						button:hover {
-							background-color: $red;
-						}
+						
 						.input {
 							position: relative;
-							background-color:#F2F2F2;
 							.border-input, .border-textarea {
 								position:absolute;
 								width: 0;
-								height: 2px;
+								height: 1px;
 								&.active {
 									width: 450px;
 								}
@@ -169,22 +239,22 @@
 								bottom: 13px;
 							}
 						}
-					}
-					p {
-							margin-top: 1px;
+						button:hover {
+							background-color: $red;
 						}
+					}
+
 						p:nth-child(2) {
 							display: block;
 							margin-top: 5px;
 							margin-left: 3px;
 						}
 				}
-				li:nth-child(2) {
+				li:nth-child(2) { // réseaux sociaux et blog
 					p {
-
-						margin: 8vh auto;
+						margin: 8vh auto 0 auto;
 						width: 50vw;
-						color: $font-color;
+						color: $light-grey;
 						i {
 							color: $grey;
 							padding: 12px 5px;
@@ -198,13 +268,12 @@
 						}
 					}
 					ul{
-						margin-top: 10px;
 						list-style-type: none;
 						li {
 							display: inline;
-							margin-right: 24px;
+							margin: 50px 25px;
 							a {
-								color: $grey;
+								color: $light-grey;
 								text-decoration: none;
 								&:hover {
 									color: $red;
@@ -218,15 +287,6 @@
 				}
 			}	
 	  	}
-	  	ul{
-			padding-left: 0;
-			list-style-type: none;
-			li{
-				display: inline-block;
-			}
-		}		
-	}
-	#sayhello{
 		button {
 			background-color: $blue;
 			margin: 4vh auto;

@@ -29,6 +29,12 @@
 			padding: 5vh 0;
 			text-align: center;
 			color: $light-grey;
+			&:hover {
+				color: $turquoise;
+				span {
+					color: $light-grey;
+				}
+			}
 	
 			span {
 				color: $turquoise;
@@ -50,18 +56,19 @@
 
 	}
 
-	#slide {
+	#slide { //les boutons d'accès rapide aux ancress
+		opacity: 0;
 		ul {
 			list-style-type: none;
 			width: 90%;
 			margin: 18px auto;
-			padding: 14vh 0 0 0;
+			padding: 0;
 			text-align: center; 
 			li {
 				display: inline-block;
 				text-align: center;
-				width: 25%;
-				margin: 12px;
+				width: 20%;
+				margin: 10px;
 				a {
 					padding: 10px 0;
 					margin: 10px;
@@ -92,6 +99,16 @@
 						color: $purple;
 					}
 				}
+				&:nth-child(4) {
+					font-weight: bold;
+					&:hover{
+						a {
+						color: $blue;
+						}
+					}
+				}
+				
+
 
 				&.active {
 					background: transparent;
@@ -106,19 +123,6 @@
 					}
 				}
 			}
-		}
-	}
-
-	#slide{
-		.content{
-			width: 800px;
-			margin: 0 auto;
-		}
-		section {
-			display: none;
-		}
-		#believe {
-			display: block;
 		}
 	}
 	//Small Screen <= 425px
