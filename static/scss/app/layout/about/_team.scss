@@ -1,5 +1,6 @@
 @include exports('team') {
-	#team{
+// Team with pictures	
+	#team{ 
 		opacity: 0;
 		span{
 			color: $purple;
@@ -24,6 +25,8 @@
 			}
 			div {
 				text-align: center;
+				height: 25px;
+				margin: 5px;
 
 				a {
 					color: $purple;
@@ -60,58 +63,18 @@
 			}
 		}
 	}
-	@media(max-width: $small-screen) {
-		#team {
-			.container {
-				.content {
 
-					div.member {
-						margin-bottom: 0px;
-						p {
-							padding: 0 6px;
-							margin-top: 0px;
-							overflow: visible;
-							height: 16px;
-							i {
-								padding: 0 3px;
-							}
-						}
-					}
-					button {
-						margin: 30px auto 0 auto;
-						display: block;
-					}
-				}
-			}
-		}
-	}
-	@media(min-width: $small-screen) and (max-width: $large-screen) {
+//Medium Screen <= 768px
+	@media(max-width: $medium-screen) {
 		#team {
-			.container {
-				.content {
+			opacity: 1;
 
-					div.member {
-						margin-bottom: 0px;
-						p {
-							padding: 0 6px;
-							margin-top: 0px;
-							overflow: visible;
-							height: 16px;
-							i {
-								padding: 0 3px;
-							}
-						}
-					}
-					button {
-						margin: 30px auto 0 auto;
-						display: block;
-					}
-				}
-			}
 		}
 	}
 
-	#jobs{ // postuler
+// postuler
+
+	#jobs{ 
 		opacity: 0;
 		background-image: url('../images/team/Quorum_NB_group_Retouche5.jpg');
 		background-position: center;
@@ -164,6 +127,21 @@
 			text-align: center;
 			}
 
+	}
+
+// JOBS ||  Medium Screen <= 768px 
+	@media(max-width: $medium-screen) {
+		#jobs {
+			opacity: 1;
+			p {
+				width: 100%;
+				line-height: 28px;
+				strong {
+					color: $pink;
+				}
+			}
+
+		}
 	}
 
 	#sayhello {
@@ -310,5 +288,21 @@
 
 		}
 
+	}
+
+// SAYHELLO ||  Medium Screen <= 768px 
+	@media(max-width: $medium-screen) {
+		#sayhello {
+			opacity: 1;
+			}
+		}
+	@media(max-width: 430px) {
+		#sayhello {
+			opacity: 1;
+			.container ul li:nth-child(2) ul li {
+				margin: 15px 10px;
+
+			}
+		}
 	}
 }

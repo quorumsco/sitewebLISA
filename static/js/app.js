@@ -43,11 +43,11 @@ $(window).scroll(function(event){
    // animation fade page about
     if(window.innerWidth >= 768) {
         var breakpointSlide = $('#slide').position().top - 600;
-        var breakpointBelieve = $('#believe').position().top - 50;
+        var breakpointBelieve = $('#believe').position().top - 200;
         var breakpointSkills = $('#skills').position().top - 200;
         var breakpointTeam = $('#team').position().top - 300;
         var breakpointJobs = $('#jobs').position().top - 150;
-        var breakpointSayhello = $('#sayhello').position().top - 50;
+        var breakpointSayhello = $('#sayhello').position().top - 150;
 
         if (yOffset > breakpointSlide){
             $('#slide').addClass('animated fadeInUp');
@@ -68,6 +68,12 @@ $(window).scroll(function(event){
             $('#sayhello').addClass('animated fadeInUp');
         }
     }
+
+        if (yOffset > 861){
+            $('.goTop').removeClass('hidden').addClass('animated fadeInUp');
+        } else {
+            $('.goTop').addClass('hidden');
+        }
 
 
 });
@@ -210,7 +216,7 @@ $(document).ready(function(){
     }    
 //donut chart
 
-    if(window.innerWidth < 500){
+    if(window.innerWidth < 760){
         var legendPosition = 'bottom';
     } else {
         var legendPosition = 'right';
@@ -251,24 +257,33 @@ $(document).ready(function(){
       $(this).find('p').toggleClass('hidden');
     });
 
-    // page about - text on scroll
-    $('#slider').find('.textOnScroll').on('click',function() {
-        $(this).find('first-child(span)').toggleClass('hidden');
+    // page about - TEXT ON SCROLL
+
+    /*console.log($('#slider').position().top);
+
+    $(window).on('scroll',function() {
+        for( var n = 1; n < 9; n++)
+        $('#slider').find('.textOnScroll').find('span:nth-child(n)').toggleClass('hidden');
+    });
+        */
+
+   /* $('#slider').find('.textOnScroll').on('click',function() {
+        $(this).find('span').toggleClass('hidden').addClass('fadeInUp');
+    });
+*/console.log($('#slider').find('.textOnScroll').find('.text2'));
+    
+
+    $('#slider').find('.textOnScroll').find('span').on('click',function() {
+       if($(this).find('.active')) {
+        $(this).removeClass('active', 'text1').addClass('smooth');} 
+        //$('#slider').find('text1').removeClass('active').addClass('hidden');
+        $('.text2').removeClass('smooth').addClass('active');
+        //$('#slider').find('.textOnScroll').find('p').find('span').find('.text2').removeClass('smooth').addClass('active');
     });
 
     // Arrow floating go back top
 // FAILLLL
-console.log(window.pageYOffset);
-$('#aboutPage').scroll(function(){
-    var yOffsetButtonBack = window.pageYOffset;
-
-   if (yOffsetButtonBack > 917){
-        $('#aboutPage').removeClass('appearTop');
-    }
-});
-
-
-
+    
     //Newsletter
     var lang = navigator.language;
     var regex = /^fr/;

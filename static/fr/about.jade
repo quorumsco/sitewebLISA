@@ -4,45 +4,67 @@ block vars
 block content
     header#about.small
     main#aboutPage
-        .goTop.appearTop
+        .goTop.hidden
             a(href="#aboutPage")
                 i.fa.fa-arrow-circle-o-up
-        #slider
-            .fontTitle
-                h1 MEET THE 
-                    span TEAM
+        #textOnScroll
+            h1.fontTitle MEET THE 
+                span TEAM
+            
+            #text1-background.active
+            #text2-background
+            #text3-background
+            #text4-background
+            #text5-background
+            #text6-background
+            #text7-background
+            #text8-background
+            #text9-background
 
-            .textOnScroll            
-                p
-                    span Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent. 
+            .texts
 
-                    span.hidden Ces problèmes, nous pensons que 
-                        strong la technologie, l’intelligence artificielle et le traitement des données
-                        |  peuvent aider à les surmonter.
+                #text1.active Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent. 
 
-                    span.hidden Comme ils ont aidé à transformer à grande échelle le secteur financier, marchand ou logistique, nous pensons qu’ils peuvent aussi aider la société à aller mieux, aux hommes à diffuser leurs idées, à 
-                        strong créer du mouvement
-                        |  , à se rassembler autour de causes.
+                #text2 Ces problèmes, nous pensons que 
+                    strong la technologie, l’intelligence artificielle et le traitement des données
+                    |  peuvent aider à les surmonter.
 
-                    span.hidden Nous pensons que la technologie peut aider les hommes à avoir un 
-                        strong impact sociétal fort
-                        | , grâce au pouvoir d’analyse, de synchronisation et de coordination de ces outils.
+                #text3 Comme ils ont aidé à transformer à grande échelle le secteur financier, marchand ou logistique, nous pensons qu’ils peuvent aussi aider la société à aller mieux, aux hommes à diffuser leurs idées, à 
+                    strong créer du mouvement
+                    |  , à se rassembler autour de causes.
 
-                    span.hidden C’est pourquoi nous avons créé 
-                        strong Quorum
-                        |  : pour mettre les technologies dans des applications simples et fluides, dédiées aux utilisateurs et au service d’objectifs 
-                        strong réels et concrets
-                        |  .
+                #text4 Nous pensons que la technologie peut aider les hommes à avoir un 
+                    strong impact sociétal fort
+                    | , grâce au pouvoir d’analyse, de synchronisation et de coordination de ces outils.
 
-                    span.hidden Mais si nous pensons que la technologie permet d'augmenter les capacités des individus et des organisations, elle ne peut être une fin en soi.
+                #text5 C’est pourquoi nous avons créé 
+                    strong Quorum
+                    |  : pour mettre les technologies dans des applications simples et fluides, dédiées aux utilisateurs et au service d’objectifs 
+                    strong réels et concrets
+                    |  .
 
-                    span.hidden Elle n’est là que pour aider les 
-                        strong hommes à accomplir
-                        | . Son accompagnement restera toujours limité par son utilisation.
-                    span.hidden C’est pourquoi la technologie doit disparaitre, 
-                        strong se rendre invisible
-                        | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit
-              
+                #text6 Mais si nous pensons que la technologie permet 
+                    strong d'augmenter les capacités 
+                    | des individus et des organisations, elle ne peut être une fin en soi.
+
+                #text7 Elle n’est là que pour aider les 
+                    strong hommes à accomplir
+                    | . Son accompagnement restera toujours limité par son utilisation.
+                
+                #text8 C’est pourquoi la technologie doit disparaitre, 
+                    strong se rendre invisible
+                    | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit
+            
+            .bulletList
+                a(href="text1").active
+                a(href="text2")
+                a(href="text3")
+                a(href="text4")
+                a(href="text5")
+                a(href="text6")
+                a(href="text7")
+                a(href="text8")
+          
         #slide
             ul
                 li.active
@@ -50,10 +72,7 @@ block content
                 li
                     a(href="#skills") HOW WE DO IT 
                 li
-                    a(href="#team") QUORUM’S FACES
-                li
-                    a(href="#sayhello") SAY HELLO
-                
+                    a(href="#team") QUORUM’S FACES               
 
 
         #believe

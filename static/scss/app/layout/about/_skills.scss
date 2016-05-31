@@ -29,4 +29,18 @@
 			padding-bottom: 5vh;
 		}
 	}
+		//Medium Screen <= 768px
+	@media(max-width: $medium-screen) {
+		#skills {
+			opacity: 1;
+			p {
+				line-height: 28px;
+				width: 90%;
+				strong {
+					color: $green;
+				}
+			}
+
+		}
+	}
 }
