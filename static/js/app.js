@@ -77,9 +77,7 @@ $(window).scroll(function(event){
 
 // scroll changing
     // page about - TEXT ON SCROLL
-    $('#textOnScroll > div').removeClass('active');
-    $('#textOnScroll > .texts > div').removeClass('active');
-    $('#textOnScroll > .bulletList > a').removeClass('active');
+   
 
     if (window.innerWidth >= 768) {
         var breakpointtext1 = $('#text1').position().top-200;
@@ -90,41 +88,65 @@ $(window).scroll(function(event){
         var breakpointtext6 = $('#text6').position().top-200;
         var breakpointtext7 = $('#text7').position().top-200;
         var breakpointtext8 = $('#text8').position().top-200;
-
+//for each event on remove les classes actives ? 
         if (yOffset > breakpointtext1){
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text1').addClass('active');
-            $('text1-background').addClass('active');
+            $('#text1-background').addClass('active').addClass('animated fadeInUp');
+
+
         }
         if (yOffset > breakpointtext2){
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text2').addClass('active');
-            $('text2-background').addClass('active');
+            $('#text2-background').addClass('active').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext3){
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text3').addClass('active');
-            $('text3-background').addClass('active');
+            $('#text3-background').addClass('active').addClass('animated fadeInUp');
         }
-        if (yOffset > breakpointtext4){
+        if (yOffset > breakpointtext4){$('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text4').addClass('active');
-            $('text4-background').addClass('active');
+            $('#text4-background').addClass('active').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext5){
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text5').addClass('active');
-            $('text5-background').addClass('active');
+            $('#text5-background').addClass('active').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext6){
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text6').addClass('active');
-            $('text6-background').addClass('active');
+            $('#text6-background').addClass('active').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext7){
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text7').addClass('active');
-            $('text7-background').addClass('active');
+            $('#text7-background').addClass('active').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext8){
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text8').addClass('active');
-            $('text8-background').addClass('active');
+            $('#text8-background').addClass('active').addClass('animated fadeInUp');
         }
 
-console.log(yOffset);
     }
 });
 
