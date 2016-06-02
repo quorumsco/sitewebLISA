@@ -18,16 +18,18 @@
 		}
 
 	}
-	#textOnScroll {
 
+	// Div for the scroll
+
+	#textOnScroll {
+		position: relative;
 
 	// Title "MEET THE TEAM"
 		.fontTitle {
 			padding: 5vh 0;
 			text-align: center;
 			color: $light-grey;
-		/*	position: relative;
-			z-index: 10; */
+
 			&:hover {
 				color: $turquoise;
 				span {
@@ -39,9 +41,6 @@
 			}
 		}
 
-		.active {
-			opacity: 1;
-		}
 
 		//Images background
 
@@ -72,30 +71,38 @@
 
 		// Properties of the backgrounds
 
-		#background {
+		.background {
 			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
 			opacity: 0;
 			width: 100vw;
-			height: 100vh;
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 0;
+			z-index: -10;
+			height: 100%;
+		}
+		.active {
+			opacity: 1;
 		}
 
 	
 		// Texts
 
 		.texts {
-			opacity: 0.2;
-			font-size: 2.5em;
+			color: $grey;
+			font-size: 2.3em;
 			overflow: hidden;
 			text-align: justify;
 			width: 60vw;
-			height: 50vh;
-			margin: 5vh auto;
+			margin: auto;
+			padding: 10vh 0 20vh 0;
 			.active {
-				opacity: 1;
+				color: $font-color;
+				strong {
+					color: $turquoise;
+				}
 			}		
 
 		}
@@ -103,14 +110,24 @@
 		// Bullet list
 
 		.bulletList {
-			display: fixed;
+			position: fixed;
 			right: 10px;
-			top: 40vh;
+			top: 35vh;
+			width: 2.5em;
+
 			a {
-				width: 15px;
-				height: 15px;
-				border-radius: 50%;
-				border-color: $purple;
+				font-size: 2em;
+				text-decoration: none;
+				display: block;
+				float: left;
+				color: $turquoise;
+				&:hover {
+					color: $font-color;
+				}
+
+			}
+			.active {
+				color: $font-color;
 			}
 		}
 
@@ -120,6 +137,7 @@
 
 	#slide { //les boutons d'accès rapide aux ancress
 		opacity: 0;
+		margin: 15vh auto;
 		ul {
 			list-style-type: none;
 			width: 90%;
@@ -189,12 +207,8 @@
 	}
 	//Medium Screen <= 768px
 	@media(max-width: $medium-screen) {
-		#aboutPage {
-	    	background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
-	    	background-size: cover;
-	    	background-attachment: fixed;
-	  	}
   		#slide {
+
 			opacity: 1;
 			ul {
 				display: block;
@@ -206,7 +220,14 @@
 					margin: auto;
 				}
 			}
-		}		
+		}
+		#believe {
+			background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
+	    	background-size: cover;
+	    	background-attachment: fixed;
+		}
+	}
+
 
 	@media(min-width: $medium-screen) and (max-width: $large-screen) {
 
@@ -223,4 +244,4 @@
     		background-position: 50%;
     	}
   	}
-}}
+}

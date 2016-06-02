@@ -68,14 +68,64 @@ $(window).scroll(function(event){
             $('#sayhello').addClass('animated fadeInUp');
         }
     }
-
-        if (yOffset > 861){
+ // Button GO back to top
+        if (yOffset > 2000){
             $('.goTop').removeClass('hidden').addClass('animated fadeInUp');
         } else {
             $('.goTop').addClass('hidden');
         }
 
+// scroll changing
+    // page about - TEXT ON SCROLL
+    $('#textOnScroll > div').removeClass('active');
+    $('#textOnScroll > .texts > div').removeClass('active');
+    $('#textOnScroll > .bulletList > a').removeClass('active');
 
+    if (window.innerWidth >= 768) {
+        var breakpointtext1 = $('#text1').position().top-200;
+        var breakpointtext2 = $('#text2').position().top-200;
+        var breakpointtext3 = $('#text3').position().top-200;
+        var breakpointtext4 = $('#text4').position().top-200;
+        var breakpointtext5 = $('#text5').position().top-200;
+        var breakpointtext6 = $('#text6').position().top-200;
+        var breakpointtext7 = $('#text7').position().top-200;
+        var breakpointtext8 = $('#text8').position().top-200;
+
+        if (yOffset > breakpointtext1){
+            $('#text1').addClass('active');
+            $('text1-background').addClass('active');
+        }
+        if (yOffset > breakpointtext2){
+            $('#text2').addClass('active');
+            $('text2-background').addClass('active');
+        }
+        if (yOffset > breakpointtext3){
+            $('#text3').addClass('active');
+            $('text3-background').addClass('active');
+        }
+        if (yOffset > breakpointtext4){
+            $('#text4').addClass('active');
+            $('text4-background').addClass('active');
+        }
+        if (yOffset > breakpointtext5){
+            $('#text5').addClass('active');
+            $('text5-background').addClass('active');
+        }
+        if (yOffset > breakpointtext6){
+            $('#text6').addClass('active');
+            $('text6-background').addClass('active');
+        }
+        if (yOffset > breakpointtext7){
+            $('#text7').addClass('active');
+            $('text7-background').addClass('active');
+        }
+        if (yOffset > breakpointtext8){
+            $('#text8').addClass('active');
+            $('text8-background').addClass('active');
+        }
+
+console.log(yOffset);
+    }
 });
 
 
@@ -259,18 +309,32 @@ $(document).ready(function(){
 
     // page about - TEXT ON SCROLL
 
+    $('#textOnScroll').find('.bulletList').find('a').on('click', function () {
+        
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+       
+        var idText = $(this).attr('href');
+        
+        $(this).addClass('active');
+        $(idText).addClass('active');
+        $(idText + '-background').addClass('active');
+
+    });
+
     /*console.log($('#slider').position().top);
 
     $(window).on('scroll',function() {
         for( var n = 1; n < 9; n++)
         $('#slider').find('.textOnScroll').find('span:nth-child(n)').toggleClass('hidden');
     });
-        */
+        
 
-   /* $('#slider').find('.textOnScroll').on('click',function() {
+   $('#slider').find('.textOnScroll').on('click',function() {
         $(this).find('span').toggleClass('hidden').addClass('fadeInUp');
     });
-*/console.log($('#slider').find('.textOnScroll').find('.text2'));
+console.log($('#slider').find('.textOnScroll').find('.text2'));
     
 
     $('#slider').find('.textOnScroll').find('span').on('click',function() {
@@ -279,10 +343,8 @@ $(document).ready(function(){
         //$('#slider').find('text1').removeClass('active').addClass('hidden');
         $('.text2').removeClass('smooth').addClass('active');
         //$('#slider').find('.textOnScroll').find('p').find('span').find('.text2').removeClass('smooth').addClass('active');
-    });
+    });*/
 
-    // Arrow floating go back top
-// FAILLLL
     
     //Newsletter
     var lang = navigator.language;

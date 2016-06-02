@@ -5,25 +5,21 @@ block content
     header#about.small
     main#aboutPage
         .goTop.hidden
-            a(href="#aboutPage")
+            a(href="#slide")
                 i.fa.fa-arrow-circle-o-up
+        
+        //- Texts + background + bullet list
+
         #textOnScroll
             h1.fontTitle MEET THE 
                 span TEAM
-            
-            #text1-background.active
-            #text2-background
-            #text3-background
-            #text4-background
-            #text5-background
-            #text6-background
-            #text7-background
-            #text8-background
-            #text9-background
 
+            //- Texts for the top scroll
             .texts
 
-                #text1.active Nos organisations aujourd’hui font face à des problèmes et des défis d’une complexité sans précédent. 
+                #text1.active Nos organisations aujourd’hui font face à des problèmes et 
+                    strong des défis d’une complexité 
+                    | sans précédent. 
 
                 #text2 Ces problèmes, nous pensons que 
                     strong la technologie, l’intelligence artificielle et le traitement des données
@@ -54,17 +50,39 @@ block content
                 #text8 C’est pourquoi la technologie doit disparaitre, 
                     strong se rendre invisible
                     | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit
-            
+
+
+
+
+            //- List as dots stick on the right
             .bulletList
-                a(href="text1").active
-                a(href="text2")
-                a(href="text3")
-                a(href="text4")
-                a(href="text5")
-                a(href="text6")
-                a(href="text7")
-                a(href="text8")
-          
+                a(href="#text1").active
+                    i.fa.fa-circle-o
+                a(href="#text2")
+                    i.fa.fa-circle-o
+                a(href="#text3")
+                    i.fa.fa-circle-o
+                a(href="#text4")
+                    i.fa.fa-circle-o
+                a(href="#text5")
+                    i.fa.fa-circle-o
+                a(href="#text6")
+                    i.fa.fa-circle-o
+                a(href="#text7")
+                    i.fa.fa-circle-o
+                a(href="#text8")
+                    i.fa.fa-circle-o
+
+            //- Backgrounds for the top scroll
+            #text1-background.background.active
+            #text2-background.background
+            #text3-background.background
+            #text4-background.background
+            #text5-background.background
+            #text6-background.background
+            #text7-background.background
+            #text8-background.background
+
         #slide
             ul
                 li.active
