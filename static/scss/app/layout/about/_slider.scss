@@ -2,7 +2,7 @@
 	#aboutPage{
 		.goTop {
 			position: fixed;
-			bottom: 10vh;
+			bottom: 6vh;
 			right: 5vw;
 			z-index: 50000;
 			a {
@@ -45,36 +45,73 @@
 		//Images background
 
 		#text1-background{
-			background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
+			background: url('../images/header/visubleu.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+    		filter: grayscale(80%)
 		}
 		#text2-background{
-			background: url('../images/header/home-header2.jpg');
+			background: url('../images/header/visurose.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+    		filter: grayscale(80%)
 		}
 		#text3-background{
-			background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
+			background: url('../images/header/visurouge.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+    		filter: grayscale(80%)
 		}
 		#text4-background{
 			background: url('../images/header/home-header2.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+    		filter: grayscale(80%)
 		}
 		#text5-background{
-			background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
+			background: url('../images/header/visuvert.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+    		filter: grayscale(80%)
 		}
 		#text6-background{
-			background: url('../images/header/home-header2.jpg');
+			background: url('../images/header/visuverteau.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+    		filter: grayscale(80%)
 		}
 		#text7-background{
-			background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
+			background: url('../images/header/visubleu.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+    		filter: grayscale(80%)
 		}
 		#text8-background{
-			background: url('../images/header/home-header2.jpg');
+			background: url('../images/header/visurouge.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+    		filter: grayscale(80%)
 		}
 
 		// Properties of the backgrounds
 
 		.background {
-			background-size: cover;
-			background-position: center;
-			background-attachment: fixed;
 			opacity: 0;
 			width: 100vw;
 			position: absolute;
@@ -95,7 +132,7 @@
 			font-size: 2.3em;
 			overflow: hidden;
 			text-align: justify;
-			width: 60vw;
+			width: 50vw;
 			margin: auto;
 			padding: 10vh 0 20vh 0;
 			.active {

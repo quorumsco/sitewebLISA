@@ -74,12 +74,18 @@ $(window).scroll(function(event){
         } else {
             $('.goTop').addClass('hidden');
         }
+// Manage disapear bullet list for the following text on scroll
+    if (yOffset > $('#slide').position().top - 380) {
+        $('.bulletList').hide();
+    } else {
+        $('.bulletList').show();
+    }
 
 // scroll changing
     // page about - TEXT ON SCROLL
    
 
-    if (window.innerWidth >= 768) {
+    /*if (window.innerWidth >= 768) {
         var breakpointtext1 = $('#text1').position().top-200;
         var breakpointtext2 = $('#text2').position().top-200;
         var breakpointtext3 = $('#text3').position().top-200;
@@ -90,12 +96,9 @@ $(window).scroll(function(event){
         var breakpointtext8 = $('#text8').position().top-200;
 //for each event on remove les classes actives ? 
         if (yOffset > breakpointtext1){
-            $('#textOnScroll > div').removeClass('active');
             $('#textOnScroll > .texts > div').removeClass('active');
             $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text1').addClass('active');
-            $('#text1-background').addClass('active').addClass('animated fadeInUp');
-
 
         }
         if (yOffset > breakpointtext2){
@@ -103,34 +106,35 @@ $(window).scroll(function(event){
             $('#textOnScroll > .texts > div').removeClass('active');
             $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text2').addClass('active');
-            $('#text2-background').addClass('active').addClass('animated fadeInUp');
+            $('#text2-background').addClass('animated fadeInUp');
         }
+
         if (yOffset > breakpointtext3){
             $('#textOnScroll > div').removeClass('active');
             $('#textOnScroll > .texts > div').removeClass('active');
             $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text3').addClass('active');
-            $('#text3-background').addClass('active').addClass('animated fadeInUp');
+            $('#text3-background').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext4){$('#textOnScroll > div').removeClass('active');
             $('#textOnScroll > .texts > div').removeClass('active');
             $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text4').addClass('active');
-            $('#text4-background').addClass('active').addClass('animated fadeInUp');
+            $('#text4-background').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext5){
             $('#textOnScroll > div').removeClass('active');
             $('#textOnScroll > .texts > div').removeClass('active');
             $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text5').addClass('active');
-            $('#text5-background').addClass('active').addClass('animated fadeInUp');
+            $('#text5-background').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext6){
             $('#textOnScroll > div').removeClass('active');
             $('#textOnScroll > .texts > div').removeClass('active');
             $('#textOnScroll > .bulletList > a').removeClass('active');
             $('#text6').addClass('active');
-            $('#text6-background').addClass('active').addClass('animated fadeInUp');
+            $('#text6-background').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointtext7){
             $('#textOnScroll > div').removeClass('active');
@@ -147,8 +151,23 @@ $(window).scroll(function(event){
             $('#text8-background').addClass('active').addClass('animated fadeInUp');
         }
 
-    }
+    }*/
 });
+    // page about - TEXT ON SCROLL on click. Issue : conflict witth the scroll which takeover this one after click
+/*
+    $('#textOnScroll').find('.bulletList').find('a').on('click', function () {
+        
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+       
+        var idText = $(this).attr('href');
+        
+        $(this).addClass('active');
+        $("#text2").addClass('active');
+        $(idText + '-background').addClass('active');
+
+    });*/
 
 
 $(document).ready(function(){
@@ -329,21 +348,62 @@ $(document).ready(function(){
       $(this).find('p').toggleClass('hidden');
     });
 
-    // page about - TEXT ON SCROLL
+// create a function for the scroll and click
 
-    $('#textOnScroll').find('.bulletList').find('a').on('click', function () {
-        
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-       
-        var idText = $(this).attr('href');
-        
-        $(this).addClass('active');
-        $(idText).addClass('active');
-        $(idText + '-background').addClass('active');
+//if (window.pageYOffset > $(textX).position().top - 200)
 
-    });
+function scrollQ (textX, event) {    console.log(event);
+
+   if (window.innerWidth >= 768) {
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
+            $(textX).addClass('active');
+            $(textX + '-background').addClass('active');
+            $('a[href =' + textX + ']').addClass('active');
+            if (event.type == 'click') { //attribut 'type' de l'objet event
+                    // position top pour arriver;
+            } 
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('.bulletList').find('a').on('click', function(e){
+
+    e.preventDefault();
+    scrollQ($(this).attr('href'), e);
+});
 
     /*console.log($('#slider').position().top);
 
