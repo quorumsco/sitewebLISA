@@ -68,111 +68,150 @@ $(window).scroll(function(event){
             $('#sayhello').addClass('animated fadeInUp');
         }
     }
+
+
  // Button GO back to top
+if(window.innerWidth >= 768) {
         if (yOffset > 2000){
             $('.goTop').removeClass('hidden').addClass('animated fadeInUp');
         } else {
             $('.goTop').addClass('hidden');
         }
-// Manage disapear bullet list for the following text on scroll
+}
+
+else {
+    if (yOffset > 6000){
+        $('.goTop').removeClass('hidden').addClass('animated fadeInUp');
+    } else {
+        $('.goTop').addClass('hidden');
+    }
+}
+// Manage disapear bullet list for the text on scroll
+
     if (yOffset > $('#slide').position().top - 380) {
         $('.bulletList').hide();
     } else {
         $('.bulletList').show();
     }
 
-// scroll changing
-    // page about - TEXT ON SCROLL
-   
+// Manage text en scroll
+// Make an array, then call it. Clean the .active class, and add it after checking the position from the top
+    var tabX = [$('#text1').position().top-200, $('#text2').position().top-200, $('#text3').position().top-200, $('#text4').position().top-200, $('#text5').position().top-200, $('#text6').position().top-200, $('#text7').position().top-200, $('#text8').position().top-200]
 
-    /*if (window.innerWidth >= 768) {
-        var breakpointtext1 = $('#text1').position().top-200;
-        var breakpointtext2 = $('#text2').position().top-200;
-        var breakpointtext3 = $('#text3').position().top-200;
-        var breakpointtext4 = $('#text4').position().top-200;
-        var breakpointtext5 = $('#text5').position().top-200;
-        var breakpointtext6 = $('#text6').position().top-200;
-        var breakpointtext7 = $('#text7').position().top-200;
-        var breakpointtext8 = $('#text8').position().top-200;
-//for each event on remove les classes actives ? 
-        if (yOffset > breakpointtext1){
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $('#text1').addClass('active');
-
-        }
-        if (yOffset > breakpointtext2){
-            $('#textOnScroll > div').removeClass('active');
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $('#text2').addClass('active');
-            $('#text2-background').addClass('animated fadeInUp');
-        }
-
-        if (yOffset > breakpointtext3){
-            $('#textOnScroll > div').removeClass('active');
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $('#text3').addClass('active');
-            $('#text3-background').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointtext4){$('#textOnScroll > div').removeClass('active');
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $('#text4').addClass('active');
-            $('#text4-background').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointtext5){
-            $('#textOnScroll > div').removeClass('active');
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $('#text5').addClass('active');
-            $('#text5-background').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointtext6){
-            $('#textOnScroll > div').removeClass('active');
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $('#text6').addClass('active');
-            $('#text6-background').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointtext7){
-            $('#textOnScroll > div').removeClass('active');
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $('#text7').addClass('active');
-            $('#text7-background').addClass('active').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointtext8){
-            $('#textOnScroll > div').removeClass('active');
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $('#text8').addClass('active');
-            $('#text8-background').addClass('active').addClass('animated fadeInUp');
-        }
-
-    }*/
-});
-    // page about - TEXT ON SCROLL on click. Issue : conflict witth the scroll which takeover this one after click
-/*
-    $('#textOnScroll').find('.bulletList').find('a').on('click', function () {
-        
+    if ( yOffset > tabX[0]) {
         $('#textOnScroll > div').removeClass('active');
         $('#textOnScroll > .texts > div').removeClass('active');
         $('#textOnScroll > .bulletList > a').removeClass('active');
-       
-        var idText = $(this).attr('href');
-        
-        $(this).addClass('active');
-        $("#text2").addClass('active');
-        $(idText + '-background').addClass('active');
+        $('#text1').addClass('active');
+        $('#text1-background').addClass('active');
+        $('[href=#text1]').addClass('active');
 
-    });*/
 
+    }
+
+    if (yOffset > tabX[1]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text2').addClass('active');
+        $('#text2-background').addClass('active');
+        $('[href=#text2]').addClass('active');
+
+    }
+
+    if (yOffset > tabX[2]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text3').addClass('active');
+        $('#text3-background').addClass('active');
+        $('[href=#text3]').addClass('active');
+
+    }
+    if (yOffset > tabX[3]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text4').addClass('active');
+        $('#text4-background').addClass('active');
+        $('[href=#text4]').addClass('active');
+
+    }
+    if (yOffset > tabX[4]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text5').addClass('active');
+        $('#text5-background').addClass('active');
+        $('[href=#text5]').addClass('active');
+
+    }
+    if (yOffset > tabX[5]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text6').addClass('active');
+        $('#text6-background').addClass('active');
+        $('[href=#text6]').addClass('active');
+
+    }
+    if (yOffset > tabX[6]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text7').addClass('active');
+        $('#text7-background').addClass('active');
+        $('[href=#text7]').addClass('active');
+
+    }
+    if (yOffset > tabX[7]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text8').addClass('active');
+        $('#text8-background').addClass('active');
+        $('[href=#text8]').addClass('active');
+
+    }
+});
+
+
+// Function for the click on bullet list - reach the text
+/*
+    var yOffset = window.pageYOffset;
+    var tabX = [$('#text1').position().top-200, $('#text2').position().top-200, $('#text3').position().top-200, $('#text4').position().top-200, $('#text5').position().top-200, $('#text6').position().top-200, $('#text7').position().top-200, $('#text8').position().top-200]
+function scrollQ (textX, event) {    
+console.log(textX);
+
+   if (window.innerWidth >= 768) {
+            if (event.type == 'click') { //attribut 'type' de l'objet event
+                    // position top pour arriver;
+            $('#textOnScroll > div').removeClass('active');
+            $('#textOnScroll > .texts > div').removeClass('active');
+            $('#textOnScroll > .bulletList > a').removeClass('active');
+            $(textX).addClass('active');
+            $(textX + '-background').addClass('active');
+            $('a[href =' + textX + ']').addClass('active');
+            // animation for click, avoid anchor too fast
+                $('html, body').animate({ scrollTop: $(textX).position().top - 250 }, 500);
+            }
+
+            // FAIL on scroll 
+            else {
+                console.log('coucou'.substring(2));
+                var numberX = 'textX'.substring(2); // -1 to manage array
+                if (tabX[numberX + 1] > yOffset > tabX[numberX]) { // test 
+                    $(textX).addClass('active');
+                }
+
+                }
+            }            
+
+    }*/
 
 $(document).ready(function(){
+
     //Animation fade believe
-    ///$('.believe-fr:nth-child(2)').addClass('animated fadeInUp');
     //Border animation - #contact home page
     $('#sayhello input, #sayhello textarea, #contact input, #contact textarea, #newsletter input').on('focusin', function(){
         var widthInput = $(this).width();
@@ -254,6 +293,25 @@ $(document).ready(function(){
             }
         });
     }
+
+        //ScrollTo - home page
+    $('#nav').find('ul.nav').find('a').not('.link').on('click', function(e){
+        if($('#contact').length > 0) {
+            e.preventDefault();
+            var name = $(this).attr('href').substring(1);
+            //Loop scrollTo management
+            if(clickScrollTo != name){
+                console.log(name);
+                clickScrollTo = name;
+                var divTop = $(name).position().top;
+                $('html, body').animate({
+                        scrollTop: divTop
+                    }, 500
+                );
+            }
+        }
+    });
+
     //White Menu
     if($('#nav').next().hasClass('small')) {
         $('#nav').addClass('active');
@@ -348,84 +406,13 @@ $(document).ready(function(){
       $(this).find('p').toggleClass('hidden');
     });
 
-// create a function for the scroll and click
 
-//if (window.pageYOffset > $(textX).position().top - 200)
-
-function scrollQ (textX, event) {    console.log(event);
-
-   if (window.innerWidth >= 768) {
-            $('#textOnScroll > div').removeClass('active');
-            $('#textOnScroll > .texts > div').removeClass('active');
-            $('#textOnScroll > .bulletList > a').removeClass('active');
-            $(textX).addClass('active');
-            $(textX + '-background').addClass('active');
-            $('a[href =' + textX + ']').addClass('active');
-            if (event.type == 'click') { //attribut 'type' de l'objet event
-                    // position top pour arriver;
-            } 
-
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$('.bulletList').find('a').on('click', function(e){
+$('.bulletList').find('a').on('click', function(e){ //call the function on click
 
     e.preventDefault();
     scrollQ($(this).attr('href'), e);
 });
 
-    /*console.log($('#slider').position().top);
-
-    $(window).on('scroll',function() {
-        for( var n = 1; n < 9; n++)
-        $('#slider').find('.textOnScroll').find('span:nth-child(n)').toggleClass('hidden');
-    });
-        
-
-   $('#slider').find('.textOnScroll').on('click',function() {
-        $(this).find('span').toggleClass('hidden').addClass('fadeInUp');
-    });
-console.log($('#slider').find('.textOnScroll').find('.text2'));
-    
-
-    $('#slider').find('.textOnScroll').find('span').on('click',function() {
-       if($(this).find('.active')) {
-        $(this).removeClass('active', 'text1').addClass('smooth');} 
-        //$('#slider').find('text1').removeClass('active').addClass('hidden');
-        $('.text2').removeClass('smooth').addClass('active');
-        //$('#slider').find('.textOnScroll').find('p').find('span').find('.text2').removeClass('smooth').addClass('active');
-    });*/
 
     
     //Newsletter

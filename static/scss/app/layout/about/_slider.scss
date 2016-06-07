@@ -6,7 +6,7 @@
 			right: 5vw;
 			z-index: 50000;
 			a {
-				font-size: 4em;
+				font-size: 3em;
 				color: $red;
 				&:hover {
 					color: $pink;
@@ -25,6 +25,7 @@
 		position: relative;
 
 	// Title "MEET THE TEAM"
+
 		.fontTitle {
 			padding: 5vh 0;
 			text-align: center;
@@ -49,24 +50,24 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
-    		filter: grayscale(80%)
+			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
+    		filter: grayscale(90%)
 		}
 		#text2-background{
 			background: url('../images/header/visurose.png');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
-    		filter: grayscale(80%)
+			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
+    		filter: grayscale(90%)
 		}
 		#text3-background{
 			background: url('../images/header/visurouge.png');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
-    		filter: grayscale(80%)
+			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
+    		filter: grayscale(90%)
 		}
 		#text4-background{
 			background: url('../images/header/home-header2.jpg');
@@ -81,32 +82,32 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
-    		filter: grayscale(80%)
+			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
+    		filter: grayscale(90%)
 		}
 		#text6-background{
 			background: url('../images/header/visuverteau.png');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
-    		filter: grayscale(80%)
+			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
+    		filter: grayscale(90%)
 		}
 		#text7-background{
 			background: url('../images/header/visubleu.png');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
-    		filter: grayscale(80%)
+			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
+    		filter: grayscale(90%)
 		}
 		#text8-background{
 			background: url('../images/header/visurouge.png');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
-    		filter: grayscale(80%)
+			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
+    		filter: grayscale(90%)
 		}
 
 		// Properties of the backgrounds
@@ -122,6 +123,9 @@
 		}
 		.active {
 			opacity: 1;
+			transition: visibility .50s ease-in-out;
+   			-moz-transition: visibility .50s ease-in-out;
+   			-webkit-transition: visibility .50s ease-in-out;
 		}
 
 	
@@ -136,7 +140,7 @@
 			margin: auto;
 			padding: 10vh 0 20vh 0;
 			.active {
-				color: $font-color;
+				color: $light-grey;
 				strong {
 					color: $turquoise;
 				}
@@ -153,26 +157,26 @@
 			width: 2.5em;
 
 			a {
-				font-size: 2em;
+				font-size: 1.5em;
 				text-decoration: none;
 				display: block;
 				float: left;
 				color: $turquoise;
 				&:hover {
-					color: $font-color;
+					color: $light-grey;
 				}
 
 			}
 			.active {
-				color: $font-color;
+				color: $light-grey;
 			}
 		}
 
 
 
 	}
-
-	#slide { //les boutons d'accès rapide aux ancress
+	// buttons to access achors points
+	#slide { 
 		opacity: 0;
 		margin: 15vh auto;
 		ul {
@@ -227,7 +231,7 @@
 				
 
 
-				&.active {
+				&.active { //
 					background: transparent;
 					&:nth-child(1){
 						border-color: $blue;
