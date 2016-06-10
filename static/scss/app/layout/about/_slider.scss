@@ -1,288 +1,354 @@
 @include exports('slider') {
-	#aboutPage{
-		.goTop {
-			position: fixed;
-			bottom: 6vh;
-			right: 5vw;
-			z-index: 50000;
-			a {
-				font-size: 3em;
-				color: $red;
-				&:hover {
-					color: $pink;
-				}
-			}
-		}
-		.hidden {
-			display: none;
-		}
+    #aboutPage{
+        .goTop {
+            position: fixed;
+            bottom: 6vh;
+            right: 5vw;
+            z-index: 50000;
+            a {
+                font-size: 3em;
+                color: $red;
+                &:hover {
+                    color: $pink;
+                }
+            }
+        }
+        .hidden {
+            display: none;
+        }
 
-	}
+    }
 
-	// Div for the scroll
+    // Div for the scroll
 
-	#textOnScroll {
-		position: relative;
+    #textOnScroll {
+        position: relative;
 
-	// Title "MEET THE TEAM"
+    // Title "MEET THE TEAM"
 
-		.fontTitle {
-			padding: 5vh 0;
-			text-align: center;
-			color: $light-grey;
+        .fontTitle {
+            padding: 5vh 0;
+            text-align: center;
+            color: $light-grey;
 
-			&:hover {
-				color: $turquoise;
-				span {
-					color: $light-grey;
-				}
-			}
-			span {
-				color: $turquoise;
-			}
-		}
+            &:hover {
+                color: $turquoise;
+                span {
+                    color: $light-grey;
+                }
+            }
+            span {
+                color: $turquoise;
+            }
+        }
 
 
-		//Images background
+        //Images background
 
-		#text1-background{
-			background: url('../images/header/visubleu.png');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
-    		filter: grayscale(90%)
-		}
-		#text2-background{
-			background: url('../images/header/visurose.png');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
-    		filter: grayscale(90%)
-		}
-		#text3-background{
-			background: url('../images/header/visurouge.png');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
-    		filter: grayscale(90%)
-		}
-		#text4-background{
-			background: url('../images/header/home-header2.jpg');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
-    		filter: grayscale(80%)
-		}
-		#text5-background{
-			background: url('../images/header/visuvert.png');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
-    		filter: grayscale(90%)
-		}
-		#text6-background{
-			background: url('../images/header/visuverteau.png');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
-    		filter: grayscale(90%)
-		}
-		#text7-background{
-			background: url('../images/header/visubleu.png');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
-    		filter: grayscale(90%)
-		}
-		#text8-background{
-			background: url('../images/header/visurouge.png');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */
-    		filter: grayscale(90%)
-		}
+        #text1-background{
+            background: url('../images/header/visubleu.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        #text2-background{
+            background: url('../images/header/visurose.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        #text3-background{
+            background: url('../images/header/visurouge.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        #text4-background{
+            background: url('../images/header/home-header2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-filter: grayscale(80%); /* Chrome, Safari, Opera */
+            filter: grayscale(80%)
+        }
+        #text5-background{
+            background: url('../images/header/visuvert.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        #text6-background{
+            background: url('../images/header/visuverteau.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        #text7-background{
+            background: url('../images/header/visubleu.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        #text8-background{
+            background: url('../images/header/visurouge.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
 
-		// Properties of the backgrounds
+        // Properties of the backgrounds
 
-		.background {
-			opacity: 0;
-			width: 100vw;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -10;
-			height: 100%;
-		}
-		.active {
-			opacity: 1;
-			transition: visibility .50s ease-in-out;
-   			-moz-transition: visibility .50s ease-in-out;
-   			-webkit-transition: visibility .50s ease-in-out;
-		}
+        .background {
+            opacity: 0;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            height: 100%;
+        }
+        .active {
+            opacity: 1;
+            animation: magicOpa 1s cubic-bezier(0.74, 0.01, 1, 1);
+            -moz-animation: magicOpa 1s cubic-bezier(0.74, 0.01, 1, 1);
+            -webkit-animation: magicOpa 1s cubic-bezier(0.74, 0.01, 1, 1);
+        }
 
-	
-		// Texts
+    
+        // Texts
 
-		.texts {
-			color: $grey;
-			font-size: 2.3em;
-			overflow: hidden;
-			text-align: justify;
-			width: 50vw;
-			margin: auto;
-			padding: 10vh 0 20vh 0;
-			.active {
-				color: $light-grey;
-				strong {
-					color: $turquoise;
-				}
-			}		
+        .texts {
+            color: $grey;
+            font-size: 2.3em;
+            overflow: hidden;
+            text-align: justify;
+            width: 50vw;
+            margin: auto;
+            padding: 10vh 0 20vh 0;
+            .active {
+                color: $light-grey;
+                strong {
+                    color: $turquoise;
+                }
+            }       
 
-		}
+        }
 
-		// Bullet list
+        // Bullet list
 
-		.bulletList {
-			position: fixed;
-			right: 10px;
-			top: 35vh;
-			width: 2.5em;
+        .bulletList {
+            position: fixed;
+            right: 10px;
+            top: 35vh;
+            width: 2.5em;
 
-			a {
-				font-size: 1.5em;
-				text-decoration: none;
-				display: block;
-				float: left;
-				color: $turquoise;
-				&:hover {
-					color: $light-grey;
-				}
+            a {
+                font-size: 1.5em;
+                text-decoration: none;
+                display: block;
+                float: left;
+                color: $turquoise;
+/*                 &:hover {
+                    color: $light-grey;
+                } */
+                pointer-events: none;
 
-			}
-			.active {
-				color: $light-grey;
-			}
-		}
+            }
+            .active {
+                color: $light-grey;
+            }
+        }
 
 
 
-	}
-	// buttons to access achors points
-	#slide { 
-		opacity: 0;
-		margin: 15vh auto;
-		ul {
-			list-style-type: none;
-			width: 90%;
-			margin: 18px auto;
-			padding: 0;
-			text-align: center; 
-			li {
-				display: inline-block;
-				text-align: center;
-				width: 25%;
-				margin: 10px;
-				a {
-					padding: 10px 0;
-					margin: 10px;
-					color: $grey;
-					text-decoration: none;
-					display: inline-block;
-					width: 100%;
-					outline: 0;
-					border: solid 1px;
-				}
-				&:nth-child(1) {
-					&:hover{
-						a {
-							color: $dark-blue;
-						}
-					}
-				}
-				&:nth-child(2) {
+    }
+    // buttons to access achors points
+    #slide { 
+        opacity: 0;
+        margin: 15vh auto;
+        ul {
+            list-style-type: none;
+            width: 90%;
+            margin: 18px auto;
+            padding: 0;
+            text-align: center; 
+            li {
+                display: inline-block;
+                text-align: center;
+                width: 25%;
+                margin: 10px;
+                a {
+                    padding: 10px 0;
+                    margin: 10px;
+                    color: $grey;
+                    text-decoration: none;
+                    display: inline-block;
+                    width: 100%;
+                    outline: 0;
+                    border: solid 1px;
+                }
+                &:nth-child(1) {
+                    &:hover{
+                        a {
+                            color: $dark-blue;
+                        }
+                    }
+                }
+                &:nth-child(2) {
 
-					&:hover {
-						a {
-						color: $green;
-						}
-					}
-				}
-				&:nth-child(3):hover{
-						a {
-						color: $purple;
-					}
-				}
-				&:nth-child(4) {
-					font-weight: bold;
-					&:hover{
-						a {
-						color: $blue;
-						}
-					}
-				}
-				
-
-
-				&.active { //
-					background: transparent;
-					&:nth-child(1){
-						border-color: $blue;
-					}
-					&:nth-child(2){
-						border-right: 0px;
-					}
-					&:nth-child(3){
-						border-color: $pink;
-					}
-				}
-			}
-		}
-	}
-	//Medium Screen <= 768px
-	@media(max-width: $medium-screen) {
-  		#slide {
-
-			opacity: 1;
-			ul {
-				display: block;
-				margin: auto;
-
-				li {
-					display: block;
-					width: 50%;
-					margin: auto;
-				}
-			}
-		}
-		#believe {
-			background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
-	    	background-size: cover;
-	    	background-attachment: fixed;
-		}
-	}
+                    &:hover {
+                        a {
+                        color: $green;
+                        }
+                    }
+                }
+                &:nth-child(3):hover{
+                        a {
+                        color: $purple;
+                    }
+                }
+                &:nth-child(4) {
+                    font-weight: bold;
+                    &:hover{
+                        a {
+                        color: $blue;
+                        }
+                    }
+                }
+                
 
 
-	@media(min-width: $medium-screen) and (max-width: $large-screen) {
+                &.active { //
+                    background: transparent;
+                    &:nth-child(1){
+                        border-color: $blue;
+                    }
+                    &:nth-child(2){
+                        border-right: 0px;
+                    }
+                    &:nth-child(3){
+                        border-color: $pink;
+                    }
+                }
+            }
+        }
+    }
+    //Medium Screen <= 768px
+    @media(max-width: $medium-screen) {
+        #slide {
 
-		#slide{
-			ul {
-				width: 100%;
-			}
-		}
-	}
+            opacity: 1;
+            ul {
+                display: block;
+                margin: auto;
 
-  	@media(max-width: 1024px) {
-  		#aboutPage {
-  			background-size: auto 100%;
-    		background-position: 50%;
-    	}
-  	}
+                li {
+                    display: block;
+                    width: 50%;
+                    margin: auto;
+                }
+            }
+        }
+        #believe {
+            background: url('../images/team/Quorum_NB_group_Retouche5.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    }
+
+
+    @media(min-width: $medium-screen) and (max-width: $large-screen) {
+
+        #slide{
+            ul {
+                width: 100%;
+            }
+        }
+    }
+
+    @media(max-width: 1024px) {
+        #aboutPage {
+            background-size: auto 100%;
+            background-position: 50%;
+        }
+    }
 }
+
+@-webkit-keyframes magicOpa{
+    0%
+    {
+        opacity: 0.8;
+    }
+    50% 
+    {
+        opacity: 0.9;    
+    }
+    100%
+    {
+        opacity: 1;   /* style */
+    }
+}
+@-moz-keyframes magicOpa{
+    0%
+    {
+        opacity: 0.8;
+    }
+    50% 
+    {
+        opacity: 0.9;    
+    }
+    100%
+    {
+        opacity: 1;   /* style */
+    }
+}
+@-ms-keyframes magicOpa{
+    0%
+    {
+        opacity: 0.8;
+    }
+    50% 
+    {
+        opacity: 0.9;    
+    }
+    100%
+    {
+        opacity: 1;   /* style */
+    }
+}
+@-o-keyframes magicOpa{
+    0%
+    {
+        opacity: 0.8;
+    }
+    50% 
+    {
+        opacity: 0.9;    
+    }
+    100%
+    {
+        opacity: 1;   /* style */
+    }
+}
+@keyframes magicOpa{
+    0%
+    {
+        opacity: 0.8;
+    }
+    50% 
+    {
+        opacity: 0.9;    
+    }
+    100%
+    {
+        opacity: 1;   /* style */
+    }
+}
+
