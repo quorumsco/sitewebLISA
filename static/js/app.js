@@ -7,10 +7,11 @@ $(window).scroll(function(event){
     //Loop scrollTo management
     clickScrollTo = null;
 
+    var currentPageIsNews = $('#nav').next().is('#reset');
     //Transition scroll
     if(window.innerWidth > 1110 && $('#nav').next().hasClass('big')) {
         var breakpoint = 50;
-        if (yOffset > breakpoint){
+        if (yOffset > breakpoint && !currentPageIsNews){
             $('#nav').addClass('active');
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         }else{
@@ -174,6 +175,8 @@ $(document).ready(function(){
     //Swith logo && button nav color
     if(window.innerWidth <= 1110) {
         $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
+    } else if($('#nav').next().is('#reset')){
+        $('#nav').css('background-color', '#312F38');
     }
     $(window).resize(function() {
         if(window.innerWidth <= 1110 && $('#nav').next().hasClass('big')) {
@@ -183,6 +186,9 @@ $(document).ready(function(){
         } 
         if(window.innerWidth > 1110) {
             $('#nav').removeClass('show-menu');
+            if($('#nav').next().is('#reset')){
+                $('#nav').css('background-color', '#312F38');
+            }
         }
     });
 

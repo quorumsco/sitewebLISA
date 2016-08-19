@@ -8,10 +8,11 @@ $(window).scroll(function (event) {
     //Loop scrollTo management
     clickScrollTo = null;
 
+    var currentPageIsNews = $('#nav').next().is('#reset');
     //Transition scroll
     if (window.innerWidth > 1110 && $('#nav').next().hasClass('big')) {
         var breakpoint = 50;
-        if (yOffset > breakpoint) {
+        if (yOffset > breakpoint && !currentPageIsNews) {
             $('#nav').addClass('active');
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else {
@@ -20,7 +21,7 @@ $(window).scroll(function (event) {
         }
     }
 
-    //Animation fade top
+    //Animation fade home
     if (window.innerWidth >= 768 && $('#product').length > 0) {
         var breakpointProduct = $('#product').position().top - 400;
         var breakpointWebconsole = $('#webconsole').position().top - 400;
@@ -40,8 +41,26 @@ $(window).scroll(function (event) {
             $('#target').addClass('animated fadeInUp');
         }
     }
+    //Animation fade believe
+    if (window.innerWidth > 425 && $('#believe').length > 0 && $('html').attr('lang') == 'fr') {
+        var breakpointSecond = $('.believe-fr:nth-child(3)').position().top - 700;
+        var breakpointThird = $('.believe-fr:nth-child(4)').position().top - 600;
+        var breakpointList = $('#believe ul').position().top - 500;
+
+        if (yOffset > breakpointSecond) {
+            $('.believe-fr:nth-child(3)').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointThird) {
+            $('.believe-fr:nth-child(4)').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointList) {
+            $('#believe ul').addClass('animated fadeInUp');
+        }
+    }
 });
 $(document).ready(function () {
+    //Animation fade believe
+    $('.believe-fr:nth-child(2)').addClass('animated fadeInUp');
     //Border animation - #contact home page
     $('#contact input, #contact textarea, #newsletter input').on('focusin', function () {
         var widthInput = $(this).width();
@@ -156,9 +175,10 @@ $(document).ready(function () {
     //Swith logo && button nav color
     if (window.innerWidth <= 1110) {
         $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
+    } else if ($('#nav').next().is('#reset')) {
+        $('#nav').css('background-color', '#312F38');
     }
     $(window).resize(function () {
-        console.log(window.innerWidth);
         if (window.innerWidth <= 1110 && $('#nav').next().hasClass('big')) {
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else if (window.pageYOffset <= 50 && $('#nav').next().hasClass('big')) {
@@ -166,7 +186,9 @@ $(document).ready(function () {
         }
         if (window.innerWidth > 1110) {
             $('#nav').removeClass('show-menu');
-            $('#nav').removeClass('active');
+            if ($('#nav').next().is('#reset')) {
+                $('#nav').css('background-color', '#312F38');
+            }
         }
     });
 
@@ -175,7 +197,7 @@ $(document).ready(function () {
         //e.preventDefault();
         var host = "//" + window.location.hostname;
         var path = window.location.pathname.substring(4);
-        if ($(this).text() == "EN") {
+        if ($(this).children('img').attr('alt') == "EN") {
             $(this).attr('href', host + "/en/" + path);
         } else {
             $(this).attr('href', host + "/fr/" + path);
@@ -212,13 +234,18 @@ $(document).ready(function () {
                 $('#' + slide).fadeIn(400);
                 //donut chart
                 if (slide == "team") {
+                    if (window.innerWidth < 500) {
+                        var legendPosition = 'bottom';
+                    } else {
+                        var legendPosition = 'right';
+                    }
                     var chart = c3.generate({
                         data: {
                             columns: [['Information Technology', 30], ['Social & Cognitive Sciences', 20], ['Data Sciences', 20], ['Field & Customer Officers', 20], ['Data Vizualisation', 5], ['Communication Officers', 5]],
                             type: 'donut'
                         },
                         legend: {
-                            position: 'right'
+                            position: legendPosition
                         },
                         donut: {
                             label: {
