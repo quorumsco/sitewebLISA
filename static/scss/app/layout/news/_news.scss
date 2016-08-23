@@ -1,60 +1,90 @@
 @include exports ('news') {
-    
-    #reset.big{
-    height: 0px;
+    #news-container {
+        background: url('../images/patternquorumv2.png');
+    }
+    #reset.big {
+        height: 0;
     }
     #titre-article {
         text-align: center;
+        margin-bottom: 4em;
     }
     /* ===== ARTICLES ===== */
     #logo-article {
         background-color: white;
     }
-
     #bloc-article {
         margin-left: 20px;
         float: left;
         width: 65vw;
     }
+    .arrow-icon {
+        width: 20px !important;
+        height: 20px !important;
+        position: absolute;
+        right: 6%;
+        bottom: 8%;
+    }
+    .purple-title {
+        background-color: #825BF1;
+    }
+    .red-title {
+        background-color: #E7375C;
+    }
+    .blue-title {
+        background-color: #2FC0F8;
+    }
+    .yellow-title {
+        background-color: #FDC82D;
+    }
+    .green-title {
+        background-color: #20D09D;
+    }
     #bloc-buttons {
         padding-left: 0 !important;
-        margin-left: 50px;
+        margin-left: 50px !important;
+        margin-top: 9em !important;
         float: left;
     }
     #square img {
-        width: 301px;
-        height: 240px;
+        width: 306px;
+        height: 245px;
     }
-
     #square {
         opacity: 0.7;
         margin-bottom: 8em;
         margin-right: 10px;
         margin-left: 15px;
         float: left;
-        width: 301px;
-        height: 240px;
+        width: 312px;
+        height: 250px;
         text-align: center;
+        background-color: white;
     }
-    #square a {
+    a {
         color: black;
         text-decoration: none;
     }
-
     #square:hover {
         opacity: 1;
     }
     span.categorie {
-        font-weight: bold;
+        font-weight: 900;
         padding-left: 1%;
+        padding-top: 1%;
+        color: white;
     }
     p.titre-article {
+        position: relative;
         margin: 0;
-        padding: 5px 0 0;
+        padding: 10px;
         height: auto;
-        border: 1px solid #D1D1D1;
-        width: 301px;
+        border-top: 1px solid rgba(209, 209, 209, 0.3);
+        width: 293px;
+        height: 95px;
+        text-align: justify;
         // text-transform: uppercase;
+        background-color: white;
     }
     ul.nav-social {
         padding: 0;
@@ -92,27 +122,33 @@
         background-color: #D1D1D1;
     }
     /* ========== TWITTER ============ */
-    #twitter {
+    #test-twitter {
         margin: auto;
-        border: 1px solid #D1D1D1;
+        border: 2px solid #D1D1D1;
+        padding: 5px;
+        text-align: center;
         float: left;
+        background-color: white;
     }
     .twitter-timeline {
         height: 47.3em!important;
     }
     /* ========== END TWITTER ============ */
-    footer {
-        margin-top: 3em;
-    }
     @media(min-width: 320px)and(max-width: 425px) {
+        #titre-article {
+            text-align: center;
+        }
         #bloc-article {
             margin-left: 5px;
         }
         #bloc-buttons {
             margin-left: 110px;
         }
-        #twitter {
+        #test-twitter {
             margin-left: 50px;
+        }
+        #square {
+            margin-bottom: 10em;
         }
     }
     @media(min-width: 425px)and(max-width: 640px) {
@@ -122,7 +158,7 @@
         #bloc-buttons {
             margin-left: 10em;
         }
-        #twitter {
+        #test-witter {
             margin-left: 7em;
         }
     }
@@ -133,7 +169,7 @@
         #bloc-buttons {
             margin-left: 270px;
         }
-        #twitter {
+        #test-twitter {
             margin-left: 220px;
         }
     }
@@ -142,21 +178,33 @@
             width: 70vw;
         }
     }
-    @media(min-width: 1025px)and(max-width: 1920px) {
+    @media(min-width: 1025px)and(max-width: 1980px) {
+        #titre-article {
+            text-align: center;
+        }
+        #bloc-article {
+            width: 72vw;
+        }
+        #bloc-buttons {
+            margin-right: 3em;
+            margin-top: 4em;
+        }
+    }
+    @media(min-width: 1981px)and(max-width:2549px) {
+        #bloc-article {
+            width: 85vw;
+        }
+        #bloc-buttons {
+            margin-top: 4em;
+        }
+    }
+    @media(min-width: 2550px) {
         #bloc-article {
             width: 80vw;
         }
         #bloc-buttons {
-            margin-right: 3em;
-        }
-    }
-
-    @media(min-width: 2550px) {
-        #bloc-article {
-            width: 65vw;
-        }
-        #bloc-buttons {
-            width: 30vw;
+            margin-top: 4em;
+            width: 15vw;
         }
     }
 }
