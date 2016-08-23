@@ -43,7 +43,7 @@
     #bloc-buttons {
         padding-left: 0 !important;
         margin-left: 50px !important;
-        margin-top: 9em !important;
+        margin-top: 6em !important;
         float: left;
     }
     #square img {
@@ -174,7 +174,8 @@
             width: 100vw;
         }
         #bloc-buttons {
-            margin-left: 270px;
+            margin-left: 17em !important;
+            width: 100vw;
         }
         #test-twitter {
             margin-left: 220px;
@@ -182,7 +183,13 @@
     }
     @media(min-width: 940px)and(max-width: 1024px) {
         #bloc-article {
-            width: 70vw;
+            width: 69.5vw;
+        }
+        .titre-article {
+            width: 287px !important;
+        }
+        #square{
+          width: 301px;
         }
     }
     @media(min-width: 1025px)and(max-width: 1980px) {
