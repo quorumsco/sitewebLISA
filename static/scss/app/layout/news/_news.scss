@@ -134,12 +134,12 @@
         height: 47.3em!important;
     }
     /* ========== END TWITTER ============ */
-    @media(min-width: 320px)and(max-width: 425px) {
+    @media(min-width: 310px)and(max-width: 425px) {
         #titre-article {
             text-align: center;
         }
         #bloc-article {
-            margin-left: 5px;
+            margin-left: 1px;
         }
         #bloc-buttons {
             margin-left: 110px;
@@ -148,7 +148,14 @@
             margin-left: 50px;
         }
         #square {
-            margin-bottom: 10em;
+          width: 270px;
+          margin-bottom: 10em;
+        }
+        #square img {
+          max-width: 250px;
+        }
+        .titre-article {
+          width: 250px !important;
         }
     }
     @media(min-width: 425px)and(max-width: 640px) {
