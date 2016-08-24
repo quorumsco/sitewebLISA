@@ -1,25 +1,50 @@
-@include exports('faq') {
-	#faq{
+@include exports ('faq') {
+	#pageFaq {
+		background: url("../images/patternquorumv2.png");
+	}
+	body {
+		background-color: white !important;
+	}
+	#faq {
+		#titleFaq {
+			background-color: #31949a;
+			color: white;
+		}
+		.subtitle {
+			font-size: 1.4em;
+		}
+		.blueFaq {
+			color: #31949a;
+			font-weight: bold;
+		}
+		.fa-angle-double-down {
+			font-size: 2em;
+		}
+		.fa-angle-double-down:hover {
+			background-color: transparent;
+		}
 		.container {
 			width: 80%;
+			background-color: white;
 			ul {
 				text-align: justify;
 				list-style-type: none;
-				padding-left: 0px;
+				padding-left: 0;
 				li {
 					position: relative;
 					&:hover {
 						cursor: pointer;
 					}
 					&:nth-child(odd) {
-						background: rgba(129,44,244,0.1);
+						background-color: #dfdfdf;
 					}
 					p {
 						width: 90%;
 						padding: 30px 20px;
-						margin: 0px;
+						margin: 0;
 					}
 					p:nth-child(1) {
+						font-weight: bold;
 						i {
 							position: absolute;
 							top: 34px;
@@ -35,6 +60,17 @@
 					}
 				}
 			}
+		}
+	}
+	// Position des chevrons sur les mobiles
+	@media(max-width: 770px) {
+		li {
+			position: relative;
+		}
+		.fa-angle-double-down {
+			position: absolute;
+			right: 1px;
+			top: 50px !important;
 		}
 	}
 }
