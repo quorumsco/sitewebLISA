@@ -5,6 +5,9 @@
 	body {
 		background-color: white !important;
 	}
+	.em {
+		font-size: 0.8em;
+	}
 	#faq {
 		#titleFaq {
 			background-color: #31949a;
@@ -12,6 +15,8 @@
 		}
 		.subtitle {
 			font-size: 1.4em;
+			margin-top: 3em;
+			margin-bottom: 3em;
 		}
 		.blueFaq {
 			color: #31949a;
@@ -47,7 +52,7 @@
 						font-weight: bold;
 						i {
 							position: absolute;
-							top: 34px;
+							top: 25px;
 							right: 22px;
 						}
 					}

@@ -3,7 +3,7 @@ var clickScrollTo = null;
 
 $(window).scroll(function(event){
     var yOffset = window.pageYOffset;
-    
+
     //Loop scrollTo management
     clickScrollTo = null;
 
@@ -183,7 +183,7 @@ $(document).ready(function(){
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else if(window.pageYOffset <= 50 && $('#nav').next().hasClass('big')){
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
-        } 
+        }
         if(window.innerWidth > 1110) {
             $('#nav').removeClass('show-menu');
             if($('#nav').next().is('#reset')){
@@ -218,12 +218,12 @@ $(document).ready(function(){
         });
     }
     $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
-    
+
     //Slider switch - about page
     $('#slider').find('a').on('click', function(e){
         e.preventDefault();
         //Vars
-        var lastSlide = $('li.active').find('a').attr('href').substring(1);;            
+        var lastSlide = $('li.active').find('a').attr('href').substring(1);;
         var slide = $(this).attr('href').substring(1);
         if (lastSlide != slide) {
             //Boder color
@@ -267,8 +267,8 @@ $(document).ready(function(){
                                 //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
                             }
                         });
-                }           
-            });     
+                }
+            });
         }
     });
 
@@ -302,9 +302,7 @@ $(document).ready(function(){
     });
 
     //FAQ toggle
-    $('#faq').find('ul').find('li').find('p:nth-child(1)').on('click', function(){
-        $(this).parent().children().eq(1).slideToggle(500);
-
+    $('.first').on('click', function(){
+        $(this).parent().children().eq(1).slideToggle(400);
     });
 });
-
