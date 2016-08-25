@@ -295,8 +295,8 @@ $(document).ready(function () {
     });
 
     //FAQ toggle
-    $('#faq').find('ul').find('li').find('p:nth-child(1)').on('click', function () {
-        $(this).parent().children().eq(1).slideToggle(500);
+    $('.first').on('click', function () {
+        $(this).parent().children().eq(1).slideToggle(400);
     });
 });
 
