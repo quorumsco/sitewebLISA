@@ -1,0 +1,65 @@
+@include exports ('redirect') {
+    #page-redirect {
+        // background-image: linear-gradient(to right, rgba(32, 191, 251, 0.76), rgba(32, 191, 251, 0.76)), url("../images/redirect/timessquarebleu.png");
+        // background-repeat: repeat, no-repeat;
+        // background-size: auto, cover;
+        background-image: url(../images/redirect/redirect-blue.png);
+        background-size: cover;
+    }
+    #main-redirect {
+        text-align: center;
+    }
+    #title-redirect {
+        padding: 10px;
+        margin-left: 10px !important;
+        text-align: center;
+        p {
+            color: white;
+            padding-left: 50px;
+            padding-bottom: 0;
+        }
+        span {
+            margin-left: 50px;
+            text-align: center;
+        }
+    }
+    .sub-redirect {
+        font-size: 0.7em;
+       font-family: "ProximaNova-Light";
+    }
+    .hr-redirect {
+        width: 30%;
+        height: 2px;
+        background-color: white;
+        border: 1px solid white;
+        margin-bottom: 1em;
+    }
+    .btn-redirect {
+        color: #20BFFB;
+        background-color: white;
+        border-radius: 8px;
+    }
+    @media(max-width:1199px) {
+        #page-redirect {
+            #title-redirect {
+                p,
+                span {
+                    margin-top: 0;
+                    padding-left: 0;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+    
+    @media(min-width: 320px)and(max-width: 780px){
+      #page-redirect{
+        h1 {
+          margin-top: -1em;
+        }
+      }
+      .btn-redirect{
+        font-size: 1.8em;
+      }
+    }
+}
