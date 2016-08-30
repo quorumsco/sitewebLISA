@@ -1,0 +1,172 @@
+extends ./layout.jade
+block vars
+    - var pageTitle = 'About us'
+block content
+    header#about.small
+    main#page-about
+        section
+            .container
+                ul#anchor-buttons
+                    li
+                        a(href="#believe") What we believe in
+                    li
+                        a(href="#do")  How we do it
+                    li
+                        a(href="#jobs")  Jobs
+                    li
+                        a(href="#meet")  Meet the Team
+        section#believes
+            #textOnScroll
+                h2.fontTitle MEET THE 
+                    span TEAM
+
+                //- Texts for the top scroll
+                .texts
+
+                    #text1.active Nos organisations aujourd’hui font face à des problèmes et 
+                        strong des défis d’une complexité 
+                        | sans précédent.
+                    br
+                    #text2 Ces problèmes, nous pensons que 
+                        strong la technologie, l’intelligence artificielle et le traitement des données
+                        |  peuvent aider à les surmonter.
+                    br
+
+                    #text3 Comme ils ont aidé à transformer à grande échelle le secteur financier, marchand ou logistique, nous pensons qu’ils peuvent aussi aider la société à aller mieux, aux hommes à diffuser leurs idées, à 
+                        strong créer du mouvement
+                        |  , à se rassembler autour de causes.
+                    br
+
+                    #text4 Nous pensons que la technologie peut aider les hommes à avoir un 
+                        strong impact sociétal fort
+                        | , grâce au pouvoir d’analyse, de synchronisation et de coordination de ces outils.
+                    br
+
+                    #text5 C’est pourquoi nous avons créé 
+                        strong Quorum
+                        |  : pour mettre les technologies dans des applications simples et fluides, dédiées aux utilisateurs et au service d’objectifs 
+                        strong réels et concrets
+                        |  .
+                    br
+
+                    #text6 Mais si nous pensons que la technologie permet 
+                        strong d'augmenter les capacités 
+                        | des individus et des organisations, elle ne peut être une fin en soi.
+                    br
+
+                    #text7 Elle n’est là que pour aider les 
+                        strong hommes à accomplir
+                        | . Son accompagnement restera toujours limité par son utilisation.
+                    br
+                    
+                    #text8 C’est pourquoi la technologie doit disparaitre, 
+                        strong se rendre invisible
+                        | , dans le sens où les individus doivent se l’accaparer pour qu’elle ne soit là que pour aider à réaliser pleinement nos objectifs : augmenter l’impact de nos actions et permettre d’aller plus loin dans la mobilisation sans jamais perdre l’idéologie qui nous définit
+
+
+
+
+                //- List as dots stick on the right
+                .bulletList
+                    a(href="#text1").active
+                        i.fa.fa-circle-o
+                    a(href="#text2")
+                        i.fa.fa-circle-o
+                    a(href="#text3")
+                        i.fa.fa-circle-o
+                    a(href="#text4")
+                        i.fa.fa-circle-o
+                    a(href="#text5")
+                        i.fa.fa-circle-o
+                    a(href="#text6")
+                        i.fa.fa-circle-o
+                    a(href="#text7")
+                        i.fa.fa-circle-o
+                    a(href="#text8")
+                        i.fa.fa-circle-o
+                #text1-background.background.active
+                #text2-background.background
+                #text3-background.background
+                #text4-background.background
+                #text5-background.background
+                #text6-background.background
+                #text7-background.background
+                #text8-background.background
+            
+            
+        section#do.grey-background
+            h2 HOW WE DO IT
+            p.p-center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu justo tincidunt, interdum massa vitae, blandit nisi. Mauris facilisis molestie dui vel congue. Nunc congue ultricies purus a porta. Donec egestas neque in aliquet varius. In hac habitasse platea dictumst. Vestibulum eu sem id velit tempus ultricies at vel ipsum. Maecenas ut nisi sit amet quam gravida condimentum. Curabitur eu porta risus. Integer vitae vehicula justo. Vivamus et massa et orci convallis pretium. Praesent id erat vitae nunc varius cursus. Duis eget ultrices massa.
+            #chart.chart-position
+        
+        section#jobs
+            h2 JOBS
+            p.p-center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu justo tincidunt, interdum massa vitae, blandit nisi. Mauris facilisis molestie dui vel congue. Nunc congue ultricies purus a porta. Donec egestas neque in aliquet varius.
+            a(href='#').btn.blue-btn#job-btn Contact us !
+        
+        section#meet.grey-background
+            h2 MEET THE TEAM
+            .container
+                img(src="../images/about/avatar-rs-1.png")#logo-contact
+                h3 Follow us on Instagram !
+                a(href='https://www.instagram.com/quorumteam/', target="_blank").btn.blue-btn
+                    i.fa.fa-instagram
+            i.fa.fa-arrow-circle-up.go-top
+        section#contact.white-background-form
+            .container
+                ul
+                    li
+                        h2 Nous écrire
+                        form(action='https://formspree.io/info@quorum-impact.com', method='post')
+                            div.input
+                                input(type='email', name="_replyto", placeholder='Email', required)
+                                .border-input.blue
+                            div.input
+                                input(name='name' type="text" placeholder="Name/Nom")
+                                .border-input.blue
+                            div.input
+                                textarea(name='message' rows="6" placeholder="Message", required)
+                                .border-textarea.blue
+                            input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
+                            input(type="text" name="_gotcha" style="display:none")
+                            input(type="hidden" name="_next" value="//quorum-impact.com/")
+                            p
+                                button.blue(type='submit' value="Send") GO !
+                    li
+                        h2 Nous trouver
+                        p 
+                            i.fa.fa-phone.fa-lg
+                            span 
+                                a(href="tel:+33179734004") +33 1 79 73 40 04
+                        p 
+                            i.fa.fa-envelope
+                            span 
+                                a(href="mailto:welcome@quorum-impact.com") welcome@quorum-impact.com
+                        p
+                            i.fa.fa-map-marker.fa-lg
+                            span
+                                a(href="https://www.google.fr/maps/place/9+Rue+de+Condé,+33000+Bordeaux/@44.8435887,-0.5755025,17z/" target="_blank") 9 rue de Condé - 33000 BORDEAUX
+                        p
+                            i.fa.fa-map-marker.fa-lg
+                            span
+                                a(href="https://www.google.fr/maps/place/124+Avenue+de+Villiers,+75017+Paris/@48.8854713,2.2930888,17z" target="_blank") 124 avenue de Villiers - 75017 PARIS
+                 
+                        p Ne manquez rien de nos évènements, de nos publications et actualités, suivez-nous :
+                            ul
+                                li
+                                    a(href='//facebook.com/quorumimpact' target="_blank")
+                                        i.fa.fa-facebook-square
+                                li
+                                    a(href='//twitter.com/quorumimpact' target="_blank")
+                                        i.fa.fa-twitter-square
+                                li
+                                    a(href='//linkedin.com/company/10114882' target="_blank")
+                                        i.fa.fa-linkedin-square
+                                li
+                                    a(href='//google.com/+Quorumappsdata' target="_blank")
+                                        i.fa.fa-google-plus-square
+                                li
+                                    a(href='//instagram.com/quorumteam/' target="_blank")
+                                        i.fa.fa-instagram
+            div.clearfix
+    
