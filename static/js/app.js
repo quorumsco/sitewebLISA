@@ -15,29 +15,40 @@ $(window).scroll(function(event){
             $('#nav').addClass('active');
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         }else{
-            $('#nav').removeClass('active');
-            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
+          //  $('#nav').removeClass('active');
+          //  $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
     }
 
     //Animation fade home
     if(window.innerWidth >= 768 && $('#product').length > 0) {
-        var breakpointProduct = $('#product').position().top - 400;
-        var breakpointWebconsole = $('#webconsole').position().top - 400;
+        // var breakpointProduct = $('#product').position().top - 400;
+        var breakpointTarget = $('#target').position().top - 400; 
+        var breakpointIcons = $('#icons').position().top - 400;
         var breakpointMobile = $('#mobile').position().top - 400;
-        var breakpointTarget = $('#target').position().top - 400;
+        var breakpointDemo = $('#get-demo').position().top -900;
+        var breakpointNewsletter = $('#bandeau-newsletter').position().top -800;
+        var breakpointContact = $('#contact').position().top - 400;
 
-        if (yOffset > breakpointProduct){
-            $('#product').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointWebconsole){
-            $('#webconsole').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointMobile){
-            $('#mobile').addClass('animated fadeInUp');
-        }
+
+        // if (yOffset > breakpointProduct){
+        //     $('#product').addClass('animated fadeInUp');
+        // }
         if (yOffset > breakpointTarget){
             $('#target').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointIcons){
+            $('#icons').addClass('animated fadeInUp');
+            $('#mobile').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointContact){
+            $('#contact').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointDemo){
+            $('#get-demo').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointNewsletter){
+            $('#bandeau-newsletter').addClass('animated fadeInUp');
         }
     }
     //Animation fade believe
@@ -50,7 +61,7 @@ $(window).scroll(function(event){
             $('.believe-fr:nth-child(3)').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointThird){
-            $('.believe-fr:nth-child(4)').addClass('animated fadhttps://fr.wikipedia.org/wiki/Liste_des_codes_HTTPeInUp');
+            $('.believe-fr:nth-child(4)').addClass('animated fadeInUp');
         }
         if (yOffset > breakpointList){
             $('#believe ul').addClass('animated fadeInUp');
@@ -263,20 +274,16 @@ $(document).ready(function(){
     //Swith logo && button nav color
     if(window.innerWidth <= 1110) {
         $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
-    } else if($('#nav').next().is('#reset')){
-        $('#nav').css('background-color', '#312F38');
     }
     $(window).resize(function() {
         if(window.innerWidth <= 1110 && $('#nav').next().hasClass('big')) {
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else if(window.pageYOffset <= 50 && $('#nav').next().hasClass('big')){
-            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
+            //$('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
         if(window.innerWidth > 1110) {
             $('#nav').removeClass('show-menu');
-            if($('#nav').next().is('#reset')){
-                $('#nav').css('background-color', '#312F38');
-            }
+
         }
     });
 
@@ -446,6 +453,118 @@ $(document).ready(function(){
           },'slow');
       });
       
+    // Gestion des témoignages (1ere partie site) #testimony
+    $('#person-1').click(function(event){
+      event.preventDefault();
+      $('#person-2').removeClass('active');
+      $('#person-3').removeClass('active');
+      
+      $('#testimony-2').css('display', 'none');
+      $('#testimony-3').css('display', 'none');
+      
+      $(this).addClass('active');
+      $( "#testimony-1" ).fadeIn(1000);
+    })
+    
+    $('#person-2').click(function(event){
+      event.preventDefault();
+      $('#person-1').removeClass('active');
+      $('#person-3').removeClass('active');
+      
+      $('#testimony-1').css('display', 'none');
+      $('#testimony-3').css('display', 'none');
+      
+      $(this).addClass('active');
+      $( "#testimony-2" ).fadeIn(1000);
+    })
+    
+    $('#person-3').click(function(event){
+      event.preventDefault();
+      $('#person-1').removeClass('active');
+      $('#person-2').removeClass('active');
+      
+      $('#testimony-1').css('display', 'none');
+      $('#testimony-2').css('display', 'none');
+      
+      $(this).addClass('active');
+      $( "#testimony-3" ).fadeIn(1000);
+    })
+    
+    // Gestion des icones et features
+    $('#icon-1').click(function(event){
+      event.preventDefault();
+      $('#icon-2').removeClass('active');
+      $('#icon-3').removeClass('active');
+      $('#icon-4').removeClass('active');
+      
+      $('#content-icon-2').css('display', 'none');
+      $('#content-icon-3').css('display', 'none');
+      $('#content-icon-4').css('display', 'none');
+      
+      $(this).addClass('active');
+      $("#mobile").fadeOut(0, function(){
+        $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        $("#icon-1").addClass('active');
+        $("#mobile").fadeIn("slow");
+        $( "#content-icon-1" ).fadeIn("slow");    
+      })
+    })
+    
+    $('#icon-2').click(function(event){
+      event.preventDefault();
+      $('#icon-1').removeClass('active');
+      $('#icon-3').removeClass('active');
+      $('#icon-4').removeClass('active');
+      
+      $('#content-icon-1').css('display', 'none');
+      $('#content-icon-3').css('display', 'none');
+      $('#content-icon-4').css('display', 'none');
+      
+      $(this).addClass('active');
+      $("#mobile").fadeOut(0, function(){
+        $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        $("#icon-2").addClass('active');
+        $("#mobile").fadeIn("slow");
+        $( "#content-icon-2" ).fadeIn("slow");    
+      })
+    })
+    
+    $('#icon-3').click(function(event){
+      event.preventDefault();
+      $('#icon-1').removeClass('active');
+      $('#icon-2').removeClass('active');
+      $('#icon-4').removeClass('active');
+      
+      $('#content-icon-1').css('display', 'none');
+      $('#content-icon-2').css('display', 'none');
+      $('#content-icon-4').css('display', 'none');
+      
+      $(this).addClass('active');
+      $("#mobile").fadeOut(0, function(){
+        $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        $("#icon-3").addClass('active');
+        $("#mobile").fadeIn("slow");
+        $( "#content-icon-3" ).fadeIn("slow");    
+      })
+    })
+    
+    $('#icon-4').click(function(event){
+      event.preventDefault();
+      $('#icon-2').removeClass('active');
+      $('#icon-3').removeClass('active');
+      $('#icon-1').removeClass('active');
+      
+      $('#content-icon-1').css('display', 'none');
+      $('#content-icon-2').css('display', 'none');
+      $('#content-icon-3').css('display', 'none');
+      
+      $("#mobile").fadeOut(0, function(){
+        $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        $("#icon-4").addClass('active');
+        $("#mobile").fadeIn("slow");
+        $( "#content-icon-4" ).fadeIn("slow");    
+      })
+    })
     
 });
 

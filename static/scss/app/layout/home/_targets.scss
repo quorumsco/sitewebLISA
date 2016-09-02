@@ -17,33 +17,36 @@
 			ul {
 				margin-bottom: 40px;
 				margin-top: 40px;
-				li:first-child {
-					button {
-							background: url('../images/home/agency.svg');
-					}
-				}
-				li:nth-child(2) {
-					button {
-							background: url('../images/home/non-profit.svg');
-					}
-				}
-				li:nth-child(3) {
-					button {
-							background: url('../images/home/campaigners.svg');
-					}
-				}
-				li:nth-child(4) {
-					button {
-							background: url('../images/home/individuals.svg');
-					}
-				}
+
 				li {
-					button {
-							margin: 10px 10px;
-							height: 200px;
-							width: 200px;
-							letter-spacing: 0.2px;
-							font-weight: bold;
+					width: 21%;
+					border: 2px solid #9fa4ac;
+					border-radius: 5px;
+					font-size: 0.8em;
+					margin: 8px;
+					text-align: left;
+					padding-left: 20px;
+					
+					.target-name {
+						font-weight: bold;
+					}
+					
+					&:first-of-type{
+						background-color: #9013fe;
+						border: none;
+					}
+					
+					&:nth-of-type(1){
+						color: $white-color;
+					}
+					&:nth-of-type(2) .target-name{
+						color: #f2009f;
+					}
+					&:nth-of-type(3) .target-name {
+						color: #00e534;
+					}
+					&:nth-of-type(4) .target-name {
+						color: #ff0049;
 					}
 				}
 			}

@@ -1,48 +1,46 @@
 @include exports('mobile') {
 	#mobile{
 		margin-top: 60px;
-		background: url('../images/home/mobile4.png');
+		background: url('../images/home/mobile-screenshot.png');
 		background-repeat: no-repeat;
-		background-size: auto 100%;
-		background-position: 15%;
+		background-size:  auto;
+		background-position: 90% top;
 		opacity: 0;
-		h3 {
-			p {
-				margin: 0 0 11px 0;
-				color: $font-color;
-			}
+		padding: 0px;
+		
+		h2 {
+			font-size: 22px;
+			text-align: right;
+			margin-top: 68px;
+			margin-bottom: 0;
 		}
-		i {
-				color: $pink;
-		}
-		.list {
-			div.sentence { 
-				color: $grey;
-				width: 90%;
-				padding: 10px 0;
-				display: inline-block;
-				line-height: 20px;
-				strong {
-					padding: 1px 3px;
-					background: $pink;
-					color: white;
-				}
+		
+		.sentence { 
+			color: $grey;
+			width: 90%;
+			display: inline-block;
+			line-height: 20px;
+			
+			.part {
+				font-size: 16px;;
 			}
-			div.icon {
-				width: 16px;
-				float: left;
-				padding: 10px;
+			
+			&:last-of-type {
+				margin-bottom: 8em;
 			}
 		}
 		.container{
-			margin-left: calc(8% + 27px);
-			float:right;
+			margin-left:3%;
+			float:left;
 			width: 43%;
-			text-align: left;
+			text-align: right;
 			margin-right: 8%; 
 		}
 		.sentence {
 			display: inline-block;
+		}	
+		div[id^="content-icon-"]:not(.active) {
+			display: none;
 		}
 	}
 	@media(max-width: 351px) {
@@ -88,6 +86,11 @@
 				div.sentence { 
 					width: 90%;
 				}
+			}
+			
+			.content {
+				margin-top: 7em;
+				width: 90%;
 			}
 		}
 	}
@@ -142,11 +145,15 @@
 	}
 	@media(min-width: 1600px) and (max-width: 2300px) {
 		#mobile {	
-			background-position: 20%;
+			background-position: 70% top;
 			.container {
-				margin-left: auto;
+				margin-left: 10%;
 				width: 41%;
 				margin-right: 3%;
+				
+				.content {
+					width: 75%;
+				}
 			}
 		}
 	}

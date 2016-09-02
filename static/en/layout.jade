@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="fr")
     block vars
     head
         meta(charset='utf-8')
@@ -32,55 +32,47 @@ html(lang="en")
         nav#nav
             .content
                 a(href='/').navbar-brand
-                    img(src='../../images/logo/logo-white.svg' alt='Logo Quorum')
+                    img(src='../../images/logo/logo-color.svg' alt='Logo Quorum')
                 button.nav-toggle
                     i.fa.fa-bars
                 div.bar
                     ul.nav
                         li
                             a(href='/#product')
-                                span Product                                
+                                span APPLICATIONS
+                        li
+                            a(href='../fr/news.html')
+                                span NEWS
                         li
                             a(href='/#contact')
-                                span Contact Us
+                                span FAQ
+                        li
+                            a(href='/#')
+                                span BLOG
+                
                     .banner
-                        img(src="../../images/icons/phone.svg")
-                        span  +33 1 79 73 40 04
-                        a(href="http://eepurl.com/bWJkZr" target="_blank")
-                            button Get Early Access
-                        span.flag
-                            a(href="#")
-                                img(src="../../images/icons/iconFR.png" alt="FR")
+                        a(href="/#")
+                            span#connexion CONNEXION
+                        a(href="http://eepurl.com/bWGgCL" target="_blank")
+                            button DEMO
+                        a(href="#")
+                            span
+                              img(src="../images/icons/language.png")
         block content
         footer#footer
             .container
                 .copyright
-                    span &copy; Quorum 2016
-                ul.social-links
-                    li
-                        a(href='//facebook.com/quorumimpact' target="_blank")
-                            i.fa.fa-facebook-square
-                    li
-                        a(href='//twitter.com/quorumimpact' target="_blank")
-                            i.fa.fa-twitter-square
-                    li
-                        a(href='//linkedin.com/company/10114882' target="_blank")
-                            i.fa.fa-linkedin-square
-                    li
-                        a(href='//google.com/+Quorumappsdata' target="_blank")
-                            i.fa.fa-google-plus-square
-                    li
-                        a(href='//instagram.com/quorumteam/' target="_blank")
-                            i.fa.fa-instagram
+                    a(href='/').navbar-brand
+                        img(src='../../images/about/avatar-rs-1.png' alt='Logo Quorum')
                 ul.nav-footer
                     li
                         a.link(href='/about.html')
-                            span About Us
+                            span About us
                     li
                         a(href='https://medium.com/@quorumblog' target="_blank") Blog
                     li
                         a.link(href='/legals.html')
-                            span Legal
+                            span Legals
         section#newsletter
             .container
                 div.banner
@@ -88,17 +80,18 @@ html(lang="en")
                         i.fa.fa-close
                     img(src="../images/popup/newsletter.png")
                 div
-                    p DON'T MISS THE BEST OF OUR ARTICLES, PUBLICATIONS AND EVENTS !
+                    p Ne manquez rien du meilleur de nos publications, actualités et événements !
                     form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368" method="post" enctype="multipart/form-data" data-dojo-attach-point="formNode" novalidate="")
                         div.input
                             input#mce-EMAIL(type="email" name="EMAIL" required placeholder="Email")
                             .border-input.blue
-                            button.blue(type="submit") GO !
+                            button.blue(type="submit") GO
+
         script(src='//code.jquery.com/jquery-2.1.4.min.js')
         script(src="https://d3js.org/d3.v3.min.js" charset="utf-8")
         script(src="../javascripts/c3.min.js")
         script(src="../javascripts/app.js")
-                // Google Tag Manager
+        // Google Tag Manager
         noscript
             iframe(src='//www.googletagmanager.com/ns.html?id=GTM-PP7JV2', height='0', width='0', style='display:none;visibility:hidden')
         script.

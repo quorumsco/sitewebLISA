@@ -1,0 +1,70 @@
+@include exports('news-faq') {
+    #faq-news {
+        padding-top: 0;
+        .container {
+            float: left;
+            width: 50%;
+        }
+        #preview-news {
+          height: 100%;
+            h2 {
+              color: #00989d;
+              font-size: 1.5em;
+              margin-top: 40px;
+              margin-bottom: 44px;
+            }
+            ul {
+                list-style: none;              
+                text-align: left;
+                p {
+                  padding-left: 20px;
+                  margin-top: 102px;
+                  font-size: 1.3em;
+                }
+                li {
+                    display: inline;
+                    margin: 30px;
+                    img {
+                        max-width: 200px !important;
+                        opacity: 0.7;
+                        -webkit-filter: grayscale(1);
+                           -moz-filter: grayscale(1);
+                            -ms-filter: grayscale(1);
+                             -o-filter: grayscale(1);
+                                filter: grayscale(1);
+                        &:hover{
+                          opacity: 1;
+                          -webkit-filter: grayscale(0);
+                             -moz-filter: grayscale(0);
+                              -ms-filter: grayscale(0);
+                               -o-filter: grayscale(0);
+                                  filter: grayscale(0);
+                        }
+                    }
+                }
+            }
+        }
+        #preview-faq {
+            background-color: #f2f2f2;
+            height: 100%;
+            h2 {
+                color: #9624f7;
+                font-size: 1.5em;
+                margin-top: 40px;
+                margin-bottom: 44px;
+            }
+            ul {
+                list-style: none;
+                li {
+                    font-size: 1.3em;
+                    text-align: left;
+                    text-decoration: none;
+                    .preview-question {
+                        font-weight: bold;
+                        margin-bottom: 36px;
+                    }
+                }
+            }
+        }
+    }
+}

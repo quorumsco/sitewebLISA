@@ -1,7 +1,7 @@
 @include exports('nav') {
 	#nav {
 		position: fixed;
-		background-color: transparent;
+		background-color: #fff;
 		width:100%;
 		color: $white-color;
 		font-size: 13px;
@@ -26,40 +26,56 @@
 				}
 			ul.nav{
 				display: inline-block;
-				padding: 15px 0;
+				padding: 20px 0;
 				li{
 					display: inline;
-					margin-left: 25px;
+					margin-left: 10px;
 					&:last-child{
 						margin-right: 25px;
 					}
 				}
 				a {
 					text-decoration: none;
-					color: $white-color;
+					color: $grey;
+					font-weight: bold;
+					padding: 10px;
 					&:hover {
-						color: $grey;
+						background-color: #00bfff;
+						color: $white-color;
+						border-radius: 4px;
 					}
 				}
 			}
 			div.bar {
-				float: right;
+				float: left;
 				margin-right: 12%;
 			}
 		}
 		.banner{
 			display: inline-block;
+			position: absolute;
+			right: 70px;
+			top: 20px;
 			a{
 				text-decoration: none;
+				color: $grey;
+				font-weight: bold;
 			}
 			img {
 				padding: 0 5px 0 25px;
 				border-left: 1px solid rgba(255, 255, 255, 0.5);
 			}
+			#connexion {
+				padding: 12px 20px;
+				border: 2px solid #f2f2f2;
+			}
 			button{
+				width: 120px;
 				padding: 12px 20px;
 				margin-left:25px;
-				background-color: transparent;
+				margin-right: 25px;
+				border-radius: 4px;
+				background-color: #00bfff;
 				border: 1px solid rgba(255, 255, 255, 0.4);
 				letter-spacing : 0.5px;
 				font-size: 14px;
@@ -205,6 +221,8 @@
 				}
 			}
 			.banner {
+				position: static;
+				display: block;
 				i {
 					border: 0px;
 				}
@@ -213,10 +231,6 @@
 				}
 				button {
 					margin: 25px;
-				}
-				.flag {
-					position: static;
-					display: block;
 				}
 			}
 		}

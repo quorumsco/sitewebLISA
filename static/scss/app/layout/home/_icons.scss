@@ -1,0 +1,23 @@
+@include exports ('icons') {
+    #icons {
+        opacity: 0;
+        li {
+            position: relative;
+            display: inline;
+            margin: 0 70px;
+            opacity: 0.5;
+            &.active {
+                opacity: 1;
+            }
+            &:hover:not(.active) {
+                cursor: pointer;
+                opacity: 1;
+            }
+            p {
+                position: absolute;
+                top: 5px;
+                left: 6%;
+            }
+        }
+    }
+}

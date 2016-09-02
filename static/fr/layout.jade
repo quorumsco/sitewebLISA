@@ -31,50 +31,38 @@ html(lang="fr")
         nav#nav
             .content
                 a(href='/').navbar-brand
-                    img(src='../../images/logo/logo-white.svg' alt='Logo Quorum')
+                    img(src='../../images/logo/logo-color.svg' alt='Logo Quorum')
                 button.nav-toggle
                     i.fa.fa-bars
                 div.bar
                     ul.nav
                         li
                             a(href='/#product')
-                                span Produit
+                                span APPLICATIONS
                         li
                             a(href='../fr/news.html')
-                                span News
+                                span NEWS
                         li
                             a(href='/#contact')
-                                span Nous contacter
+                                span FAQ
+                        li
+                            a(href='/#')
+                                span BLOG
+                
                     .banner
-                        a(href="tel:+33179734004")
-                            img(src="../../images/icons/phone.svg")
-                            span +33 1 79 73 40 04
+                        a(href="/#")
+                            span#connexion CONNEXION
                         a(href="http://eepurl.com/bWGgCL" target="_blank")
-                            button S'inscrire
-                        span.flag
-                            a(href="#")
-                                img(src="../../images/icons/iconEN.png" alt="EN")
+                            button DEMO
+                        a(href="#")
+                            span
+                              img(src="../images/icons/language.png")
         block content
         footer#footer
             .container
                 .copyright
-                    span &copy; Quorum 2016
-                ul.social-links
-                    li
-                        a(href='//facebook.com/quorumimpact' target="_blank")
-                            i.fa.fa-facebook-square
-                    li
-                        a(href='//twitter.com/quorumimpact' target="_blank")
-                            i.fa.fa-twitter-square
-                    li
-                        a(href='//linkedin.com/company/10114882' target="_blank")
-                            i.fa.fa-linkedin-square
-                    li
-                        a(href='//google.com/+Quorumappsdata' target="_blank")
-                            i.fa.fa-google-plus-square
-                    li
-                        a(href='//instagram.com/quorumteam/' target="_blank")
-                            i.fa.fa-instagram
+                    a(href='/').navbar-brand
+                        img(src='../../images/about/avatar-rs-1.png' alt='Logo Quorum')
                 ul.nav-footer
                     li
                         a.link(href='/about.html')
