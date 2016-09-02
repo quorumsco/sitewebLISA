@@ -1,14 +1,14 @@
-@include exports('product') {
-  	#product {
-  		margin-top: 60px;
+@include exports ('product') {
+    #product {
+        margin-top: 60px;
         margin-bottom: 60px;
-  		// opacity: 0;
+        // opacity: 0;
         .container {
             margin-top: 70px;
-            margin-left: auto; 
+            margin-left: auto;
             margin-right: auto;
             width: 80%;
-            span.quote{
+            span.quote {
                 color: $grey;
                 font-size: 20px;
                 strong {
@@ -16,17 +16,17 @@
                     background: $purple;
                     color: white;
                 }
-                &:nth-of-type(1){ 
+                &:nth-of-type(1) {
                     display: inline;
                 }
             }
             div[id^="testimony"]:not(.active) {
-              display: none;
+                display: none;
             }
             .hr-testimony {
-              margin-top: 35px;
-              width: 40%;
-              border: 1px solid #f2f2f2;
+                margin-top: 35px;
+                width: 40%;
+                border: 1px solid #f2f2f2;
             }
             .person-testimony {
                 position: relative;
@@ -35,20 +35,18 @@
                 margin-right: 2vw;
                 float: left;
                 opacity: 0.5;
-                
                 &.active {
-                  opacity: 1;
+                    opacity: 1;
                 }
-                
                 &:hover:not(.active) {
-                  cursor: pointer;
-                  opacity: 1;
+                    cursor: pointer;
+                    opacity: 1;
                 }
                 .photo-testimony {
-                  margin-top: 44px;
-                  position: absolute;
-                  left: 1px;
-                  bottom: 10px;
+                    margin-top: 44px;
+                    position: absolute;
+                    left: 1px;
+                    bottom: 10px;
                 }
                 .infos-testimony {
                     .testimony-name {
@@ -57,29 +55,28 @@
                         margin-bottom: 0;
                     }
                     .testimony-job {
-                      margin-top: 0;
+                        margin-top: 0;
                     }
                 }
             }
-            
             h2 {
-	  			p {
-	  				margin: 0;
+                p {
+                    margin: 0;
                     display: inline;
-	  			}
-	  		}
-	  	}
-  	}
-  	@media(max-width: 767px){
-  		#product {
-        opacity: 1;
-  			margin-top: 10px;
-  			h2 {
-  				display: inline-block;
-  			}
-  		}
-  	}
-    @media(max-width: 425px){
+                }
+            }
+        }
+    }
+    @media(max-width: 767px) {
+        #product {
+            opacity: 1;
+            margin-top: 10px;
+            h2 {
+                display: inline-block;
+            }
+        }
+    }
+    @media(max-width: 425px) {
         #product {
             text-align: left;
             padding: 0 10px;
@@ -87,8 +84,9 @@
                 margin-left: auto;
                 margin-right: auto;
                 width: 100%;
-                span.quote{
-                    &:nth-of-type(1), &:nth-of-type(2){ 
+                span.quote {
+                    &:nth-of-type(1),
+                    &:nth-of-type(2) {
                         display: inline;
                     }
                 }
@@ -97,14 +95,15 @@
     }
     @media(min-width: 1250px) {
         .container {
-            margin-left: auto; 
+            margin-left: auto;
             margin-right: auto;
         }
     }
     @media(min-width: 1024px) {
         .container {
-            span.quote{
-                &:nth-of-type(2), &:nth-of-type(3){ 
+            span.quote {
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
                     display: block;
                 }
             }

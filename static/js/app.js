@@ -566,6 +566,12 @@ $(document).ready(function(){
       })
     })
     
+    // Effet du texte tapé comme sur le site de Slack pour le h2 du premier témoignage
+    $("#testimony-1 h2, #testimony-2 h2").typeIt({
+      speed: 55,
+      autoStart: true
+    });
+    
 });
 
 
