@@ -20,7 +20,9 @@ html(lang="fr")
         link(rel="alternate" hreflang="en" href="https://www.quorum-impact.com/en")
         link(rel="icon" href="../../images/icons/favicon.ico")
         link(rel='stylesheet' href='../stylesheets/app.css')
-        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        link(href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet")
+        link(rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css")
+            
         <!--[if IE 8]>
         link(rel='stylesheet' href='../stylesheets/ie.css')
         <![endif]-->
@@ -37,7 +39,7 @@ html(lang="fr")
                 div.bar
                     ul.nav
                         li
-                            a(href='/#product')
+                            a(href='/#icons')
                                 span APPLICATIONS
                         li
                             a(href='../fr/news.html')
@@ -62,7 +64,8 @@ html(lang="fr")
             .container
                 .copyright
                     a(href='/').navbar-brand
-                        img(src='../../images/about/avatar-rs-1.png' alt='Logo Quorum')
+                        img(src='../../images/logo/logo-color.svg' alt='Logo Quorum')
+                        //- img(src='../../images/about/avatar-rs-1.png' alt='Logo Quorum')
                 ul.nav-footer
                     li
                         a.link(href='/about.html')

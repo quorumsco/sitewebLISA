@@ -1,6 +1,6 @@
 @include exports('target') {
 	#target {
-		background-color: #f9f9fc;
+		background-color: #f2f2f2;
 		margin-top: 60px;
 		opacity: 0;
 		.container {
@@ -17,37 +17,49 @@
 			ul {
 				margin-bottom: 40px;
 				margin-top: 40px;
+				
+
+				.active{
+					background-color: white;
+					color:black;
+					border: 2px solid #fff;
+					border-radius: 5px;
+					font-size: 0.9em;
+				}
 
 				li {
 					width: 21%;
 					border: 2px solid #9fa4ac;
 					border-radius: 5px;
-					font-size: 0.8em;
+					font-size: 0.9em;
 					margin: 8px;
 					text-align: left;
 					padding-left: 20px;
 					
+					.objectifs {
+						font-weight: bold !important;
+						font-size: 1.6em;
+						color:black;
+					}
+
+					.active-box {
+						background-color: #0f949a;
+						color: #fff;
+						display: inline-block;
+						margin-bottom: 0 !important;
+						padding-left: 3px;
+						padding-right: 3px;
+						padding-top: 2px;
+						padding-bottom: 2px;
+					}
+
+
 					.target-name {
 						font-weight: bold;
+						color:#0f949a;
 					}
 					
-					&:first-of-type{
-						background-color: #9013fe;
-						border: none;
-					}
-					
-					&:nth-of-type(1){
-						color: $white-color;
-					}
-					&:nth-of-type(2) .target-name{
-						color: #f2009f;
-					}
-					&:nth-of-type(3) .target-name {
-						color: #00e534;
-					}
-					&:nth-of-type(4) .target-name {
-						color: #ff0049;
-					}
+
 				}
 			}
 			button.blue {

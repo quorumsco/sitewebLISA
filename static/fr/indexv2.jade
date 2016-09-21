@@ -7,60 +7,68 @@ block content
     main
         section#product
             .container
-                h1 Quorum, l'application qui a permis de :
+
+                img(src="../images/home/icon-header.png")
+
                 #testimony-1.active
 
-                    h2 Créer des actions de terrain 
-                        span.highlight-span  organisées et ciblées
-                        span  qui engagent les individus
+                    h2 L'application qui a permis à l'équipe de mobiliser plus efficacement,
+                        span.highlight-span  rue après rue,
+                        span  citoyen après citoyen.
                     span.quote L'équipe derrière Sébastien Saint Pasteur est l'une des équipes qui a utilisé Quorum pour leur actions de mobilisations plus efficaces et plus simples pour les équipes. 
 
                 #testimony-2
-                    h2 Test2
-                    span.quote Test pour le jquery 2
+                    h2  Lorem ipsum dolor sit amet
+                    span.quote  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis harum, at facere voluptate, nulla consequuntur illum. Qui accusantium, atque maxime aperiam harum dolores aliquid! Et perspiciatis adipisci quo sit iure.
                     
                 #testimony-3
-                    h2 Test3
-                    span.quote Test pour le jquery 3
+                    h2  Lorem ipsum dolor sit amet
+                    span.quote  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum numquam earum vel accusantium corporis recusandae quam, dolorum, sed omnis repellat maiores temporibus consequuntur officiis veniam rem magni eius exercitationem? Aut.
               
                 hr.hr-testimony
-                .person-testimony.active#person-1
-                    img(src="../images/header/photo-testimony2.png").photo-testimony
-                    .infos-testimony
-                        p.testimony-name Sébastien Saint
-                        p.testimony-job Conseiller
-                .person-testimony#person-2
-                    img(src="../images/header/photo-testimony2.png").photo-testimony
-                    .infos-testimony
-                        p.testimony-name Sébastien Saint
-                        p.testimony-job Conseiller
-                .person-testimony#person-3
-                    img(src="../images/header/photo-testimony2.png").photo-testimony
-                    .infos-testimony
-                        p.testimony-name Sébastien Saint
-                        p.testimony-job Conseiller
-        
+                .testimonies
+                    .person-testimony.active#person-1
+                        img(src="../images/header/photo-testimony2.png").photo-testimony
+                        .infos-testimony
+                            p.testimony-name Sébastien Saint
+                            p.testimony-job Conseiller
+                    .person-testimony#person-2
+                        img(src="../images/header/photo-testimony2.png").photo-testimony
+                        .infos-testimony
+                            p.testimony-name Bernard Claverie
+                            p.testimony-job Président
+                    .person-testimony#person-3
+                        img(src="../images/header/photo-testimony2.png").photo-testimony
+                        .infos-testimony
+                            p.testimony-name Loïc Rakotozafy
+                            p.testimony-job Breton
+            
         section#target
             .container#target-container
                 h2 MOBILISER SUR LE TERRAIN, EFFICACEMENT.
                 ul
-                    li
-                      p.target-name Candidats & Équipe de Campagne
+                    li.active
+                      p.objectif.active-box OPTIMISER
+                      p.target-name ONG / Mouvements
                       p Gagner une élection & construire une dynamique 
                     li
-                      p.target-name  Collectivités
-                      p Gérer efficacement ma relation citotyenne
+                      p.objectif OPTIMISER
+                      p.target-name  Candidats
+                      p Gérer efficacement ma relation citoyenne
                     li
-                      p.target-name Candidats & Équipe de Campagne
-                      p Organiser son mouvement & récolter soutiens, donateurs, adhésion
+                      p.objectif OPTIMISER
+                      p.target-name ONG / Mouvement
+                      p Gérer efficacement ma relation citoyenne
                     li
-                      p.target-name  Agence & Consultant
+                      p.objectif OPTIMISER
+                      p.target-name  Candidats
                       p Devenez partenaire de Quorum dès aujourd'hui 
                         
-        section#before-after
-            .container#schema-before
+        section#schema
+            .container
+                span.img-schema
+                    img(src="../images/schema.png")
             
-            .container#schema-after
             
         section#icons
             .container
@@ -125,39 +133,10 @@ block content
                         span.part et organiser un suivi par personne
             .clearfix
         .clearfix
-        section#get-demo
-            .container
-                h2 DÉCOUVREZ NOTRE SOLUTION
-                button.btn.blue 
-                  a(href="/#") DEMANDER UNE DEMO
-        
+
         section#faq-news
-            .container#preview-news
-                h2 DERNIERES NEWS
-                ul
-                    li
-                      a(href="../fr/news.html")
-                          img(src="../images/home/imgres.jpg").ok
-                    li
-                      a(href="../fr/news.html")
-                          img(src="../images/home/imgres.png")
-                    li
-                      a(href="../fr/news.html")
-                          img(src="../images/home/imgres-1.jpg")
-                    li
-                      a(href="../fr/news.html")
-                          img(src="../images/home/imgres-2.png")
-                    li
-                      a(href="../fr/news.html")
-                          img(src="../images/home/imgres-3.jpg")
-                    li
-                      a(href="../fr/news.html")
-                          img(src="../images/home/imgres-3.png")
-                    
-                    a(href="../fr/news.html")
-                        p ▸ Les News Quorum
-            
-                
+
+
             .container#preview-faq
                 h2 QUESTIONS FREQUENTES
                 
@@ -171,76 +150,121 @@ block content
                     li
                         a(href="../fr/faq.html")
                             p.preview-question La question. Morbi leo risus, porta ac consectetur ac, vestibulum...
+
+
                         a(href="../fr/faq.html")
                             p ▸ Toutes les questions fréquentes
                     .clearfix
                 .clearfix
+
+            .container#preview-news
+                h2 LES DERNIERES NEWS
+                ul
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/imgres.jpg" ).ok
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/imgres.png" )
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/imgres-1.jpg" )
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/imgres-2.png" )
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/imgres-3.jpg" )
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/imgres-3.png"  )
+                    
+                    a(href="../fr/news.html")
+                        p ▸ Les News Quorum
+            
         
         .clearfix
-        section#bandeau-newsletter
-            form(action="page-traitement-newsletter",method="post")
-                ul
-                    li
-                        span RETROUVEZ TOUTES LES NEWS QUORUM
-                    li
-                        input(type='email', name="mail-newsletter", placeHolder="Votre adresse mail", required)
-                    li
-                        button.btn.blue S'ABONNER
-        .clearfix
-        section#contact
+
+        section#get-demo
             .container
-                ul
-                    li
-                        h2 Nous écrire
-                        form(action='https://formspree.io/info@quorum-impact.com', method='post')
-                            div.input
-                                input(type='email', name="_replyto", placeholder='Email', required)
-                                .border-input.blue
-                            div.input
-                                input(name='name' type="text" placeholder="Name/Nom")
-                                .border-input.blue
-                            div.input
-                                textarea(name='message' rows="6" placeholder="Message", required)
-                                .border-textarea.blue
-                            input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
-                            input(type="text" name="_gotcha" style="display:none")
-                            input(type="hidden" name="_next" value="//quorum-impact.com/")
-                            p
-                                button.blue(type='submit' value="Send") GO !
-                    li
-                        h2 Nous trouver
-                        p 
-                            i.fa.fa-phone.fa-lg
-                            span 
-                                a(href="tel:+33179734004") +33 1 79 73 40 04
-                        p 
-                            i.fa.fa-envelope
-                            span 
-                                a(href="mailto:welcome@quorum-impact.com") welcome@quorum-impact.com
-                        p
-                            i.fa.fa-map-marker.fa-lg
-                            span
-                                a(href="https://www.google.fr/maps/place/9+Rue+de+Condé,+33000+Bordeaux/@44.8435887,-0.5755025,17z/" target="_blank") 9 rue de Condé - 33000 BORDEAUX
-                        p
-                            i.fa.fa-map-marker.fa-lg
-                            span
-                                a(href="https://www.google.fr/maps/place/124+Avenue+de+Villiers,+75017+Paris/@48.8854713,2.2930888,17z" target="_blank") 124 avenue de Villiers - 75017 PARIS
-                 
-                        p Ne manquez rien de nos évènements, de nos publications et actualités, suivez-nous :
-                            ul
-                                li
-                                    a(href='//facebook.com/quorumimpact' target="_blank")
-                                        i.fa.fa-facebook-square
-                                li
-                                    a(href='//twitter.com/quorumimpact' target="_blank")
-                                        i.fa.fa-twitter-square
-                                li
-                                    a(href='//linkedin.com/company/10114882' target="_blank")
-                                        i.fa.fa-linkedin-square
-                                li
-                                    a(href='//google.com/+Quorumappsdata' target="_blank")
-                                        i.fa.fa-google-plus-square
-                                li
-                                    a(href='//instagram.com/quorumteam/' target="_blank")
-                                        i.fa.fa-instagram
+                h2 DÉCOUVREZ NOTRE SOLUTION
+                button.btn
+                  a(href="/#") DEMANDER UNE DEMO
+        
+        section#contact
+            .container#form-contact
+                h2 ECRIVEZ-NOUS
+
+                form(action='https://formspree.io/info@quorum-impact.com', method='post')
+
+                    input(name='name' type="text" placeholder="Name/Nom")
+                    .border-input.blue
+
+                    input(type='email', name="_replyto", placeholder='Email', required)
+                    .border-input.blue
+
+                    textarea(name='message' rows="6" placeholder="Message", required)
+                    .border-textarea.blue
+                    input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
+                    input(type="text" name="_gotcha" style="display:none")
+                    input(type="hidden" name="_next" value="//quorum-impact.com/")
+                    p
+                        button.blue(type='submit' value="Send") ENVOYER
+
+
+            .container#adress-postale
+                #cadre-pop
+
+                    span.text-center
+                        img(src='../../images/about/avatar-rs-1.png' alt='Logo Quorum')
+
+                    h2 DITES-NOUS BONJOUR
+
+                    p
+                        a(href="tel:+33179734004") +33 1 79 73 40 04
+                    p
+                        a(href="mailto:welcome@quorum-impact.com") welcome@quorum-impact.com
+                    p
+                        a(href="https://www.google.fr/maps/place/9+Rue+de+Condé,+33000+Bordeaux/@44.8435887,-0.5755025,17z/" target="_blank") 9 rue de Condé - 33000 BORDEAUX
+                    p
+                        a(href="https://www.google.fr/maps/place/124+Avenue+de+Villiers,+75017+Paris/@48.8854713,2.2930888,17z" target="_blank") 124 avenue de Villiers - 75017 PARIS
+        .clearfix
+
+
+
+        section#bandeau-newsletter
+
+            form(action="page-traitement-newsletter",method="post")
+                .description-newsletter
+                    h1 RETROUVEZ TOUTES LES NEWS QUORUM 
+                    h2 En vous abonnant à notre Newsletter mensuelle
+                .input-newsletter
+                    input(type='email', name="mail-newsletter", placeHolder="Votre adresse mail", required)
+                .abonnement
+                    button.btn S'ABONNER
+        .clearfix
+
+        section#social
+            h1 SUIVEZ QUORUM 
+
+            ul
+                li
+                    a(href="https://www.facebook.com/quorumhq/" target="_blank")
+                        img(src="../images/social/facebook.png" )
+                li 
+                    a(href="https://twitter.com/quorumhq" target="_blank")
+                        img(src="../images/social/twitter.png" )
+                li
+                    a(href="https://www.linkedin.com/company/quorum-apps" target="_blank")
+                        img(src="../images/social/linkedin.png" )
+                li 
+                    a(href="https://www.instagram.com/quorumteam/" target="_blank")
+                        img(src="../images/social/instagram.png" )            
+                li 
+                    a(href="https://plus.google.com/+Quorumappsdata" target="_blank")
+                        img(src="../images/social/googleplus.png" )               
+                    
+
+
+
             div.clearfix

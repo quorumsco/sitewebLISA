@@ -1,3 +1,12 @@
+
+
+$(document).ready(function() {
+    var height = Math.max($("#preview-news").height(), $("#preview-faq").height());
+    $("#preview-news").height(height);
+    $("#preview-faq").height(height);
+});
+
+
 //Loop scrollTo management
 var clickScrollTo = null;
 

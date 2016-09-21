@@ -1,0 +1,32 @@
+@include exports('social') {
+	#social {
+		background-color: #f9f9fc;
+		margin-top: 20px;
+
+		h1 {
+			color: #0f949a;
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 36px;
+		}
+
+		ul {
+			list-style: none;
+			margin-top: 30px;
+
+
+			li {
+				display: inline;
+
+				margin-right: 30px;
+
+				img {
+					width:30px;
+				}
+			}
+		}
+	}
+
+
+
+}

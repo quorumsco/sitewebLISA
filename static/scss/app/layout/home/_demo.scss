@@ -1,20 +1,39 @@
 @include exports('demo') {
   #get-demo {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/home/background-demo.jpg);
-    background-size: auto , cover;
-    background-repeat: auto, no-repeat;
-    background-position: right, right;
-  }
-  h2{
-    color: black;
-  }
-  
-  button {
-    border-radius: 4px;
+    background-image:  url(../images/home/demo-bg.png);
+    background-repeat:  no-repeat;
+    height: 174px;
+    margin-top: 0  !important;
+    padding-top: 40px;
+    margin-bottom: 0px;
+
+    h2{
+      color: #f2f2f2;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      font-family: 'ProximaNova-Regular';
+      src:url('../fonts/ProximaNova-Regular.otf');
+    }
     
-    & a {
-          font-size: 0.7em;
-          color: white;
+    button {
+      border-radius: 4px;
+      width: 400px;
+      height: 64px;
+      background-color: #eb3459 !important;
+      padding-top:5px !important;
+      margin-top: 0px;
+        
+      & a {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 31px;
+        color:white;
+        margin-top: 0px !important;
+        font-family: 'ProximaNova-Regular';
+        src:url('../fonts/ProximaNova-Regular.otf');
+      }
     }
   }
+
 }

@@ -1,4 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+
+
+$(document).ready(function () {
+    var height = Math.max($("#preview-news").height(), $("#preview-faq").height());
+    $("#preview-news").height(height);
+    $("#preview-faq").height(height);
+});
+
 //Loop scrollTo management
 var clickScrollTo = null;
 
@@ -16,29 +24,39 @@ $(window).scroll(function (event) {
             $('#nav').addClass('active');
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else {
-            $('#nav').removeClass('active');
-            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
+            //  $('#nav').removeClass('active');
+            //  $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
     }
 
     //Animation fade home
     if (window.innerWidth >= 768 && $('#product').length > 0) {
-        var breakpointProduct = $('#product').position().top - 400;
-        var breakpointWebconsole = $('#webconsole').position().top - 400;
-        var breakpointMobile = $('#mobile').position().top - 400;
+        // var breakpointProduct = $('#product').position().top - 400;
         var breakpointTarget = $('#target').position().top - 400;
+        var breakpointIcons = $('#icons').position().top - 400;
+        var breakpointMobile = $('#mobile').position().top - 400;
+        var breakpointDemo = $('#get-demo').position().top - 900;
+        var breakpointNewsletter = $('#bandeau-newsletter').position().top - 800;
+        var breakpointContact = $('#contact').position().top - 400;
 
-        if (yOffset > breakpointProduct) {
-            $('#product').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointWebconsole) {
-            $('#webconsole').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointMobile) {
-            $('#mobile').addClass('animated fadeInUp');
-        }
+        // if (yOffset > breakpointProduct){
+        //     $('#product').addClass('animated fadeInUp');
+        // }
         if (yOffset > breakpointTarget) {
             $('#target').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointIcons) {
+            $('#icons').addClass('animated fadeInUp');
+            $('#mobile').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointContact) {
+            $('#contact').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointDemo) {
+            $('#get-demo').addClass('animated fadeInUp');
+        }
+        if (yOffset > breakpointNewsletter) {
+            $('#bandeau-newsletter').addClass('animated fadeInUp');
         }
     }
     //Animation fade believe
@@ -56,6 +74,84 @@ $(window).scroll(function (event) {
         if (yOffset > breakpointList) {
             $('#believe ul').addClass('animated fadeInUp');
         }
+    }
+
+    // Manage disapear bullet list for the text on scroll
+
+    if (yOffset > $('#do').position().top - 380) {
+        $('.bulletList').hide();
+    } else {
+        $('.bulletList').show();
+    }
+
+    // Manage text en scroll
+    // Make an array, then call it. Clean the .active class, and add it after checking the position from the top
+    var tabX = [$('#text1').position().top - 200, $('#text2').position().top - 200, $('#text3').position().top - 200, $('#text4').position().top - 200, $('#text5').position().top - 200, $('#text6').position().top - 200, $('#text7').position().top - 200, $('#text8').position().top - 200];
+    if (yOffset > tabX[0]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text1').addClass('active');
+        $('#text1-background').addClass('active');
+        $('[href=#text1]').addClass('active');
+    }
+
+    if (yOffset > tabX[1]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text2').addClass('active');
+        $('#text2-background').addClass('active');
+        $('[href=#text2]').addClass('active');
+    }
+
+    if (yOffset > tabX[2]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text3').addClass('active');
+        $('#text3-background').addClass('active');
+        $('[href=#text3]').addClass('active');
+    }
+    if (yOffset > tabX[3]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text4').addClass('active');
+        $('#text4-background').addClass('active');
+        $('[href=#text4]').addClass('active');
+    }
+    if (yOffset > tabX[4]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text5').addClass('active');
+        $('#text5-background').addClass('active');
+        $('[href=#text5]').addClass('active');
+    }
+    if (yOffset > tabX[5]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text6').addClass('active');
+        $('#text6-background').addClass('active');
+        $('[href=#text6]').addClass('active');
+    }
+    if (yOffset > tabX[6]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text7').addClass('active');
+        $('#text7-background').addClass('active');
+        $('[href=#text7]').addClass('active');
+    }
+    if (yOffset > tabX[7]) {
+        $('#textOnScroll > div').removeClass('active');
+        $('#textOnScroll > .texts > div').removeClass('active');
+        $('#textOnScroll > .bulletList > a').removeClass('active');
+        $('#text8').addClass('active');
+        $('#text8-background').addClass('active');
+        $('[href=#text8]').addClass('active');
     }
 });
 $(document).ready(function () {
@@ -175,20 +271,15 @@ $(document).ready(function () {
     //Swith logo && button nav color
     if (window.innerWidth <= 1110) {
         $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
-    } else if ($('#nav').next().is('#reset')) {
-        $('#nav').css('background-color', '#312F38');
     }
     $(window).resize(function () {
         if (window.innerWidth <= 1110 && $('#nav').next().hasClass('big')) {
             $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
         } else if (window.pageYOffset <= 50 && $('#nav').next().hasClass('big')) {
-            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
+            //$('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
         if (window.innerWidth > 1110) {
             $('#nav').removeClass('show-menu');
-            if ($('#nav').next().is('#reset')) {
-                $('#nav').css('background-color', '#312F38');
-            }
         }
     });
 
@@ -297,6 +388,170 @@ $(document).ready(function () {
     //FAQ toggle
     $('.first').on('click', function () {
         $(this).parent().children().eq(1).slideToggle(400);
+    });
+
+    // Donut chart in aboutv2.jade
+    if (window.innerWidth < 500) {
+        var legendPosition = 'bottom';
+    } else {
+        var legendPosition = 'inset';
+    }
+    var chart = c3.generate({
+        data: {
+            columns: [['Information Technology', 30], ['Social & Cognitive Sciences', 20], ['Data Sciences', 20], ['Field & Customer Officers', 20], ['Data Vizualisation', 5], ['Communication Officers', 5]],
+            type: 'donut'
+        },
+        legend: {
+
+            show: true,
+            position: legendPosition,
+            inset: {
+                anchor: 'right',
+                x: 450,
+                y: 220,
+                step: 10
+            }
+        },
+        donut: {
+            label: {
+                format: function (value, ratio, id) {
+                    return "";
+                }
+            }
+        },
+        color: {
+            //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
+            // pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
+            pattern: ['#47B6FF', '#33cd5f', '#ffc900', '#ef473a', '#8D66F3', '#8f8e94', '#20BFFB', '#00D19C']
+            //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
+        }
+    });
+
+    // GoTop arrow in aboutv2.html    
+    $('.go-top').click(function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 'slow');
+    });
+
+    // Gestion des témoignages (1ere partie site) #testimony
+    $('#person-1').click(function (event) {
+        event.preventDefault();
+        $('#person-2').removeClass('active');
+        $('#person-3').removeClass('active');
+
+        $('#testimony-2').css('display', 'none');
+        $('#testimony-3').css('display', 'none');
+
+        $(this).addClass('active');
+        $("#testimony-1").fadeIn(1000);
+    });
+
+    $('#person-2').click(function (event) {
+        event.preventDefault();
+        $('#person-1').removeClass('active');
+        $('#person-3').removeClass('active');
+
+        $('#testimony-1').css('display', 'none');
+        $('#testimony-3').css('display', 'none');
+
+        $(this).addClass('active');
+        $("#testimony-2").fadeIn(1000);
+    });
+
+    $('#person-3').click(function (event) {
+        event.preventDefault();
+        $('#person-1').removeClass('active');
+        $('#person-2').removeClass('active');
+
+        $('#testimony-1').css('display', 'none');
+        $('#testimony-2').css('display', 'none');
+
+        $(this).addClass('active');
+        $("#testimony-3").fadeIn(1000);
+    });
+
+    // Gestion des icones et features
+    $('#icon-1').click(function (event) {
+        event.preventDefault();
+        $('#icon-2').removeClass('active');
+        $('#icon-3').removeClass('active');
+        $('#icon-4').removeClass('active');
+
+        $('#content-icon-2').css('display', 'none');
+        $('#content-icon-3').css('display', 'none');
+        $('#content-icon-4').css('display', 'none');
+
+        $(this).addClass('active');
+        $("#mobile").fadeOut(0, function () {
+            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            $("#icon-1").addClass('active');
+            $("#mobile").fadeIn("slow");
+            $("#content-icon-1").fadeIn("slow");
+        });
+    });
+
+    $('#icon-2').click(function (event) {
+        event.preventDefault();
+        $('#icon-1').removeClass('active');
+        $('#icon-3').removeClass('active');
+        $('#icon-4').removeClass('active');
+
+        $('#content-icon-1').css('display', 'none');
+        $('#content-icon-3').css('display', 'none');
+        $('#content-icon-4').css('display', 'none');
+
+        $(this).addClass('active');
+        $("#mobile").fadeOut(0, function () {
+            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            $("#icon-2").addClass('active');
+            $("#mobile").fadeIn("slow");
+            $("#content-icon-2").fadeIn("slow");
+        });
+    });
+
+    $('#icon-3').click(function (event) {
+        event.preventDefault();
+        $('#icon-1').removeClass('active');
+        $('#icon-2').removeClass('active');
+        $('#icon-4').removeClass('active');
+
+        $('#content-icon-1').css('display', 'none');
+        $('#content-icon-2').css('display', 'none');
+        $('#content-icon-4').css('display', 'none');
+
+        $(this).addClass('active');
+        $("#mobile").fadeOut(0, function () {
+            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            $("#icon-3").addClass('active');
+            $("#mobile").fadeIn("slow");
+            $("#content-icon-3").fadeIn("slow");
+        });
+    });
+
+    $('#icon-4').click(function (event) {
+        event.preventDefault();
+        $('#icon-2').removeClass('active');
+        $('#icon-3').removeClass('active');
+        $('#icon-1').removeClass('active');
+
+        $('#content-icon-1').css('display', 'none');
+        $('#content-icon-2').css('display', 'none');
+        $('#content-icon-3').css('display', 'none');
+
+        $("#mobile").fadeOut(0, function () {
+            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            $("#icon-4").addClass('active');
+            $("#mobile").fadeIn("slow");
+            $("#content-icon-4").fadeIn("slow");
+        });
+    });
+
+    // Effet du texte tapé comme sur le site de Slack pour le h2 du premier témoignage
+    $("#testimony-1 h2, #testimony-2 h2").typeIt({
+        speed: 55,
+        autoStart: true
     });
 });
 

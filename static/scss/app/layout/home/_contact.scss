@@ -1,110 +1,99 @@
 @include exports('contact') {
 	#contact {
-		margin-top: 60px;
+		
 		padding-bottom: 50px;
 		opacity: 0;
-		.container {
-			width: 90%;
+
+
+	  	#form-contact {
+	  		height: 100%;
+	  		text-align:left;
+	  		float:left;
+	  		width: 60%;
+	  		padding-left:60px;
 
 	  		h2 {
-	  			p {
-	  				margin: 0;
-	  			}
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 24px;
+             border-bottom: 40px;
+
 	  		}
-			ul {
-				li:nth-child(1) {
-					width:50%;
-					vertical-align : top;
-					text-align: left;
-					margin-right: 10px; 
-					form {
-						input, textarea {
-							width: calc(310px + 4%);
-							border: 0;
-							border-bottom: 2px solid #E0E0E0;
-							padding: 10px 0;
-							margin-bottom: 10px;
-							outline: none;
-							background-color: #F2F2F2;
-							cursor: pointer;
-						}
-						button:hover {
-							background-color: $red;
-						}
-						.input {
-							position: relative;
-							background-color:#F2F2F2;
-							.border-input, .border-textarea {
-								position:absolute;
-								width: 0;
-								height: 2px;
-								&.active {
-									width: 450px;
-								}
-							}
-							.border-input {
-								bottom: 10px;
-							}
-							.border-textarea {
-								bottom: 13px;
-							}
-						}
-					}
-					p {
-							margin-top: 1px;
-						}
-						p:nth-child(2) {
-							display: block;
-							margin-top: 5px;
-							margin-left: 3px;
-						}
-				}
-				li:nth-child(2) {
-					width: 46%;
-					vertical-align : top;
-					text-align: left;
-					p {
-						margin-top: 15px;
-						i {
-							color: $grey;
-							padding: 12px 5px;
-						}
-						a {
-							text-decoration: none;
-							color: $font-color;
-						}
-						.fa-map-marker {
-							margin-right: 12px;
-						}
-					}
-					ul{
-						margin-top: 10px;
-						list-style-type: none;
-						li {
-							display: inline;
-							margin-right: 24px;
-							a {
-								color: $grey;
-								text-decoration: none;
-								&:hover {
-									color: $red;
-								}
-							}
-							i {
-								font-size: 30px;
-							}
-						}
-					}
-				}
-			}	
+
+	  		input {
+	  			width :700px;
+	  			height: 50px;
+	  			border-radius: 5px;
+	  			border: 1px solid #bdc3c7;
+	  			margin-bottom: 25px !important;
+	  			padding-left : 15px;
+
+	  		}
+
+	  		textarea {
+	  			width: 685px;
+	  			border-radius: 5px;
+	  			border: 1px solid #bdc3c7 !important;
+	  			padding:  15px 15px 15px 15px;
+
+	  		}
+
+
 	  	}
-	  	ul{
-			padding-left: 0;
-			list-style-type: none;
-			li{
-				display: inline-block;
-			}
-		}		
+
+	  	#adress-postale {
+	  		height: 100%;
+	  		text-align:left;
+	  		float:left;
+	  		width: 30%;
+
+
+	  		#cadre-pop {
+				
+				.text-center {
+					text-align:center;
+					width:200px;
+					display: block;
+					margin-bottom: 35px;
+				}
+
+				img {
+					width: 120px;
+					height: 120px;
+					border-radius: 50%;
+					margin:0 auto;
+
+				}
+
+
+	  			margin-top : 20px !important;
+
+
+	  			padding-left: 20px;
+	  			padding-right: 20px;
+	  			padding-top: 10px;
+	  			padding-bottom:10px;
+
+		  		p {
+		  			a {
+		  				color: black;
+		  			}
+		  		}
+
+
+		  		h2 {
+		  		  color: black;
+	              font-size: 20px;
+	              font-weight: lighter !important;
+
+
+
+		  		}
+	  		}
+
+	  	}
+
+		
 	}
 	@media(min-width: 321px) and (max-width: 767px){
 		#contact {

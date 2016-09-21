@@ -75,14 +75,14 @@
 				margin-left:25px;
 				margin-right: 25px;
 				border-radius: 4px;
-				background-color: #00bfff;
-				border: 1px solid rgba(255, 255, 255, 0.4);
+				background-color: $red;
+				border: 1px solid rgba(255, 0, 0, 0.4);
 				letter-spacing : 0.5px;
 				font-size: 14px;
 				font-weight: bold;
 				&:hover {
-					background-color: $red;
-					border: 1px solid rgba(255, 0, 0, 0.4);
+					background-color: #00bfff;
+					border: 1px solid rgba(255, 255, 255, 0.4);
 					padding: 12px 20px;
 					letter-spacing : 0.5px;
 				}
