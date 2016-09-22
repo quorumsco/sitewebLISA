@@ -43,7 +43,7 @@
 					font-weight: bold;
 					padding: 10px;
 					&:hover {
-						background-color: #00bfff;
+						background-color: #31949a;
 						color: $white-color;
 						border-radius: 4px;
 					}
@@ -60,14 +60,14 @@
 			right: 70px;
 			top: 20px;
 
+			.phone img {
+				filter: invert(100%) !important;
+				margin-right: 20px;
+			}
 
 			.telephone {
 
 				margin-right: 20px;
-
-				img{
-					border-left: 1px solid rgba(255,255,255,.5);
-				}
 
 			}
 
@@ -76,10 +76,7 @@
 				color: $grey;
 				font-weight: bold;
 			}
-			img {
-				padding: 0 5px 0 25px;
-				border-left: 1px solid rgba(255, 255, 255, 0.5);
-			}
+
 			#connexion {
 				padding: 12px 20px;
 				border: 2px solid #f2f2f2;
