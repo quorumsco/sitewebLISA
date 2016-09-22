@@ -24,9 +24,10 @@
 			a {
 					color: $white-color;
 				}
-			ul.nav{
+			.nav-menu{
 				display: inline-block;
 				padding: 20px 0;
+
 				li{
 					display: inline;
 					margin-left: 10px;
@@ -34,6 +35,8 @@
 						margin-right: 25px;
 					}
 				}
+
+
 				a {
 					text-decoration: none;
 					color: $grey;
@@ -56,6 +59,18 @@
 			position: absolute;
 			right: 70px;
 			top: 20px;
+
+
+			.telephone {
+
+				margin-right: 20px;
+
+				img{
+					border-left: 1px solid rgba(255,255,255,.5);
+				}
+
+			}
+
 			a{
 				text-decoration: none;
 				color: $grey;
