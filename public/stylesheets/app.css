@@ -1268,9 +1268,9 @@ section hr.title {
   text-align: left;
   padding-left: 20px;
 }
-#target .container ul li .objectifs {
+#target .container ul li .objectif {
   font-weight: bold !important;
-  font-size: 1.6em;
+  font-size: 1em;
   color: black;
 }
 #target .container ul li .active-box {
@@ -1286,6 +1286,38 @@ section hr.title {
 #target .container ul li .target-name {
   font-weight: bold;
   color: #0f949a;
+}
+#target .container ul li:hover {
+  width: 21%;
+  border: 2px solid #0f949a;
+  background-color: #0f949a;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin: 8px;
+  text-align: left;
+  padding-left: 20px;
+}
+#target .container ul li:hover p {
+  color: white;
+}
+#target .container ul li:hover .objectif {
+  font-weight: bold !important;
+  font-size: 1em;
+  color: white;
+}
+#target .container ul li:hover .active-box {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 0 !important;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#target .container ul li:hover .target-name {
+  font-weight: bold;
+  color: #fff;
 }
 #target .container button.blue:hover {
   background: #EA3358;
