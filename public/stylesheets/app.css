@@ -575,24 +575,24 @@ h3 {
 #nav .content a {
   color: #F2F2F2;
 }
-#nav .content ul.nav {
+#nav .content .nav-menu {
   display: inline-block;
   padding: 20px 0;
 }
-#nav .content ul.nav li {
+#nav .content .nav-menu li {
   display: inline;
   margin-left: 10px;
 }
-#nav .content ul.nav li:last-child {
+#nav .content .nav-menu li:last-child {
   margin-right: 25px;
 }
-#nav .content ul.nav a {
+#nav .content .nav-menu a {
   text-decoration: none;
   color: #9FA4AB;
   font-weight: bold;
   padding: 10px;
 }
-#nav .content ul.nav a:hover {
+#nav .content .nav-menu a:hover {
   background-color: #00bfff;
   color: #F2F2F2;
   border-radius: 4px;
@@ -606,6 +606,12 @@ h3 {
   position: absolute;
   right: 70px;
   top: 20px;
+}
+#nav .banner .telephone {
+  margin-right: 20px;
+}
+#nav .banner .telephone img {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 #nav .banner a {
   text-decoration: none;
@@ -1880,6 +1886,7 @@ section hr.title {
 #faq-news #preview-news ul {
   list-style: none;
   text-align: left;
+  padding-left: 80px;
 }
 #faq-news #preview-news ul p {
   padding-left: 20px;
