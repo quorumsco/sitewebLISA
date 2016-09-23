@@ -75,6 +75,10 @@
             margin-top: 0 !important;
           }
         }
+        .abonnement-responsive {
+          display: none;
+
+        }
     
         
     }
@@ -110,7 +114,53 @@
      }
 
   }
+  @media(max-width: 1125px){
+     #bandeau-newsletter {
+      
+      input {
+          width: 250px;
+        }
+      button {
 
+          width: 50px;
+      }
+
+     }
+
+  }
+
+  @media(max-width: 875px){
+     #bandeau-newsletter {
+
+      input {
+          width: 250px;
+          height: 34px;
+        }
+      button {
+          width: 100px;
+          height: 24px;
+          font-size: 18px;
+      }
+
+      .description-newsletter {
+        float:none;
+        margin-top: -40px;
+      }
+
+
+      .input-newsletter {
+        float:none;
+      }
+
+      .abonnement {
+        margin-top: 10px;
+        float:none;
+      }
+        
+
+     }
+
+  }
 
 
 }

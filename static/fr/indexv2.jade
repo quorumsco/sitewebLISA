@@ -162,7 +162,7 @@ block content
 
             .container#preview-news
                 h2 LES DERNIERES NEWS
-                ul
+                ul.news-img
 
                     li
                       a(href="../fr/news.html")
@@ -191,6 +191,30 @@ block content
                     
                     a(href="../fr/news.html" target="_blank")
                         p ▸ Les News Quorum
+
+                ul.news-responsive 
+                    li
+                      a(href="../fr/news.html") Impact Hub Singapore 
+
+                    li
+                      a(href="../fr/news.html") Sud Ouest 
+
+                    li
+                      a(href="../fr/news.html") La Tribune 
+
+
+                    li
+                      a(href="../fr/news.html") Web Summit 
+
+                    li
+                      a(href="../fr/news.html") La France des Solutions 
+
+                    li
+                      a(href="../fr/news.html") Challenges
+                    
+                    a(href="../fr/news.html" target="_blank")
+                        p ▸ Les News Quorum
+
             
         
         .clearfix
@@ -200,6 +224,7 @@ block content
                 h2 DÉCOUVREZ NOTRE SOLUTION
                 button.btn
                   a(href="https://quorum-impact.us12.list-manage.com/subscribe?u=8d7c7595072992d8808c7993d&id=913c162260" target="_blank") DEMANDER UNE DEMO
+        .clearfix
         
         section#contact
             .container#form-contact
@@ -225,8 +250,6 @@ block content
             .container#adress-postale
                 #cadre-pop
 
-                    span.text-center
-                        img(src='../../images/about/avatar-rs-1.png' alt='Logo Quorum')
 
                     h2 DITES-NOUS BONJOUR
 
@@ -247,11 +270,13 @@ block content
             form(action="page-traitement-newsletter",method="post")
                 .description-newsletter
                     h1 RETROUVEZ TOUTES LES NEWS QUORUM 
-                    h2 En vous abonnant à notre Newsletter mensuelle
-                .input-newsletter
-                    input(type='email', name="mail-newsletter", placeHolder="Votre adresse mail", required)
-                .abonnement
-                    button.btn S'ABONNER
+                    h2.newsletter-msg En vous abonnant à notre Newsletter mensuelle
+                .form-newletter
+                    .input-newsletter
+                        input(type='email', name="mail-newsletter", placeHolder="Votre adresse mail", required)
+                    .abonnement
+                        button.btn.abonnement-btn S'ABONNER
+
         .clearfix
 
         section#social
