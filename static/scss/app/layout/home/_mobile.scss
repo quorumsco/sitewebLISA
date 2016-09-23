@@ -29,8 +29,8 @@
 				margin-bottom: 8em;
 			}
 		}
-		.container{
-			margin-left:3%;
+		.container {
+			// margin-left:3%;
 			float:left;
 			width: 43%;
 			text-align: right;
@@ -38,31 +38,25 @@
 		}
 		.sentence {
 			display: inline-block;
-		}	
+		}
+
 		div[id^="content-icon-"]:not(.active) {
 			display: none;
 		}
 	}
-	@media(max-width: 351px) {
-		#mobile {
-			.sentence {
-				width: 80%;
-				padding-left: 10px;
-				.part {
-					padding-left: 0px; 
-					margin-left: 0px;
-				}
-			}
-		}
-	}
+
 	@media(max-width: 1024px){
 		#mobile {
 			margin-top: 20px;
 			background: none;
 			div.container {
-				width: 90%;
-				margin: 0 8%;
+				width: 100%;
+				text-align:center;
 				float: none;
+
+				h2 {
+					text-align: center;
+				}
 			}
 			.list {
 				div.sentence {
@@ -96,53 +90,31 @@
 	}
 	@media(max-width: 1250px){
 		#mobile {
-			background-position: 4%;
-		}
-	}
-	@media(min-width: 1025px) and (max-width: 1109px){
-		#mobile {
-			.list {
-				div.sentence { 
-					width: 84%;
-				}
-			}
-		}
-	}
-	@media(min-width: 768px) and (max-width: 1024px) {
-		#mobile {
+			// background:none;
+
 			.container {
-				max-width: 1000px;
+				width:40%;
+				
+
 			}
+
 		}
 	}
-	@media(max-width: 767px) {
+
+	@media(max-width: 1110px){
 		#mobile {
-			opacity: 1;
+			// background:none;
+
 			.container {
-				max-width: 760px;
+				width:30%;
+				
+
 			}
-			.list {
-				div.sentence {
-					width: 86%;
-				}
-			}
+
 		}
 	}
-	@media(max-width: $medium-screen) {
-		#mobile {	
-			.container {
-				margin: 0 auto;
-			}
-		}
-	}
-	@media(max-width: $small-screen) {
-		#mobile {	
-			div.container {
-				margin: 0 auto;
-				width: calc(100% - 20px);
-			}
-		}
-	}
+
+
 	@media(min-width: 1600px) and (max-width: 2300px) {
 		#mobile {	
 			background-position: 70% top;
