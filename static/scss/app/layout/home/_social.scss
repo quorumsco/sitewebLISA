@@ -27,6 +27,21 @@
 		}
 	}
 
+    @media(max-width: 1250px) {
+		#social {
 
+			h1 {
+				font-size: 20px;
+			}
+			ul {
+				li {
+					img {
+						width:20px;
+					}
+
+				}
+			}
+		}
+    }
 
 }
