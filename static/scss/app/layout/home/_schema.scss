@@ -6,4 +6,33 @@
 		}
 	}
 
+
+	@media(max-width: 1110px){
+		#schema {
+			.img-schema {
+				margin-left: 0px;
+				img {
+					width:1000px;
+				}
+			}
+		}
+	}
+	@media(max-width: 1024px){
+		#schema {
+			.img-schema {
+				margin-left: 0px;
+				img {
+					width:800px;
+				}
+			}
+		}
+	}	
+	@media(max-width: 800px){
+		#schema {
+			.img-schema {
+				display: none;
+			}
+		}
+	}
+
 }
