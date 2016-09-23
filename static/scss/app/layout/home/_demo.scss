@@ -36,4 +36,18 @@
     }
   }
 
+
+    @media(max-width: 435px) {
+        #get-demo {
+           button {
+            width:300px;
+            height: 60px;
+              & a {
+                 font-size: 20px;
+              }
+           }
+        }
+    }
+
+
 }
