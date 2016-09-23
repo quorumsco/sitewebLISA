@@ -523,7 +523,9 @@ $(document).ready(function(){
       
       $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
-        $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        if ($( window ).width() > 1125 ) {
+             $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        }
         $("#icon-1").addClass('active');
         $("#mobile").fadeIn("slow");
         $( "#content-icon-1" ).fadeIn("slow");    
@@ -542,7 +544,9 @@ $(document).ready(function(){
       
       $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
-        $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        if ($( window ).width() > 1125 ) {
+             $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        }
         $("#icon-2").addClass('active');
         $("#mobile").fadeIn("slow");
         $( "#content-icon-2" ).fadeIn("slow");    
@@ -561,7 +565,9 @@ $(document).ready(function(){
       
       $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
-        $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        if ($( window ).width() > 1125 ) {
+            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        }
         $("#icon-3").addClass('active');
         $("#mobile").fadeIn("slow");
         $( "#content-icon-3" ).fadeIn("slow");    
@@ -579,7 +585,10 @@ $(document).ready(function(){
       $('#content-icon-3').css('display', 'none');
       
       $("#mobile").fadeOut(0, function(){
-        $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        if ($( window ).width() > 1125 ) {
+            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+        }
+
         $("#icon-4").addClass('active');
         $("#mobile").fadeIn("slow");
         $( "#content-icon-4" ).fadeIn("slow");    
