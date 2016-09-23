@@ -92,128 +92,37 @@
 	  		}
 
 	  	}
+	}
 
+	@media(max-width: 1250px){
 		
-	}
-	@media(min-width: 321px) and (max-width: 767px){
 		#contact {
-			margin-top:10px;
-			.container {
-				span.quote{
-		  			color: $grey;
-		  			font-size: 20px;
-		  		}
-				ul {
-					display: list-item;
-					li:nth-child(1) {
-						form {
-							input, textarea {
-								width: 100%
-							}
-						}
-						width: 100%;
-					}
-					li:nth-child(2) {
-						margin-top: 100px;
-					}
-				}
-			}
-			ul {
-				padding-left: 0;
-				list-style-type: none;
-				li{
-					display: block;
-				}
-			}
-			
-		}
-	}
-	@media(max-width: 320px){
-		#contact {
-			margin-top:10px;
-			.container {
-				ul {
-					li:nth-child(1) {
-						form {
-							input, textarea {
-								width: 100%
-							}
-						}
-						width: 100%;
-					}
-					li:nth-child(2) {
-						width: auto;
-						margin-top: 70px;
-					}
 
-				}			
-			}
-			ul {
-				padding-left: 0;
-				list-style-type: none;
-				li{
-					display: block;
+			#form-contact {
+				input {
+					width :400px;
 				}
-			}
-			
-		}
-	}
-	@media(min-width: 326px) and (max-width: 425px){
-		#contact {
-			.container {
-				ul {
-					li:nth-child(2) {
-						width: auto;
-					}
 
-				}			
-			}
-		}
-	}
-	@media(min-width: 426px) and (max-width: 767px){
-		#contact {
-			.container {
-				ul {
-					li:nth-child(1) {
-						text-align: center;
-						form {
-							input, textarea {
-								width: 100%;
-							}
-						}
-						width: 100%;
-					}
-					li:nth-child(2) {
-						width: auto;
-						h2 {
-							text-align: center;
-						}
-					}
-
-				}			
-			}
-		}
-	}
-	@media(min-width: 1600px) {
-		#contact {
-			.container {
-				max-width: 1000px;
-			}
-		}
-	}
-	@media(min-width: 1024px) {
-		#contact {
-			.container {
-				ul{
-					li:nth-child(1){
-						form {
-							input, textarea {
-								width: 450px;
-							}
-						}
-					}
+				textarea {
+					width: 385px;
 				}
 			}
 		}
+
+	}
+	@media(max-width: 780px){
+		
+		#contact {
+
+			#form-contact {
+				display: none;
+			}
+
+			#adress-postale {
+				float: none;
+				width: 60%;
+			}
+		}
+
 	}
 }

@@ -5,6 +5,14 @@ $(document).ready(function () {
     var height = Math.max($("#preview-news").height(), $("#preview-faq").height());
     $("#preview-news").height(height);
     $("#preview-faq").height(height);
+
+    if ($(window).width() < 1125) {
+        $('.abonnement-btn').html('GO');
+    };
+
+    if ($(window).width() < 485) {
+        $('.newsletter-msg').html('');
+    };
 });
 
 //Loop scrollTo management
