@@ -2,10 +2,6 @@
     #product {
         margin-top: 60px;
         margin-bottom: 80px;
-        // background-image:  url(../images/home/group-2.png);
-        // background-repeat:  no-repeat;
-        // background-size: cover;
-        // min-height: 100vh;
 
         .container {
             margin-top: 70px;
@@ -33,9 +29,13 @@
                 border: 1px solid #f2f2f2;
             }
             
+            // .testimonies-responsive {
+            //     display: none;
+            // }
             .testimonies {
                 margin: 0 auto;
                 width:100%;
+                margin-left: 5vw !important;
 
                 .person-testimony {
                     position: relative;
@@ -103,12 +103,57 @@
             }
         }
     }
+    
+    @media(max-width: 1103px) {
+        .container {
+            width:100vw !important;
+
+
+            .testimonies {
+                margin-left: 10vw !important;
+            }
+        }
+    }
+
+    @media(min-width: 1026px) {
+        #product {
+            .testimonies-responsive {
+                display: none;
+            }
+        }
+
+    }
+
+    @media(max-width: 1025px) {
+        #product {
+            .testimonies {
+                display: none;
+            }
+
+            .testimonies-responsive {
+                display: block;
+                ul {
+                    list-style: none;
+
+                    li {
+                        display: inline-block;
+                    }
+
+                    li:not(:first-child) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
     @media(min-width: 1250px) {
         .container {
             margin-left: auto;
             margin-right: auto;
         }
     }
+
     @media(min-width: 1024px) {
         .container {
             span.quote {
