@@ -1,4 +1,7 @@
 @include exports('nav') {
+
+	.hide { opacity:0;}
+
 	#nav {
 		position: fixed;
 		background-color: #fff;

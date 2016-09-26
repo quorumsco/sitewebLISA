@@ -13,8 +13,6 @@ $(document).ready(function() {
         $('.newsletter-msg').html('');
     };
 
-
-
 });
 
 
@@ -41,35 +39,24 @@ $(window).scroll(function(event){
     }
 
     //Animation fade home
-    if(window.innerWidth >= 768 && $('#product').length > 0) {
-        // var breakpointProduct = $('#product').position().top - 400;
-        var breakpointTarget = $('#target').position().top - 400; 
-        var breakpointIcons = $('#icons').position().top - 400;
-        var breakpointMobile = $('#mobile').position().top - 400;
-        var breakpointDemo = $('#get-demo').position().top -900;
-        var breakpointNewsletter = $('#bandeau-newsletter').position().top -800;
-        var breakpointContact = $('#contact').position().top - 400;
+    if(window.innerWidth >= 768 ) {
+
+        $('.hide').each(function(i) {
+
+            var bottom_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_window = $(window).scrollTop() + $(window).height();
+
+            if(bottom_window > bottom_object) {
+                $(this).animate({'opacity':'1'},500);
+            }
 
 
-        // if (yOffset > breakpointProduct){
-        //     $('#product').addClass('animated fadeInUp');
-        // }
-        if (yOffset > breakpointTarget){
-            $('#target').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointIcons){
-            $('#icons').addClass('animated fadeInUp');
-            $('#mobile').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointContact){
-            $('#contact').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointDemo){
-            $('#get-demo').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointNewsletter){
-            $('#bandeau-newsletter').addClass('animated fadeInUp');
-        }
+
+        });
+        
+
+
+
     }
     //Animation fade believe
     if(window.innerWidth > 425 && $('#believe').length > 0 && $('html').attr('lang') == 'fr') {
