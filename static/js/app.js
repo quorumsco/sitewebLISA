@@ -37,27 +37,23 @@ $(window).scroll(function(event){
           //  $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
     }
-
+    console.log($('#product').length)
     //Animation fade home
-    if(window.innerWidth >= 768 ) {
 
-        $('.hide').each(function(i) {
-
-            var bottom_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_window = $(window).scrollTop() + $(window).height();
-
-            if(bottom_window > bottom_object) {
+    if(window.innerWidth >= 768) {
+       $('.hide').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            
+            if( bottom_of_window > bottom_of_object  ){   
                 $(this).animate({'opacity':'1'},500);
             }
-
-
-
         });
-        
-
-
-
     }
+
+
     //Animation fade believe
     if(window.innerWidth > 425 && $('#believe').length > 0 && $('html').attr('lang') == 'fr') {
         var breakpointSecond = $('.believe-fr:nth-child(3)').position().top - 700;
@@ -77,90 +73,85 @@ $(window).scroll(function(event){
     
     // Manage disapear bullet list for the text on scroll
 
-    if (yOffset > $('#do').position().top - 380) {
-        $('.bulletList').hide();
-    } else {
-        $('.bulletList').show();
-    }
 
 // Manage text en scroll
 // Make an array, then call it. Clean the .active class, and add it after checking the position from the top
-    var tabX = [$('#text1').position().top-200, $('#text2').position().top-200, $('#text3').position().top-200, $('#text4').position().top-200, $('#text5').position().top-200, $('#text6').position().top-200, $('#text7').position().top-200, $('#text8').position().top-200]
-    if ( yOffset > tabX[0]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text1').addClass('active');
-        $('#text1-background').addClass('active');
-        $('[href=#text1]').addClass('active');
+    // var tabX = [$('#text1').position().top-200, $('#text2').position().top-200, $('#text3').position().top-200, $('#text4').position().top-200, $('#text5').position().top-200, $('#text6').position().top-200, $('#text7').position().top-200, $('#text8').position().top-200]
+    // if ( yOffset > tabX[0]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text1').addClass('active');
+    //     $('#text1-background').addClass('active');
+    //     $('[href=#text1]').addClass('active');
 
 
-    }
+    // }
 
-    if (yOffset > tabX[1]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text2').addClass('active');
-        $('#text2-background').addClass('active');
-        $('[href=#text2]').addClass('active');
+    // if (yOffset > tabX[1]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text2').addClass('active');
+    //     $('#text2-background').addClass('active');
+    //     $('[href=#text2]').addClass('active');
 
-    }
+    // }
 
-    if (yOffset > tabX[2]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text3').addClass('active');
-        $('#text3-background').addClass('active');
-        $('[href=#text3]').addClass('active');
+    // if (yOffset > tabX[2]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text3').addClass('active');
+    //     $('#text3-background').addClass('active');
+    //     $('[href=#text3]').addClass('active');
 
-    }
-    if (yOffset > tabX[3]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text4').addClass('active');
-        $('#text4-background').addClass('active');
-        $('[href=#text4]').addClass('active');
+    // }
+    // if (yOffset > tabX[3]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text4').addClass('active');
+    //     $('#text4-background').addClass('active');
+    //     $('[href=#text4]').addClass('active');
 
-    }
-    if (yOffset > tabX[4]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text5').addClass('active');
-        $('#text5-background').addClass('active');
-        $('[href=#text5]').addClass('active');
+    // }
+    // if (yOffset > tabX[4]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text5').addClass('active');
+    //     $('#text5-background').addClass('active');
+    //     $('[href=#text5]').addClass('active');
 
-    }
-    if (yOffset > tabX[5]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text6').addClass('active');
-        $('#text6-background').addClass('active');
-        $('[href=#text6]').addClass('active');
+    // }
+    // if (yOffset > tabX[5]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text6').addClass('active');
+    //     $('#text6-background').addClass('active');
+    //     $('[href=#text6]').addClass('active');
 
-    }
-    if (yOffset > tabX[6]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text7').addClass('active');
-        $('#text7-background').addClass('active');
-        $('[href=#text7]').addClass('active');
+    // }
+    // if (yOffset > tabX[6]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text7').addClass('active');
+    //     $('#text7-background').addClass('active');
+    //     $('[href=#text7]').addClass('active');
 
-    }
-    if (yOffset > tabX[7]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text8').addClass('active');
-        $('#text8-background').addClass('active');
-        $('[href=#text8]').addClass('active');
+    // }
+    // if (yOffset > tabX[7]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text8').addClass('active');
+    //     $('#text8-background').addClass('active');
+    //     $('[href=#text8]').addClass('active');
 
-    }
+    // }
     
 });
 $(document).ready(function(){
@@ -547,7 +538,7 @@ $(document).ready(function(){
         }
         $("#icon-1").addClass('active');
         $("#mobile").fadeIn("slow");
-        $( "#content-icon-1" ).fadeIn("slow");    
+        $("#content-icon-1" ).fadeIn("slow");    
       })
     })
     
@@ -602,7 +593,7 @@ $(document).ready(function(){
       $('#content-icon-1').css('display', 'none');
       $('#content-icon-2').css('display', 'none');
       $('#content-icon-3').css('display', 'none');
-      
+      $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
         if ($( window ).width() > 1125 ) {
             $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");

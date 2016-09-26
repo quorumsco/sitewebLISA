@@ -1,7 +1,6 @@
 @include exports('target') {
 	#target {
 		background-color: #f2f2f2;
-		opacity: 0;
 		.container {
 			span.quote{
 	  			color: $grey;
