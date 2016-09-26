@@ -27,17 +27,17 @@ block content
               
                 hr.hr-testimony
                 .testimonies
-                    .person-testimony.active#person-1
+                    .person-testimony.active.person-1
                         img(src="../images/header/photo-testimony2.png").photo-testimony
                         .infos-testimony
                             p.testimony-name Sébastien Saint
                             p.testimony-job Conseiller
-                    .person-testimony#person-2
+                    .person-testimony.person-2
                         img(src="../images/header/photo-testimony2.png").photo-testimony
                         .infos-testimony
                             p.testimony-name Bernard Claverie
                             p.testimony-job Président
-                    .person-testimony#person-3
+                    .person-testimony.person-3
                         img(src="../images/header/photo-testimony2.png").photo-testimony
                         .infos-testimony
                             p.testimony-name Loïc Rakotozafy
@@ -46,11 +46,17 @@ block content
                 .testimonies-responsive
                     ul
                         li
-                            p O
+                            .person-1
+                                p
+                                    span.icones-1.fa.fa-circle
                         li
-                            p O
+                            .person-2
+                                p
+                                    span.icones-2.fa.fa-circle-o
                         li
-                            p O
+                            .person-3
+                                p
+                                    span.icones-3.fa.fa-circle-o
         section#target
             .container#target-container
                 h2 MOBILISER SUR LE TERRAIN, EFFICACEMENT.

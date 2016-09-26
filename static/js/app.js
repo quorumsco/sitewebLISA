@@ -472,12 +472,23 @@ $(document).ready(function(){
           scrollTop:0
           },'slow');
       });
-      
+
+
     // Gestion des témoignages (1ere partie site) #testimony
-    $('#person-1').click(function(event){
+    $('.person-1').click(function(event){
+
       event.preventDefault();
-      $('#person-2').removeClass('active');
-      $('#person-3').removeClass('active');
+
+      $('.icones-1').removeClass('fa-circle-o');
+      $('.icones-1').addClass('fa-circle');
+
+      $('.icones-2').removeClass('fa-circle');
+      $('.icones-2').addClass('fa-circle-o');
+      $('.icones-3').removeClass('fa-circle');
+      $('.icones-3').addClass('fa-circle-o');
+
+      $('.person-2').removeClass('active');
+      $('.person-3').removeClass('active');
       
       $('#testimony-2').css('display', 'none');
       $('#testimony-3').css('display', 'none');
@@ -486,10 +497,21 @@ $(document).ready(function(){
       $( "#testimony-1" ).fadeIn(1000);
     })
     
-    $('#person-2').click(function(event){
+    $('.person-2').click(function(event){
+
       event.preventDefault();
-      $('#person-1').removeClass('active');
-      $('#person-3').removeClass('active');
+
+      $('.icones-2').removeClass('fa-circle-o');
+      $('.icones-2').addClass('fa-circle');
+      
+      $('.icones-1').removeClass('fa-circle');
+      $('.icones-1').addClass('fa-circle-o');
+      $('.icones-3').removeClass('fa-circle');
+      $('.icones-3').addClass('fa-circle-o');
+
+
+      $('.person-1').removeClass('active');
+      $('.person-3').removeClass('active');
       
       $('#testimony-1').css('display', 'none');
       $('#testimony-3').css('display', 'none');
@@ -498,10 +520,20 @@ $(document).ready(function(){
       $( "#testimony-2" ).fadeIn(1000);
     })
     
-    $('#person-3').click(function(event){
+    $('.person-3').click(function(event){
+
       event.preventDefault();
-      $('#person-1').removeClass('active');
-      $('#person-2').removeClass('active');
+
+      $('.icones-3').removeClass('fa-circle-o');
+      $('.icones-3').addClass('fa-circle');
+      
+      $('.icones-1').removeClass('fa-circle');
+      $('.icones-1').addClass('fa-circle-o');
+      $('.icones-2').removeClass('fa-circle');
+      $('.icones-2').addClass('fa-circle-o');
+
+      $('.person-1').removeClass('active');
+      $('.person-2').removeClass('active');
       
       $('#testimony-1').css('display', 'none');
       $('#testimony-2').css('display', 'none');
