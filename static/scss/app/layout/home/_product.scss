@@ -179,4 +179,10 @@
         }
         }
     }
+
+    @media(min-width: 375px) {
+        main {
+            width:397px;
+        }
+    }
 }

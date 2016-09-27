@@ -137,6 +137,23 @@
 			background: none;
 		}
 	}
+
+
+    @media(min-width: 375px){
+        #mobile {
+            background: none;
+
+            div.container { 
+            	padding-left: 15px;
+
+            	text-align: center;
+            	
+            	h2 {
+            		text-align: center;
+            	}
+            }
+        }
+    }
 	// @media(max-width: 2301px) {
 	// 	#mobile {	
 	// 		background-position: 25%;

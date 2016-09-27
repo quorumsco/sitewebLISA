@@ -172,5 +172,16 @@
       }
     }
 
+    @media(min-width: 375px){
+      #faq-news {
+        #preview-faq {
+            margin-left: 0;
+            margin-right: 0;
+            width: 397px !important;
+        }
+      }
+    }
+
+
 
 }
