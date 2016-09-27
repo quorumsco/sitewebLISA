@@ -45,37 +45,37 @@
 		}
 	}
 
-	@media(min-width: 1024px){
-		#mobile {
-			margin-top: 100px;
-			background: none;
-			div.container {
-				background:none;
-				width: 100%;
-				text-align:center;
-				float: none;
-				margin-left: 28vw;
+	// @media(min-width: 1024px){
+	// 	#mobile {
+	// 		margin-top: 100px;
+	// 		background: none;
+	// 		div.container {
+	// 			background:none;
+	// 			width: 100%;
+	// 			text-align:center;
+	// 			float: none;
+	// 			margin-left: 15vw;
 
-				h2 {
-					text-align: center;
-				}
-			}
-			.list {
-				div.sentence {
-					width: 90%;
-				}
-			}
-			p {
-				&:first-child{
-					display: inline-block;
-				}
-			}
-			h3 {
-				margin-bottom: 0px;
-			}
+	// 			h2 {
+	// 				text-align: center;
+	// 			}
+	// 		}
+	// 		.list {
+	// 			div.sentence {
+	// 				width: 90%;
+	// 			}
+	// 		}
+	// 		p {
+	// 			&:first-child{
+	// 				display: inline-block;
+	// 			}
+	// 		}
+	// 		h3 {
+	// 			margin-bottom: 0px;
+	// 		}
 
-		}
-	}
+	// 	}
+	// }
 	@media(min-width: 1110px) and (max-width: 1400px){
 		#mobile {
 			.list {
@@ -132,14 +132,14 @@
 		}
 	}
 
-	@media(min-width: 425px) {
+	@media(min-width: 425px) and (max-width: 430px) {
 		#mobile {
 			background: none;
 		}
 	}
 
 
-    @media(min-width: 375px){
+    @media(min-width: 375px) and (max-width: 380px){
         #mobile {
             background: none;
 
@@ -155,7 +155,7 @@
         }
     }
 
-    @media(min-width: 320px) {
+    @media(min-width: 320px) and (max-width: 325px) {
         #mobile {
         	background: none;
 
@@ -169,6 +169,7 @@
         	}
         }
     }
+
 	// @media(max-width: 2301px) {
 	// 	#mobile {	
 	// 		background-position: 25%;
