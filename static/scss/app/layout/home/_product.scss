@@ -163,18 +163,12 @@
         }
     }
     
-    @media(max-width:1024px){
-        main {
 
-        width: 1205px !important;
-
-        }
-    }
 
     @media(min-width: 1024px) {
         main {
 
-        width: 100%;
+        width: 1024px;
         .container {
             span.quote {
                 &:nth-of-type(2),

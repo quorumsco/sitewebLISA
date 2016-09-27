@@ -150,7 +150,7 @@
       }
   }
 
-   @media(max-width: 1024px){
+   @media(min-width: 1024px){
       #faq-news {
         #preview-faq { 
           min-width: 1205px !important;

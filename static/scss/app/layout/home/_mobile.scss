@@ -45,7 +45,7 @@
 		}
 	}
 
-	@media(max-width: 1024px){
+	@media(min-width: 1024px){
 		#mobile {
 			margin-top: 100px;
 			background: none;
@@ -129,6 +129,12 @@
 					width: 75%;
 				}
 			}
+		}
+	}
+
+	@media(min-width: 425px) {
+		#mobile {
+			background: none;
 		}
 	}
 	// @media(max-width: 2301px) {
