@@ -132,5 +132,24 @@
         }
     }
 
+    @media(min-width: 320px) {
+        #icons {
+
+            margin-left: -65px; 
+            margin-top: -20px;
+            li {
+                img {
+
+                    width:40px !important;
+                }
+                p {
+                    font-size: 13px !important;
+                    margin-left: -22px !important;
+                }
+
+            }
+        }
+    }
+
 
 }

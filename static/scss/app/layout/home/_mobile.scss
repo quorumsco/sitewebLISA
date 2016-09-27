@@ -147,11 +147,26 @@
             	padding-left: 15px;
 
             	text-align: center;
-            	
+
             	h2 {
             		text-align: center;
             	}
             }
+        }
+    }
+
+    @media(min-width: 320px) {
+        #mobile {
+        	background: none;
+
+        	div.container { 
+        		padding-left: 15px;
+            	text-align: center;
+
+            	h2 {
+            		text-align: center;
+            	}
+        	}
         }
     }
 	// @media(max-width: 2301px) {

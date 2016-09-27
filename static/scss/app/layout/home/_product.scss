@@ -185,4 +185,10 @@
             width:397px;
         }
     }
+
+    @media(min-width: 320px) {
+        main {
+            width:345px;
+        }
+    }
 }
