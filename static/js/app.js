@@ -40,18 +40,20 @@ $(window).scroll(function(event){
     console.log($('#product').length)
     //Animation fade home
 
-    if(window.innerWidth >= 768) {
-       $('.hide').each( function(i){
-            
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            
-            if( bottom_of_window > bottom_of_object  ){   
-                $(this).animate({'opacity':'1'},500);
-            }
-        });
-    }
+
+   $('.hide').each( function(i){
+        
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        
+        
+        if(window.innerWidth >= 768 && bottom_of_window > bottom_of_object  ){   
+            $(this).animate({'opacity':'1'},500);
+        } else {
+            $(this).animate({'opacity':'1'},500);
+        }
+    });
+
 
 
     //Animation fade believe
@@ -533,7 +535,7 @@ $(document).ready(function(){
       
       $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
-        if ($( window ).width() > 1125 ) {
+        if ($( window ).width() > 1109 ) {
              $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
         }
         $("#icon-1").addClass('active');
@@ -554,7 +556,7 @@ $(document).ready(function(){
       
       $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
-        if ($( window ).width() > 1125 ) {
+        if ($( window ).width() > 1109 ) {
              $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
         }
         $("#icon-2").addClass('active');
@@ -575,7 +577,7 @@ $(document).ready(function(){
       
       $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
-        if ($( window ).width() > 1125 ) {
+        if ($( window ).width() > 1109 ) {
             $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
         }
         $("#icon-3").addClass('active');
@@ -595,7 +597,7 @@ $(document).ready(function(){
       $('#content-icon-3').css('display', 'none');
       $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
-        if ($( window ).width() > 1125 ) {
+        if ($( window ).width() > 1109 ) {
             $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
         }
 

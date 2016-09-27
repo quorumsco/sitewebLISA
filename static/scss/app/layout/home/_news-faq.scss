@@ -121,7 +121,23 @@
 
     @media(max-width: 600px){
       #faq-news {
+        #preview-faq {
+          margin-top:  -60px; 
+
+          h2 {
+            padding-top: 20px;
+            margin-bottom: 0px;
+          }
+          ul {
+            li {
+              padding-right: 20px;
+            }
+          }
+        }
         .container {
+
+          display: block;
+
           float:none;
           width:100%;
           max-width: none !important;

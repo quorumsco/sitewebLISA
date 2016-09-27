@@ -5,6 +5,7 @@
 		background-repeat: no-repeat;
 		background-size:  auto;
 		background-position: 90% top;
+
 		padding: 0px;
 		
 		h2 {
@@ -129,13 +130,13 @@
 			}
 		}
 	}
-	@media(min-width: 2301px) {
-		#mobile {	
-			background-position: 25%;
-			.container {
-				margin-left: 20%;
-				width: auto;
-			}
-		}
-	}
+	// @media(max-width: 2301px) {
+	// 	#mobile {	
+	// 		background-position: 25%;
+	// 		.container {
+	// 			margin-left: 20%;
+	// 			width: auto;
+	// 		}
+	// 	}
+	// }
 }
