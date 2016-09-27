@@ -108,6 +108,25 @@
 		}
 
 	}
+	@media(max-width: 1024px){
+		
+		#contact {
+
+			#form-contact {
+				width:50% !important;
+				float:left;
+				display: block;
+			}
+			
+			#adress-postale {
+				width:30% !important;
+				display: block;
+				float: left;
+			}
+
+		}
+
+	}
 	@media(max-width: 780px){
 		
 		#contact {

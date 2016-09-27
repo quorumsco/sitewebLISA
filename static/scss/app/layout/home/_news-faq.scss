@@ -95,12 +95,13 @@
     }
 
 
-  @media(max-width: 1200px){
+  @media(max-width: 800px){
       #faq-news {
         #preview-news {
            ul.news-responsive {
                 display: block;
                 list-style: none;
+                text-align: center;
 
                 li {
                   display: block;
@@ -145,6 +146,28 @@
 
       }
   }
+
+   @media(max-width: 1024px){
+      #faq-news {
+        #preview-faq { 
+          min-width: 1205px !important;
+
+          .container {
+            min-width:1205px !important;
+          }
+
+        }
+
+        #preview-news { 
+          min-width: 1205px !important;
+
+          .container {
+            min-width:1205px !important;
+          }
+
+        }
+      }
+    }
 
 
 }
