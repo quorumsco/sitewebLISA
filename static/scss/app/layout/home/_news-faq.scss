@@ -7,8 +7,10 @@
         }
 
         #preview-news {
+          position:relative;
 
           height: 100%;
+          min-height: 580px;
 
           ul.news-responsive {
             display: none;
@@ -27,9 +29,12 @@
                 list-style: none;              
                 text-align: left;
                 padding-left: 80px;
+                margin-bottom: 30px;
+
                 p {
                   padding-left: 20px;
-                  margin-top: 102px;
+                  position:absolute;
+                  bottom:0;
                   font-size: 1.3em;
                 }
                 li {
@@ -58,6 +63,7 @@
         #preview-faq {
             background-color: #f2f2f2;
             height: 100%;
+            position: relative;
 
             h2 {
                 color: #20bffb;
@@ -68,6 +74,7 @@
                 margin-bottom: 44px;
             }
             ul {
+
                 list-style: none;
                 li {
                     font-size: 22px;
@@ -75,6 +82,8 @@
                     line-height: 26px;
                     text-align: left;
                     text-decoration: none;
+
+
                     .preview-question {
                         font-weight: bold;
                         margin-bottom: 0px !important;
@@ -83,10 +92,13 @@
                     .answer {
                       font-size: 16px;
                       margin-top: 5px !important;
+                      padding-right: 50px;
                     }
                     
                     .faq-access {
                       font-size: 20px;
+                      position:absolute;
+                      bottom:0;
                     }
 
                 }
@@ -94,30 +106,12 @@
         }
     }
 
-
-  @media(max-width: 800px){
+  @media(max-width: 1103px){
       #faq-news {
         #preview-news {
 
-           ul.news-responsive {
-                display: block;
-                list-style: none;
-                text-align: center;
-                margin-left: 0 !important;
-                padding-left: 0 !important;
-
-                li {
-                  display: block;
-                  font-size: 17px;
-                  font-weight: 700;
-                  line-height: 24px;
-                  margin-top: 0px;
-                }
-              }
-
-              ul.news-img {
                 display:none;
-              }
+            
 
         }
       }

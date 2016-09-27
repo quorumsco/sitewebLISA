@@ -26,6 +26,7 @@
 				}
 
 				li {
+					margin-top: 0px !important;
 					width: 21%;
 					border: 2px solid #9fa4ac;
 					border-radius: 5px;
@@ -33,6 +34,10 @@
 					margin: 8px;
 					text-align: left;
 					padding-left: 20px;
+					// height: 170px !important;
+					vertical-align: top ;
+					// line-height: 1.5em;
+					height: 170px !important;
 					
 					.objectif {
 						font-weight: bold !important;
@@ -50,7 +55,6 @@
 						padding-top: 2px;
 						padding-bottom: 2px;
 					}
-
 
 					.target-name {
 						font-weight: bold;
