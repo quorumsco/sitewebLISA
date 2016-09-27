@@ -135,8 +135,13 @@
           width: 1500px;
         }
 
-
      }
+  }
+@media(min-width: 760px) and (max-width: 768px){
+    #bandeau-newsletter {
+      padding-top: 60px;
+    }
+
   }
 
   @media(max-width: 875px){

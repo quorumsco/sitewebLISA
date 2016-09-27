@@ -98,10 +98,13 @@
   @media(max-width: 800px){
       #faq-news {
         #preview-news {
+
            ul.news-responsive {
                 display: block;
                 list-style: none;
                 text-align: center;
+                margin-left: 0 !important;
+                padding-left: 0 !important;
 
                 li {
                   display: block;

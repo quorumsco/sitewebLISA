@@ -9,7 +9,7 @@ $(document).ready(function() {
         $('.abonnement-btn').html('GO');
     };
 
-    if ($( window ).width() < 485 ) {
+    if ($( window ).width() < 769 ) {
         $('.newsletter-msg').html('');
     };
 
