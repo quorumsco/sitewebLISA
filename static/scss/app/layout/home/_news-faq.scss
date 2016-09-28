@@ -183,6 +183,30 @@
    //    }
    //  }
 
+
+@media(min-width: 425px) and (max-width: 430px){
+
+      #faq-news {
+        #preview-faq {
+          padding-top: 5px;
+
+          h2 { 
+            padding-top: 2px;
+            width: 250px;
+          }
+          ul {
+            li {
+              .faq-access { 
+                position:relative;
+              }
+            }
+          }
+
+        }
+      }
+
+}
+
     @media(min-width: 375px) and (max-width: 380px){
       #faq-news {
         #preview-faq {

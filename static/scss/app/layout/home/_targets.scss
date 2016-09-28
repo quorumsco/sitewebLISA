@@ -143,11 +143,37 @@
 			}
 		}
 	}
+	@media(min-width: 430px) {
+		#target {
+			.container {
+				ul {
+					li{
+						.keywords {
+							display: none;
+						}
+			
+					}
+				}
+			}
+		}
+	}
 	@media(max-width: 425px){
 		#target {
 			.container {
 				ul {
 					li{
+						 width : 30%;
+						 height: 110px !important;
+						 padding-left: 10px;
+						 margin-top: 10px !important;
+						.target-name {
+							display: none;
+						}
+						.description {
+							display: none;
+						}
+
+
 						button{
 							font-size: 18px;
 						}
