@@ -8,11 +8,14 @@
   		}
   		.copyright {
   			// margin-bottom: 20px;
-  			display: inline-block;
+  			display: inline-block !important;
 				
-				.navbar-brand img{
-						width: 30%;
-						border-radius: 100px;
+				.logo-footer{
+						// width: 30%;
+						// border-radius: 100px;
+            float:left !important;
+            margin-top: 25px !important
+      //       width: 182px;
 				}
   		}
   		ul{
