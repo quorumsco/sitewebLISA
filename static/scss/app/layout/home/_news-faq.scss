@@ -210,9 +210,23 @@
     @media(min-width: 375px) and (max-width: 380px){
       #faq-news {
         #preview-faq {
+          padding-top: 5px; 
             margin-left: 0;
             margin-right: 0;
             width: 397px !important;
+
+          h2 { 
+            padding-top: 2px;
+            width: 250px;
+          }
+
+          ul {
+            li {
+              .faq-access { 
+                position:relative;
+              }
+            }
+          }
         }
       }
     }
@@ -222,10 +236,24 @@
         #preview-faq {
             margin-left: 0;
             margin-right: 0;
-            width: 345px !important;
+            width: 320px !important;
+            padding-top: 5px;
+
+          h2 { 
+            padding-top: 2px;
+            width: 250px;
+          }
+
+          ul {
+            li {
+              .faq-access { 
+                position:relative;
+              }
+            }
         }
       }
     }
+  }
 
 
 

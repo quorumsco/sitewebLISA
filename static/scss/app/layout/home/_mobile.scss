@@ -146,6 +146,8 @@
             div.container { 
             	padding-left: 15px;
 
+            	margin-top: -60px;
+
             	text-align: center;
 
             	h2 {
@@ -158,9 +160,10 @@
     @media(min-width: 320px) and (max-width: 325px) {
         #mobile {
         	background: none;
+        	max-width: 320px !important;
 
         	div.container { 
-        		padding-left: 15px;
+        		// padding-left: 15px;
             	text-align: center;
 
             	h2 {

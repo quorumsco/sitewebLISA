@@ -125,6 +125,13 @@
         }
     }
 
+    @media(min-width: 425px) and (max-width: 430px) {
+         #icons {
+            margin-top: -20px;
+            margin-bottom: -30px;
+        }
+    }
+
     @media(min-width: 375px) and (max-width: 380px){
         #icons {
             margin-top: -20px;
@@ -134,8 +141,8 @@
 
     @media(min-width: 320px)  and (max-width: 330px) {
         #icons {
-
-            margin-left: -65px; 
+            max-width:320px !important;
+            margin-left: -40px; 
             margin-top: -20px;
             li {
                 img {

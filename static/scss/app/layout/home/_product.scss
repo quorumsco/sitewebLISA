@@ -181,13 +181,16 @@
 
     @media(min-width: 375px) and (max-width: 380px) {
         main {
-            width:375px;
+            width:397px;
         }
     }
 
     @media(min-width: 320px) and (max-width: 370px){
         main {
             width:320px;
+        }
+        nav {
+            width: 320px !important;
         }
     }
 }
