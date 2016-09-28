@@ -10,13 +10,25 @@
 	  		width: 60%;
 	  		padding-left:60px;
 
-	  		h2 {
-			font-size: 20px;
-			font-weight: 700;
-			line-height: 24px;
-             border-bottom: 40px;
+          .titre-formulaire {
+            margin-top: 40px;
+            margin-bottom: 44px;
+            display: block;
+            text-align:center;
+          }
+          
+          h2 {
+              color: #fff;
+              font-size: 17px;
+              font-weight: 700;
+              line-height: 24px;
+              background-color: #00989d;
+              width: 150px;
+              transform: rotate(-3deg);
+              padding-top: 3px;
+              margin:auto;
 
-	  		}
+            }
 
 	  		input {
 	  			width :700px;
@@ -63,13 +75,8 @@
 
 				}
 
-
-	  			margin-top : 20px !important;
-
-
 	  			padding-left: 20px;
 	  			padding-right: 20px;
-	  			padding-top: 10px;
 	  			padding-bottom:10px;
 
 		  		p {
@@ -79,14 +86,24 @@
 		  		}
 
 
-		  		h2 {
-		  		  color: black;
-	              font-size: 20px;
-	              font-weight: lighter !important;
-
-
-
-		  		}
+          .titre-postal {
+            margin-top: 40px;
+            margin-bottom: 44px;
+            display: block;
+            text-align: center;
+          }
+            
+            h2 {
+                background-color: #20bffb;
+                font-size: 17px;
+                font-weight: 700;
+                line-height: 24px;
+                width:210px;
+                transform: rotate(-3deg);
+                padding-top: 3px;
+                margin:auto;
+                color:#fff;
+            }
 	  		}
 
 	  	}
@@ -108,6 +125,7 @@
 		}
 
 	}
+
 	// @media(min-width: 1024px){
 		
 	// 	#contact {
@@ -127,6 +145,7 @@
 	// 	}
 
 	// }
+
 	@media(max-width: 780px){
 		
 		#contact {

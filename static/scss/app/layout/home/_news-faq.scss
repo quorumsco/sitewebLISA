@@ -1,6 +1,6 @@
 @include exports('news-faq') {
     #faq-news {
-        padding-top: 0;
+        padding-top: 0px;
         .container {
             float: left;
             width: 50%;
@@ -15,14 +15,22 @@
           ul.news-responsive {
             display: none;
           }
-
+          .derniere-actu {
+            margin-top: 40px;
+            margin-bottom: 44px;
+            display: block;
+          }
             h2 {
-              color: #00989d;
-              font-size: 20px;
+              color: #fff;
+              font-size: 17px;
               font-weight: 700;
               line-height: 24px;
-              margin-top: 40px;
-              margin-bottom: 44px;
+              background-color: #00989d;
+              width: 300px;
+              transform: rotate(-3deg);
+              padding-top: 3px;
+              margin:auto;
+
             }
             ul {
                 
@@ -65,13 +73,22 @@
             height: 100%;
             position: relative;
 
+          .question-freq {
+            margin-top: 40px;
+            margin-bottom: 44px;
+            display: block;
+          }
+            
             h2 {
-                color: #20bffb;
-                font-size: 20px;
+                background-color: #20bffb;
+                font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;
-                margin-top: 40px;
-                margin-bottom: 44px;
+                width:300px;
+                transform: rotate(-3deg);
+                padding-top: 3px;
+                margin:auto;
+                color:#fff;
             }
             ul {
 
