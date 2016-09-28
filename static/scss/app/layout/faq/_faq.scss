@@ -10,8 +10,16 @@
 	}
 	#faq {
 		#titleFaq {
-			background-color: #31949a;
-			color: white;
+			  display: block;
+			  color: #fff;
+              font-size: 25px;
+              font-weight: 700;
+              line-height: 24px;
+              background-color: #00989d;
+              width: 70px;
+              transform: rotate(-3deg);
+              padding-top: 3px;
+              margin:auto;
 		}
 		.subtitle {
 			font-size: 1.4em;
@@ -76,6 +84,33 @@
 			position: absolute;
 			right: 1px;
 			top: 50px !important;
+		}
+	}
+
+	@media(max-width: 425px) {
+		#faq {
+
+			.fa-angle-double-down {
+				display: block;
+				float: right;
+				position: absolute !important;
+				margin-top: -25px;
+			}
+
+			.first {
+				max-width: 280px !important;
+			}
+		}
+	}
+
+
+	@media(max-width: 320px) {
+		#faq {
+
+
+			.first {
+				max-width: 220px !important;
+			}
 		}
 	}
 }
