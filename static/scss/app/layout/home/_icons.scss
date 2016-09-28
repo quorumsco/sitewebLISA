@@ -1,21 +1,31 @@
 @include exports ('icons') {
     #icons {
-        li {
-            position: relative;
-            display: inline;
-            margin: 0 70px;
-            opacity: 0.5;
-            &.active {
-                opacity: 1;
-            }
-            &:hover:not(.active) {
-                cursor: pointer;
-                opacity: 1;
-            }
-            p {
-                position: absolute;
-                top: 5px;
-                left: 6%;
+        margin-top: 30px;
+        h1 {
+            font-size: 25px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        ul {
+            margin-top: 60px !important;
+            li {
+                position: relative;
+                display: inline-block;
+                margin: 0 70px;
+                opacity: 0.5;
+                &.active {
+                    opacity: 1;
+                }
+                &:hover:not(.active) {
+                    cursor: pointer;
+                    opacity: 1;
+                }
+                // p {
+                //     position: absolute;
+                //     top: 20px;
+                //     left: 30%;
+                // }
             }
         }
     }
