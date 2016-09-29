@@ -10,9 +10,10 @@
 		
 		h2 {
 			font-size: 22px;
-			text-align: right;
-			margin-top: 68px;
+			text-align: left;
+			margin-top: 28px;
 			margin-bottom: 0;
+
 		}
 		
 		.sentence { 
@@ -22,7 +23,7 @@
 			line-height: 20px;
 			
 			.part {
-				font-size: 16px;;
+				font-size: 16px;
 			}
 			
 			&:last-of-type {
@@ -30,15 +31,24 @@
 			}
 		}
 		.container {
-			// margin-left:3%;
+			margin-top: -80px;
 			float:left;
 			width: 43%;
-			text-align: right;
-			margin-right: 8%; 
+			text-align: left;
+			margin-left: 8%; 
+
+			ul {
+				margin-bottom: 0px !important;
+				margin-top: 20px !important;
+			}
 		}
-		.sentence {
-			display: inline-block;
+		.content {
+			.last{
+				margin-bottom: 40px !important;
+				display: block;
+			}
 		}
+
 
 		div[id^="content-icon-"]:not(.active) {
 			display: none;
@@ -134,7 +144,24 @@
 
 	@media(min-width: 425px) and (max-width: 430px) {
 		#mobile {
+			margin-top: 100px;
 			background: none;
+			margin-bottom: 50px;
+			div.container{
+				min-width:425px !important;
+				margin-right: 0 !important;
+				text-align: left;
+
+				ul {
+					li {
+						width: 300px;
+					}
+				}
+				h2 {
+					text-align: left;
+				}
+			}
+			
 		}
 	}
 
@@ -161,7 +188,7 @@
         #mobile {
         	background: none;
         	max-width: 320px !important;
-
+			
         	div.container { 
         		// padding-left: 15px;
             	text-align: center;
@@ -169,6 +196,8 @@
             	h2 {
             		text-align: center;
             	}
+
+
         	}
         }
     }
