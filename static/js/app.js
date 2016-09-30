@@ -334,34 +334,34 @@ $(document).ready(function(){
                     } else {
                         var legendPosition = 'right';
                     }
-                        var chart = c3.generate({
-                            data: {
-                                columns: [
-                                    ['Information Technology', 30],
-                                    ['Social & Cognitive Sciences', 20] ,
-                                    ['Data Sciences', 20],
-                                    ['Field & Customer Officers', 20],
-                                    ['Data Vizualisation', 5],
-                                    ['Communication Officers', 5]
-                                ],
-                                type: 'donut'
-                            },
-                            legend: {
-                                    position: legendPosition
-                            },
-                            donut: {
-                                label: {
-                                    format: function (value, ratio, id) {
-                                        return "";
-                                    }
-                                }
-                            },
-                            color: {
-                                //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
-                                pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
-                                //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
-                            }
-                        });
+                        // var chart = c3.generate({
+                        //     data: {
+                        //         columns: [
+                        //             ['Information Technology', 30],
+                        //             ['Social & Cognitive Sciences', 20] ,
+                        //             ['Data Sciences', 20],
+                        //             ['Field & Customer Officers', 20],
+                        //             ['Data Vizualisation', 5],
+                        //             ['Communication Officers', 5]
+                        //         ],
+                        //         type: 'donut'
+                        //     },
+                        //     legend: {
+                        //             position: legendPosition
+                        //     },
+                        //     donut: {
+                        //         label: {
+                        //             format: function (value, ratio, id) {
+                        //                 return "";
+                        //             }
+                        //         }
+                        //     },
+                        //     color: {
+                        //         //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
+                        //         pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
+                        //         //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
+                        //     }
+                        // });
                 }
             });
         }
@@ -407,43 +407,43 @@ $(document).ready(function(){
     } else {
         var legendPosition = 'inset';
     }
-    var chart = c3.generate({
-        data: {
-            columns: [
-                ['Information Technology', 30],
-                ['Social & Cognitive Sciences', 20] ,
-                ['Data Sciences', 20],
-                ['Field & Customer Officers', 20],
-                ['Data Vizualisation', 5],
-                ['Communication Officers', 5]
-            ],
-            type: 'donut'
-        },
-        legend: {
+    // var chart = c3.generate({
+    //     data: {
+    //         columns: [
+    //             ['Information Technology', 30],
+    //             ['Social & Cognitive Sciences', 20] ,
+    //             ['Data Sciences', 20],
+    //             ['Field & Customer Officers', 20],
+    //             ['Data Vizualisation', 5],
+    //             ['Communication Officers', 5]
+    //         ],
+    //         type: 'donut'
+    //     },
+    //     legend: {
                 
-                show: true,
-                position: legendPosition,
-                inset: {
-                    anchor: 'right',
-                    x: 450,
-                    y: 220,
-                    step: 10,
-                  }
-        },
-        donut: {
-            label: {
-                format: function (value, ratio, id) {
-                    return "";
-                }
-            }
-        },
-        color: {
-            //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
-            // pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
-            pattern: ['#47B6FF', '#33cd5f','#ffc900','#ef473a', '#8D66F3', '#8f8e94', '#20BFFB', '#00D19C']
-            //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
-        }
-    });
+    //             show: true,
+    //             position: legendPosition,
+    //             inset: {
+    //                 anchor: 'right',
+    //                 x: 450,
+    //                 y: 220,
+    //                 step: 10,
+    //               }
+    //     },
+    //     donut: {
+    //         label: {
+    //             format: function (value, ratio, id) {
+    //                 return "";
+    //             }
+    //         }
+    //     },
+    //     color: {
+    //         //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
+    //         // pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
+    //         pattern: ['#47B6FF', '#33cd5f','#ffc900','#ef473a', '#8D66F3', '#8f8e94', '#20BFFB', '#00D19C']
+    //         //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
+    //     }
+    // });
         
     // GoTop arrow in aboutv2.html    
     $('.go-top').click(function(event){
@@ -626,15 +626,16 @@ $(document).ready(function(){
     });
 
 
-    var mymap = L.map('carte').setView([48.505, -0.5], 13);
+    var map = L.map('carte');
 
-
-     L.tileLayer('//{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
-    minZoom: 1,
-    maxZoom: 20
-}).addTo(mymap);
-
+     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>',
+        minZoom: 1,
+        maxZoom: 20
+    }).addTo(map);
+     
+     map.setView([44.8435522,-0.5756165], 15);
+     var marker = L.marker([44.843594,-0.572905]).addTo(map);
     
 });
 

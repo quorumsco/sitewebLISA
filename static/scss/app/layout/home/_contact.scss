@@ -1,9 +1,7 @@
 @include exports('contact') {
 	#contact {
 
-		#carte {
-			height:250px;
-		}
+
 		
 		padding-bottom: 50px;
 
@@ -63,7 +61,6 @@
 	  			margin-top: 30px;
 	  		}
 
-
 	  	}
 
 	  	#adress-postale {
@@ -71,7 +68,13 @@
 	  		text-align:left;
 	  		float:left;
 	  		width: 30%;
+			 
+			 #carte {
+					height:150px;
+					margin-bottom: 25px;
+					margin-top: -10px;
 
+				}
 
 	  		#cadre-pop {
 				
