@@ -536,7 +536,7 @@ $(document).ready(function(){
       $(this).addClass('active');
       $("#mobile").fadeOut(0, function(){
         if ($( window ).width() > 1109 ) {
-             $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+             $("#mobile").css("background-image", "url(../images/home/view-web.png)");
         }
         $("#icon-1").addClass('active');
         $("#mobile").fadeIn("slow");
@@ -610,10 +610,30 @@ $(document).ready(function(){
     // Effet du texte tapé comme sur le site de Slack pour le h2 du premier témoignage
     $(".highlight-span").typeIt({
       speed: 55,
-      autoStart: true
+      autoStart: true,
+      callback : function () {
+
+        $(".underline").each(function(){
+            $(this).animate({ 
+                // opacity:0.25
+                borderBottomWidth: '3px'
+
+            }, 500 );
+        });
+
+      }
+
     });
 
 
+    var mymap = L.map('carte').setView([48.505, -0.5], 13);
+
+
+     L.tileLayer('//{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+    minZoom: 1,
+    maxZoom: 20
+}).addTo(mymap);
 
     
 });

@@ -25,6 +25,15 @@
 					font-size: 0.9em;
 				}
 
+				hr {
+					border:1px solid #0f949a;
+					width: 60px;
+					margin-left: 0px;
+					margin-top: -15px;
+					border-radius: 100px;
+
+				}
+
 				li {
 					margin-top: 0px !important;
 					width: 18%;
@@ -38,12 +47,22 @@
 					// height: 170px !important;
 					vertical-align: top ;
 					// line-height: 1.5em;
-					height: 190px !important;
+					height: 195px !important;
 					
 					.objectif {
-						font-weight: bold !important;
-						font-size: 1em;
-						color:black;
+						// font-weight: bold !important;
+						// font-size: 1em;
+						font-size: 14px;
+						color:#000;
+						// text-transform: uppercase;
+						// text-decoration: underline;
+						// text-align: center;
+						padding-top: 5px;
+						padding-bottom: 5px;
+						font-family: 'ProximaNova-Bold';
+        				src:url('../fonts/ProximaNova-Bold.otf');
+
+
 					}
 
 					.active-box {
@@ -80,9 +99,15 @@
 					}
 					
 					.objectif {
-						font-weight: bold !important;
-						font-size: 1em;
-						color:white;
+						font-size: 14px;
+						color:#fff;
+						// text-transform: uppercase;
+						// text-decoration: underline;
+						// text-align: center;
+						padding-top: 5px;
+						padding-bottom: 5px;
+						font-family: 'ProximaNova-Bold';
+        				src:url('../fonts/ProximaNova-Bold.otf');
 					}
 
 					.active-box {

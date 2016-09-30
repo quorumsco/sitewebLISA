@@ -12,18 +12,17 @@ block content
 
                 #testimony-1.active
 
-                    h2 L'application qui a permis à l'équipe de 
-                        span.underline mobiliser 
-                        span.highlight-span plus efficacement,  rue après rue, citoyen après citoyen.
+                    h2 L'application qui a permis à l'équipe de <span class="underline">mobiliser</span> &nbsp;
+                        span.highlight-span  plus efficacement,  <span class="underline">rue après rue</span> , <span class="underline">citoyen après citoyen</span>.
 
                     span.quote L'équipe derrière Sébastien Saint Pasteur est l'une des équipes qui a utilisé Quorum dans leurs actions de mobilisation au quotidien ; les rendant plus fluides et plus efficaces pour ainsi se focaliser sur l’essentiel : la rencontre.
 
                 #testimony-2
-                    h2  L’application qui permet  de construire une équipe de bénévole impliqués à l'écoute  de chaque personne rencontrée.
+                    h2  L’application qui permet  de construire une équipe de <span class="underline">bénévole impliqués</span>  à l'écoute  de chaque personne rencontrée.
                     span.quote  Les Jours heureux est un mouvement qui fait intervenir différentes organisations de la société civile.  Il publie en novembre 2016 “Et nous vivrons des jours heureux” 120 propositions pour une nouvelle société.
                     
                 #testimony-3
-                    h2  L’application qui permet de proposer à ses clients un logiciel pour mobiliser sur le terrain, en délivrant la bonne information.
+                    h2  L’application qui permet de proposer à ses clients un logiciel pour <span class="underline">mobiliser sur le terrain</span> , en délivrant <span class="underline">la bonne information</span>.
                     span.quote  Tell & Charrier est une agence de communication spécialisée dans le secteur public qui intègre Quorum à son offre. Ils ont compris qu’aujourd’hui s’équiper des dernières technologies n’est plus simplement une pièce du puzzle, mais un bloc structurant de la stratégie, quelque soit la taille de l'organisation.
               
                 hr.hr-testimony
@@ -64,29 +63,33 @@ block content
                 ul
                     li(onclick="location.href='http://google.fr';")
                       p.objectif Equipes de campagne
+                      hr
                       p.target-name Candidats aux élections et collectifs
                       p.description Je veux mobiliser les citoyens et mes électeurs.
                       p.keywords Mobiliser les électeurs
                     li(onclick="location.href='http://google.fr';")
                       p.objectif  Associations, ONG
+                      hr
                       p.target-name  Associations, mouvements, syndicats, et individuels
                       p.description Je veux sensibiliser le public à ma cause, recruter de nouveaux bénévoles ou donateurs.
                       p.keywords Sensibiliser, Recruter bénévoles et donateurs
                     li(onclick="location.href='http://google.fr';")
                       p.objectif Collectivités
+                      hr
                       p.target-name Administration publique, locales et groupes privés
                       p.description Je veux gérer efficacement la relation citoyenne, interroger le terrain et analyser pour comprendre.
                       p.keywords Gérer la relation citoyenne, Interroger, Analyser
                     li(onclick="location.href='http://google.fr';")
                       p.objectif Agences de communication, consultants
-                      p.target-name  Agence de communication, data, consultants indépendants
+                      hr
+                      p.target-name  Agence de communication, consultants indépendants
                       p.description Je veux intégrer Quorum à mon offre de service ou devenir partenaire.
                       p.keywords Devenir Partenaire
                         
         section#schema.hide
             .container
                 span.img-schema
-                    img(src="../images/schema.png")
+                    img(src="../images/schema-3.png")
             
             
         section#icons.hide
@@ -96,8 +99,8 @@ block content
                 ul
                     li#icon-1
                         img(src="../images/icons/icon2.png")
-                        p Ordinateur
-                    li#icon-2
+                        p Web
+                    li#icon-2.active
                         img(src="../images/icons/icon3.png")
                         p Mobile
 
@@ -254,6 +257,7 @@ block content
             .container#form-contact
                 span.titre-formulaire
                     h2 ECRIVEZ-NOUS
+                
 
                 form(action='https://formspree.io/info@quorum-impact.com', method='post')
 
@@ -274,9 +278,10 @@ block content
 
             .container#adress-postale
                 #cadre-pop
-
+                    
                     span.titre-postal
                         h2 RENDEZ-NOUS VISITE
+                    div#carte
 
                     p
                         a(href="tel:+33179734004") +33 1 79 73 40 04
