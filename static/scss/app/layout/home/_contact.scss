@@ -1,7 +1,5 @@
 @include exports('contact') {
 	#contact {
-
-
 		
 		padding-bottom: 50px;
 
@@ -179,6 +177,22 @@
 			#adress-postale {
 				float: none;
 				width: 60%;
+			}
+		}
+
+	}
+
+	@media(min-width: 320px) and (max-width: 370px){ 
+		#contact {
+
+			#adress-postale {
+					p {
+						padding-left: 30px !important;
+					}
+					p:first-child {
+						margin-top: 20px;
+					}
+                    
 			}
 		}
 

@@ -637,6 +637,7 @@ $(document).ready(function(){
      map.setView([44.8435522,-0.5756165], 15);
      var marker = L.marker([44.843594,-0.572905]).addTo(map);
     
+    $('#debbug').html($( window ).width());
 });
 
 

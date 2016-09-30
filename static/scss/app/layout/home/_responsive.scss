@@ -1,0 +1,61 @@
+@include exports('responsive') { 
+	
+	main {
+		width: 100%;
+	}
+
+// /* iPhone 4 */
+// @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+// 	main {
+// 		width : 100vw !important;
+// 	}
+// }
+
+
+@media (min-width: 359px) and (max-width: 365px){
+	main {
+		width: 360px !important;
+	}
+	body {
+		width: 360px !important 
+	}
+	nav {
+		width: 360px !important;
+	}
+
+	#target {
+
+
+	} 
+
+}
+
+/* iPhone 5 */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+	main {
+		width: 320px !important;
+	}
+	body {
+		width: 320px !important;
+	}
+
+	nav {
+		width: 320px !important;
+	}
+
+
+}
+
+// /* iPhone 6 */
+// @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+
+// 	main {
+// 		width: 100vw !important;
+// 	}
+
+// }
+
+
+
+
+}

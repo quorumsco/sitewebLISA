@@ -177,5 +177,23 @@
 
   }
 
+    @media(min-width: 320px) and (max-width: 370px){ 
+        
+        #bandeau-newsletter {
+          margin-top: -20px;
+
+
+            .input-newsletter {
+
+            margin-left: 20px !important;
+          }
+        }
+
+
+
+
+
+     }
+
 
 }

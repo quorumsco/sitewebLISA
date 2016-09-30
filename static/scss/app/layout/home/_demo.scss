@@ -50,5 +50,21 @@
         }
     }
 
+    @media(min-width: 320px) and (max-width: 370px){ 
+      #get-demo {
+        margin-top: 0px;
+        h2 {
+          margin-top :0px;
+        }
+        button { 
+          width:250px;
+            & a {
+                font-size: 17px !important;
+              }
+        }
+
+      }  
+     }
+
 
 }

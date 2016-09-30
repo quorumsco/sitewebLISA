@@ -148,7 +148,6 @@
 			background: none;
 			margin-bottom: 50px;
 			div.container{
-				min-width:425px !important;
 				margin-right: 0 !important;
 				text-align: left;
 
@@ -187,15 +186,17 @@
     @media(min-width: 320px) and (max-width: 325px) {
         #mobile {
         	background: none;
-        	max-width: 320px !important;
-			
-        	div.container { 
-        		// padding-left: 15px;
-            	text-align: center;
+        	margin-top: 40px;
+        	margin-bottom: 60px;
 
-            	h2 {
-            		text-align: center;
-            	}
+        	.sentence {
+        		margin-left: -30px;
+        	}
+
+        	div.container { 
+        		max-width: 320px !important;
+        		// padding-left: 15px;
+
 
 
         	}

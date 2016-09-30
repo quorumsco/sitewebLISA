@@ -56,10 +56,6 @@
     @media(max-width: 840px){
         #icons {
 
-            div.container { 
-                max-width: 100vw;
-                width: 100vw;
-            }
             ul {
 
                 margin-left: -20px;
@@ -169,19 +165,27 @@
 
     @media(min-width: 320px)  and (max-width: 330px) {
         #icons {
-            max-width:320px !important;
             margin-top: -20px;
+
             ul {
 
+                margin-left:-40px !important;
+                
+
                 li#icon-1 {
-                    margin: 0px !important;
+                    margin-right: 20px;
                 }
                 li {
+                    margin:0;
+                    position: static;
+                    display: inline-block;
+
                     img {
 
-                        width:40px !important;
+                        width:60px !important;
                     }
                     p {
+                        padding-left: 20px;
                         font-size: 13px !important;
                         // margin-left: -22px !important;
                     }

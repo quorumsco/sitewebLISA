@@ -213,4 +213,18 @@
 			}
 		}
 	}
+
+
+	@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+		#target {
+			.container {
+				ul {
+					li {
+						height: 150px !important;
+					}
+				}
+			}
+		}
+
+	}
 }
