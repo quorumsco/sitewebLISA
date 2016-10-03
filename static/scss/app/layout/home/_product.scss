@@ -207,4 +207,20 @@
         }
 
     }
+
+/* iPhone 6 */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    
+    #product {
+        margin-top: 25px;
+        .container {
+            width: 305px !important;
+            padding-left: 10px;
+            padding-right: 5px;
+        }
+
+    }
+
+}
+
 }

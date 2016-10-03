@@ -23,10 +23,6 @@
 		width: 360px !important;
 	}
 
-	#target {
-
-
-	} 
 
 }
 
@@ -43,17 +39,24 @@
 		width: 320px !important;
 	}
 
-
 }
 
-// /* iPhone 6 */
-// @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* iPhone 6 */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
 
-// 	main {
-// 		width: 100vw !important;
-// 	}
+	main {
+		width: 375px !important;
+	}
+	body {
+		width: 375px !important;
+	}
 
-// }
+	nav {
+		width: 375px !important;
+	}
+
+
+}
 
 
 

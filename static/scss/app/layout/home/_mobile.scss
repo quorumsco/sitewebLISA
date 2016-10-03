@@ -170,15 +170,27 @@
             background: none;
 
             div.container { 
-            	padding-left: 15px;
+
 
             	margin-top: -60px;
 
-            	text-align: center;
+            	text-align: left;
 
             	h2 {
-            		text-align: center;
+            		text-align: left;
             	}
+            	 ul {
+            	 	li {
+            	 		max-width: 250px;
+            	 	}
+            	 }
+				.content {
+
+					.last {
+            	 	margin-bottom: 20px;
+            	 }
+				}
+
             }
         }
     }

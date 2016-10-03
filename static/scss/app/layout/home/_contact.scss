@@ -197,4 +197,22 @@
 		}
 
 	}
+
+
+    @media (min-width: 375px) and (max-width: 385px){
+		#contact {
+
+			#adress-postale {
+					p {
+						padding-left: 30px !important;
+					}
+					p:first-child {
+						margin-top: 20px;
+					}
+                    
+			}
+		}
+
+	}
+
 }

@@ -196,4 +196,39 @@
     }
 
 
+    @media (min-width: 375px) and (max-width: 385px){
+    
+            #icons {
+
+            ul {
+
+                margin-left:-40px !important;
+                
+
+                li#icon-1 {
+                    margin-right: 20px;
+                }
+                li {
+                    margin:0;
+                    position: static;
+                    display: inline-block;
+
+                    img {
+
+                        width:60px !important;
+                    }
+                    p {
+                        padding-left: 20px;
+                        font-size: 13px !important;
+                        // margin-left: -22px !important;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+
 }
