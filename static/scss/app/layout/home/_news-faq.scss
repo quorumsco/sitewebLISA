@@ -78,9 +78,11 @@
             margin-bottom: 44px;
             display: block;
           }
+
+    
             
             h2 {
-                background-color: #20bffb;
+                background-color: #eb3459;
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;
@@ -89,25 +91,29 @@
                 padding-top: 3px;
                 margin:auto;
                 color:#fff;
+
             }
             ul {
-
+                margin-top: 50px;
                 list-style: none;
                 li {
-                    font-size: 22px;
+                    font-size: 17px;
                     font-weight: 700;
                     line-height: 26px;
                     text-align: left;
                     text-decoration: none;
 
 
+
                     .preview-question {
                         font-weight: bold;
                         margin-bottom: 0px !important;
+                        font-family: 'ProximaNova-Bold';
+                         src:url('../fonts/ProximaNova-Bold.otf');
                     }
 
                     .answer {
-                      font-size: 16px;
+                      font-size: 17px;
                       margin-top: 5px !important;
                       padding-right: 50px;
                     }

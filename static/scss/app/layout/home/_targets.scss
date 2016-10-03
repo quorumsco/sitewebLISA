@@ -10,7 +10,13 @@
 			margin-top: 60px;
 			margin-bottom: 60px;
 			h2{
-				padding: 0 10px;	
+				padding: 0 10px;
+				font-family: 'ProximaNova-Regular';
+        		src:url('../fonts/ProximaNova-Regular.otf');	
+			}
+			.bold {
+				font-family: 'ProximaNova-Bold';
+        		src:url('../fonts/ProximaNova-Bold.otf');
 			}
 			ul {
 				margin-bottom: 40px;

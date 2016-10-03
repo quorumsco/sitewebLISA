@@ -23,7 +23,7 @@
               font-size: 17px;
               font-weight: 700;
               line-height: 24px;
-              background-color: #00989d;
+              background-color: #eb3459;
               width: 150px;
               transform: rotate(-3deg);
               padding-top: 3px;
@@ -50,13 +50,17 @@
 	  		}
 
 	  		button {
-	  			background-color:  #eb3459 !important;
+	  			background-color:  #00bfff !important;
+	  			
 	  			width: 230px;
 	  			height: 30px;
 	  			padding-top: 6px !important;
 	  			display: block;
 	  			margin-left: 150px;
 	  			margin-top: 30px;
+	  		}
+	  		button:hover {
+	  			background-color:  #eb3459 !important;
 	  		}
 
 	  	}
@@ -111,7 +115,7 @@
           }
             
             h2 {
-                background-color: #20bffb;
+                background-color: #00989d;
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;

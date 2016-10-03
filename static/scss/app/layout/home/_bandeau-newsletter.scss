@@ -48,12 +48,16 @@
         button {
           width: 226px;
           height: 64px;
-          background-color: #eb3954;
+          background-color: #00bfff;
           border-radius: 4px;
           padding:0;
           font-size: 26px;
           font-weight: 700;
           line-height: 31px;
+        }
+
+        button:hover {
+          background-color:  #eb3459 !important;
         }
 
         .description-newsletter {
