@@ -270,6 +270,22 @@
 
     }
 
+    /* Ipad */
+
+    @media (min-width: 768px) and (max-width: 780px) {
+        #icons {
+            margin-bottom: 20px !important;
+            h1 {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            h3 {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+    }
 
 
 }

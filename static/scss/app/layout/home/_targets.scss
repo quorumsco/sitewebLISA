@@ -253,6 +253,22 @@
 				}
 			}
 		}
-
 	}
+
+	/* Ipad */
+
+    @media (min-width: 768px) and (max-width: 780px) {
+	#target {
+		.container {
+			ul {
+				li {
+					height: 250px !important;
+				}
+			}
+		}
+	}  	
+    }
+
+
+
 }

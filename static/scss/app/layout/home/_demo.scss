@@ -52,7 +52,7 @@
 
     @media(min-width: 320px) and (max-width: 370px){ 
       #get-demo {
-        margin-top: 0px;
+        margin-top: 0px !important;
         h2 {
           margin-top :0px;
         }

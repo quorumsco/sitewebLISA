@@ -228,6 +228,17 @@
     
     }
 
+        @media (min-width: 768px) and (max-width: 780px) { 
+
+		    	#mobile {
+		    		background:none;
+		    		margin-top: 60px;
+		    		margin-bottom: 60px;
+
+
+		    	}
+        }
+
 	// @media(max-width: 2301px) {
 	// 	#mobile {	
 	// 		background-position: 25%;

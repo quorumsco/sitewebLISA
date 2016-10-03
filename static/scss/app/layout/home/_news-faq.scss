@@ -213,6 +213,7 @@
           padding-top: 5px; 
             margin-left: 0;
             margin-right: 0;
+            margin-bottom: -20px !important;
 
           h2 { 
             padding-top: 2px;
@@ -236,6 +237,7 @@
             margin-left: 0;
             margin-right: 0;
             padding-top: 5px;
+            margin-bottom: -20px !important;
 
           h2 { 
             padding-top: 2px;
@@ -260,6 +262,7 @@
         margin-left: 0;
         margin-right: 0;
         padding-top: 5px;
+        margin-bottom: -20px !important;
 
         h2 {
           padding-top: 3px;
@@ -267,7 +270,7 @@
 
         }
 
-                  ul {
+        ul {
             li {
               .faq-access { 
                 position:relative;
@@ -280,6 +283,30 @@
 
 
   }
+
+
+    @media (min-width: 768px) and (max-width: 780px) { 
+
+
+    #faq-news {
+      #preview-faq {
+
+        max-height: 500px;
+
+
+        ul {
+            li {
+              .faq-access { 
+                position:relative;
+              }
+            }
+        }
+
+      }
+    }
+
+
+    }
 
 
 

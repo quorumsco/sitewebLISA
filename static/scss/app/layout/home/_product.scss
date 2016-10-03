@@ -227,4 +227,18 @@
         }
     }
 
+/* Ipad */
+
+    @media (min-width: 768px) and (max-width: 780px) {
+        #product {
+
+            .container {
+                    width:700px !important;
+                    padding-left: 15px !important;
+                    padding-right: 15px !important;
+
+            }
+
+        }
+    }
 }

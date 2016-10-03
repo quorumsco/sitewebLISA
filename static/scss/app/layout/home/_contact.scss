@@ -230,4 +230,22 @@
 
     }
 
+    @media (min-width: 768px) and (max-width: 780px) { 
+
+		#contact {
+
+			#adress-postale {
+					p {
+						padding-left: 30px !important;
+					}
+					p:first-child {
+						margin-top: 40px !important;
+					}
+                    
+			}
+		}
+    }
+
+
+
 }
