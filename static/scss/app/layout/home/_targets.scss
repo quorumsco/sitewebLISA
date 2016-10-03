@@ -242,4 +242,17 @@
 		}
 
 	}
+	/* iPhone 6+ */
+    @media (min-width: 414px) and (max-width: 425px){
+			#target {
+			.container {
+				ul {
+					li {
+						height: 120px !important;
+					}
+				}
+			}
+		}
+
+	}
 }

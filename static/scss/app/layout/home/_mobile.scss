@@ -186,7 +186,7 @@
             	 }
 				.content {
 
-					.last {
+				.last {
             	 	margin-bottom: 20px;
             	 }
 				}
@@ -198,7 +198,7 @@
     @media(min-width: 320px) and (max-width: 325px) {
         #mobile {
         	background: none;
-        	margin-top: 40px;
+        	margin-top: 80px;
         	margin-bottom: 60px;
 
         	.sentence {
@@ -213,6 +213,19 @@
 
         	}
         }
+    }
+    
+    @media (min-width: 414px) and (max-width: 425px){
+
+    	#mobile {
+    		background:none;
+    		margin-top: 40px;
+    		margin-bottom: 60px;
+
+
+    	}
+
+    
     }
 
 	// @media(max-width: 2301px) {

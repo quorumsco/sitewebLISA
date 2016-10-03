@@ -191,7 +191,7 @@
 
 
 
-
+/* iPhone 5 */
     @media(min-width: 320px) and (max-width: 370px){
         #product {
             margin-top: 25px;
@@ -209,18 +209,22 @@
     }
 
 /* iPhone 6 */
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    
-    #product {
-        margin-top: 25px;
-        .container {
-            width: 305px !important;
-            padding-left: 10px;
-            padding-right: 5px;
+    @media (min-width: 375px) and (max-width: 385px){   
+        #product {
+            margin-top: 25px;
+            .container {
+                width: 305px !important;
+                padding-left: 10px;
+                padding-right: 5px;
+            }
+
         }
-
     }
-
-}
+/* iPhone 6+ */
+    @media (min-width: 414px) and (max-width: 425px){
+        #product {
+            margin-top: 70px;
+        }
+    }
 
 }

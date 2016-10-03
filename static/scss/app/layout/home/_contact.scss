@@ -215,4 +215,19 @@
 
 	}
 
+    @media (min-width: 414px) and (max-width: 425px){
+	
+	#contact {
+		#adresse-postale {
+			width: 414px;
+
+			p:first-child {
+				margin-top: 20px !important;
+			}
+
+		}
+	}
+
+    }
+
 }

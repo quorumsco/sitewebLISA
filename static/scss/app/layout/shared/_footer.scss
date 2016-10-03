@@ -109,4 +109,16 @@
             }
         }   
     }
+
+    @media(max-width: 425px) {
+      #footer {  
+
+        .copyright {
+          .logo-footer {
+            float:none !important;
+            margin-top: 20px !important; 
+          }
+        }
+      }
+    }
 }
