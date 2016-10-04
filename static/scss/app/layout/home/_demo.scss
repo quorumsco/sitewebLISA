@@ -56,10 +56,12 @@
     @media(min-width: 320px) and (max-width: 370px){ 
       #get-demo {
         margin-top: 0px !important;
+
         h2 {
           margin-top :0px;
         }
         button { 
+          margin-top: -30px !important;
           width:250px;
             & a {
                 font-size: 17px !important;
@@ -69,5 +71,19 @@
       }  
      }
 
+    @media (min-width: 375px) and (max-width: 385px){
+        #get-demo {
+          button {
+              margin-top: -35px;
+          }
+        }
+    }
+    @media (min-width: 414px) and (max-width: 425px){ 
+        #get-demo {
+          button {
+              margin-top: -35px;
+          }
+        }
+    }
 
 }
