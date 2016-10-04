@@ -1,9 +1,7 @@
 @include exports ('bandeau-newsletter') {
     #bandeau-newsletter {
 
-
-        margin-top: 50px;
-        background-image: url("../images/home/newsletter-bg.png");
+        background-image: url("../images/home/bg-newsletter.png");
         background-size: cover;
         background-repeat: no-repeat;
         height: 100px;
@@ -12,11 +10,13 @@
         
         h1 {
 
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 700;
           line-height: 24px;
           margin-bottom: -10px;
           color:white;
+          font-family: 'ProximaNova-Regular';
+          src:url('../fonts/ProximaNova-Regular.otf');
         }
 
         h2 {
@@ -64,6 +64,8 @@
           float: left;
           margin-right: 40px;
           padding-left: 50px;
+          width:300px;
+          text-align: left;
         }
 
         .input-newsletter {
@@ -186,11 +188,17 @@
         #bandeau-newsletter {
           margin-top: -20px;
 
+          .description-newsletter {
+            margin-bottom: 20px;
+            float:none;
+            text-align: center;
+            padding-left: 0px !important;
+          }
+
 
             .input-newsletter {
-
-            margin-left: 20px !important;
-          }
+                  margin-left: 20px !important;
+              }
         }
 
 
@@ -198,6 +206,38 @@
 
 
      }
+  @media (min-width: 375px) and (max-width: 385px){
+        
+        #bandeau-newsletter {
+          margin-top: -20px;
 
+          .description-newsletter {
+            margin-bottom: 20px;
+            float:none;
+            text-align: center;
+            padding-left: 0px !important;
+            margin-left: 30px;
+          }
+
+
+            .input-newsletter {
+                  margin-left: 20px !important;
+              }
+        }
+
+     }
+
+    @media (min-width: 414px) and (max-width: 425px){ 
+      #bandeau-newsletter {
+          .description-newsletter {
+            margin-bottom: 20px;
+            float:none;
+            text-align: center;
+            padding-left: 0px !important;
+            margin-left: 50px;
+          }
+
+      }
+    }
 
 }
