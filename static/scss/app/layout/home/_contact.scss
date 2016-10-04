@@ -1,18 +1,25 @@
 @include exports('contact') {
 	#contact {
 		
-		padding-bottom: 50px;
+		// padding-bottom: 50px;
+		margin-top: -15px !important;
 
 	  	#form-contact {
+	  		background-color: #f2f2f2;
 	  		height: 100%;
 	  		text-align:left;
 	  		float:left;
 	  		width: 50%;
-	  		padding-left:100px;
+	  		padding-bottom: 50px;
+
+	  	.formulaire {
+	  		padding-left: 100px;
+	  		padding-top: 20px;
+	  	}
 
           .titre-formulaire {
             margin-top: 40px;
-            margin-bottom: 44px;
+            margin-bottom: 70px;
             margin-left: -180px;
             display: block;
             text-align:center;
@@ -24,7 +31,7 @@
               font-weight: 700;
               line-height: 24px;
               background-color: #eb3459;
-              width: 150px;
+              width: 300px;
               transform: rotate(-3deg);
               padding-top: 3px;
               margin:auto;
@@ -69,8 +76,38 @@
 	  		height: 100%;
 	  		text-align:left;
 	  		float:left;
-	  		width: 30%;
-			 
+	  		width: 50%;
+
+	  		.contact-postal {
+	  			padding-left: 100px;
+	  			padding-right: 100px;
+	  			padding-top: 20px;
+	  		}
+
+
+
+			.phone {
+				margin-right: 30px;
+
+			}
+			 .phone img {
+				filter: invert(100%) !important;
+				position: absolute;
+				width: 20px;
+			}
+
+			.adresse-bordeaux {
+				float: left;
+				display: block;
+				margin-right: 60px;
+			}
+
+			.adresse-paris {
+				margin-top: 32px;
+				display: block;
+
+			}
+
 			 #carte {
 					height:150px;
 					margin-bottom: 25px;
@@ -79,7 +116,11 @@
 
 				}
 
+
 	  		#cadre-pop {
+
+
+
 				
 				.text-center {
 					text-align:center;
@@ -109,7 +150,7 @@
 
           .titre-postal {
             margin-top: 40px;
-            margin-bottom: 44px;
+            margin-bottom: 70px;
             display: block;
             text-align: center;
           }
@@ -119,7 +160,7 @@
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;
-                width:210px;
+                width: 300px;
                 transform: rotate(-3deg);
                 padding-top: 3px;
                 margin:auto;
@@ -188,11 +229,18 @@
 
 	@media(min-width: 320px) and (max-width: 370px){ 
 		#contact {
-
+			margin-bottom: 40px;
 			#adress-postale {
-					p {
-						padding-left: 30px !important;
-					}
+
+				h2 {
+					width:200px !important;
+				}
+				.contact-postal {
+					width: 300px !important;
+		  			padding-left: 10px !important;
+		  			padding-right: 10px !important;
+		  			padding-top: 20px;
+		  		}
 					p:first-child {
 						margin-top: 20px;
 					}
@@ -205,11 +253,18 @@
 
     @media (min-width: 375px) and (max-width: 385px){
 		#contact {
-
+			margin-bottom: 40px;
 			#adress-postale {
-					p {
-						padding-left: 30px !important;
-					}
+
+				h2 {
+					width:200px !important;
+				}
+				.contact-postal {
+					width: 355px !important;
+		  			padding-left: 10px !important;
+		  			padding-right: 10px !important;
+		  			padding-top: 20px;
+		  		}
 					p:first-child {
 						margin-top: 20px;
 					}
@@ -220,17 +275,25 @@
 	}
 
     @media (min-width: 414px) and (max-width: 425px){
-	
-	#contact {
-		#adresse-postale {
-			width: 414px;
+		#contact {
+			margin-bottom: 40px;
+			#adress-postale {
 
-			p:first-child {
-				margin-top: 20px !important;
+				h2 {
+					width:200px !important;
+				}
+				.contact-postal {
+					width: 375px !important;
+		  			padding-left: 0px !important;
+		  			padding-right: 10px !important;
+		  			padding-top: 20px;
+		  		}
+					p:first-child {
+						margin-top: 20px;
+					}
+                    
 			}
-
 		}
-	}
 
     }
 
@@ -239,9 +302,8 @@
 		#contact {
 
 			#adress-postale {
-					p {
-						padding-left: 30px !important;
-					}
+
+
 					p:first-child {
 						margin-top: 40px !important;
 					}
