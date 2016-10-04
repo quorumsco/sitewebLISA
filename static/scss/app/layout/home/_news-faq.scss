@@ -7,17 +7,16 @@
         }
 
         #preview-news {
-          position:relative;
 
-          height: 100%;
-          min-height: 580px;
+          padding-top: 50px;
+          position:relative;
 
           ul.news-responsive {
             display: none;
           }
           .derniere-actu {
             margin-top: 40px;
-            margin-bottom: 44px;
+            margin-bottom: 60px;
             display: block;
           }
             h2 {
@@ -37,13 +36,14 @@
                 list-style: none;              
                 text-align: left;
                 padding-left: 80px;
-                margin-bottom: 30px;
+                
 
                 p {
                   padding-left: 20px;
+                  margin-top: 100px !important;
                   position:absolute;
                   bottom:0;
-                  font-size: 1.3em;
+                  font-size: 17px;
                 }
                 li {
                     display: inline;
@@ -69,13 +69,14 @@
             }
         }
         #preview-faq {
+            padding-top: 50px;
             background-color: #f2f2f2;
             height: 100%;
             position: relative;
 
           .question-freq {
             margin-top: 40px;
-            margin-bottom: 44px;
+            margin-bottom: 70px;
             display: block;
           }
 
@@ -94,8 +95,8 @@
 
             }
             ul {
-                margin-top: 50px;
                 list-style: none;
+                margin-bottom: 100px;
                 li {
                     font-size: 17px;
                     font-weight: 700;
@@ -119,7 +120,7 @@
                     }
                     
                     .faq-access {
-                      font-size: 20px;
+                      font-size: 17px;
                       position:absolute;
                       bottom:0;
                     }
