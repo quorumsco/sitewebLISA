@@ -35,7 +35,7 @@
 					border:1px solid #0f949a;
 					width: 60px;
 					margin-left: 0px;
-					margin-top: -15px;
+
 					border-radius: 100px;
 
 				}
@@ -43,7 +43,7 @@
 				li {
 					margin-top: 0px !important;
 					width: 18%;
-					border: 2px solid #9fa4ac;
+					border: 2px solid #0f949a;
 					border-radius: 5px;
 					font-size: 0.9em;
 					margin: 8px;
@@ -59,7 +59,10 @@
 						// font-weight: bold !important;
 						// font-size: 1em;
 						font-size: 14px;
-						color:#000;
+						// color:#fff;
+						color : #000;
+						// background-color: #0f949a;
+						// text-align: center;
 						// text-transform: uppercase;
 						// text-decoration: underline;
 						// text-align: center;
@@ -83,8 +86,9 @@
 					}
 
 					.target-name {
-						font-weight: bold;
 						color:#0f949a;
+						font-family: 'ProximaNova-RegularItalic';
+        				src:url('../fonts/ProximaNova-RegularItalic.otf');
 					}
 					
 
@@ -102,6 +106,14 @@
 
 					p {
 						color:white;
+					}
+
+					hr {
+					border:1px solid #fff;
+					width: 60px;
+					margin-left: 0px;
+					border-radius: 100px;
+
 					}
 					
 					.objectif {
@@ -241,7 +253,7 @@
 			.container {
 				ul {
 					li {
-						height: 120px !important;
+						height: 140px !important;
 					}
 				}
 			}
@@ -254,7 +266,7 @@
 			.container {
 				ul {
 					li {
-						height: 120px !important;
+						height: 140px !important;
 					}
 				}
 			}
