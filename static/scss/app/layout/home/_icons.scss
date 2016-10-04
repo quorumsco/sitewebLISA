@@ -13,7 +13,7 @@
 
         ul {
             margin-top: 90px !important;
-            margin-bottom: 100px;
+            margin-bottom: 30px;
             li {
                 position: relative;
                 display: inline-block;
@@ -84,16 +84,6 @@
         }
     }
 
-    @media(max-width: 820px){
-        #icons {
-            ul {
-
-                margin-left: -40px;
-
-            }
-
-        }
-    }
     @media (min-width: 601px) and (max-width: 800px){
         #icons {
             ul {
@@ -118,26 +108,7 @@
         }
     }
 
-    @media(max-width: 600px){
-        #icons {
-            ul {
-                
-                li#icon-3 {
-                    display: inline-block;
-                    margin-top: 60px;
 
-                     p {
-                        padding-top: 50px;
-                     }
-
-                }
-
-
-
-            }
-
-        }
-    }
 
     @media(min-width: 425px) and (max-width: 430px) {
          #icons {
@@ -158,30 +129,16 @@
         }
     }
 
-    @media(min-width: 375px) and (max-width: 380px){
-        #icons {
-            margin-top: -20px;
-            
-            ul {
-                li#icon-1 {
-                    margin-right: 0px;
-                }
-
-            }
-        }
-    }
 
     @media(min-width: 320px)  and (max-width: 330px) {
         #icons {
-            margin-top: -20px;
 
+            margin-top: -60px !important;
             ul {
-
-                margin-left:-40px !important;
-                
-
+                margin-top:60px !important;
+                margin-left: -40px;
                 li#icon-1 {
-                    margin-right: 20px;
+                    margin-bottom: 10px;
                 }
                 li {
                     margin:0;
@@ -193,7 +150,7 @@
                         width:60px !important;
                     }
                     p {
-                        padding-left: 20px;
+                        padding-left: 35px;
                         font-size: 13px !important;
                         // margin-left: -22px !important;
                     }
@@ -208,27 +165,27 @@
     
         #icons {
 
+            margin-top: -60px !important;
             ul {
-
-                margin-left:-40px !important;
-                
-
+                margin-top:60px !important;
+                margin-left: -40px;
                 li#icon-1 {
-                    margin-right: 20px;
+                    margin-bottom: 10px;
                 }
                 li {
                     margin:0;
                     position: static;
                     display: inline-block;
+                    margin-left: 50px;
 
                     img {
-
+                        margin-left: -50px;
                         width:60px !important;
                     }
                     p {
-                        padding-left: 20px;
+                        
                         font-size: 13px !important;
-                        // margin-left: -22px !important;
+                        margin-left: -50px !important;
                     }
 
                 }
@@ -237,45 +194,13 @@
 
     }
 
-    @media (min-width: 414px) and (max-width: 425px){
-    
-
-
+    @media (min-width: 414px) and (max-width: 425px){ 
         #icons {
-
-            h3 {
-                font-size: 20px;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-
+            margin-top: -60px !important;
             ul {
-
-                margin-left:-40px !important;
-                
-
-                li#icon-1 {
-                    margin-right: 20px;
-                }
-                li {
-                    margin:0;
-                    position: static;
-                    display: inline-block;
-
-                    img {
-
-                        width:60px !important;
-                    }
-                    p {
-                        padding-left: 20px;
-                        font-size: 13px !important;
-                        // margin-left: -22px !important;
-                    }
-
-                }
+                margin-left: -40px !important;
             }
         }
-
     }
 
     /* Ipad */
