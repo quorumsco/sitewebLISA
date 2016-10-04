@@ -65,27 +65,27 @@ block content
                 ul
                     li(onclick="location.href='http://google.fr';")
                       p.objectif Equipes de campagne
-                      hr
                       p.target-name Candidats aux élections et collectifs
-                      p.description Je veux mobiliser les citoyens et mes électeurs.
+                      hr
+                      p.description Je veux <span class='bold'> mobiliser les citoyens et mes électeurs.</span>
                       p.keywords Mobiliser les électeurs
                     li(onclick="location.href='http://google.fr';")
                       p.objectif  Associations, ONG
-                      hr
                       p.target-name  Associations, mouvements, syndicats, et game changers
-                      p.description Je veux sensibiliser le public à ma cause, recruter de nouveaux bénévoles ou donateurs.
+                      hr
+                      p.description Je veux <span class='bold'> sensibiliser le public à ma cause, recruter de nouveaux bénévoles ou donateurs.</span>
                       p.keywords Sensibiliser, Recruter bénévoles et donateurs
                     li(onclick="location.href='http://google.fr';")
                       p.objectif Collectivités
-                      hr
                       p.target-name Administration publique et groupes privés
-                      p.description Je veux gérer efficacement la relation citoyenne, interroger le terrain et analyser.
+                      hr
+                      p.description Je veux <span class='bold'> gérer efficacement la relation citoyenne, interroger le terrain et analyser.</span>
                       p.keywords Gérer la relation citoyenne, Interroger, Analyser
                     li(onclick="location.href='http://google.fr';")
                       p.objectif Agences & consultants
-                      hr
                       p.target-name  Communication, data, indépendants
-                      p.description Je veux intégrer Quorum à mon offre de service ou devenir partenaire.
+                      hr
+                      p.description Je veux <span class='bold'> intégrer Quorum à mon offre de service ou devenir partenaire.</span>
                       p.keywords Devenir Partenaire
                         
         section#schema.hide
@@ -102,7 +102,7 @@ block content
                 ul
                     li#icon-1
                         img(src="../images/icons/icon1.png")
-                        p Data-ciblage
+                        p Data-ciblage <br/><br/>
                     li#icon-2
                         img(src="../images/icons/icon2.png")
                         p Organiser son mouvement
@@ -175,7 +175,7 @@ block content
         section#get-demo.hide
             .container
                 button.btn
-                  a(href="https://quorum-impact.us12.list-manage.com/subscribe?u=8d7c7595072992d8808c7993d&id=913c162260" target="_blank") DEMANDER UNE DEMO EN 1 CLIC !
+                  a(href="https://quorum-impact.us12.list-manage.com/subscribe?u=8d7c7595072992d8808c7993d&id=913c162260" target="_blank").get-demo DEMANDER UNE DEMO EN 1 CLIC !
         .clearfix
 
         section#faq-news.hide
@@ -234,7 +234,7 @@ block content
                       a(href="../fr/news.html") Challenges
                     
                     a(href="../fr/news.html" target="_blank")
-                        p ▸ Découvrir les nouvelles actualités
+                        p.access-news ▸ Découvrir les nouvelles actualités
 
             .container#preview-faq
                 span.question-freq
@@ -265,45 +265,48 @@ block content
         
         section#contact.hide
             .container#form-contact
+                .formulaire
+                    span.titre-formulaire
+                        h2 ECRIVEZ-NOUS
+                    
 
-                span.titre-formulaire
-                    h2 ECRIVEZ-NOUS
-                
+                    form(action='https://formspree.io/info@quorum-impact.com', method='post')
 
-                form(action='https://formspree.io/info@quorum-impact.com', method='post')
+                        input(name='name' type="text" placeholder="Votre nom")
+                        .border-input.blue
 
-                    input(name='name' type="text" placeholder="Votre nom")
-                    .border-input.blue
+                        input(type='email', name="_replyto", placeholder='Votre Email', required)
+                        .border-input.blue
 
-                    input(type='email', name="_replyto", placeholder='Votre Email', required)
-                    .border-input.blue
-
-                    textarea(name='message' rows="6" placeholder="Votre Message", required)
-                    .border-textarea.blue
-                    input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
-                    input(type="text" name="_gotcha" style="display:none")
-                    input(type="hidden" name="_next" value="//quorum-impact.com/")
-                    p
-                        button.blue(type='submit' value="Send") ENVOYER
+                        textarea(name='message' rows="6" placeholder="Votre Message", required)
+                        .border-textarea.blue
+                        input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
+                        input(type="text" name="_gotcha" style="display:none")
+                        input(type="hidden" name="_next" value="//quorum-impact.com/")
+                        p
+                            button.blue(type='submit' value="Send") ENVOYER
 
 
             .container#adress-postale
-                #cadre-pop
+                .contact-postal
+                    #cadre-pop
+                        
+                        span.titre-postal
+                            h2 RENDEZ-NOUS VISITE
+                        
+                        
+                    div#carte
                     
-                    span.titre-postal
-                        h2 RENDEZ-NOUS VISITE
-                    
-                    
-                div#carte
-                
-                p
-                    a(href="tel:+33179734004") +33 1 79 73 40 04
-                p
-                    a(href="mailto:welcome@quorum-impact.com") welcome@quorum-impact.com
-                p
-                    a(href="https://www.google.fr/maps/place/9+Rue+de+Condé,+33000+Bordeaux/@44.8435887,-0.5755025,17z/" target="_blank") 9 rue de Condé - 33000 BORDEAUX
-                p
-                    a(href="https://www.google.fr/maps/place/124+Avenue+de+Villiers,+75017+Paris/@48.8854713,2.2930888,17z" target="_blank") 124 avenue de Villiers - 75017 PARIS
+                    p.telephone
+                        span.phone
+                            img(src='../images/icons/phone.svg', alt='Phone')
+                        a(href="tel:+33179734004") +33 1 79 73 40 04
+                    p
+                        a(href="mailto:welcome@quorum-impact.com") welcome@quorum-impact.com
+                    p.adresse-bordeaux
+                        a(href="https://www.google.fr/maps/place/9+Rue+de+Condé,+33000+Bordeaux/@44.8435887,-0.5755025,17z/" target="_blank") 9 rue de Condé <br/> 33000 Bordeaux
+                    p.adresse-paris
+                        a(href="https://www.google.fr/maps/place/124+Avenue+de+Villiers,+75017+Paris/@48.8854713,2.2930888,17z" target="_blank") 124 avenue de Villiers <br/> 75017 Paris
         .clearfix
 
 
@@ -312,8 +315,8 @@ block content
 
             form(action="page-traitement-newsletter",method="post")
                 .description-newsletter
-                    h1 RETROUVEZ TOUTES LES NEWS QUORUM 
-                    h2.newsletter-msg En vous abonnant à notre Newsletter mensuelle
+                    h1.newsletter-msg Recevez nos actualités et publications sur votre boîte mail.
+                    //- h2.newsletter-msg En vous abonnant à notre Newsletter mensuelle
                 .form-newletter
                     .input-newsletter
                         input(type='email', name="mail-newsletter", placeHolder="Votre adresse mail", required)
