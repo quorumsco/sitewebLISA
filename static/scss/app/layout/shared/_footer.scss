@@ -23,7 +23,7 @@
 			li{
 				display: inline-block;
 				a {
-					color: black;
+					color: #afb3b9;
 					text-decoration: none;
 					padding: 10px;
 					&:hover {
@@ -112,7 +112,7 @@
 
     @media(max-width: 425px) {
       #footer {  
-
+      
         .copyright {
           .logo-footer {
             float:none !important;
