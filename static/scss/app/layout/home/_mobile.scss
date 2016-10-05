@@ -24,6 +24,10 @@
 			
 			.part {
 				font-size: 16px;
+				margin: 0 !important;
+				padding-left: 0 !important;
+				font-family: 'ProximaNova-Bold';
+        		src:url('../fonts/ProximaNova-Bold.otf');	
 			}
 			
 			&:last-of-type {
