@@ -1,11 +1,13 @@
 @include exports('footer') {
 	#footer {
+      width:100%;
   		background: #fff;
   		padding: 25px;
   		color: $grey;
-  		.container {
-  			padding: 0 8%;
-  		}
+      .container {
+        padding-left: 0 !important;
+        margin-left:  8% !important;
+      }
   		.copyright {
   			// margin-bottom: 20px;
   			display: inline-block !important;
@@ -112,7 +114,10 @@
 
     @media(max-width: 425px) {
       #footer {  
-      
+        .container {
+          margin-left: 0 !important;
+          padding-left: 0 !important;
+        }
         .copyright {
           .logo-footer {
             float:none !important;

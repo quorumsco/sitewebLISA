@@ -35,6 +35,7 @@
 					border:1px solid #0f949a;
 					width: 60px;
 					margin-left: 0px;
+					margin-bottom: 20px !important;
 
 					border-radius: 100px;
 
@@ -43,7 +44,7 @@
 				li {
 					margin-top: 0px !important;
 					width: 18%;
-					border: 2px solid #0f949a;
+					border: 3px solid #0f949a;
 					border-radius: 5px;
 					font-size: 0.9em;
 					margin: 8px;
@@ -60,14 +61,9 @@
 						// font-size: 1em;
 						font-size: 14px;
 						// color:#fff;
-						color : #000;
-						// background-color: #0f949a;
-						// text-align: center;
-						// text-transform: uppercase;
-						// text-decoration: underline;
-						// text-align: center;
+						color : #0f949a;
+						
 						padding-top: 5px;
-						padding-bottom: 5px;
 						font-family: 'ProximaNova-Bold';
         				src:url('../fonts/ProximaNova-Bold.otf');
 
@@ -87,6 +83,7 @@
 
 					.target-name {
 						color:#0f949a;
+						margin-top: -10px;
 						font-family: 'ProximaNova-RegularItalic';
         				src:url('../fonts/ProximaNova-RegularItalic.otf');
 					}
@@ -96,7 +93,7 @@
 
 				li:hover {
 					width: 18%;
-					border: 2px solid #0f949a;
+					border: 3px solid #0f949a;
 					background-color: #0f949a;
 					border-radius: 5px;
 					font-size: 0.9em;
@@ -113,19 +110,22 @@
 					width: 60px;
 					margin-left: 0px;
 					border-radius: 100px;
+					margin-bottom: 20px !important;
 
 					}
 					
 					.objectif {
+						// font-weight: bold !important;
+						// font-size: 1em;
 						font-size: 14px;
-						color:#fff;
-						// text-transform: uppercase;
-						// text-decoration: underline;
-						// text-align: center;
+						// color:#fff;
+						color : #fff;
+						
 						padding-top: 5px;
-						padding-bottom: 5px;
 						font-family: 'ProximaNova-Bold';
         				src:url('../fonts/ProximaNova-Bold.otf');
+
+
 					}
 
 					.active-box {
@@ -143,6 +143,9 @@
 					.target-name {
 						font-weight: bold;
 						color:#fff;
+						margin-top: -10px;
+
+	
 					}
 					
 
@@ -201,6 +204,19 @@
 			}
 		}
 	}
+
+	@media(max-width: 1024px) {
+	#target {
+		.container {
+			ul {
+				li {
+					height: 250px !important;
+				}
+			}
+		}
+	}  
+	}
+
 	@media(max-width: 425px){
 		#target {
 			.container {

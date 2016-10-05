@@ -21,7 +21,7 @@ block content
 
                 #testimony-2
                     h2  L’application qui permet  de construire une équipe de <span class="underline">bénévoles impliqués qui sensibilise</span>  et <span class="underline">écoute</span> chaque personne rencontrée.
-                    span.quote  Les Jours heureux est un mouvement qui fait intervenir différentes organisations de la société civile. (Génération cobaye, Association des Paralysés de France etc.)
+                    span.quote  Les Jours heureux est un mouvement qui fait intervenir différentes organisations de la société civile. (Génération cobaye, Association des Paralysés de France etc.). Il publie en novembre 2016 "Et nous vivrons des jours heureux".
                     
                 #testimony-3
                     h2  L’application qui permet de proposer à ses clients une application pour <span class="underline">mobiliser sur le terrain à chaque instant</span> , en délivrant <span class="underline">la bonne information</span>.
@@ -61,28 +61,28 @@ block content
                                     span.icones-3.fa.fa-circle-o
         section#target.hide
             .container#target-container
-                h2 <span class='bold'>MOBILISER</span> SUR LE TERRAIN, <span class='bold'>PLUS FORT</span>
+                h2 <span class='bold'>MOBILISER</span> SUR LE TERRAIN, <span class='bold'>PLUS FORT !</span>
                 ul
                     li(onclick="location.href='http://google.fr';")
-                      p.objectif Equipes de campagne
+                      p.objectif ÉQUIPES DE CAMPAGNE
                       p.target-name Candidats aux élections et collectifs
                       hr
                       p.description Je veux <span class='bold'> mobiliser les citoyens et mes électeurs.</span>
                       p.keywords Mobiliser les électeurs
                     li(onclick="location.href='http://google.fr';")
-                      p.objectif  Associations, ONG
+                      p.objectif  ASSOCIATIONS, ONG
                       p.target-name  Associations, mouvements, syndicats, et game changers
                       hr
                       p.description Je veux <span class='bold'> sensibiliser le public à ma cause, recruter de nouveaux bénévoles ou donateurs.</span>
                       p.keywords Sensibiliser, Recruter bénévoles et donateurs
                     li(onclick="location.href='http://google.fr';")
-                      p.objectif Collectivités
+                      p.objectif COLLECTIVITÉS
                       p.target-name Administration publique et groupes privés
                       hr
-                      p.description Je veux <span class='bold'> gérer efficacement la relation citoyenne, interroger le terrain et analyser.</span>
+                      p.description Je veux <span class='bold'> consulter, gérer la relation citoyennen et analyser</span>
                       p.keywords Gérer la relation citoyenne, Interroger, Analyser
                     li(onclick="location.href='http://google.fr';")
-                      p.objectif Agences & consultants
+                      p.objectif AGENCES & CONSULTANTS
                       p.target-name  Communication, data, indépendants
                       hr
                       p.description Je veux <span class='bold'> intégrer Quorum à mon offre de service ou devenir partenaire.</span>
@@ -90,28 +90,29 @@ block content
                         
         section#schema.hide
             .container
+                h2 <span class='bold'>POURQUOI</span> QUORUM ? 
                 span.img-schema
                     img(src="../images/schema-4.png")
             
             
         section#icons.hide
             .container
-
+                h2 MOBILISER <span class='bold'>EFFICACEMENT</span>
                 h3 <span class='bold'>1 application web</span> pour s’<span class='bold'>organiser</span>, <span class='bold'>analyser</span> et <span class='bold'>communiquer</span>. 
                 h3 <span class='bold'>1 application mobile</span> pour <span class='bold'>révéler tout le potentiel de votre équipe.</span>
                 ul
                     li#icon-1
                         img(src="../images/icons/icon1.png")
-                        p Data-ciblage
+                        p Cibler
                     li#icon-2
                         img(src="../images/icons/icon2.png")
-                        p Organiser son mouvement
+                        p Organiser
                     li.active#icon-3
                         img(src="../images/icons/icon3.png")
-                        p Mobiliser sur le terrain
+                        p Mobiliser
                     li#icon-4
                         img(src="../images/icons/icon4.png")
-                        p Analyser le besoin 
+                        p Analyser
 
                                 
         section#mobile
@@ -267,24 +268,24 @@ block content
             .container#form-contact
                 .formulaire
                     span.titre-formulaire
-                        h2 ECRIVEZ-NOUS
+                        h2 ÉCRIVEZ-NOUS
                     
 
                     form(action='https://formspree.io/info@quorum-impact.com', method='post')
+                        .champs
+                            input(name='name' type="text" placeholder="Votre nom")
+                            .border-input.blue
 
-                        input(name='name' type="text" placeholder="Votre nom")
-                        .border-input.blue
+                            input(type='email', name="_replyto", placeholder='Votre Email', required)
+                            .border-input.blue
 
-                        input(type='email', name="_replyto", placeholder='Votre Email', required)
-                        .border-input.blue
-
-                        textarea(name='message' rows="6" placeholder="Votre Message", required)
-                        .border-textarea.blue
-                        input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
-                        input(type="text" name="_gotcha" style="display:none")
-                        input(type="hidden" name="_next" value="//quorum-impact.com/")
-                        p
-                            button.blue(type='submit' value="Send") ENVOYER
+                            textarea(name='message' rows="6" placeholder="Votre Message", required)
+                            .border-textarea.blue
+                            input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
+                            input(type="text" name="_gotcha" style="display:none")
+                            input(type="hidden" name="_next" value="//quorum-impact.com/")
+                        
+                        button.blue(type='submit' value="Send") ENVOYER
 
 
             .container#adress-postale
@@ -304,8 +305,12 @@ block content
                     p
                         a(href="mailto:welcome@quorum-impact.com") welcome@quorum-impact.com
                     p.adresse-bordeaux
+                        span.building
+                            img(src="../images/home/bordeaux.png", alt="Building")
                         a(href="https://www.google.fr/maps/place/9+Rue+de+Condé,+33000+Bordeaux/@44.8435887,-0.5755025,17z/" target="_blank") 9 rue de Condé <br/> 33000 Bordeaux
                     p.adresse-paris
+                        span.building
+                            img(src="../images/home/paris.png", alt="Building")
                         a(href="https://www.google.fr/maps/place/124+Avenue+de+Villiers,+75017+Paris/@48.8854713,2.2930888,17z" target="_blank") 124 avenue de Villiers <br/> 75017 Paris
         .clearfix
 
@@ -315,7 +320,7 @@ block content
 
             form(action="page-traitement-newsletter",method="post")
                 .description-newsletter
-                    h1.newsletter-msg Recevez nos actualités et publications sur votre boîte mail.
+                    h1.newsletter-msg Recevez directement sur votre boîte mail nouvelles fonctionnalités et publications ! 
                     //- h2.newsletter-msg En vous abonnant à notre Newsletter mensuelle
                 .form-newletter
                     .input-newsletter

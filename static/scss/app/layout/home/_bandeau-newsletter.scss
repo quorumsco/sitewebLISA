@@ -4,7 +4,7 @@
         background-image: url("../images/home/bg-newsletter.png");
         background-size: cover;
         background-repeat: no-repeat;
-        height: 100px;
+        height: 90px;
         padding-top: 40px;
 
         
@@ -37,7 +37,7 @@
         }
         
         input {
-          width: 516px;
+          width: 40vw;
           height: 64px;
           border-radius: 4px;
           border: none;
@@ -64,7 +64,7 @@
           float: left;
           margin-right: 40px;
           padding-left: 50px;
-          width:300px;
+          width:30vw;
           text-align: left;
         }
 
@@ -74,7 +74,8 @@
         }
 
         .abonnement {
-          float:left;
+          float:right;
+          margin-right: 25px;
           margin-top: 0;
           button {
             margin-top: 0 !important;

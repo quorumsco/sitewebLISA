@@ -1,0 +1,195 @@
+extends ./layout.jade
+block vars
+    - var pageTitle = 'Accueil'
+block content
+    header#home.big
+        .container
+            h1 Mobiliser et Gagner 
+                span le terrain
+            p.subtitle L'application pour construire de grands mouvements, depuis son smartphone
+            a(href="http://eepurl.com/bWGgCL" target="_blank")
+                button.blue S'inscrire et obtenir une démo
+    main
+        section#product
+            .container
+                h2 Créer des actions de terrain organisées et ciblées 
+                    p qui engagent les individus.
+                span.quote Construire un mouvement commence par une simple conversation.
+                span.quote  
+                    strong ORGANISER, CIBLER
+                    |  , ANALYSER et MOTIVER VOS EQUIPES 
+                span.quote 
+                    strong pour que chaque rencontre
+                    |  sur le terrain  
+                    strong ait du sens. 
+        section#webconsole
+            .container
+                .content
+                    img(src="../images/icons/computer.svg" alt="Computer")
+                    div.sentence
+                        span.part APPLICATION WEB
+                    h3 Organiser et cibler
+                    hr.green.title
+                    
+                    .list
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg" alt="Check")
+                            div.sentence
+                                strong Créer, fédérer et organiser les individus autour de votre mouvement, quelle qu’en soit l’échelle.
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg" alt="Check")
+                            div.sentence
+                                span 
+                                    strong.highlight ANALYSER
+                                    |  : Dégager du sens des données externes et des données récoltées sur le terrain et affiner vos stratégies
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg" alt="Check")
+                            div.sentence
+                                span Identifier les zones prioritaires où agir
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg" alt="Check")
+                            div.sentence
+                                span Disposer de caractéristiques clés sur les individus et les territoires
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg" alt="Check")
+                            div.sentence
+                                span Construire des relations personnalisées et durables avec les individus
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg" alt="Check")
+                            div.sentence
+                                span Suivre la PROGRESSION en temps réel de son action et de ses équipes & adapter sa stratégie
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg" alt="Check")
+                            div.sentence
+                                span 
+                                    strong.highlight REMONTEE D’INFORMATION
+                                    |  : mieux identifier les préoccupations du terrain
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-green.svg" alt="Check")
+                            div.sentence
+                                span Paramétrer et personnaliser vos questionnaires
+        section#mobile
+            .container
+                .content
+                    img(src="../images/icons/mobile.svg" alt="Mobile")
+                    div.sentence
+                        span.part APPLICATION MOBILE
+                    h3 Sur le terrain : créer une  
+                        strong force collective
+                    hr.pink.title
+                    .list
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg" alt="Check")
+                            div.sentence
+                                span
+                                    strong GAGNER DU TEMPS
+                                    |  en équipant ses équipes sur le terrain
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg" alt="Check")
+                            div.sentence
+                                span À chaque instant 
+                                    strong ENGAGER de nouvelles personnes, de nouveaux soutiens, volontaires ou donateurs
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg" alt="Check")
+                            div.sentence
+                                span À chaque instant ajouter ou rafraichir vos bases, assigner des tags, donner un statut aux individus, définir un call-to-action
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg" alt="Check")
+                            div.sentence
+                                span Paramétrer et créer des feuilles de route d’action de terrain (porte-à-porte)
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg" alt="Check")
+                            div.sentence
+                                span Motiver vos équipes : ne remplissez plus des formulaires, tenez des conversations avec des individus grâce à des informations claires et fiables.
+                        div.line
+                            div.icon
+                                img(src="../images/icons/check-pink.svg" alt="Check")
+                            div.sentence
+                                span Suivre la progression de vos actions, et des autres membres de l’équipe
+            .clearfix
+        section#target
+            .container
+                h2 Moins de process, mobiliser plus : GO !
+                span.quote Équipes de campagne, associations, syndicats, individus & mouvements, 
+                    p nos technologies vous accompagnent sur le terrain.
+                ul
+                    li
+                        button(disabled) Equipes de Campagne
+                    li
+                        button(disabled) Consultants & Agences
+                    li
+                        button(disabled) ONG & Associations
+                    li
+                        button(disabled) Individus & Changemakers
+                a(href="http://eepurl.com/bWGgCL" target="_blank")
+                    button.blue S'inscrire et obtenir une démo
+        section#contact
+            .container
+                ul
+                    li
+                        h2 Nous écrire
+                        form(action='https://formspree.io/info@quorum-impact.com', method='post')
+                            div.input
+                                input(type='email', name="_replyto", placeholder='Email', required)
+                                .border-input.blue
+                            div.input
+                                input(name='name' type="text" placeholder="Name/Nom")
+                                .border-input.blue
+                            div.input
+                                textarea(name='message' rows="6" placeholder="Message", required)
+                                .border-textarea.blue
+                            input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
+                            input(type="text" name="_gotcha" style="display:none")
+                            input(type="hidden" name="_next" value="//quorum-impact.com/")
+                            p
+                                button.blue(type='submit' value="Send") GO !
+                    li
+                        h2 Nous trouver
+                        p 
+                            i.fa.fa-phone.fa-lg
+                            span 
+                                a(href="tel:+33179734004") +33 1 79 73 40 04
+                        p 
+                            i.fa.fa-envelope
+                            span 
+                                a(href="mailto:welcome@quorum-impact.com") welcome@quorum-impact.com
+                        p
+                            i.fa.fa-map-marker.fa-lg
+                            span
+                                a(href="https://www.google.fr/maps/place/9+Rue+de+Condé,+33000+Bordeaux/@44.8435887,-0.5755025,17z/" target="_blank") 9 rue de Condé - 33000 BORDEAUX
+                        p
+                            i.fa.fa-map-marker.fa-lg
+                            span
+                                a(href="https://www.google.fr/maps/place/124+Avenue+de+Villiers,+75017+Paris/@48.8854713,2.2930888,17z" target="_blank") 124 avenue de Villiers - 75017 PARIS
+                 
+                        p Ne manquez rien de nos évènements, de nos publications et actualités, suivez-nous :
+                            ul
+                                li
+                                    a(href='//facebook.com/quorumimpact' target="_blank")
+                                        i.fa.fa-facebook-square
+                                li
+                                    a(href='//twitter.com/quorumimpact' target="_blank")
+                                        i.fa.fa-twitter-square
+                                li
+                                    a(href='//linkedin.com/company/10114882' target="_blank")
+                                        i.fa.fa-linkedin-square
+                                li
+                                    a(href='//google.com/+Quorumappsdata' target="_blank")
+                                        i.fa.fa-google-plus-square
+                                li
+                                    a(href='//instagram.com/quorumteam/' target="_blank")
+                                        i.fa.fa-instagram
+            div.clearfix

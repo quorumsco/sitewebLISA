@@ -1,7 +1,14 @@
 @include exports ('icons') {
     #icons {
-        margin-top: 60px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        
 
+        h2 {
+            font-family: 'ProximaNova-Regular';
+            src:url('../fonts/ProximaNova-Regular.otf');
+            margin-bottom: 35px;
+        }
         h3 {
             font-size: 22px;
             margin-top: -10px;
@@ -29,11 +36,10 @@
                     cursor: pointer;
                     opacity: 1;
                 }
-                // p {
-                //     position: absolute;
-                //     top: 20px;
-                //     left: 30%;
-                // }
+                p {
+                    font-family: 'ProximaNova-Bold';
+                    src:url('../fonts/ProximaNova-Bold.otf');
+                }
             }
         }
     }

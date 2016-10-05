@@ -13,14 +13,13 @@
 	  		padding-bottom: 50px;
 
 	  	.formulaire {
-	  		padding-left: 100px;
 	  		padding-top: 20px;
 	  	}
 
           .titre-formulaire {
             margin-top: 40px;
             margin-bottom: 70px;
-            margin-left: -180px;
+            // margin-left: -180px;
             display: block;
             text-align:center;
           }
@@ -37,34 +36,40 @@
               margin:auto;
 
             }
+			.champs {
+				width:100%;
+				margin:auto;
+				input {
+		  			width :80%;
+		  			height: 50px;
+		  			border-radius: 5px;
+		  			border: 1px solid #bdc3c7;
+		  			margin-bottom: 25px !important;
+		  			padding-left : 15px;
+		  			margin-left: 50px;
 
-	  		input {
-	  			width :80%;
-	  			height: 50px;
-	  			border-radius: 5px;
-	  			border: 1px solid #bdc3c7;
-	  			margin-bottom: 25px !important;
-	  			padding-left : 15px;
+		  		}
 
-	  		}
+		  		textarea {
+		  			width: 78%;
+		  			border-radius: 5px;
+		  			border: 1px solid #bdc3c7 !important;
+		  			padding:  15px 15px 15px 15px;
+		  			margin-left:50px;
+		  			margin-bottom: 30px;
 
-	  		textarea {
-	  			width: 78%;
-	  			border-radius: 5px;
-	  			border: 1px solid #bdc3c7 !important;
-	  			padding:  15px 15px 15px 15px;
+		  		}
+			}
 
-	  		}
 
 	  		button {
 	  			background-color:  #00bfff !important;
-	  			
+	  			margin:auto;
 	  			width: 230px;
 	  			height: 30px;
 	  			padding-top: 6px !important;
 	  			display: block;
-	  			margin-left: 150px;
-	  			margin-top: 30px;
+	  			
 	  		}
 	  		button:hover {
 	  			background-color:  #eb3459 !important;
@@ -85,6 +90,11 @@
 	  		}
 
 
+			
+			.building {
+				float:left;
+				margin-right: 20px;
+			}
 
 			.phone {
 				margin-right: 30px;
@@ -99,6 +109,7 @@
 			.adresse-bordeaux {
 				float: left;
 				display: block;
+				width:200px;
 				margin-right: 60px;
 			}
 
