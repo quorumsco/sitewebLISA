@@ -8,7 +8,7 @@
     #titre-article {
         text-align: center;
         margin-bottom: 4em;
-        margin-top: 50px; 
+        margin-top: 150px; 
     
     h1 {
           color: #fff;
@@ -23,6 +23,10 @@
 
         }
 
+    }
+
+    #bloc-buttons {
+        margin-top: 150px;
     }
 
 
@@ -60,7 +64,7 @@
     #bloc-buttons {
         padding-left: 0 !important;
         margin-left: 50px !important;
-        margin-top: 6em !important;
+        margin-top: 192px !important;
         float: left;
     }
     #square img {
@@ -68,7 +72,7 @@
         height: 245px;
     }
     #square {
-        opacity: 0.7;
+        opacity: 1;
         margin-bottom: 8em;
         margin-right: 10px;
         margin-left: 15px;
@@ -83,7 +87,7 @@
         text-decoration: none;
     }
     #square:hover {
-        opacity: 1;
+        opacity: 0.7;
     }
     span.categorie {
         font-weight: 900;
