@@ -11,12 +11,12 @@
 			margin-bottom: 60px;
 			h2{
 				padding: 0 10px;
-				font-family: 'ProximaNova-Regular';
-        		src:url('../fonts/ProximaNova-Regular.otf');	
+				font-family: 'ProximaNova';
+
 			}
 			.bold {
-				font-family: 'ProximaNova-Bold';
-        		src:url('../fonts/ProximaNova-Bold.otf');
+				font-family: 'ProximaNova';
+        		font-weight: bold;
 			}
 			ul {
 				margin-bottom: 40px;
@@ -64,8 +64,8 @@
 						color : #0f949a;
 						
 						padding-top: 5px;
-						font-family: 'ProximaNova-Bold';
-        				src:url('../fonts/ProximaNova-Bold.otf');
+						font-family: 'ProximaNova';
+        				font-weight: bold;
 
 
 					}
@@ -84,8 +84,8 @@
 					.target-name {
 						color:#0f949a;
 						margin-top: -10px;
-						font-family: 'ProximaNova-RegularItalic';
-        				src:url('../fonts/ProximaNova-RegularItalic.otf');
+						font-family: 'ProximaNova';
+        				font-style: italic;
 					}
 					
 
@@ -122,8 +122,8 @@
 						color : #fff;
 						
 						padding-top: 5px;
-						font-family: 'ProximaNova-Bold';
-        				src:url('../fonts/ProximaNova-Bold.otf');
+						font-family: 'ProximaNova';
+        				font-weight: bold;
 
 
 					}

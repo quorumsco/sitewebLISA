@@ -21,6 +21,9 @@
               padding-top: 3px;
               margin:auto;
 		}
+		.bold {
+            font-weight: bold;
+		}
 		.subtitle {
 			font-size: 1.4em;
 			margin-top: 3em;
@@ -55,6 +58,7 @@
 						width: 90%;
 						padding: 30px 20px;
 						margin: 0;
+						font-weight: normal !important;
 					}
 					p:nth-child(1) {
 						font-weight: bold;

@@ -5,17 +5,18 @@
         
 
         h2 {
-            font-family: 'ProximaNova-Regular';
-            src:url('../fonts/ProximaNova-Regular.otf');
+            font-family: 'ProximaNova';
             margin-bottom: 35px;
         }
         h3 {
             font-size: 22px;
             margin-top: -10px;
+            font-family: 'ProximaNova';
         }
         .bold {
-            font-family: 'ProximaNova-Bold';
-            src:url('../fonts/ProximaNova-Bold.otf');
+            font-family: 'ProximaNova';
+            font-weight: bold;
+
         }
 
         ul {
@@ -37,8 +38,8 @@
                     opacity: 1;
                 }
                 p {
-                    font-family: 'ProximaNova-Bold';
-                    src:url('../fonts/ProximaNova-Bold.otf');
+                    font-family: 'ProximaNova';
+                    font-weight: bold;
                 }
             }
         }

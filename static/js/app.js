@@ -11,6 +11,10 @@ $(document).ready(function() {
 
     if ($( window ).width() < 769 ) {
         $('.newsletter-msg').html('');
+        $('.newsletter-msg').html('Newsletter');
+    }; 
+    if ($( window ).width() < 450 ) {
+        $('.get-demo').html('DEMANDER UNE DEMO');
     };
 
 });

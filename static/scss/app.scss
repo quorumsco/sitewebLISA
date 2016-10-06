@@ -10,20 +10,23 @@
 @import 'app/layout/base';
 
 @font-face {
-    font-family: 'ProximaNova-Bold';
+    font-family: 'ProximaNova';
     src:url('../fonts/ProximaNova-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
 }
+
 @font-face {
-    font-family: 'ProximaNova-Light';
-    src:url('../fonts/ProximaNova-Light.otf');
-}
-@font-face {
-    font-family: 'ProximaNova-Regular';
+    font-family: 'ProximaNova';
     src:url('../fonts/ProximaNova-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-    font-family: 'ProximaNova-RegularItalic';
+    font-family: 'ProximaNova';
     src:url('../fonts/ProximaNova-RegularItalic.otf');
+    font-weight: normal;
+    font-style: italic;
 }
 @font-face {
     font-family: 'quorum';
