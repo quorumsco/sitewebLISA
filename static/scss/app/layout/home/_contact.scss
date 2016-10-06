@@ -17,7 +17,7 @@
 	  	}
 
           .titre-formulaire {
-            margin-top: 40px;
+            margin-top: 60px;
             margin-bottom: 70px;
             // margin-left: -180px;
             display: block;
@@ -276,10 +276,14 @@
 		  			padding-right: 10px !important;
 		  			padding-top: 20px;
 		  		}
-					p:first-child {
-						margin-top: 20px;
-					}
-                    
+				p:first-child {
+					margin-top: 20px;
+				}
+
+				.adresse-bordeaux {
+					width:100%;
+				}
+                
 			}
 		}
 

@@ -44,6 +44,9 @@
 	}	
 	@media(max-width: 800px){
 		#schema {
+			h2 {
+				display: none;
+			}
 			.img-schema {
 				display: none;
 			}
