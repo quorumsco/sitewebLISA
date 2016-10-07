@@ -110,7 +110,9 @@
                     text-align: left;
                     text-decoration: none;
 
-
+                    a {
+                      color:$grey;
+                    }
 
                     .preview-question {
                         font-weight: bold;
@@ -118,6 +120,7 @@
                         padding-right: 20px;
                         font-family: 'ProximaNova';
                         font-weight: bold;
+                        color:black !important;
                     }
 
                     .answer {
@@ -125,6 +128,7 @@
                       margin-top: 0px !important;
                       padding-right: 50px;
                       font-weight: normal;
+                      color: $grey !important;
                     }
                     
                     .faq-access {
