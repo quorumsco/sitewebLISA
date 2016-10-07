@@ -20,12 +20,19 @@
 
 			li {
 				display: inline;
-				opacity:0.75;
+
 
 				margin-right: 30px;
 
-				img {
-					width:30px;
+				i {
+					font-size: 30px;
+					color: #0f949a;
+
+				}
+
+				i:hover {
+					color:$red;
+					background-color: #f2f2f2 !important;
 				}
 			}
 
@@ -43,8 +50,8 @@
 			}
 			ul {
 				li {
-					img {
-						width:20px;
+					i {
+						font-size:20px;
 					}
 
 				}
@@ -60,8 +67,8 @@
 			}
 			ul {
 				li {
-					img {
-						width:12px;
+					i {
+						font-size:12px;
 					}
 
 				}
