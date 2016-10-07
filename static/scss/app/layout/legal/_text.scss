@@ -9,7 +9,11 @@
 	  			color: $grey;
 	  			font-size: 20px;
 	  		}
+        h3 {
+          font-family: 'ProximaNova' !important;
+        }
 	  		h2 {
+       font-family: 'ProximaNova';
         margin-top: 70px;
 	  			p {
 	  				margin: 0;
@@ -22,6 +26,7 @@
   			margin-top: 10px;
   			h2 {
   				display: inline-block;
+          font-family: 'ProximaNova';
   				p {
   					display: inline-block;
   				}
