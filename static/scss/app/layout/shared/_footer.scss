@@ -4,24 +4,25 @@
   		background: #fff;
   		padding: 25px;
   		color: $grey;
-      .container {
-        padding-left: 0 !important;
-        margin-left:  8% !important;
-      }
+
   		.copyright {
   			// margin-bottom: 20px;
   			display: inline-block !important;
+        margin-left: 8%;
 				
 				.logo-footer{
 						// width: 30%;
 						// border-radius: 100px;
             float:left !important;
-            margin-top: 25px !important
+            margin-top: 25px !important;
       //       width: 182px;
 				}
   		}
   		ul{
-			display: inline-block;
+        position:absolute;
+        right: 80px;
+
+			 display: inline-block;
 			li{
 				display: inline-block;
 				a {
@@ -49,13 +50,15 @@
 				}
 			}
 			&.nav-footer{
-				float: right;
+				
 				li {
 					margin: 20px 10px; 
 				}
 			}
   		}
   	}
+
+
   	@media(max-width: $small-screen){
   		#footer{
   			text-align: center;
