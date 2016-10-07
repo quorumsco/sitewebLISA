@@ -16,7 +16,7 @@
           font-weight: 700;
           line-height: 24px;
           background-color: #eb3459;
-          width: 100px;
+          width: 250px;
           transform: rotate(-3deg);
           padding-top: 3px;
           margin:auto;
@@ -25,9 +25,9 @@
 
     }
 
-    #bloc-buttons {
-        margin-top: 150px;
-    }
+    // #bloc-buttons {
+    //     margin-top: 150px;
+    // }
 
 
     /* ===== ARTICLES ===== */
@@ -46,25 +46,11 @@
         right: 6%;
         bottom: 8%;
     }
-    .purple-title {
-        background-color: #825BF1;
-    }
-    .red-title {
-        background-color: #E7375C;
-    }
-    .blue-title {
-        background-color: #2FC0F8;
-    }
-    .yellow-title {
-        background-color: #FDC82D;
-    }
-    .green-title {
-        background-color: #20D09D;
-    }
+
     #bloc-buttons {
         padding-left: 0 !important;
         margin-left: 50px !important;
-        margin-top: 192px !important;
+        margin-top: 240px !important;
         float: left;
     }
     #square img {
@@ -94,6 +80,7 @@
         padding-left: 1%;
         padding-top: 1%;
         color: white;
+        background-color: #E7375C;
     }
     p.titre-article {
         position: relative;
