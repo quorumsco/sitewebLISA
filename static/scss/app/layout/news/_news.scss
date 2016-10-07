@@ -20,6 +20,7 @@
           transform: rotate(-3deg);
           padding-top: 3px;
           margin:auto;
+        font-family: 'ProximaNova';
 
         }
 
@@ -76,11 +77,15 @@
         opacity: 0.7;
     }
     span.categorie {
-        font-weight: 900;
         padding-left: 1%;
         padding-top: 1%;
         color: white;
         background-color: #E7375C;
+        font-family: 'ProximaNova';
+        padding-left: 5px; 
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
     }
     p.titre-article {
         position: relative;
