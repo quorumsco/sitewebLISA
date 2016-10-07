@@ -214,17 +214,18 @@
     @media(min-width: 320px) and (max-width: 325px) {
         #mobile {
         	background: none;
-        	margin-top: 80px;
+        	margin-top: 0px;
         	margin-bottom: 60px;
 
-        	.sentence {
-        		margin-left: -30px;
-        	}
 
         	div.container { 
         		max-width: 320px !important;
         		// padding-left: 15px;
-
+			
+			    h2 {
+            		text-align: left;
+            		max-width: 290px;
+            	}
 
 
         	}
@@ -235,7 +236,7 @@
 
     	#mobile {
     		background:none;
-    		margin-top: 40px;
+    		margin-top: -40px;
     		margin-bottom: 60px;
 
 

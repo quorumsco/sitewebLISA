@@ -255,9 +255,13 @@
 		  			padding-right: 10px !important;
 		  			padding-top: 20px;
 		  		}
-					p:first-child {
-						margin-top: 20px;
-					}
+				p:first-child {
+					margin-top: 20px;
+				}
+
+				.adresse-bordeaux {
+					width:100%;
+				}
                     
 			}
 		}
@@ -309,7 +313,9 @@
 					p:first-child {
 						margin-top: 20px;
 					}
-                    
+				.adresse-bordeaux {
+					width:100%;
+				}    
 			}
 		}
 
