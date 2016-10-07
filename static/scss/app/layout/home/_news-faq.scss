@@ -115,7 +115,7 @@
                     .preview-question {
                         font-weight: bold;
                         margin-bottom: 0px !important;
-                        padding-right: 10px;
+                        padding-right: 20px;
                         font-family: 'ProximaNova';
                         font-weight: bold;
                     }
@@ -130,6 +130,7 @@
                     .faq-access {
                       font-size: 17px;
                       position:absolute;
+                      font-weight: normal;
                       bottom:0;
                       color: $grey;
                     }
