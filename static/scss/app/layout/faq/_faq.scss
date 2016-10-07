@@ -48,6 +48,11 @@
 				padding-left: 0;
 				li {
 					position: relative;
+					a {
+						color:$blue;
+						text-decoration: underline;
+						font-weight: bold;
+					}
 					&:hover {
 						cursor: pointer;
 					}
