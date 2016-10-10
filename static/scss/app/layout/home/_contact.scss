@@ -1,343 +1,250 @@
 @include exports('contact') {
-	#contact {
-		
-		// padding-bottom: 50px;
-		margin-top: -15px !important;
-
-	  	#form-contact {
-	  		background-color: #f2f2f2;
-	  		height: 100%;
-	  		text-align:left;
-	  		float:left;
-	  		width: 50%;
-	  		padding-bottom: 50px;
-
-	  	.formulaire {
-	  		padding-top: 20px;
-	  	}
-
-          .titre-formulaire {
-            margin-top: 60px;
-            margin-bottom: 70px;
-            // margin-left: -180px;
-            display: block;
-            text-align:center;
-          }
-          
-          h2 {
-              color: #fff;
-              font-size: 17px;
-              font-weight: 700;
-              line-height: 24px;
-              background-color: #eb3459;
-              width: 300px;
-              transform: rotate(-3deg);
-              padding-top: 3px;
-              margin:auto;
-
+    #contact {
+        // padding-bottom: 50px;
+        margin-top: -15px !important;
+        #form-contact {
+            background-color: #f2f2f2;
+            height: 100%;
+            text-align: left;
+            float: left;
+            width: 50%;
+            padding-bottom: 50px;
+            .formulaire {
+                padding-top: 20px;
             }
-			.champs {
-				width:100%;
-				margin:auto;
-				input {
-		  			width :80%;
-		  			height: 50px;
-		  			border-radius: 5px;
-		  			border: 1px solid #bdc3c7;
-		  			margin-bottom: 25px !important;
-		  			padding-left : 15px;
-		  			margin-left: 50px;
-
-		  		}
-
-		  		textarea {
-		  			width: 78%;
-		  			border-radius: 5px;
-		  			border: 1px solid #bdc3c7 !important;
-		  			padding:  15px 15px 15px 15px;
-		  			margin-left:50px;
-		  			margin-bottom: 30px;
-
-		  		}
-			}
-
-
-	  		button {
-	  			background-color:  #00bfff !important;
-	  			margin:auto;
-	  			width: 230px;
-	  			height: 30px;
-	  			padding-top: 6px !important;
-	  			display: block;
-	  			
-	  		}
-	  		button:hover {
-	  			background-color:  #eb3459 !important;
-	  		}
-
-	  	}
-
-	  	#adress-postale {
-	  		height: 100%;
-	  		text-align:left;
-	  		float:left;
-	  		width: 50%;
-
-	  		.contact-postal {
-	  			padding-left: 100px;
-	  			padding-right: 100px;
-	  			padding-top: 20px;
-	  		}
-
-
-			.building {
-				float:left;
-				margin-right: 20px;
-			}
-			.adresse-mail {
-				margin-left: 15px;
-			}
-			.fa-envelope-o {
-				margin-right: 20px;
-			}
-			.phone {
-				margin-left: 10px;
-				margin-right: 40px;
-
-			}
-			 .phone img {
-				filter: invert(100%) !important;
-				position: absolute;
-				width: 20px;
-			}
-
-			.adresse-bordeaux {
-				float: left;
-				display: block;
-				width:200px;
-				margin-right: 60px;
-			}
-
-			.adresse-paris {
-				margin-top: 32px;
-				display: block;
-
-			}
-
-			 #carte {
-					height:150px;
-					margin-bottom: 25px;
-					margin-top: -10px;
-					z-index:-1;
-
-				}
-
-
-	  		#cadre-pop {
-
-
-
-				
-				.text-center {
-					text-align:center;
-					width:200px;
-					display: block;
-					margin-bottom: 35px;
-				}
-
-				img {
-					width: 120px;
-					height: 120px;
-					border-radius: 50%;
-					margin:0 auto;
-
-				}
-
-	  			padding-left: 20px;
-	  			padding-right: 20px;
-	  			padding-bottom:10px;
-
-		  		p {
-		  			a {
-		  				color: black;
-		  			}
-		  		}
-
-
-          .titre-postal {
-            margin-top: 40px;
-            margin-bottom: 70px;
-            display: block;
-            text-align: center;
-          }
-            
+            .titre-formulaire {
+                margin-top: 60px;
+                margin-bottom: 70px;
+                // margin-left: -180px;
+                display: block;
+                text-align: center;
+            }
             h2 {
-                background-color: #00989d;
+                color: #fff;
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;
+                background-color: #eb3459;
                 width: 300px;
                 transform: rotate(-3deg);
                 padding-top: 3px;
-                margin:auto;
-                color:#fff;
+                margin: auto;
             }
-	  		}
-
-	  	}
-	}
-
-	@media(max-width: 1250px){
-		
-		#contact {
-
-			#form-contact {
-				input {
-					width :400px;
-				}
-
-				textarea {
-					width: 385px;
-				}
-			}
-		}
-
-	}
-
-
-
-
-	// @media(min-width: 1024px){
-		
-	// 	#contact {
-
-	// 		#form-contact {
-	// 			width:50% !important;
-	// 			float:left;
-	// 			display: block;
-	// 		}
-			
-	// 		#adress-postale {
-	// 			width:30% !important;
-	// 			display: block;
-	// 			float: left;
-	// 		}
-
-	// 	}
-
-	// }
-
-	@media(max-width: 780px){
-		
-		#contact {
-
-			#form-contact {
-				display: none;
-			}
-
-			#adress-postale {
-				float: none;
-				width: 60%;
-			}
-		}
-
-	}
-
-	@media(min-width: 320px) and (max-width: 370px){ 
-		#contact {
-			margin-bottom: 40px;
-			#adress-postale {
-
-				h2 {
-					width:200px !important;
-				}
-				.contact-postal {
-					width: 300px !important;
-		  			padding-left: 10px !important;
-		  			padding-right: 10px !important;
-		  			padding-top: 20px;
-		  		}
-				p:first-child {
-					margin-top: 20px;
-				}
-
-				.adresse-bordeaux {
-					width:100%;
-				}
-                    
-			}
-		}
-
-	}
-
-
-    @media (min-width: 375px) and (max-width: 385px){
-		#contact {
-			margin-bottom: 40px;
-			#adress-postale {
-
-				h2 {
-					width:200px !important;
-				}
-				.contact-postal {
-					width: 355px !important;
-		  			padding-left: 10px !important;
-		  			padding-right: 10px !important;
-		  			padding-top: 20px;
-		  		}
-				p:first-child {
-					margin-top: 20px;
-				}
-
-				.adresse-bordeaux {
-					width:100%;
-				}
-                
-			}
-		}
-
-	}
-
-    @media (min-width: 414px) and (max-width: 425px){
-		#contact {
-			margin-bottom: 40px;
-			#adress-postale {
-
-				h2 {
-					width:200px !important;
-				}
-				.contact-postal {
-					width: 375px !important;
-		  			padding-left: 0px !important;
-		  			padding-right: 10px !important;
-		  			padding-top: 20px;
-		  		}
-					p:first-child {
-						margin-top: 20px;
-					}
-				.adresse-bordeaux {
-					width:100%;
-				}    
-			}
-		}
-
+            .champs {
+                width: 100%;
+                margin: auto;
+                input {
+                    width: 80%;
+                    height: 50px;
+                    border-radius: 5px;
+                    border: 1px solid #bdc3c7;
+                    margin-bottom: 25px !important;
+                    padding-left: 15px;
+                    margin-left: 50px;
+                }
+                textarea {
+                    width: 78%;
+                    border-radius: 5px;
+                    border: 1px solid #bdc3c7 !important;
+                    padding: 15px 15px 15px 15px;
+                    margin-left: 50px;
+                    margin-bottom: 30px;
+                }
+            }
+            button {
+                background-color: #00bfff !important;
+                margin: auto;
+                width: 230px;
+                height: 30px;
+                padding-top: 6px !important;
+                display: block;
+            }
+            button:hover {
+                background-color: #eb3459 !important;
+            }
+        }
+        #adress-postale {
+            height: 100%;
+            text-align: left;
+            float: left;
+            width: 50%;
+            .contact-postal {
+                padding-left: 100px;
+                padding-right: 100px;
+                padding-top: 20px;
+            }
+            .building {
+                float: left;
+                margin-right: 20px;
+            }
+            .adresse-mail {
+                margin-left: 15px;
+            }
+            .fa-envelope-o {
+                margin-right: 20px;
+            }
+            .phone {
+                margin-left: 10px;
+                margin-right: 40px;
+            }
+            .phone img {
+                filter: invert(100%) !important;
+                position: absolute;
+                width: 20px;
+            }
+            .adresse-bordeaux {
+                float: left;
+                display: block;
+                width: 200px;
+                margin-right: 60px;
+            }
+            .adresse-paris {
+                margin-top: 32px;
+                display: block;
+            }
+            #carte {
+                height: 150px;
+                margin-bottom: 25px;
+                margin-top: -10px;
+                z-index: -1;
+            }
+            #cadre-pop {
+                .text-center {
+                    text-align: center;
+                    width: 200px;
+                    display: block;
+                    margin-bottom: 35px;
+                }
+                img {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                }
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom:10px;
+                p {
+                    a {
+                        color: black;
+                    }
+                }
+                .titre-postal {
+                    margin-top: 40px;
+                    margin-bottom: 70px;
+                    display: block;
+                    text-align: center;
+                }
+                h2 {
+                    background-color: #00989d;
+                    font-size: 17px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    width: 300px;
+                    transform: rotate(-3deg);
+                    padding-top: 3px;
+                    margin: auto;
+                    color: #fff;
+                }
+            }
+        }
     }
-
-    @media (min-width: 768px) and (max-width: 780px) { 
-
-		#contact {
-
-			#adress-postale {
-
-
-					p:first-child {
-						margin-top: 40px !important;
-					}
-                    
-			}
-		}
+    @media(max-width: 1250px) {
+        #contact {
+            #form-contact {
+                input {
+                    width: 400px;
+                }
+                textarea {
+                    width: 385px;
+                }
+            }
+        }
     }
-
-
-
+    @media(max-width: 780px) {
+        #contact {
+            #form-contact {
+                display: none;
+            }
+            #adress-postale {
+                float: none;
+                width: 60%;
+            }
+        }
+    }
+    @media(min-width: 320px) and (max-width: 370px) {
+        #contact {
+            margin-bottom: 40px;
+            #adress-postale {
+                h2 {
+                    width: 200px !important;
+                }
+                .contact-postal {
+                    width: 300px !important;
+                    padding-left: 10px !important;
+                    padding-right: 10px !important;
+                    padding-top: 20px;
+                }
+                p:first-child {
+                    margin-top: 20px;
+                }
+                .adresse-bordeaux {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (min-width: 375px) and (max-width: 385px) {
+        #contact {
+            margin-bottom: 40px;
+            #adress-postale {
+                h2 {
+                    width: 200px !important;
+                }
+                .contact-postal {
+                    width: 355px !important;
+                    padding-left: 10px !important;
+                    padding-right: 10px !important;
+                    padding-top: 20px;
+                }
+                p:first-child {
+                    margin-top: 20px;
+                }
+                .adresse-bordeaux {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (min-width: 414px) and (max-width: 425px) {
+        #contact {
+            margin-bottom: 40px;
+            #adress-postale {
+                h2 {
+                    width: 200px !important;
+                }
+                .contact-postal {
+                    width: 375px !important;
+                    padding-left: 0px !important;
+                    padding-right: 10px !important;
+                    padding-top: 20px;
+                }
+                p:first-child {
+                    margin-top: 20px;
+                }
+                .adresse-bordeaux {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 780px) {
+        #contact {
+            #adress-postale {
+                p:first-child {
+                    margin-top: 40px !important;
+                }
+            }
+        }
+    }
 }

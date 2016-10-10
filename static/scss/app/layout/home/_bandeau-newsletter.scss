@@ -1,252 +1,188 @@
 @include exports ('bandeau-newsletter') {
     #bandeau-newsletter {
-
         background-image: url("../images/home/bg-newsletter.png");
         background-size: cover;
         background-repeat: no-repeat;
         height: 90px;
         padding-top: 40px;
-
-        
         h1 {
-
-          font-size: 18px;
-          font-weight: 700;
-          line-height: 24px;
-          margin-bottom: -10px;
-          color:white;
-          font-family: 'ProximaNova';
-          font-weight:normal;
-
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: -10px;
+            color: white;
+            font-family: 'ProximaNova';
+            font-weight: normal;
         }
-
         h2 {
-
-          font-size: 18px;
-          line-height: 24px;
-          color:white;
-          font-weight: lighter;
-          font-family: 'ProximaNova';
-          font-weight: normal;
- 
+            font-size: 18px;
+            line-height: 24px;
+            color: white;
+            font-weight: lighter;
+            font-family: 'ProximaNova';
+            font-weight: normal;
         }
-
         span {
-          color: white;
-          font-weight: bold;
-          font-size: 1.4em;
-          margin-right: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.4em;
+            margin-right: 10px;
         }
-        
         input {
-          width: 40vw;
-          height: 64px;
-          border-radius: 4px;
-          border: none;
-          padding-left: 30px;
-          color: #95a5a6;
+            width: 40vw;
+            height: 64px;
+            border-radius: 4px;
+            border: none;
+            padding-left: 30px;
+            color: #95a5a6;
         }
-        
         button {
-          width: 226px;
-          height: 64px;
-          background-color: #00bfff;
-          border-radius: 4px;
-          padding:0;
-          font-size: 26px;
-          font-weight: 700;
-          line-height: 31px;
+            width: 226px;
+            height: 64px;
+            background-color: #00bfff;
+            border-radius: 4px;
+            padding: 0;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 31px;
         }
-
         button:hover {
-          background-color:  #eb3459 !important;
+            background-color: #eb3459 !important;
         }
-
         .description-newsletter {
-          float: left;
-          margin-right: 40px;
-          padding-left: 50px;
-          width:30vw;
-          text-align: left;
+            float: left;
+            margin-right: 40px;
+            padding-left: 50px;
+            width: 30vw;
+            text-align: left;
         }
-
         .input-newsletter {
-          float:left;
-          margin-right: 20px;
+            float: left;
+            margin-right: 20px;
         }
-
         .abonnement {
-          float:right;
-          margin-right: 25px;
-          margin-top: 0;
-          button {
-            margin-top: 0 !important;
-          }
+            float: right;
+            margin-right: 25px;
+            margin-top: 0;
+            button {
+                margin-top: 0 !important;
+            }
         }
         .abonnement-responsive {
-          display: none;
-
+            display: none;
         }
-    
-        
     }
-
-  @media(max-width: 1320px){
-     #bandeau-newsletter {
-
-
-      input {
-          width: 416px;
-        }
-      button {
-
-          width: 200px;
-      }
-
-     }
-
-  }
-
-  @media(max-width: 1190px){
-     #bandeau-newsletter {
-
-
-      input {
-          width: 350px;
-        }
-      button {
-
-          width: 200px;
-      }
-
-     }
-
-  }
-  @media(max-width: 1125px){
-     #bandeau-newsletter {
-      
-      input {
-          width: 250px;
-        }
-      button {
-
-          width: 50px;
-      }
-
-     }
-
-  }
-
-  @media(min-width: 2455px){
-    #bandeau-newsletter {
-      
-      input {
-          width: 1500px;
-        }
-
-     }
-  }
-@media(min-width: 760px) and (max-width: 768px){
-    #bandeau-newsletter {
-      padding-top: 60px;
-    }
-
-  }
-
-  @media(max-width: 875px){
-     #bandeau-newsletter {
-
-      input {
-          width: 250px;
-          height: 34px;
-        }
-      button {
-          width: 100px;
-          height: 34px;
-          font-size: 20px;
-      }
-
-      .description-newsletter {
-        float:none;
-        margin-top: -40px;
-      }
-
-
-      .input-newsletter {
-        float:none;
-      }
-
-      .abonnement {
-        margin-top: 10px;
-        float:none;
-      }
-        
-
-     }
-
-  }
-
-    @media(min-width: 320px) and (max-width: 370px){ 
-        
+    @media(max-width: 1320px) {
         #bandeau-newsletter {
-          margin-top: -20px;
-
-          .description-newsletter {
-            margin-bottom: 20px;
-            float:none;
-            text-align: center;
-            padding-left: 0px !important;
-            margin-left: 100px;
-          }
-
-
+            input {
+                width: 416px;
+            }
+            button {
+                width: 200px;
+            }
+        }
+    }
+    @media(max-width: 1190px) {
+        #bandeau-newsletter {
+            input {
+                width: 350px;
+            }
+            button {
+                width: 200px;
+            }
+        }
+    }
+    @media(max-width: 1125px) {
+        #bandeau-newsletter {
+            input {
+                width: 250px;
+            }
+            button {
+                width: 50px;
+            }
+        }
+    }
+    @media(min-width: 2455px) {
+        #bandeau-newsletter {
+            input {
+                width: 1500px;
+            }
+        }
+    }
+    @media(min-width: 760px) and (max-width: 768px) {
+        #bandeau-newsletter {
+            padding-top: 60px;
+        }
+    }
+    @media(max-width: 875px) {
+        #bandeau-newsletter {
+            input {
+                width: 250px;
+                height: 34px;
+            }
+            button {
+                width: 100px;
+                height: 34px;
+                font-size: 20px;
+            }
+            .description-newsletter {
+                float: none;
+                margin-top: -40px;
+            }
             .input-newsletter {
-                  margin-left: 20px !important;
-              }
+                float: none;
+            }
+            .abonnement {
+                margin-top: 10px;
+                float: none;
+            }
         }
-
-
-
-
-
-     }
-  @media (min-width: 375px) and (max-width: 385px){
-        
+    }
+    @media(min-width: 320px) and (max-width: 370px) {
         #bandeau-newsletter {
-          margin-top: -20px;
-
-          .description-newsletter {
-            margin-bottom: 20px;
-            float:none;
-            padding-left: 0px !important;
-            margin: 0 auto;
-            
-          }
-
-          .newsletter-msg {
             margin-top: -20px;
-            margin-bottom: 10px;
-          }
-
-
+            .description-newsletter {
+                margin-bottom: 20px;
+                float: none;
+                text-align: center;
+                padding-left: 0px !important;
+                margin-left: 100px;
+            }
             .input-newsletter {
-                  margin-left: 20px !important;
-              }
+                margin-left: 20px !important;
+            }
         }
-
-     }
-
-    @media (min-width: 414px) and (max-width: 425px){ 
-      #bandeau-newsletter {
-          .description-newsletter {
-            margin-bottom: 20px;
-            float:none;
-            text-align: center;
-            padding-left: 0px !important;
-            margin-left: 50px;
-          }
-
-      }
     }
-
+    @media (min-width: 375px) and (max-width: 385px) {
+        #bandeau-newsletter {
+            margin-top: -20px;
+            .description-newsletter {
+                margin-bottom: 20px;
+                float: none;
+                padding-left: 0px !important;
+                margin: 0 auto;
+            }
+            .newsletter-msg {
+                margin-top: -20px;
+                margin-bottom: 10px;
+            }
+            .input-newsletter {
+                margin-left: 20px !important;
+            }
+        }
+    }
+    @media (min-width: 414px) and (max-width: 425px) {
+        #bandeau-newsletter {
+            .newsletter-msg {
+                margin-left: 95px;
+            }
+            .description-newsletter {
+                margin-bottom: 20px;
+                float: none;
+                text-align: center;
+                padding-left: 0px !important;
+                margin-left: 50px;
+            }
+        }
+    }
 }

@@ -5,52 +5,43 @@
             float: left;
             width: 50%;
         }
-
         #preview-news {
-
-          padding-top: 50px;
-          position:relative;
-
-          ul.news-responsive {
-            display: none;
-          }
-          .derniere-actu {
-            margin-top: 40px;
-            margin-bottom: 60px;
-            display: block;
-          }
+            padding-top: 50px;
+            position: relative;
+            ul.news-responsive {
+                display: none;
+            }
+            .derniere-actu {
+                margin-top: 40px;
+                margin-bottom: 60px;
+                display: block;
+            }
             h2 {
-              color: #fff;
-              font-size: 17px;
-              font-weight: 700;
-              line-height: 24px;
-              background-color: #00989d;
-              width: 300px;
-              transform: rotate(-3deg);
-              padding-top: 3px;
-              margin:auto;
-
+                color: #fff;
+                font-size: 17px;
+                font-weight: 700;
+                line-height: 24px;
+                background-color: #00989d;
+                width: 300px;
+                transform: rotate(-3deg);
+                padding-top: 3px;
+                margin: auto;
             }
             ul {
-                
-                list-style: none;              
+                list-style: none;
                 text-align: left;
                 padding-left: 80px;
-                
-
                 p {
-                  padding-left: 20px;
-                  margin-top: 100px !important;
-                  position:absolute;
-                  bottom:0;
-                  font-size: 17px;
-                  color: $grey;
+                    padding-left: 20px;
+                    margin-top: 100px !important;
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 17px;
+                    color: $grey;
                 }
-
                 p:hover {
-                  color:black;
+                    color: black;
                 }
-
                 li {
                     display: inline;
                     margin: 30px;
@@ -58,17 +49,17 @@
                         max-width: 200px !important;
                         opacity: 0.7;
                         -webkit-filter: grayscale(1);
-                           -moz-filter: grayscale(1);
-                            -ms-filter: grayscale(1);
-                             -o-filter: grayscale(1);
-                                filter: grayscale(1);
-                        &:hover{
-                          opacity: 1;
-                          -webkit-filter: grayscale(0);
-                             -moz-filter: grayscale(0);
-                              -ms-filter: grayscale(0);
-                               -o-filter: grayscale(0);
-                                  filter: grayscale(0);
+                        -moz-filter: grayscale(1);
+                        -ms-filter: grayscale(1);
+                        -o-filter: grayscale(1);
+                        filter: grayscale(1);
+                        &:hover {
+                            opacity: 1;
+                            -webkit-filter: grayscale(0);
+                            -moz-filter: grayscale(0);
+                            -ms-filter: grayscale(0);
+                            -o-filter: grayscale(0);
+                            filter: grayscale(0);
                         }
                     }
                 }
@@ -79,26 +70,21 @@
             background-color: #f2f2f2;
             height: 100%;
             position: relative;
-
-          .question-freq {
-            margin-top: 40px;
-            margin-bottom: 70px;
-            display: block;
-          }
-
-    
-            
+            .question-freq {
+                margin-top: 40px;
+                margin-bottom: 70px;
+                display: block;
+            }
             h2 {
                 background-color: #eb3459;
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;
-                width:300px;
+                width: 300px;
                 transform: rotate(-3deg);
                 padding-top: 3px;
-                margin:auto;
-                color:#fff;
-
+                margin: auto;
+                color: #fff;
             }
             ul {
                 list-style: none;
@@ -109,230 +95,160 @@
                     line-height: 26px;
                     text-align: left;
                     text-decoration: none;
-
                     a {
-                      color:$grey;
+                        color: $grey;
                     }
-
                     .preview-question {
                         font-weight: bold;
                         margin-bottom: 0px !important;
                         padding-right: 20px;
                         font-family: 'ProximaNova';
                         font-weight: bold;
-                        color:black !important;
+                        color: black !important;
                     }
-
                     .answer {
-                      font-size: 17px;
-                      margin-top: 0px !important;
-                      padding-right: 50px;
-                      font-weight: normal;
-                      color: $grey !important;
+                        font-size: 17px;
+                        margin-top: 0px !important;
+                        padding-right: 50px;
+                        font-weight: normal;
+                        color: $grey !important;
                     }
-                    
                     .faq-access {
-                      font-size: 17px;
-                      position:absolute;
-                      font-weight: normal;
-                      bottom:0;
-                      color: $grey;
+                        font-size: 17px;
+                        position: absolute;
+                        font-weight: normal;
+                        bottom: 0;
+                        color: $grey;
                     }
-
                     .faq-access:hover {
-                      color:black;
+                        color: black;
                     }
-
                 }
             }
         }
     }
-
-  @media(max-width: 1103px){
-      #faq-news {
-        #preview-news {
-
-                display:none;
-            
-
-        }
-      }
-  }
-
-    @media(max-width: 600px){
-      #faq-news {
-        #preview-faq {
-          margin-top:  -60px; 
-
-          h2 {
-            padding-top: 20px;
-            margin-bottom: 0px;
-          }
-          ul {
-            li {
-              padding-right: 20px;
+    @media(max-width: 1103px) {
+        #faq-news {
+            #preview-news {
+                display: none;
             }
-          }
         }
-        .container {
-
-          display: block;
-
-          float:none;
-          width:100%;
-          max-width: none !important;
-        }
-
-      }
-  }
-
-   // @media(min-width: 1024px){
-   //    #faq-news {
-   //      #preview-faq { 
-   //        min-width: 1205px !important;
-
-   //        .container {
-   //          min-width:1205px !important;
-   //        }
-
-   //      }
-
-   //      #preview-news { 
-   //        min-width: 1205px !important;
-
-   //        .container {
-   //          min-width:1205px !important;
-   //        }
-
-   //      }
-   //    }
-   //  }
-
-
-@media(min-width: 425px) and (max-width: 430px){
-
-      #faq-news {
-        #preview-faq {
-          padding-top: 5px;
-
-          h2 { 
-            padding-top: 2px;
-            width: 250px;
-          }
-          ul {
-            li {
-              .faq-access { 
-                position:relative;
-              }
-            }
-          }
-
-        }
-      }
-
-}
-
-    @media(min-width: 375px) and (max-width: 380px){
-      #faq-news {
-        #preview-faq {
-          padding-top: 5px; 
-            margin-left: 0;
-            margin-right: 0;
-            margin-bottom: -20px !important;
-
-          h2 { 
-            padding-top: 2px;
-            width: 250px;
-          }
-
-          ul {
-            li {
-              .faq-access { 
-                position:relative;
-              }
-            }
-          }
-        }
-      }
     }
-
+    @media(max-width: 600px) {
+        #faq-news {
+            #preview-faq {
+                margin-top: -60px;
+                h2 {
+                    padding-top: 20px;
+                    margin-bottom: 0px;
+                }
+                ul {
+                    li {
+                        padding-right: 20px;
+                    }
+                }
+            }
+            .container {
+                display: block;
+                float: none;
+                width: 100%;
+                max-width: none !important;
+            }
+        }
+    }
+    @media(min-width: 425px) and (max-width: 430px) {
+        #faq-news {
+            #preview-faq {
+                padding-top: 5px;
+                h2 {
+                    padding-top: 2px;
+                    width: 250px;
+                }
+                ul {
+                    li {
+                        .faq-access {
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(min-width: 375px) and (max-width: 380px) {
+        #faq-news {
+            #preview-faq {
+                padding-top: 5px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: -20px !important;
+                h2 {
+                    padding-top: 2px;
+                    width: 250px;
+                }
+                ul {
+                    li {
+                        .faq-access {
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+    }
     @media(min-width: 320px) and (max-width: 330px) {
-      #faq-news {
-        #preview-faq {
-            margin-left: 0;
-            margin-right: 0;
-            padding-top: 5px;
-            margin-bottom: -20px !important;
-
-          h2 { 
-            padding-top: 2px;
-            width: 250px;
-          }
-
-          ul {
-            li {
-              .faq-access { 
-                position:relative;
-              }
+        #faq-news {
+            #preview-faq {
+                margin-left: 0;
+                margin-right: 0;
+                padding-top: 5px;
+                margin-bottom: -20px !important;
+                h2 {
+                    padding-top: 2px;
+                    width: 250px;
+                }
+                ul {
+                    li {
+                        .faq-access {
+                            position: relative;
+                        }
+                    }
+                }
             }
         }
-      }
     }
-  }
-
-  @media (min-width: 414px) and (max-width: 425px){
-
-    #faq-news {
-      #preview-faq {
-        margin-left: 0;
-        margin-right: 0;
-        padding-top: 5px;
-        margin-bottom: -20px !important;
-
-        h2 {
-          padding-top: 3px;
-          width: 250px;
-
-        }
-
-        ul {
-            li {
-              .faq-access { 
-                position:relative;
-              }
+    @media (min-width: 414px) and (max-width: 425px) {
+        #faq-news {
+            #preview-faq {
+                margin-left: 0;
+                margin-right: 0;
+                padding-top: 5px;
+                margin-bottom: -20px !important;
+                h2 {
+                    padding-top: 3px;
+                    width: 250px;
+                }
+                ul {
+                    li {
+                        .faq-access {
+                            position: relative;
+                        }
+                    }
+                }
             }
         }
-
-      }
     }
-
-
-  }
-
-
-    @media (min-width: 768px) and (max-width: 780px) { 
-
-
-    #faq-news {
-      #preview-faq {
-
-        max-height: 500px;
-
-
-        ul {
-            li {
-              .faq-access { 
-                position:relative;
-              }
+    @media (min-width: 768px) and (max-width: 780px) {
+        #faq-news {
+            #preview-faq {
+                max-height: 500px;
+                ul {
+                    li {
+                        .faq-access {
+                            position: relative;
+                        }
+                    }
+                }
             }
         }
-
-      }
     }
-
-
-    }
-
-
-
 }

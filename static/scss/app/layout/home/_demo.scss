@@ -1,88 +1,77 @@
 @include exports('demo') {
-  #get-demo {
-    background-image:  url(../images/home/demo-bg-3.png);
-    background-repeat:  no-repeat;
-    background-size: cover;
-    height: 110px;
-    margin-top: 0  !important;
-    padding-top: 70px;
-    margin-bottom: 0px;
-
-    h2{
-      color: #f2f2f2;
-      font-size: 26px;
-      font-weight: 700;
-      line-height: 24px;
-      font-family: 'ProximaNova';
+    #get-demo {
+        background-image: url(../images/home/demo-bg-3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 110px;
+        margin-top: 0 !important;
+        padding-top: 70px;
+        margin-bottom: 0px;
+        h2 {
+            color: #f2f2f2;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: 'ProximaNova';
+        }
+        button {
+            border-radius: 4px;
+            width: 460px;
+            height: 64px;
+            background-color: #00bfff !important;
+            padding-top: 5px !important;
+            margin-top: 0px;
+            & a {
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 31px;
+                color: white;
+                margin-top: 0px !important;
+                font-family: 'ProximaNova';
+            }
+        }
+        button:hover {
+            background-color: #eb3459 !important;
+        }
     }
-    
-    button {
-      border-radius: 4px;
-      width: 460px;
-      height: 64px;
-      background-color: #00bfff !important;
-      padding-top:5px !important;
-      margin-top: 0px;
-        
-      & a {
-        font-size: 25px;
-        font-weight: 700;
-        line-height: 31px;
-        color:white;
-        margin-top: 0px !important;
-        font-family: 'ProximaNova';
-
-      }
-    }
-    button:hover {
-      background-color: #eb3459 !important;
-    }
-  }
-
-
     @media(max-width: 435px) {
         #get-demo {
-           button {
-            width:300px;
-            height: 60px;
-              & a {
-                 font-size: 20px;
-              }
-           }
+            button {
+                width: 300px;
+                height: 60px;
+                & a {
+                    font-size: 20px;
+                }
+            }
         }
     }
-
-    @media(min-width: 320px) and (max-width: 370px){ 
-      #get-demo {
-        margin-top: 0px !important;
-
-        h2 {
-          margin-top :0px;
-        }
-        button { 
-          margin-top: -30px !important;
-          width:250px;
-            & a {
-                font-size: 17px !important;
-              }
-        }
-
-      }  
-     }
-
-    @media (min-width: 375px) and (max-width: 385px){
+    @media(min-width: 320px) and (max-width: 370px) {
         #get-demo {
-          button {
-              margin-top: -35px;
-          }
+            margin-top: 0px !important;
+            h2 {
+                margin-top: 0px;
+            }
+            button {
+                margin-top: -30px !important;
+                width: 250px;
+                & a {
+                    font-size: 17px !important;
+                }
+            }
         }
     }
-    @media (min-width: 414px) and (max-width: 425px){ 
+    @media (min-width: 375px) and (max-width: 385px) {
         #get-demo {
-          button {
-              margin-top: -35px;
-          }
+            button {
+                margin-top: -35px;
+            }
         }
     }
-
+    @media (min-width: 414px) and (max-width: 425px) {
+        #get-demo {
+            button {
+                margin-top: -35px;
+            }
+        }
+    }
 }
