@@ -177,4 +177,28 @@
             margin-bottom: 60px;
         }
     }
+    @media (min-width: 1024px) and (max-width: 1100px) {
+        #mobile {
+            div.container {
+                margin-left: 0 !important;
+                .mobile-content {
+                    margin-left: 8%;
+                    text-align: center;
+                    h2 {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 800px){ 
+        #mobile {
+            div.container {
+                margin-left: 0 !important;
+                .mobile-content {
+                    margin-left: 8%;
+                }
+            }
+        }
+    }
 }
