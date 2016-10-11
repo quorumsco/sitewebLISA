@@ -2,208 +2,367 @@ extends ./layout.jade
 block vars
     - var pageTitle = 'Home'
 block content
-    header#home.big
-        .container
-            h1 Mobilise above 
-                span expectations
-            p.subtitle The data-driven app to build & organise big movements from your smartphone.
-            a(href="http://eepurl.com/bWJkZr" target="_blank")
-                button.blue Get Early Access
+    header#reset.big.
+      .container
     main
         section#product
             .container
-                h2 Build people centered, meaningful and 
-                    p organized field actions.
-                span.quote Every great cause starts with a simple conversation. 
-                span.quote Make every interaction with the people count :  
-                span.quote 
-                    strong Organize, Analyse, Target and Engage
-                    |  people using Quorum
-        section#webconsole
-            .container
-                .content
-                    img(src="../images/icons/computer.svg")
-                    div.sentence
-                        span.part WEB APPLICATION : ORGANISE & ANALYSE
-                    h3 Build, lead and organize your 
-                        p team at any scale
-                    hr.green.title
+
+                //- img(src="../images/home/icon-header.png")
+
+                #testimony-1.active
+
+                    h2 L'application qui a permis à l'équipe de Sébastien de <span class="underline">mobiliser</span> &nbsp;
+                        span.highlight-span  plus efficacement,  <span class="underline">rue après rue</span> , <span class="underline">citoyen après citoyen</span>.
+
+                    span.quote L'équipe derrière Sébastien Saint Pasteur est l'une des équipes qui a utilisé Quorum dans leurs actions de mobilisation au quotidien ; les rendant plus fluides et plus efficaces pour ainsi se focaliser sur l’essentiel : mobiliser pour l'élection.
                     
-                    .list
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-green.svg")
-                            div.sentence
-                                span Create a 
-                                    strong.highlight collective force
-                                    |  with your team, at any scale
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-green.svg")
-                            div.sentence
-                                span Analyse : Use data beyond expectations to sharpen your strategy
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-green.svg")
-                            div.sentence
-                                span 
-                                    strong.highlight Identify swing zones 
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-green.svg")
-                            div.sentence
-                                span Get key characteristics about people and territories
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-green.svg")
-                            div.sentence
-                                span Track, analyze and predict with data 
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-green.svg")
-                            div.sentence
-                                span Receive 
-                                    strong.highlight real-time
-                                    |  results of your team progressions & actionable insights
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-green.svg")
-                            div.sentence
-                                span Build & develop long term & personalized relationships 
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-green.svg")
-                            div.sentence
-                                span Develop custom survey
+
+
+                #testimony-2
+                    h2  L’application qui permet  de construire une équipe de <span class="underline">bénévoles impliqués qui sensibilise</span>  et <span class="underline">écoute</span> chaque personne rencontrée.
+                    span.quote  Les Jours heureux est un mouvement qui fait intervenir différentes organisations de la société civile. (Génération cobaye, Association des Paralysés de France etc.). Il publie en novembre 2016 "Et nous vivrons des jours heureux".
+                    
+                #testimony-3
+                    h2  L’application qui permet de proposer à ses clients une application pour <span class="underline">mobiliser sur le terrain à chaque instant</span> , en délivrant <span class="underline">la bonne information</span>.
+                    span.quote  Tell & Charrier est une agence de communication spécialisée dans le secteur public qui intègre Quorum à son offre. Ils ont compris qu’aujourd’hui s’équiper des dernières technologies n’est plus simplement une pièce du puzzle, mais un bloc structurant de la stratégie, quelque soit la taille de l'organisation.
+              
+                hr.hr-testimony
+                .testimonies
+                    .person-testimony.active.person-1
+                        img(src="../images/header/photo-testimony2.png").photo-testimony
+                        .infos-testimony
+                            p.testimony-name Sébastien Saint Pasteur
+                            p.testimony-job Elected Councillor
+                    .person-testimony.person-2
+                        img(src="../images/header/photo-JHP.png").photo-testimony
+                        .infos-testimony
+                            p.testimony-name Les jours heureux
+                            p.testimony-job Association
+                    .person-testimony.person-3
+                        img(src="../images/header/photo-testimony3.png").photo-testimony
+                        .infos-testimony
+                            p.testimony-name Agence Tell & Charrier
+                            p.testimony-job Communication
+
+                .testimonies-responsive
+                    ul
+                        li
+                            .person-1
+                                p
+                                    span.icones-1.fa.fa-circle
+                        li
+                            .person-2
+                                p
+                                    span.icones-2.fa.fa-circle-o
+                        li
+                            .person-3
+                                p
+                                    span.icones-3.fa.fa-circle-o
+        section#target.hide
+            .container#target-container
+                h2 <b>MOBILISE</b> ABOVE EXPECTATIONS
+                ul
+                    li(onclick="location.href='http://google.fr';")
+                      p.objectif CAMPAIGNERS
+                      p.target-name Staff, election runner 
+                      hr
+                      p.description <b>Win an election and engage people</b>
+                      p.keywords Win an election
+                    li(onclick="location.href='http://google.fr';")
+                      p.objectif  NON-PROFITS
+                      p.target-name  Game changer, Advocacy group, Union
+                      hr
+                      p.description <b>Raise more money, Get more support, build a movement</b>
+                      p.keywords Build a movement 
+                    li(onclick="location.href='http://google.fr';")
+                      p.objectif PUBLIC ADMINISTRATION 
+                      p.target-name Local and national authorities, companies
+                      hr
+                      p.description <b>Engage public, serve your constituents, deliver better outcomes</b>
+                      p.keywords Engage, serve and deliver
+                    li(onclick="location.href='http://google.fr';")
+                      p.objectif AGENCIES & CONSULTING 
+                      p.target-name  Communication, Data consulting, Independant
+                      hr
+                      p.description <b> Offer your clients efficient, effective and powerful tools joining our partner program</b>
+                      p.keywords Join our partner program
+                        
+        section#schema.hide
+            .container
+                h2 <b>WHY</b> QUORUM ? 
+                span.img-schema
+                    img(src="../images/schema-4.png")
+            
+            
+        section#icons.hide
+            .container
+                h2 MOBILISER & ENGAGER  <b>LE TERRAIN</b>
+                h3 <b>1 application web</b> pour s’<b>organiser</b>, <b>analyser</b> et <b>communiquer</b>. 
+                h3 <b>1 application mobile</b> pour <b>révéler tout le potentiel de votre équipe.</b>
+                ul
+                    li#icon-1
+                        img(src="../images/icons/icon1.png")
+                        p Cibler (optionnel)
+                    li#icon-2
+                        img(src="../images/icons/icon2.png")
+                        p Organiser
+                    li.active#icon-3
+                        img(src="../images/icons/icon3.png")
+                        p Mobiliser
+                    li#icon-4
+                        img(src="../images/icons/icon4.png")
+                        p Analyser
+
+                                
         section#mobile
             .container
-                .content
-                    img(src="../images/icons/mobile.svg")
-                    div.sentence
-                        span.part MOBILE APPLICATION : ON THE GO
-                    h3 Build big movements from 
-                        p your smartphone
-                    hr.pink.title
-                    .list
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span
-                                    strong Save hours
-                                    |  with instant capture on the field
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span Anytime/Anywhere add information about your cause for your team
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span 
-                                    strong Engage
-                                    |  anytime/anywhere
-                                    strong a new person
-                                    |  or organization to your movement
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span Anytime/Anywhere log contact, assign tags, set follow-ups, change volunteer status, record donations and adjust support level
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span 
-                                    strong Integrated Canvassing features
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span Motivate the team
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span Don’t fill contact forms, hold conversation with people thanks to targeted information 
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span Find teammates to 
-                                    strong drive action together
-                        div.line
-                            div.icon
-                                img(src="../images/icons/check-pink.svg")
-                            div.sentence
-                                span Follow your movement and teammates progression
+                .mobile-content       
+                    .content#content-icon-1
+                        h2 Prioriser et configurer son action
+                        div.sentence
+                            span.part grâce aux technologies de la data
+                        h2 Disposer de données cartographiées
+                        div.sentence 
+                            span.part &  de caractéristiques clées par territoire et individus
+                        h2 Identifier les zones prioritaires où agir
+                        div.sentence.last
+                            span.part et les thématiques associées
+                            
+                    .content#content-icon-2
+                        h2 Attribuer des zones d’actions à chacun 
+                        div.sentence
+                            span.part définissez des objectifs, générer des feuilles de route
+
+                        h2 Personnaliser le QG de l’application
+                        div.sentence
+                            span.part  avec des éléments d’information pour vos équipes
+                        
+                        h2 Personnalisez les questionnaires 
+                        div.sentence.last
+                            span.part depuis la web app et pour l'application mobile
+
+                        h2 Fonctionnalité de porte-à-porte (optionnelle)
+                        div.sentence.last
+                            span.part rencontrer les individus là où ils se trouvent
+
+                    .content#content-icon-3.active
+                        h2  Inviter de nouveaux soutiens à rejoindre l’application mobile
+                        div.sentence
+                            span.part pour constituer une véritable force collective
+                        h2 Mobiliser partout, à chaque instant grâce à l’application mobile
+                        div.sentence
+                            span.part Recruter soutiens, donateurs, informations
+                        h2  Envoyer directement des éléments aux individus rencontrées
+                        div.sentence
+                            span.part Immédiat depuis le smartphone
+                        h2  Disposer d’une base unique et pérenne 
+                        div.sentence
+                            span.part mailing, phoning, sms, nouvelle visite
+                            
+                    .content#content-icon-4
+                        h2 Comprendre et lire les enjeux en temps réel 
+                        div.sentence
+                            span.part grâce à des remontées et des données analysées
+                        h2 Ajuster son action en cours
+                        div.sentence
+                            span.part et bénéficier d'une photographie détaillé de son action
+                        h2 Suivre la progression de son action
+                        div.sentence
+                            span.part pour engager et motiver les équipes
+                        h2 Et d'autres fonctionnalité à découvrir ! 
+                        div.sentence
+                            span.part contactez-nous on vous en dira plus
             .clearfix
-        section#target
+        .clearfix
+
+
+        section#get-demo.hide
             .container
-                h2 Less process, mobilise more : it's on you.
-                span.quote Grassroots movements, political campaigns, nonprofits, our tech is your in-field support.
+                button.btn
+                  a(href="https://quorum-impact.us12.list-manage.com/subscribe?u=8d7c7595072992d8808c7993d&id=913c162260" target="_blank").get-demo INSTALL QUORUM
+        .clearfix
+
+        section#faq-news.hide
+
+            .container#preview-news
+                span.derniere-actu
+                    h2 THE LATEST NEWS
+                ul.news-img
+
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/impacthub.png" )
+
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/sudouest.png" )
+
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/imgres-1.jpg" )
+
+
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/websummit.png" )
+
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/fdsolutons2.png" ).ok
+
+                    li
+                      a(href="../fr/news.html")
+                          img(src="../images/home/challenges2.png" )
+                    
+                    a(href="../fr/news.html" target="_blank")
+                        p ▸ Read the latest news
+
+                ul.news-responsive 
+                    li
+                      a(href="../fr/news.html") Impact Hub Singapore 
+
+                    li
+                      a(href="../fr/news.html") Sud Ouest 
+
+                    li
+                      a(href="../fr/news.html") La Tribune 
+
+
+                    li
+                      a(href="../fr/news.html") Web Summit 
+
+                    li
+                      a(href="../fr/news.html") La France des Solutions 
+
+                    li
+                      a(href="../fr/news.html") Challenges
+                    
+                    a(href="../fr/news.html" target="_blank")
+                        p.access-news ▸ Découvrir les nouvelles actualités
+
+            .container#preview-faq
+                span.question-freq
+                    h2 FAQ
+                
                 ul
                     li
-                        button(disabled) Campaigners & Staff 
+                        a(href="../fr/faq.html")
+                            p.preview-question Qu’est-ce que Quorum ?
+                            p.answer Quorum est une startup de technologie de mobilisation. Nous construisons une ..
                     li
-                        button(disabled) Agencies & Advocacy
+                        a(href="../fr/faq.html")
+                            p.preview-question Pourquoi faire du terrain et s'équiper avec Quorum ?
+                            p.answer Le face-à-face est le moyen le plus efficace d’engager les individus ! Un mouvement commence toujours par une rencontre, une ..
                     li
-                        button(disabled) Non-Profits & Volunteers
-                    li
-                        button(disabled) Individuals & Game Changers
-                a(href="http://eepurl.com/bWJkZr" target="_blank")
-                    button.blue Get Early Access
-        section#contact
-            .container
-                ul
-                    li
-                        h2 Contact Form
-                        form(action='https://formspree.io/info@quorum-impact.com', method='post')
-                            div.input
-                                input(type='email', name="_replyto", placeholder='Email', required)
-                                .border-input.blue
-                            div.input
-                                input(name='name' type="text" placeholder="Name/Nom")
-                                .border-input.blue
-                            div.input
-                                textarea(name='message' rows="6" placeholder="Message", required)
-                                .border-textarea.blue
+                        a(href="../fr/faq.html")
+                            p.preview-question Tout ne m’intéresse pas dans la solution Quorum ? Est-il possible de souscrire qu’à une fonctionnalité ? 
+                            p.answer Oui, c’est possible. Vous pouvez n’utiliser qu’une brique ou une autre des applications si vous le souhaitez selon votre intérêt ou votre momentum d'action. N’hésitez pas à contacter <a href="mailto:mb@quorumapp.co">Maxime</a> pour plus d’informations.
+
+
+                        a(href="../fr/faq.html")
+                            p.faq-access ▸ Find answers here
+                    .clearfix
+                .clearfix
+        
+        .clearfix
+
+        
+        section#contact.hide
+            .container#form-contact
+                .formulaire
+                    span.titre-formulaire
+                        h2 DROP US A LINE
+                    
+
+                    form(action='https://formspree.io/info@quorum-impact.com', method='post')
+                        .champs
+                            input(name='name' type="text" placeholder="Your name")
+                            .border-input.blue
+
+                            input(type='email', name="_replyto", placeholder='Your email', required)
+                            .border-input.blue
+
+                            textarea(name='message' rows="6" placeholder="Your Message", required)
+                            .border-textarea.blue
                             input(type="hidden" name="_subject" value="Contact from quorum-impact.com")
                             input(type="text" name="_gotcha" style="display:none")
                             input(type="hidden" name="_next" value="//quorum-impact.com/")
-                            p
-                                button.blue(type='submit' value="Send") GO !
-                    li
-                        h2 Contact Info
-                        p 
-                            i.fa.fa-phone.fa-lg
-                            span +33 1 79 73 40 04 
-                        p 
-                            i.fa.fa-envelope
-                            span info@quorum-impact.com
-                        p 
-                            i.fa.fa-map-marker.fa-lg
-                            span 124 avenue de Villiers - 75017 PARIS
-                        p
-                            i.fa.fa-map-marker.fa-lg
-                            span 9 rue de Condé - 33000 BORDEAUX
-             
-                        p Don't miss any of our events, news and publications, follow us :
-                            ul
-                                li
-                                    a(href='//facebook.com/quorumimpact' target="_blank")
-                                        i.fa.fa-facebook-square
-                                li
-                                    a(href='//twitter.com/quorumimpact' target="_blank")
-                                        i.fa.fa-twitter-square
-                                li
-                                    a(href='//linkedin.com/company/10114882' target="_blank")
-                                        i.fa.fa-linkedin-square
-                                li
-                                    a(href='//google.com/+Quorumappsdata' target="_blank")
-                                        i.fa.fa-google-plus-square
-                                li
-                                    a(href='//instagram.com/quorumteam/' target="_blank")
-                                        i.fa.fa-instagram
+                        
+                        button.blue(type='submit' value="Send") SEND IT ! 
+
+
+            .container#adress-postale
+                .contact-postal
+                    #cadre-pop
+                        
+                        span.titre-postal
+                            h2 PAY US A VISIT
+                        
+                        
+                    div#carte
+                    
+                    p.telephone
+                        span.phone
+                            img(src='../images/icons/phone.svg', alt='Phone')
+                        a(href="tel:+33179734004") +33 1 79 73 40 04
+                    p.adresse-mail
+                        a(href="mailto:welcome@quorum-impact.com")<i class="fa fa-envelope-o" aria-hidden="true"></i>  info@quorumapp.co
+                    p.adresse-bordeaux
+                        span.building
+                            img(src="../images/home/bordeaux.png", alt="Building")
+                        a(href="https://www.google.fr/maps/place/9+Rue+de+Condé,+33000+Bordeaux/@44.8435887,-0.5755025,17z/" target="_blank") 9 rue de Condé <br/> 33000 Bordeaux
+                    p.adresse-paris
+                        span.building
+                            img(src="../images/home/paris.png", alt="Building")
+                        a(href="https://www.google.fr/maps/place/124+Avenue+de+Villiers,+75017+Paris/@48.8854713,2.2930888,17z" target="_blank") 124 avenue de Villiers <br/> 75017 Paris
+        .clearfix
+
+
+
+        section#bandeau-newsletter.hide
+
+            form(action="page-traitement-newsletter",method="post")
+                .description-newsletter
+                    h1.newsletter-msg Get announcements & latest publications directly in your mailbox 
+                    //- h2.newsletter-msg En vous abonnant à notre Newsletter mensuelle
+                .form-newletter
+                    .input-newsletter
+                        input(type='email', name="mail-newsletter", placeHolder="Votre adresse mail", required)
+                    .abonnement
+                        button.btn.abonnement-btn SUBSCRIBE
+
+        .clearfix
+
+        section#social.hide
+
+            h1 CONNECT WITH QUORUM
+
+            ul
+                li
+                    a(href="https://www.facebook.com/quorumhq/" target="_blank")
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                li 
+                    a(href="https://twitter.com/quorumhq" target="_blank")
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+
+                li
+                    a(href="https://www.linkedin.com/company/quorum-apps" target="_blank")
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+
+                li 
+                    a(href="https://www.instagram.com/quorumteam/" target="_blank")
+                        <i class="fa fa-instagram" aria-hidden="true"></i>           
+                li 
+                    a(href="https://plus.google.com/+Quorumappsdata" target="_blank")
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>                  
+                li 
+                    a(href="https://medium.com/quorum-blog" target="_blank")
+                        <i class="fa fa-medium" aria-hidden="true"></i>
+
+
+                    
+
+
+
             div.clearfix

@@ -22,6 +22,8 @@ html(lang="fr")
         link(rel="icon" href="../../images/icons/favicon.ico")
         link(rel='stylesheet' href='../stylesheets/app.css')
         <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+ 
+            
         <!--[if IE 8]>
         link(rel='stylesheet' href='../stylesheets/ie.css')
         <![endif]-->
@@ -36,43 +38,43 @@ html(lang="fr")
                 button.nav-toggle
                     i.fa.fa-bars
                 div.bar
-                    ul.nav
+                    ul.nav-menu
                         li
-                            a(href='/#product')
-                                span APPLICATIONS
+                            a(href='../en/index.html#icons') FEATURES
                         li
-                            a(href='../fr/news.html')
-                                span NEWS
+                            a(href='../fr/news.html') NEWS
                         li
-                            a(href='/#contact')
-                                span FAQ
+                            a(href='../en/faq.html') FAQ
                         li
-                            a(href='/#')
-                                span BLOG
+                            a(href='https://medium.com/quorum-blog' target="_blank") BLOG
                 
                     .banner
-                        a(href="/#")
-                            span#connexion CONNEXION
-                        a(href="http://eepurl.com/bWGgCL" target="_blank")
+                        span.phone
+                            img(src='../images/icons/phone.svg', alt='Phone')
+
+                        a(href="tel:+33179734004")
+                            span.telephone +33 1 79 73 40 04
+                        a(href="https://cloud.quorumapps.com" target="_blank")
+                            span#connexion CONNECTION
+                        a(href="http://eepurl.com/bWGgCL" target="_blank" class="demo-nav")
                             button DEMO
                         a(href="#")
                             span
-                              img(src="../images/icons/language.png")
+                              img(src="../images/icons/language-2.png")
         block content
         footer#footer
-            .container
+            .content
                 .copyright
-                    a(href='/').navbar-brand
-                        img(src='../../images/about/avatar-rs-1.png' alt='Logo Quorum')
-                ul.nav-footer
-                    li
-                        a.link(href='/about.html')
-                            span About us
-                    li
-                        a(href='https://medium.com/@quorumblog' target="_blank") Blog
-                    li
-                        a.link(href='/legals.html')
-                            span Legals
+                    a(href='/').logo-footer
+                        img(src='../../images/logo/logo_footer.png' alt='Logo Quorum')
+                        
+                    ul.nav-footer
+                        li &copy; Quorum 2016
+                        li
+                            a(href="mailto:contact@quorumapp.co") Contact
+                        li
+                            a.link(href='/legals.html')
+                                span Legal
         section#newsletter
             .container
                 div.banner
@@ -88,11 +90,20 @@ html(lang="fr")
                             button.blue(type="submit") GO
 
         script(src='//code.jquery.com/jquery-2.1.4.min.js')
-        script(src="https://d3js.org/d3.v3.min.js" charset="utf-8")
-        script(src="../javascripts/c3.min.js")
+        //- script(src="https://d3js.org/d3.v3.min.js" charset="utf-8")
+        //- script(src="../javascripts/c3.min.js")
+        script(src="https://cdn.jsdelivr.net/jquery.typeit/4.2.3/typeit.min.js")
+        script(src="../javascripts/leaflet.js")
         script(src="../javascripts/app.js")
-        <script src="https://cdn.jsdelivr.net/jquery.typeit/4.2.3/typeit.min.js"></script>
-        // Google Tag Manager
+        script(src="https://use.fontawesome.com/3b1755dbc3.js")
+        //- Intercom
+        script.
+          window.intercomSettings = {
+          app_id: "pmsh755t"
+          };
+        script.
+          (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/pmsh755t';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+
         noscript
             iframe(src='//www.googletagmanager.com/ns.html?id=GTM-PP7JV2', height='0', width='0', style='display:none;visibility:hidden')
         script.
