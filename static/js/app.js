@@ -17,6 +17,8 @@ $(document).ready(function() {
         $('.get-demo').html('DEMANDER UNE DEMO');
     };
 
+
+
 });
 
 
@@ -629,8 +631,17 @@ $(document).ready(function(){
 
     });
 
+    console.log("window : ")
+    console.log(window.location.pathname);
 
-    var map = L.map('carte');
+    if (window.location.pathname == "/fr/") {
+        var map = L.map('carte');
+        console.log('french')
+    } else {
+        var map = L.map('carte');
+        console.log('english')
+    }
+
 
      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>',
@@ -638,10 +649,13 @@ $(document).ready(function(){
         maxZoom: 20
     }).addTo(map);
      
-     map.setView([44.8435522,-0.5756165], 15);
-     var marker = L.marker([44.843594,-0.572905]).addTo(map);
+    map.setView([44.8435522,-0.5756165], 15);
+    var marker = L.marker([44.843594,-0.572905]).addTo(map);
+
     
-    $('#debbug').html($( window ).width());
+
+    
+    // $('#debbug').html($( window ).width());
 });
 
 
