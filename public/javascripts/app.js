@@ -10,8 +10,12 @@ $(document).ready(function () {
         $('.abonnement-btn').html('GO');
     };
 
-    if ($(window).width() < 485) {
+    if ($(window).width() < 769) {
         $('.newsletter-msg').html('');
+        $('.newsletter-msg').html('Newsletter');
+    };
+    if ($(window).width() < 450) {
+        $('.get-demo').html('DEMANDER UNE DEMO');
     };
 });
 
@@ -36,37 +40,22 @@ $(window).scroll(function (event) {
             //  $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
     }
-
+    console.log($('#product').length);
     //Animation fade home
-    if (window.innerWidth >= 768 && $('#product').length > 0) {
-        // var breakpointProduct = $('#product').position().top - 400;
-        var breakpointTarget = $('#target').position().top - 400;
-        var breakpointIcons = $('#icons').position().top - 400;
-        var breakpointMobile = $('#mobile').position().top - 400;
-        var breakpointDemo = $('#get-demo').position().top - 900;
-        var breakpointNewsletter = $('#bandeau-newsletter').position().top - 800;
-        var breakpointContact = $('#contact').position().top - 400;
 
-        // if (yOffset > breakpointProduct){
-        //     $('#product').addClass('animated fadeInUp');
-        // }
-        if (yOffset > breakpointTarget) {
-            $('#target').addClass('animated fadeInUp');
+
+    $('.hide').each(function (i) {
+
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        if (window.innerWidth >= 768 && bottom_of_window > bottom_of_object) {
+            $(this).animate({ 'opacity': '1' }, 500);
+        } else {
+            $(this).animate({ 'opacity': '1' }, 500);
         }
-        if (yOffset > breakpointIcons) {
-            $('#icons').addClass('animated fadeInUp');
-            $('#mobile').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointContact) {
-            $('#contact').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointDemo) {
-            $('#get-demo').addClass('animated fadeInUp');
-        }
-        if (yOffset > breakpointNewsletter) {
-            $('#bandeau-newsletter').addClass('animated fadeInUp');
-        }
-    }
+    });
+
     //Animation fade believe
     if (window.innerWidth > 425 && $('#believe').length > 0 && $('html').attr('lang') == 'fr') {
         var breakpointSecond = $('.believe-fr:nth-child(3)').position().top - 700;
@@ -86,81 +75,85 @@ $(window).scroll(function (event) {
 
     // Manage disapear bullet list for the text on scroll
 
-    if (yOffset > $('#do').position().top - 380) {
-        $('.bulletList').hide();
-    } else {
-        $('.bulletList').show();
-    }
 
     // Manage text en scroll
     // Make an array, then call it. Clean the .active class, and add it after checking the position from the top
-    var tabX = [$('#text1').position().top - 200, $('#text2').position().top - 200, $('#text3').position().top - 200, $('#text4').position().top - 200, $('#text5').position().top - 200, $('#text6').position().top - 200, $('#text7').position().top - 200, $('#text8').position().top - 200];
-    if (yOffset > tabX[0]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text1').addClass('active');
-        $('#text1-background').addClass('active');
-        $('[href=#text1]').addClass('active');
-    }
+    // var tabX = [$('#text1').position().top-200, $('#text2').position().top-200, $('#text3').position().top-200, $('#text4').position().top-200, $('#text5').position().top-200, $('#text6').position().top-200, $('#text7').position().top-200, $('#text8').position().top-200]
+    // if ( yOffset > tabX[0]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text1').addClass('active');
+    //     $('#text1-background').addClass('active');
+    //     $('[href=#text1]').addClass('active');
 
-    if (yOffset > tabX[1]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text2').addClass('active');
-        $('#text2-background').addClass('active');
-        $('[href=#text2]').addClass('active');
-    }
 
-    if (yOffset > tabX[2]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text3').addClass('active');
-        $('#text3-background').addClass('active');
-        $('[href=#text3]').addClass('active');
-    }
-    if (yOffset > tabX[3]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text4').addClass('active');
-        $('#text4-background').addClass('active');
-        $('[href=#text4]').addClass('active');
-    }
-    if (yOffset > tabX[4]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text5').addClass('active');
-        $('#text5-background').addClass('active');
-        $('[href=#text5]').addClass('active');
-    }
-    if (yOffset > tabX[5]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text6').addClass('active');
-        $('#text6-background').addClass('active');
-        $('[href=#text6]').addClass('active');
-    }
-    if (yOffset > tabX[6]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text7').addClass('active');
-        $('#text7-background').addClass('active');
-        $('[href=#text7]').addClass('active');
-    }
-    if (yOffset > tabX[7]) {
-        $('#textOnScroll > div').removeClass('active');
-        $('#textOnScroll > .texts > div').removeClass('active');
-        $('#textOnScroll > .bulletList > a').removeClass('active');
-        $('#text8').addClass('active');
-        $('#text8-background').addClass('active');
-        $('[href=#text8]').addClass('active');
-    }
+    // }
+
+    // if (yOffset > tabX[1]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text2').addClass('active');
+    //     $('#text2-background').addClass('active');
+    //     $('[href=#text2]').addClass('active');
+
+    // }
+
+    // if (yOffset > tabX[2]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text3').addClass('active');
+    //     $('#text3-background').addClass('active');
+    //     $('[href=#text3]').addClass('active');
+
+    // }
+    // if (yOffset > tabX[3]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text4').addClass('active');
+    //     $('#text4-background').addClass('active');
+    //     $('[href=#text4]').addClass('active');
+
+    // }
+    // if (yOffset > tabX[4]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text5').addClass('active');
+    //     $('#text5-background').addClass('active');
+    //     $('[href=#text5]').addClass('active');
+
+    // }
+    // if (yOffset > tabX[5]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text6').addClass('active');
+    //     $('#text6-background').addClass('active');
+    //     $('[href=#text6]').addClass('active');
+
+    // }
+    // if (yOffset > tabX[6]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text7').addClass('active');
+    //     $('#text7-background').addClass('active');
+    //     $('[href=#text7]').addClass('active');
+
+    // }
+    // if (yOffset > tabX[7]) {
+    //     $('#textOnScroll > div').removeClass('active');
+    //     $('#textOnScroll > .texts > div').removeClass('active');
+    //     $('#textOnScroll > .bulletList > a').removeClass('active');
+    //     $('#text8').addClass('active');
+    //     $('#text8-background').addClass('active');
+    //     $('[href=#text8]').addClass('active');
+
+    // }
 });
 $(document).ready(function () {
     //Animation fade believe
@@ -180,17 +173,17 @@ $(document).ready(function () {
 
     //Random email/name - #contact home page
     if ($('#contact').length > 0) {
-        if (window.location.pathname.substring(0, 4) == "/fr/") {
-            var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['p.rickwaert@hotmail.fr', 'Philippe Rickwaert']];
-            var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
-            $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
-            $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
-        } else {
-            var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['franck.underwood@gmail.com', 'Franck Underwood'], ['georges.washington@gmail.com', 'Georges Washington']];
-            var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
-            $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
-            $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
-        }
+        // if(window.location.pathname.substring(0, 4) == "/fr/") {
+        // //     var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['p.rickwaert@hotmail.fr', 'Philippe Rickwaert']];
+        // //     var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
+        // //     $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
+        // //     $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
+        // // } else {
+        // //     var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['franck.underwood@gmail.com', 'Franck Underwood'], ['georges.washington@gmail.com', 'Georges Washington']];
+        // //     var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
+        // //     $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
+        // //     $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
+        // // }
         //Custom error message - #contact input - home page
         function validEmail(email) {
             var emailRegex = /\S+@\S+\.\S+/;
@@ -338,27 +331,34 @@ $(document).ready(function () {
                     } else {
                         var legendPosition = 'right';
                     }
-                    var chart = c3.generate({
-                        data: {
-                            columns: [['Information Technology', 30], ['Social & Cognitive Sciences', 20], ['Data Sciences', 20], ['Field & Customer Officers', 20], ['Data Vizualisation', 5], ['Communication Officers', 5]],
-                            type: 'donut'
-                        },
-                        legend: {
-                            position: legendPosition
-                        },
-                        donut: {
-                            label: {
-                                format: function (value, ratio, id) {
-                                    return "";
-                                }
-                            }
-                        },
-                        color: {
-                            //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
-                            pattern: ['#6AD931', '#00D19C', '#0F949A', '#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
-                            //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
-                        }
-                    });
+                    // var chart = c3.generate({
+                    //     data: {
+                    //         columns: [
+                    //             ['Information Technology', 30],
+                    //             ['Social & Cognitive Sciences', 20] ,
+                    //             ['Data Sciences', 20],
+                    //             ['Field & Customer Officers', 20],
+                    //             ['Data Vizualisation', 5],
+                    //             ['Communication Officers', 5]
+                    //         ],
+                    //         type: 'donut'
+                    //     },
+                    //     legend: {
+                    //             position: legendPosition
+                    //     },
+                    //     donut: {
+                    //         label: {
+                    //             format: function (value, ratio, id) {
+                    //                 return "";
+                    //             }
+                    //         }
+                    //     },
+                    //     color: {
+                    //         //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
+                    //         pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
+                    //         //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
+                    //     }
+                    // });
                 }
             });
         }
@@ -404,36 +404,43 @@ $(document).ready(function () {
     } else {
         var legendPosition = 'inset';
     }
-    var chart = c3.generate({
-        data: {
-            columns: [['Information Technology', 30], ['Social & Cognitive Sciences', 20], ['Data Sciences', 20], ['Field & Customer Officers', 20], ['Data Vizualisation', 5], ['Communication Officers', 5]],
-            type: 'donut'
-        },
-        legend: {
+    // var chart = c3.generate({
+    //     data: {
+    //         columns: [
+    //             ['Information Technology', 30],
+    //             ['Social & Cognitive Sciences', 20] ,
+    //             ['Data Sciences', 20],
+    //             ['Field & Customer Officers', 20],
+    //             ['Data Vizualisation', 5],
+    //             ['Communication Officers', 5]
+    //         ],
+    //         type: 'donut'
+    //     },
+    //     legend: {
 
-            show: true,
-            position: legendPosition,
-            inset: {
-                anchor: 'right',
-                x: 450,
-                y: 220,
-                step: 10
-            }
-        },
-        donut: {
-            label: {
-                format: function (value, ratio, id) {
-                    return "";
-                }
-            }
-        },
-        color: {
-            //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
-            // pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
-            pattern: ['#47B6FF', '#33cd5f', '#ffc900', '#ef473a', '#8D66F3', '#8f8e94', '#20BFFB', '#00D19C']
-            //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
-        }
-    });
+    //             show: true,
+    //             position: legendPosition,
+    //             inset: {
+    //                 anchor: 'right',
+    //                 x: 450,
+    //                 y: 220,
+    //                 step: 10,
+    //               }
+    //     },
+    //     donut: {
+    //         label: {
+    //             format: function (value, ratio, id) {
+    //                 return "";
+    //             }
+    //         }
+    //     },
+    //     color: {
+    //         //pattern: ['#9FA4AB', '#6AD931', '#8255F5', '#0F949A', '#20BFFB', '#00D19C']
+    //         // pattern: ['#6AD931', '#00D19C','#0F949A','#20BFFB', '#8255F5', '#9FA4AB', '#20BFFB', '#00D19C']
+    //         pattern: ['#47B6FF', '#33cd5f','#ffc900','#ef473a', '#8D66F3', '#8f8e94', '#20BFFB', '#00D19C']
+    //         //pattern: ['#C6B6F1', '#9F87DE', '#806DA8', '#7E61C9', '#6142B1', '#4928A0']
+    //     }
+    // });
 
     // GoTop arrow in aboutv2.html    
     $('.go-top').click(function (event) {
@@ -444,10 +451,20 @@ $(document).ready(function () {
     });
 
     // Gestion des témoignages (1ere partie site) #testimony
-    $('#person-1').click(function (event) {
+    $('.person-1').click(function (event) {
+
         event.preventDefault();
-        $('#person-2').removeClass('active');
-        $('#person-3').removeClass('active');
+
+        $('.icones-1').removeClass('fa-circle-o');
+        $('.icones-1').addClass('fa-circle');
+
+        $('.icones-2').removeClass('fa-circle');
+        $('.icones-2').addClass('fa-circle-o');
+        $('.icones-3').removeClass('fa-circle');
+        $('.icones-3').addClass('fa-circle-o');
+
+        $('.person-2').removeClass('active');
+        $('.person-3').removeClass('active');
 
         $('#testimony-2').css('display', 'none');
         $('#testimony-3').css('display', 'none');
@@ -456,10 +473,20 @@ $(document).ready(function () {
         $("#testimony-1").fadeIn(1000);
     });
 
-    $('#person-2').click(function (event) {
+    $('.person-2').click(function (event) {
+
         event.preventDefault();
-        $('#person-1').removeClass('active');
-        $('#person-3').removeClass('active');
+
+        $('.icones-2').removeClass('fa-circle-o');
+        $('.icones-2').addClass('fa-circle');
+
+        $('.icones-1').removeClass('fa-circle');
+        $('.icones-1').addClass('fa-circle-o');
+        $('.icones-3').removeClass('fa-circle');
+        $('.icones-3').addClass('fa-circle-o');
+
+        $('.person-1').removeClass('active');
+        $('.person-3').removeClass('active');
 
         $('#testimony-1').css('display', 'none');
         $('#testimony-3').css('display', 'none');
@@ -468,10 +495,20 @@ $(document).ready(function () {
         $("#testimony-2").fadeIn(1000);
     });
 
-    $('#person-3').click(function (event) {
+    $('.person-3').click(function (event) {
+
         event.preventDefault();
-        $('#person-1').removeClass('active');
-        $('#person-2').removeClass('active');
+
+        $('.icones-3').removeClass('fa-circle-o');
+        $('.icones-3').addClass('fa-circle');
+
+        $('.icones-1').removeClass('fa-circle');
+        $('.icones-1').addClass('fa-circle-o');
+        $('.icones-2').removeClass('fa-circle');
+        $('.icones-2').addClass('fa-circle-o');
+
+        $('.person-1').removeClass('active');
+        $('.person-2').removeClass('active');
 
         $('#testimony-1').css('display', 'none');
         $('#testimony-2').css('display', 'none');
@@ -493,7 +530,9 @@ $(document).ready(function () {
 
         $(this).addClass('active');
         $("#mobile").fadeOut(0, function () {
-            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            if ($(window).width() > 1109) {
+                $("#mobile").css("background-image", "url(../images/home/view-web.png)");
+            }
             $("#icon-1").addClass('active');
             $("#mobile").fadeIn("slow");
             $("#content-icon-1").fadeIn("slow");
@@ -512,7 +551,9 @@ $(document).ready(function () {
 
         $(this).addClass('active');
         $("#mobile").fadeOut(0, function () {
-            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            if ($(window).width() > 1109) {
+                $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            }
             $("#icon-2").addClass('active');
             $("#mobile").fadeIn("slow");
             $("#content-icon-2").fadeIn("slow");
@@ -531,7 +572,9 @@ $(document).ready(function () {
 
         $(this).addClass('active');
         $("#mobile").fadeOut(0, function () {
-            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            if ($(window).width() > 1109) {
+                $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            }
             $("#icon-3").addClass('active');
             $("#mobile").fadeIn("slow");
             $("#content-icon-3").fadeIn("slow");
@@ -547,9 +590,12 @@ $(document).ready(function () {
         $('#content-icon-1').css('display', 'none');
         $('#content-icon-2').css('display', 'none');
         $('#content-icon-3').css('display', 'none');
-
+        $(this).addClass('active');
         $("#mobile").fadeOut(0, function () {
-            $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            if ($(window).width() > 1109) {
+                $("#mobile").css("background-image", "url(../images/home/mobile-screenshot.png)");
+            }
+
             $("#icon-4").addClass('active');
             $("#mobile").fadeIn("slow");
             $("#content-icon-4").fadeIn("slow");
@@ -559,8 +605,36 @@ $(document).ready(function () {
     // Effet du texte tapé comme sur le site de Slack pour le h2 du premier témoignage
     $(".highlight-span").typeIt({
         speed: 55,
-        autoStart: true
+        autoStart: true,
+        callback: function () {
+
+            $(".underline").each(function () {
+                $(this).animate({
+                    // opacity:0.25
+                    borderBottomWidth: '3px'
+
+                }, 500);
+            });
+        }
+
     });
+
+    if (window.location.pathname == "/fr/") {
+        var map = L.map('carte');
+    } else {
+        var map = L.map('carte');
+    }
+
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'donn&eacute;es &copy; <a href="//osm.org/copyright">OpenStreetMap</a>',
+        minZoom: 1,
+        maxZoom: 20
+    }).addTo(map);
+
+    map.setView([44.8435522, -0.5756165], 15);
+    var marker = L.marker([44.843594, -0.572905]).addTo(map);
+
+    // $('#debbug').html($( window ).width());
 });
 
 },{}]},{},[1]);
