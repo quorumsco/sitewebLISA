@@ -40,9 +40,6 @@ $(window).scroll(function (event) {
             //  $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
         }
     }
-    console.log($('#product').length);
-    //Animation fade home
-
 
     $('.hide').each(function (i) {
 
@@ -248,7 +245,7 @@ $(document).ready(function () {
             var name = $(this).attr('href').substring(1);
             //Loop scrollTo management
             if (clickScrollTo != name) {
-                console.log(name);
+
                 clickScrollTo = name;
                 var divTop = $(name).position().top;
                 $('html, body').animate({
