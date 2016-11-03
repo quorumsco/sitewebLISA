@@ -1,16 +1,19 @@
 @include exports('social') {
 	#social {
 
-		background-color: #f2f2f2;
+		background-color: #fff;
 
 		// margin-top: 20px;
-		padding-top: 20px;
+		padding-top: 60px;
+		margin-bottom: 20px;
 
-		h1 {
-			color: #0f949a;
-			font-size: 30px;
-			font-weight: 700;
-			line-height: 36px;
+		h2 {
+			font-weight: normal;
+			line-height: 36px;                
+			color: #000;
+            font-size: 17px;
+            line-height: 24px;
+            letter-spacing: 3px;
 		}
 
 		ul {
@@ -25,8 +28,8 @@
 				margin-right: 30px;
 
 				i {
-					font-size: 30px;
-					color: #0f949a;
+					font-size: 20px;
+					color: #2778e4;
 
 				}
 

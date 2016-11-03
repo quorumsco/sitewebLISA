@@ -42,10 +42,10 @@
 
 				a {
 					text-decoration: none;
-					color: $grey;
+					color: #000;
 					padding: 10px;
 					&:hover {
-						background-color: #20bffb;
+						background-color: #2778e4;
 						color: $white-color;
 						border-radius: 4px;
 					}
@@ -98,7 +98,7 @@
 				margin-left:25px;
 				margin-right: 25px;
 				border-radius: 4px;
-				background-color: #00bfff;
+				background-color: #2778e4;
 				border: 1px solid rgba(255, 255, 255, 0.4);
 				letter-spacing : 0.5px;
 				font-size: 14px;

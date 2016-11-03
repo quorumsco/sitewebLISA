@@ -12,19 +12,14 @@ block content
 
                 #testimony-1.active
 
-                    h2 L'application qui a permis à l'équipe de Sébastien de <span class="underline">mobiliser</span> &nbsp;
-                        span.highlight-span  plus efficacement,  <span class="underline">rue après rue</span> , <span class="underline">citoyen après citoyen</span>.
-
-                    span.quote L'équipe derrière Sébastien Saint Pasteur est l'une des équipes qui a utilisé Quorum dans leurs actions de mobilisation au quotidien ; les rendant plus fluides et plus efficaces pour ainsi se focaliser sur l’essentiel : mobiliser pour l'élection.
-
+                    h2 <span class="citation">"</span> Notre équipe <span class="underline">mobilise</span>
+                        span.highlight-span &nbsp; plus efficacement,  <span class="underline">rue après rue</span>, <span class="underline">citoyen après citoyen</span>.
 
                 #testimony-2
-                    h2  L’application qui permet  de construire une équipe de <span class="underline">bénévoles impliqués qui sensibilise</span>  et <span class="underline">écoute</span> chaque personne rencontrée.
-                    span.quote  Les Jours heureux est un mouvement qui fait intervenir différentes organisations de la société civile. (Génération cobaye, Association des Paralysés de France etc.). Il publie en novembre 2016 "Et nous vivrons des jours heureux".
+                    h2  <span class="citation">"</span> Chaque bénévole est désormais un <span class="underline">acteur de la mobilisation</span>  et fait grossir notre mouvement"
                     
                 #testimony-3
-                    h2  L’application qui permet de proposer à ses clients une application pour <span class="underline">mobiliser sur le terrain à chaque instant</span> , en délivrant <span class="underline">la bonne information</span>.
-                    span.quote  Tell & Charrier est une agence de communication spécialisée dans le secteur public qui intègre Quorum à son offre. Ils ont compris qu’aujourd’hui s’équiper des dernières technologies n’est plus simplement une pièce du puzzle, mais un bloc structurant de la stratégie, quelque soit la taille de l'organisation.
+                    h2  <span class="citation">"</span> Mes clients disposent des dernières technologies pour <span class="underline">cibler les zones</span> où agir et faire que chaque intéraction compte"
               
                 hr.hr-testimony
                 .testimonies
@@ -32,85 +27,107 @@ block content
                         img(src="../images/header/photo-testimony2.png").photo-testimony
                         .infos-testimony
                             p.testimony-name Sébastien Saint Pasteur
-                            p.testimony-job Conseiller Départemental
+                            p.testimony-job MOBILISER POUR L'ELECTION
                     .person-testimony.person-2
                         img(src="../images/header/photo-JHP.png").photo-testimony
                         .infos-testimony
-                            p.testimony-name Les jours heureux
-                            p.testimony-job Association
+                            p.testimony-name Graine de développement
+                            p.testimony-job SENSIBILISER LE PUBLIC
                     .person-testimony.person-3
                         img(src="../images/header/photo-testimony3.png").photo-testimony
                         .infos-testimony
                             p.testimony-name Agence Tell & Charrier
-                            p.testimony-job Communication
+                            p.testimony-job OUTILLER NUMÉRIQUEMENT LE TERRAIN
 
                 .testimonies-responsive
                     ul
                         li
-                            .person-1
+                            .person-1-action
                                 p
                                     span.icones-1.fa.fa-circle
                         li
-                            .person-2
+                            .person-2-action
                                 p
                                     span.icones-2.fa.fa-circle-o
                         li
-                            .person-3
+                            .person-3-action
                                 p
                                     span.icones-3.fa.fa-circle-o
+                .input-form
+                    .abonnement
+                        button.btn OBTENIR UNE DÉMO
+
+
         section#target.hide
-            .container#target-container
-                h2 <b>MOBILISER</b> SUR LE TERRAIN, <b>PLUS FORT </b>
-                ul
-                    li(onclick=" window.open('https://quorum.typeform.com/to/AQL2Nm','_blank');")
-                      p.objectif ÉQUIPES DE CAMPAGNE
-                      p.target-name Candidats aux élections et collectifs
-                      hr
-                      p.description Je veux <b> mobiliser les citoyens et mes électeurs.</b>
-                      p.keywords Mobiliser les électeurs
-                    li(onclick="window.open('https://quorum.typeform.com/to/xZrSB4','_blank');")
-                      p.objectif  ASSOCIATIONS, ONG
-                      p.target-name  Associations, mouvements, syndicats, et game changers
-                      hr
-                      p.description Je veux <b> sensibiliser le public à ma cause, recruter de nouveaux bénévoles ou donateurs.</b>
-                      p.keywords Sensibiliser, Recruter bénévoles et donateurs
-                    li(onclick="window.open('https://quorum.typeform.com/to/QN2iIK','_blank');")
-                      p.objectif ÉTABLISSEMENTS PUBLICS
-                      p.target-name Établissements, collectivités et groupes privés
-                      hr
-                      p.description Je veux <b> consulter, gérer la relation citoyenne  et analyser les retours.</b>
-                      p.keywords Gérer la relation citoyenne, Interroger, Analyser
-                    li(onclick="window.open('https://quorum.typeform.com/to/ze2Zsh','_blank');")
-                      p.objectif AGENCES & CONSULTANTS
-                      p.target-name  Communication, data, indépendants
-                      hr
-                      p.description Je veux <b> intégrer Quorum à mon offre de service ou devenir partenaire.</b>
-                      p.keywords Devenir Partenaire
+            .container
+                .left-col
+                    h1 Le logiciel de mobilisation sur le terrain, pour vous et vos équipes
+
+                    span.illustration
+                        img(src="../images/home/illustration.png", alt="#")
+        
+                .right-col
+                    ul
+                        li
+                            h2 Équipe de campagne
+                            p Candidats aux élections et collectifs
+                            p.link
+                                a(href="#") Mobiliser les citoyens et mes électeurs &nbsp;  > 
+                        li
+                            h2 Association, ONG
+                            p Game changers, mouvements et syndicats 
+                            p.link
+                                a(href="#") Recruter bénévoles, donateurs. Sensibiliser &nbsp;  > 
+                        li
+                            h2 Établissements publics
+                            p Collectivités et groupes privés 
+                            p.link
+                                a(href="#") Organiser une consultation, informer &nbsp;  > 
+                        li
+                            h2 Agence & consultants
+                            p Communication, data et indépendants
+                            p.link
+                                a(href="#") Intégrer Quorum à mon offre &nbsp;  > 
+        .clearfix
+                
                         
         section#schema.hide
             .container
-                h2 <b>POURQUOI</b> QUORUM ? 
-                span.img-schema
-                    img(src="../images/schema-4.png")
+                .left-col
+                    h3 Mobiliser ne devrait pas être si compliqué.
+                    p Traditionnellement ... 
+
+                    .schema-img
+                        img(src="../images/home/schema.png", alt="#")
+
+                .right-col
+                    p Avec Quorum ... 
+                    .img-smartphone
+                        img(src="../images/home/img-phone.png", alt="#")
+                    //- h3 Avec Quorum c'est facile, personalisé et accessible
+                    h3 Anticiper, économiser temps et ressources, prendre en compte chacun
+
+                
             
             
         section#icons.hide
             .container
-                h2 MOBILISER & ENGAGER  <b>LE TERRAIN</b>
-                h3 <b>1 application web</b> pour s’<b>organiser</b>, <b>analyser</b> et <b>communiquer</b>. 
-                h3 <b>1 application mobile</b> pour <b>révéler tout le potentiel de votre équipe.</b>
+                h2 MOBILISER SUR LE TERRAIN, <b>PLUS FORT</b>
+                .container
+                    .left-col
+                        img(src="../images/home/computer.png", alt="#")
+                        h3 Une application web pour s'organiser, <br> analyser et communiquer. 
+                    .right-col 
+                        img(src="../images/home/smartphone.png", alt="#")
+                        h3 Une application mobile pour outiller et révéler <br> le potentiel de chaque membre de l’équipe.
                 ul
                     li#icon-1
-                        img(src="../images/icons/icon1.png")
-                        p Cibler (optionnel)
+                        p Cibler
                     li#icon-2
-                        img(src="../images/icons/icon2.png")
                         p Organiser
                     li.active#icon-3
-                        img(src="../images/icons/icon3.png")
                         p Mobiliser
                     li#icon-4
-                        img(src="../images/icons/icon4.png")
                         p Analyser
 
                                 
@@ -215,7 +232,7 @@ block content
                           img(src="../images/home/challenges2.png" )
                     
                     a(href="../fr/news.html" target="_blank")
-                        p ▸ Découvrir les nouvelles actualités
+                        p Découvrir les nouvelles actualités &nbsp; >
 
                 ul.news-responsive 
                     li
@@ -238,7 +255,7 @@ block content
                       a(href="../fr/news.html") Challenges
                     
                     a(href="../fr/news.html" target="_blank")
-                        p.access-news ▸ Découvrir les nouvelles actualités
+                        p.access-news  Découvrir les nouvelles actualités &nbsp; >
 
             .container#preview-faq
                 span.question-freq
@@ -260,7 +277,7 @@ block content
 
 
                         a(href="../fr/faq.html")
-                            p.faq-access ▸ Toutes les questions fréquentes
+                            p.faq-access  Toutes les questions fréquentes &nbsp; >
                     .clearfix
                 .clearfix
         
@@ -335,7 +352,7 @@ block content
 
         section#social.hide
 
-            h1 RESTEZ CONNECTÉ À QUORUM 
+            h2 RESTEZ CONNECTÉ À QUORUM 
 
             ul
                 li

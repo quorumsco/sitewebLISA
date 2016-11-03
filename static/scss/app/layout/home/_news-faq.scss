@@ -17,15 +17,15 @@
                 display: block;
             }
             h2 {
-                color: #fff;
+                color: #000;
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;
-                background-color: #00989d;
                 width: 300px;
-                transform: rotate(-3deg);
                 padding-top: 3px;
                 margin: auto;
+                font-weight: normal;
+                letter-spacing: 3px;
             }
             ul {
                 list-style: none;
@@ -37,10 +37,10 @@
                     position: absolute;
                     bottom: 0;
                     font-size: 17px;
-                    color: $grey;
+                    color: #f14e6c;
                 }
                 p:hover {
-                    color: black;
+                    color: #f14e6c;
                 }
                 li {
                     display: inline;
@@ -67,7 +67,7 @@
         }
         #preview-faq {
             padding-top: 50px;
-            background-color: #f2f2f2;
+            background-color: #eff5fe;
             height: 100%;
             position: relative;
             .question-freq {
@@ -76,15 +76,15 @@
                 display: block;
             }
             h2 {
-                background-color: #eb3459;
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;
                 width: 300px;
-                transform: rotate(-3deg);
                 padding-top: 3px;
                 margin: auto;
-                color: #fff;
+                color: #000;
+                font-weight: normal;
+                letter-spacing: 3px;
             }
             ul {
                 list-style: none;
@@ -118,10 +118,10 @@
                         position: absolute;
                         font-weight: normal;
                         bottom: 0;
-                        color: $grey;
+                        color: #f14e6c;
                     }
                     .faq-access:hover {
-                        color: black;
+                        color: #f14e6c;
                     }
                 }
             }

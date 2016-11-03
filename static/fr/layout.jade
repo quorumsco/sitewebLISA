@@ -40,13 +40,19 @@ html(lang="fr")
                 div.bar
                     ul.nav-menu
                         li
-                            a(href='../fr/index.html#icons') SOLUTIONS
+                            a(href='../fr/index.html#icons') 
+                                b SOLUTIONS
                         li
-                            a(href='../fr/news.html') ACTUALITÉS
+                            a(href='../fr/news.html') 
+                                b ACTUALITÉS
                         li
-                            a(href='../fr/faq.html') FAQ
+                            a(href='../fr/faq.html') 
+                                b FAQ
                         li
-                            a(href='https://medium.com/quorum-blog' target="_blank") BLOG
+                            a(href='https://medium.com/quorum-blog' target="_blank")
+                                b BLOG
+                        li
+                            a(href='../en/') English
                 
                     .banner
                         span.phone
@@ -58,9 +64,9 @@ html(lang="fr")
                             span#connexion CONNEXION
                         a(href="https://quorum.typeform.com/to/GkkXDe" target="_blank" class="demo-nav")
                             button DEMO
-                        a(href="../en/")
-                            span
-                              img(src="../images/icons/language-en.png")
+                        //- a(href="../en/")
+                        //-     span
+                        //-       img(src="../images/icons/language-en.png")
         block content
         footer#footer
             .content
@@ -73,21 +79,11 @@ html(lang="fr")
                         li
                             a(href="mailto:contact@quorumapp.co") Contact
                         li
+                            a(href="mailto:presse@quorumapp.co") Presse
+                        li
                             a.link(href='/legals.html')
                                 span Mentions Légales
-        //- section#newsletter
-        //-     .container
-        //-         div.banner
-        //-             button.leave
-        //-                 i.fa.fa-close
-        //-             img(src="../images/popup/newsletter.png")
-        //-         div
-        //-             p Ne manquez rien du meilleur de nos publications, actualités et événements !
-        //-             form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e5f9b9d368" method="post" enctype="multipart/form-data" data-dojo-attach-point="formNode" novalidate="")
-        //-                 div.input
-        //-                     input#mce-EMAIL(type="email" name="EMAIL" required placeholder="Email")
-        //-                     .border-input.blue
-        //-                     button.blue(type="submit") GO
+
 
         script(src='//code.jquery.com/jquery-2.1.4.min.js')
         //- script(src="https://d3js.org/d3.v3.min.js" charset="utf-8")

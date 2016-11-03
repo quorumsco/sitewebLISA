@@ -1,291 +1,95 @@
 @include exports('target') {
 	#target {
-		background-color: #f2f2f2;
-		.container {
-			span.quote{
-	  			color: $grey;
-	  			font-size: 20px;
-	  		}
-	  		width: 95%;
-			margin-top: 60px;
-			margin-bottom: 60px;
-			h2{
-				padding: 0 10px;
-				font-family: 'ProximaNova';
-				font-weight: normal;
+		margin-bottom: 50px;
+		margin-top: 60px;
+		.left-col {
+			width:50%;
+			float:left;
+			text-align: left;
+			
 
+
+			h1 {
+			color: #011936;
+			font-family: "ProximaNova";
+			font-size:40px;
+			font-weight: 300;
+			line-height: 47px;
+			margin-left: 30px;
 			}
-			.bold {
-				font-family: 'ProximaNova';
-        		font-weight: bold;
+
+			.illustration {
+				display: block;
+
+				img {
+					width: 90%;
+					margin-top: 20%;
+				}
 			}
+		}
+
+		.right-col {
+			width:50%;
+			float:left;
+			font-family: "ProximaNova";
+
+
 			ul {
-				margin-bottom: 40px;
+				list-style: none;
+				text-align: left;
 				margin-top: 40px;
-				
-
-				.active{
-					background-color: white;
-					color:black;
-					border: 2px solid #fff;
-					border-radius: 5px;
-					font-size: 0.9em;
-				}
-
-				hr {
-					border:1px solid #0f949a;
-					width: 60px;
-					margin-left: 0px;
-					margin-bottom: 20px !important;
-
-					border-radius: 100px;
-
-				}
+				margin-left: 25px;
 
 				li {
-					margin-top: 0px !important;
-					width: 18%;
-					border: 3px solid #0f949a;
-					border-radius: 5px;
-					font-size: 0.9em;
-					margin: 8px;
-					text-align: left;
-					padding-left: 20px;
-					padding-right: 20px;
-					// height: 170px !important;
-					vertical-align: top ;
-					// line-height: 1.5em;
-					height: 195px !important;
-					
-					.objectif {
-						// font-weight: bold !important;
-						// font-size: 1em;
-						font-size: 14px;
-						// color:#fff;
-						color : #0f949a;
-						
-						padding-top: 5px;
-						font-family: 'ProximaNova';
-        				font-weight: bold;
+					margin-bottom: 35px;
 
-
-					}
-
-					.active-box {
-						background-color: #0f949a;
-						color: #fff;
-						display: inline-block;
-						margin-bottom: 0 !important;
-						padding-left: 3px;
-						padding-right: 3px;
-						padding-top: 2px;
-						padding-bottom: 2px;
-					}
-
-					.target-name {
-						color:#0f949a;
+					.link {
 						margin-top: -10px;
-						font-family: 'ProximaNova';
-        				font-style: italic;
 					}
-					
+
+					a {
+						color: #f14e6c;
+					}
+
+					h2 {
+						font-family: "ProximaNova";
+						font-size: 15px;
+						font-weight: 700;
+						line-height: 26px;
+						margin-bottom: -13px !important;
+					}
 
 				}
-
-				li:hover {
-					width: 18%;
-					border: 3px solid #0f949a;
-					background-color: #0f949a;
-					border-radius: 5px;
-					font-size: 0.9em;
-					margin: 8px;
-					text-align: left;
-					padding-left: 20px;
-
-					p {
-						color:white;
-					}
-
-					hr {
-					border:1px solid #fff;
-					width: 60px;
-					margin-left: 0px;
-					border-radius: 100px;
-					margin-bottom: 20px !important;
-
-					}
-					
-					.objectif {
-						// font-weight: bold !important;
-						// font-size: 1em;
-						font-size: 14px;
-						// color:#fff;
-						color : #fff;
-						
-						padding-top: 5px;
-						font-family: 'ProximaNova';
-        				font-weight: bold;
-
-
-					}
-
-					.active-box {
-						background-color: #000;
-						color: #fff;
-						display: inline-block;
-						margin-bottom: 0 !important;
-						padding-left: 3px;
-						padding-right: 3px;
-						padding-top: 2px;
-						padding-bottom: 2px;
-					}
-
-
-					.target-name {
-						font-weight: bold;
-						color:#fff;
-						margin-top: -10px;
+			}
+		}
+	}
 
 	
-					}
-					
-
-				}
-
-			}
-			button.blue {
-				&:hover {
-					background: $red;
-				}
-			}
-		}
-		ul{
-			padding-left: 0;
-			list-style-type: none;
-			li{
-				display: inline-block;
-			}
-		}
-	}
-	@media(max-width: $small-screen){
-		#target {
-			button {
-				height: 100px;
-				margin-top: 10px;
-			}
-			ul {
-				li {
-					margin-bottom: 5px;
-				}
-			}
-		}
-	}
-	@media(max-width: 767px){
-		#target {
-			opacity: 1;
-			span.quote {
-				p {
-					display: inline;
-					margin-top: 0px;
-				}
-			}
-		}
-	}
-	@media(min-width: 430px) {
-		#target {
-			.container {
-				ul {
-					li{
-						.keywords {
-							display: none;
-						}
-			
-					}
-				}
-			}
-		}
-	}
-
-	@media(max-width: 1024px) {
-	#target {
-		.container {
-			ul {
-				li {
-					height: 250px !important;
-				}
-			}
-		}
-	}  
-	}
-
-	@media(max-width: 425px){
-		#target {
-			.container {
-				ul {
-					li{
-						 width : 30%;
-						 height: 110px !important;
-						 padding-left: 10px;
-						 margin-top: 10px !important;
-						.target-name {
-							display: none;
-						}
-						.description {
-							display: none;
-						}
-
-
-						button{
-							font-size: 18px;
-						}
-					}
-				}
-				a {
-					button {
-							font-size: 16px;
-					}
-				}
-			}
-		}
-	}
-
-
-	@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-		#target {
-			.container {
-				ul {
-					li {
-						height: 150px !important;
-					}
-				}
-			}
-		}
-
-	}
-
 
 	/* iPhone 6 */
 	@media (min-width: 375px) and (max-width: 385px){
 			#target {
 			.container {
-				ul {
-					li {
-						height: 140px !important;
-					}
-				}
+
 			}
 		}
 
 	}
 	/* iPhone 6+ */
-    @media (min-width: 414px) and (max-width: 425px){
+    @media  (max-width: 425px){
 			#target {
 			.container {
-				ul {
-					li {
-						height: 140px !important;
-					}
-				}
+				 .left-col {
+				 	float: none;
+				 	width:100%;
+				 }
+				 .right-col {
+				 	float:none;
+				 	width:100%;
+				 	display: block;
+				 	margin-top: 100px;
+				 }
+
 			}
 		}
 	}
@@ -295,11 +99,7 @@
     @media (min-width: 768px) and (max-width: 780px) {
 	#target {
 		.container {
-			ul {
-				li {
-					height: 250px !important;
-				}
-			}
+
 		}
 	}  	
     }

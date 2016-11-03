@@ -3,7 +3,7 @@
         // padding-bottom: 50px;
         margin-top: -15px !important;
         #form-contact {
-            background-color: #f2f2f2;
+            background-color: #eff5fe;
             height: 100%;
             text-align: left;
             float: left;
@@ -20,15 +20,15 @@
                 text-align: center;
             }
             h2 {
-                color: #fff;
+                color: #000;
+                font-weight: normal !important;
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 24px;
-                background-color: #eb3459;
                 width: 300px;
-                transform: rotate(-3deg);
                 padding-top: 3px;
                 margin: auto;
+                letter-spacing: 3px;
             }
             .champs {
                 width: 100%;
@@ -52,7 +52,7 @@
                 }
             }
             button {
-                background-color: #00bfff !important;
+                background-color: #2778e4 !important;
                 margin: auto;
                 width: 230px;
                 height: 30px;
@@ -136,21 +136,21 @@
                     }
                 }
                 .titre-postal {
-                    margin-top: 40px;
+                    margin-top: 50px;
                     margin-bottom: 70px;
                     display: block;
                     text-align: center;
                 }
                 h2 {
-                    background-color: #00989d;
                     font-size: 17px;
                     font-weight: 700;
                     line-height: 24px;
                     width: 300px;
-                    transform: rotate(-3deg);
                     padding-top: 3px;
                     margin: auto;
-                    color: #fff;
+                    color: #000;
+                    font-weight: normal;
+                    letter-spacing: 3px;
                 }
             }
         }
@@ -202,14 +202,16 @@
     }
     @media (min-width: 375px) and (max-width: 385px) {
         #contact {
-            margin-bottom: 40px;
             #adress-postale {
+                width:100%;
+                margin-bottom: 50px;
                 h2 {
                     width: 200px !important;
                 }
                 .contact-postal {
-                    width: 355px !important;
-                    padding-left: 10px !important;
+                    // width: 375px !important;
+                    width: 100% !important;
+                    padding-left: 0px !important;
                     padding-right: 10px !important;
                     padding-top: 20px;
                 }
@@ -224,13 +226,15 @@
     }
     @media (min-width: 414px) and (max-width: 425px) {
         #contact {
-            margin-bottom: 40px;
             #adress-postale {
+                width:100%;
+                margin-bottom: 50px;
                 h2 {
                     width: 200px !important;
                 }
                 .contact-postal {
-                    width: 375px !important;
+                    // width: 375px !important;
+                    width: 100% !important;
                     padding-left: 0px !important;
                     padding-right: 10px !important;
                     padding-top: 20px;

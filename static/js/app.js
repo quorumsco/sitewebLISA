@@ -305,18 +305,18 @@ $(document).ready(function(){
     });
 
     //a(href) with language EN/FR
-    $.each($('.link'), function() {
-        if($(this).attr('href').substring(0,1) == "/") {
-            $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
-        }
-    });
-    if(window.location.pathname.substring(4) != "") {
-        $.each($('ul.nav').find('a').not('.link'), function() {
-            if($(this).attr('href').substring(0,1) == "/") {
-                $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
-            }
-        });
-    }
+    // $.each($('.link'), function() {
+    //     if($(this).attr('href').substring(0,1) == "/") {
+    //         $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
+    //     }
+    // });
+    // if(window.location.pathname.substring(4) != "") {
+    //     $.each($('ul.nav').find('a').not('.link'), function() {
+    //         if($(this).attr('href').substring(0,1) == "/") {
+    //             $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
+    //         }
+    //     });
+    // }
     $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
 
     //Slider switch - about page
@@ -460,9 +460,13 @@ $(document).ready(function(){
 
 
     // Gestion des témoignages (1ere partie site) #testimony
-    $('.person-1').click(function(event){
+    $('.person-1-action').click(function(event){
 
       event.preventDefault();
+
+      $('.person-1').show();
+      $('.person-2').css('display', 'none');
+      $('.person-3').css('display', 'none');
 
       $('.icones-1').removeClass('fa-circle-o');
       $('.icones-1').addClass('fa-circle');
@@ -482,9 +486,14 @@ $(document).ready(function(){
       $( "#testimony-1" ).fadeIn(1000);
     })
     
-    $('.person-2').click(function(event){
+    $('.person-2-action').click(function(event){
 
       event.preventDefault();
+
+      $('.person-2').show();
+
+      $('.person-1').css('display', 'none');
+      $('.person-3').css('display', 'none');
 
       $('.icones-2').removeClass('fa-circle-o');
       $('.icones-2').addClass('fa-circle');
@@ -505,12 +514,17 @@ $(document).ready(function(){
       $( "#testimony-2" ).fadeIn(1000);
     })
     
-    $('.person-3').click(function(event){
+    $('.person-3-action').click(function(event){
 
       event.preventDefault();
 
       $('.icones-3').removeClass('fa-circle-o');
       $('.icones-3').addClass('fa-circle');
+
+      $('.person-3').show();
+
+      $('.person-1').css('display', 'none');
+      $('.person-2').css('display', 'none');
       
       $('.icones-1').removeClass('fa-circle');
       $('.icones-1').addClass('fa-circle-o');
@@ -621,7 +635,7 @@ $(document).ready(function(){
         $(".underline").each(function(){
             $(this).animate({ 
                 // opacity:0.25
-                borderBottomWidth: '3px'
+                borderBottomWidth: '2px'
 
             }, 500 );
         });

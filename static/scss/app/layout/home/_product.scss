@@ -1,13 +1,24 @@
 @include exports ('product') {
     #product {
-        background-image: url(../images/home/group-2.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: 120px;
-        margin-bottom: 80px;
+        // background-image: url(../images/home/group-2.png);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-color: #eff5fe;
+        padding-top: 20vh;
+        padding-bottom: 120px;
         .container {
+            text-align: left;
+            .citation {
+                color:#2778e4;
+            }
             .underline {
-                border-bottom: 0px solid #0f949a;
+                border-bottom: 0px solid #2778e4;
+            }
+
+            h2 {
+                font-weight: normal;    
+                line-height: 64px;
+                font-size:48px;
             }
             margin-top: 70px;
             margin-left: auto;
@@ -28,30 +39,53 @@
             div[id^="testimony"]:not(.active) {
                 display: none;
             }
-            .hr-testimony {
+            hr {
+                border-width:0px !important;
+            }
+            .hr-.person-1 {
                 margin-top: 35px;
                 width: 40%;
-                border: 1px solid #f2f2f2;
+                border: 0px solid #f2f2f2;
+                text-align: left;
             }
+
+            .person-2 {
+                display: none;
+            }
+
+            .person-3 {
+                display: none;
+            }
+
             .testimonies-responsive {
+                display: block;
+                margin-top: 130px;
+                width:250px;
+                text-align: left;
+                color: #47b6ff;
                 ul {
+                    list-style: none;
+                    padding-left: 0px !important;
+
+                    li {
+                        font-size: 10px;
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
                     li:hover {
                         background-color: none;
-                        color: black;
+                        color: #47b6ff;
                     }
                 }
             }
             .testimonies {
-                margin: 0 auto;
                 width: 100%;
-                margin-left: 5vw !important;
+                text-align: left;
                 .person-testimony {
                     position: relative;
-                    width: 250px;
-                    margin-left: 2vw;
+                    width: 400px;
                     margin-right: 2vw;
                     float: left;
-                    opacity: 0.5;
                     &.active {
                         opacity: 1;
                     }
@@ -60,22 +94,24 @@
                         opacity: 1;
                     }
                     .photo-testimony {
-                        margin-top: 44px;
-                        position: absolute;
-                        left: 1px;
-                        bottom: 10px;
+                        margin-top: 30px;
+                        float:left;
                     }
                     .infos-testimony {
-                        margin-left: 50px;
+                        margin-left: 70px !important;
+                        margin-top: 35px;
+                        display: block;
                         .testimony-name {
                             font-weight: bold !important;
-                            padding-top: 20px;
+                            margin-top: 20px;
                             margin-bottom: 0;
                         }
                         .testimony-job {
-                            margin-top: 0;
+                            margin-top: 5px;
                             font-family: 'ProximaNova';
-                            font-style: italic;
+                            color: #011936;
+                            letter-spacing: 2px;
+                            font-size: 12px;
                         }
                     }
                 }
@@ -87,125 +123,92 @@
                 }
             }
         }
-    }
-    @media(max-width: 767px) {
-        #product {
-            opacity: 1;
-            margin-top: 10px;
-            h2 {
-                display: inline-block;
+    
+    .input-form {
+        margin-top: 50px;
+
+        .abonnement {
+            width: 210px; 
+            margin:0 auto;
+            button {
+                width: 210px;
+                height: 51px;
+                background-color: #e10c32;
+                border-radius: 4px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                padding-top: 17px !important;
+                margin-top: 0;
             }
         }
+
     }
-    @media(max-width: 425px) {
-        #product {
-            // text-align: left;
-            // padding: 0 10px;
-            .container {
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-                span.quote {
-                    &:nth-of-type(1), &:nth-of-type(2) {
-                        display: inline;
-                    }
-                }
-            }
-        }
+
     }
-    @media(max-width: 1103px) {
-        .container {
-            width: 100vw !important;
-            .testimonies {
-                margin-left: 10vw !important;
-            }
-        }
-    }
-    @media(min-width: 1026px) {
-        #product {
-            .testimonies-responsive {
-                display: none;
-            }
-        }
-    }
-    @media(max-width: 1025px) {
-        #product {
-            .testimonies {
-                display: none;
-            }
-            .testimonies-responsive {
-                display: block;
-                ul {
-                    list-style: none;
-                    margin-left: -60px;
-                    li {
-                        display: inline-block;
-                    }
-                    li:not(:first-child) {
-                        margin-left: 20px;
-                    }
-                }
-            }
-        }
-    }
-    @media(min-width: 1250px) {
-        .container {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-    @media(min-width: 1024px) and (min-width: 1030px) {
-        main {
-            .container {
-                span.quote {
-                    &:nth-of-type(2), &:nth-of-type(3) {
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
+
     /* iPhone 5 */
     
     @media(min-width: 320px) and (max-width: 370px) {
         #product {
-            margin-top: 25px;
-            margin-bottom: 20px;
-            .container {
-                width: 305px !important;
-                padding-left: 10px;
-                padding-right: 5px;
-            }
+
         }
     }
     /* iPhone 6 */
     
     @media (min-width: 375px) and (max-width: 385px) {
         #product {
-            margin-top: 25px;
-            .container {
-                width: 305px !important;
-                padding-left: 10px;
-                padding-right: 5px;
-            }
+            margin-top: -80px;
+            margin-bottom: -100px;
+
+             .container {
+                width:90%;
+                
+                .testimonies {
+                    .person-testimony {
+                        width:100%;
+                    }
+                }
+
+
+                .input-form {
+                    .abonnement {
+                        button {
+                        margin-left: -10px;
+                        }
+                    }
+                }
+             }
         }
     }
     /* iPhone 6+ */
     
     @media (min-width: 414px) and (max-width: 425px) {
         #product {
-            margin-top: 70px;
+
+             width:100%;
+             margin-top: -80px;
+             margin-bottom: 0px;
+             padding-bottom: 0px;
+
+             .container {
+                width:100%;
+
+                .input-form {
+                    .abonnement {
+                        button {
+                        margin-left: 0px;
+                        }
+                    }
+                }
+             }
         }
     }
     /* Ipad */
     
     @media (min-width: 768px) and (max-width: 780px) {
         #product {
-            .container {
-                width: 700px !important;
-                padding-left: 15px !important;
-                padding-right: 15px !important;
-            }
+
         }
     }
 }

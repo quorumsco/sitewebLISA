@@ -26,6 +26,7 @@
                 margin: 0 !important;
                 padding-left: 0 !important;
                 font-family: 'ProximaNova';
+                letter-spacing: 0px;
             }
             &:last-of-type {
                 margin-bottom: 8em;
@@ -120,27 +121,20 @@
     @media(min-width: 375px) and (max-width: 380px) {
         #mobile {
             background: none;
-            div.container {
+            margin-top: -40px;
+            margin-bottom: 10px;
+            .container {
+                width:100%;
+                padding-left: 0;
                 .mobile-content {
-                    margin-left: 8%;
-                }
-                margin-left: 0px !important;
-                margin-top: -60px;
-                text-align: left;
-                h2 {
-                    text-align: left;
-                    max-width: 300px;
-                }
-                ul {
-                    li {
-                        max-width: 250px;
+                    margin-left: 0 !important;
+                    .content {
+                        h2 {
+                            width: 90%;
+                        }
                     }
                 }
-                .content {
-                    .last {
-                        margin-bottom: 20px;
-                    }
-                }
+
             }
         }
     }
@@ -167,7 +161,10 @@
         #mobile {
             background: none;
             margin-top: -40px;
-            margin-bottom: 60px;
+            margin-bottom: 10px;
+            .container {
+                width:100%;
+            }
         }
     }
     @media (min-width: 768px) and (max-width: 780px) {

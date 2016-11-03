@@ -1,57 +1,165 @@
 @include exports('schema') {
 
 	#schema {
+		background-color: #eff5fe;
+		padding-top: 50px;
+		padding-bottom: 50px;
 
 		h2 {
 			font-family: 'ProximaNova';
 			font-weight: normal;
-
-        	margin-bottom: 40px;
+			margin-top: 50px;
+        	margin-bottom: 30px;
 		}
-		.bold {
-			font-family: 'ProximaNova';
-        	font-weight: bold;
-		}
-		margin-top: 50px;
-		.img-schema {
-			margin-left: -50px;
-			margin-top: 70px;
-		}
-	}
+		
+		.left-col {
+			float:left;
+			width:50%;
+			text-align:left;
+			margin-bottom: 30px;
 
+			h3 {
+					font-family: "ProximaNova";
+					font-size:35px;
+					font-weight: 300;
+					line-height: 47px;
+					margin-bottom: 50px;
+			}
 
-	@media(max-width: 1110px){
-		#schema {
-			.img-schema {
-				margin-left: 0px;
+			.schema-img {
+				margin-top: 20px;
+			}
+		}
+		
+		.right-col {
+			float:left;
+			width:50%;
+			margin-top: 50px;
+
+			p {
+				text-align: left;
+				padding-left: 60px;
+			}
+
+			.img-smartphone {
 				img {
-					width:1000px;
-					margin-top: 30px;
+					width: 390px;
 				}
 			}
-		}
-	}
-	@media(max-width: 1024px){
-		#schema {
-			.img-schema {
 
-				margin-left: 0px;
-				img {
-					width:800px;
-					margin-top: 30px;
-				}
-			}
-		}
-	}	
-	@media(max-width: 800px){
-		#schema {
-			h2 {
-				display: none;
-			}
-			.img-schema {
-				display: none;
+			h3 {
+					font-family: "ProximaNova";
+					font-size:35px;
+					font-weight: 300;
+					line-height: 47px;
+					width:430px;
+					text-align: left;
+					padding-left: 60px;
 			}
 		}
 	}
+
+
+
+	/* iPhone 6 */
+	@media (min-width: 375px) and (max-width: 385px){
+			#schema {
+			.container {
+				padding-left: 20px;
+				padding-right: 20px;
+				 .left-col {
+				 	float: none;
+				 	width:100%;
+
+				 	.schema-img {
+				 		margin-top: 20px;
+				 		display: block;
+				 		img {
+				 			width: 100%;
+				 		}
+				 	}
+				 }
+				 .right-col {
+				 	float:none;
+				 	width:100%;
+				 	display: block;
+				 	margin-top: 100px;
+				 	margin-bottom: 50px;
+
+				 	p {
+				 		padding-left: 0px;
+				 		margin-left: 0px;
+				 	}
+
+				 	h3 {
+				 		padding-left: 0px;
+				 		margin-left: 0px;
+				 		width:100%;
+				 	}
+
+				 	.img-smartphone {
+				 		img {
+				 			width: 100%;
+				 		}
+				 	}
+				 }
+			}
+		}
+
+	}
+	/* iPhone 6+ */
+    @media (min-width: 414px) and (max-width: 425px){
+			#schema {
+			.container {
+				 .left-col {
+				 	float: none;
+				 	width:100%;
+
+				 	.schema-img {
+				 		margin-top: 20px;
+				 		display: block;
+				 		img {
+				 			width: 100%;
+				 		}
+				 	}
+				 }
+				 .right-col {
+				 	float:none;
+				 	width:100%;
+				 	display: block;
+				 	margin-top: 100px;
+				 	margin-bottom: 50px;
+
+				 	p {
+				 		padding-left: 0px;
+				 		margin-left: 0px;
+				 	}
+
+				 	h3 {
+				 		padding-left: 0px;
+				 		margin-left: 0px;
+				 		width:100%;
+				 	}
+
+				 	.img-smartphone {
+				 		img {
+				 			width: 100%;
+				 		}
+				 	}
+				 }
+			}
+		}
+	}
+
+	/* Ipad */
+
+    @media (min-width: 768px) and (max-width: 780px) {
+	#schema {
+		.container {
+
+		}
+	}  	
+    }
+
 
 }
