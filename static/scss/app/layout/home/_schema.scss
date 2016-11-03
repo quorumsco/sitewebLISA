@@ -151,14 +151,52 @@
 		}
 	}
 
-	/* Ipad */
+	/* Iphone 5 */
 
-    @media (min-width: 768px) and (max-width: 780px) {
-	#schema {
-		.container {
+    @media(min-width: 320px) and (max-width: 370px) {
+		#schema {
+			.container {
+				padding-left: 20px;
+				padding-right: 20px;
+				 .left-col {
+				 	float: none;
+				 	width:100%;
 
+				 	.schema-img {
+				 		margin-top: 20px;
+				 		display: block;
+				 		img {
+				 			width: 100%;
+				 		}
+				 	}
+				 }
+				 .right-col {
+				 	float:none;
+				 	width:100%;
+				 	display: block;
+				 	margin-top: 100px;
+				 	margin-bottom: 50px;
+
+				 	p {
+				 		padding-left: 0px;
+				 		margin-left: 0px;
+				 	}
+
+				 	h3 {
+				 		padding-left: 0px;
+				 		margin-left: 0px;
+				 		width:100%;
+				 	}
+
+				 	.img-smartphone {
+				 		img {
+				 			width: 100%;
+				 		}
+				 	}
+				 }
+			}
 		}
-	}  	
+		
     }
 
 

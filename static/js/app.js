@@ -179,18 +179,7 @@ $(document).ready(function(){
 
     //Random email/name - #contact home page
     if($('#contact').length > 0) {
-        // if(window.location.pathname.substring(0, 4) == "/fr/") {
-        // //     var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['p.rickwaert@hotmail.fr', 'Philippe Rickwaert']];
-        // //     var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
-        // //     $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
-        // //     $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
-        // // } else {
-        // //     var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['franck.underwood@gmail.com', 'Franck Underwood'], ['georges.washington@gmail.com', 'Georges Washington']];
-        // //     var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
-        // //     $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
-        // //     $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
-        // // }
-        //Custom error message - #contact input - home page
+
         function validEmail(email) {
             var emailRegex = /\S+@\S+\.\S+/;
             return emailRegex.test(email);

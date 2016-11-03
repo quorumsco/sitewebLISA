@@ -110,7 +110,6 @@
                             margin-top: 5px;
                             font-family: 'ProximaNova';
                             color: #011936;
-                            letter-spacing: 2px;
                             font-size: 12px;
                         }
                     }
@@ -140,6 +139,10 @@
                 line-height: 18px;
                 padding-top: 17px !important;
                 margin-top: 0;
+
+                a {
+                    color: #fff;
+                }
             }
         }
 
@@ -150,8 +153,32 @@
     /* iPhone 5 */
     
     @media(min-width: 320px) and (max-width: 370px) {
-        #product {
+         #product {
+            margin-top: -60px;
+            margin-bottom: -100px;
 
+             .container {
+                width:90%;
+                
+                .testimonies {
+                    .person-testimony {
+                        width:100%;
+                    }
+                }
+                
+                h2 {
+                    font-size: 30px;
+                    line-height: 50px;
+                }
+
+                .input-form {
+                    .abonnement {
+                        button {
+                        margin-left: -10px;
+                        }
+                    }
+                }
+             }
         }
     }
     /* iPhone 6 */

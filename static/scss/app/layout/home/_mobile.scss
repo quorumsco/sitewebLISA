@@ -126,8 +126,9 @@
             .container {
                 width:100%;
                 padding-left: 0;
+                margin-left: 0 !important;
                 .mobile-content {
-                    margin-left: 0 !important;
+                    padding-left: 20px;
                     .content {
                         h2 {
                             width: 90%;
@@ -141,19 +142,21 @@
     @media(min-width: 320px) and (max-width: 325px) {
         #mobile {
             background: none;
-            margin-top: 0px;
-            margin-bottom: 60px;
-            div.container {
+            margin-top: -40px;
+            margin-bottom: 10px;
+            .container {
+                width:100%;
+                padding-left: 0;
+                margin-left: 0 !important;
                 .mobile-content {
-                    margin-left: 8%;
-                    padding-right: 10px;
+                    padding-left: 20px;
+                    .content {
+                        h2 {
+                            width: 90%;
+                        }
+                    }
                 }
-                max-width: 320px !important;
-                margin-left: 0!important;
-                h2 {
-                    text-align: left;
-                    max-width: 290px;
-                }
+
             }
         }
     }
