@@ -447,12 +447,21 @@ $(document).ready(function(){
           },'slow');
       });
 
+    // var currentTemoignage = '#testimony-1';
 
-    // Gestion des témoignages (1ere partie site) #testimony
-    $('.person-1-action').click(function(event){
+    // function changeCarrousel () {
 
-      event.preventDefault();
+    //     console.log(currentTemoignage)
 
+    //     setTimeout(changeCarrousel(currentTemoignage), 500000);
+
+    // }
+
+
+    // setTimeout(changeCarrousel(currentTemoignage), 500000);
+    
+
+    function showT1 () {
       $('.person-1').show();
       $('.person-2').css('display', 'none');
       $('.person-3').css('display', 'none');
@@ -471,13 +480,11 @@ $(document).ready(function(){
       $('#testimony-2').css('display', 'none');
       $('#testimony-3').css('display', 'none');
       
-      $(this).addClass('active');
+      $('.person-1-action').addClass('active');
       $( "#testimony-1" ).fadeIn(1000);
-    })
-    
-    $('.person-2-action').click(function(event){
+    }
 
-      event.preventDefault();
+    function showT2 () {
 
       $('.person-2').show();
 
@@ -499,14 +506,11 @@ $(document).ready(function(){
       $('#testimony-1').css('display', 'none');
       $('#testimony-3').css('display', 'none');
       
-      $(this).addClass('active');
+      $('.person-2-action').addClass('active');
       $( "#testimony-2" ).fadeIn(1000);
-    })
-    
-    $('.person-3-action').click(function(event){
+    }
 
-      event.preventDefault();
-
+    function showT3 () {
       $('.icones-3').removeClass('fa-circle-o');
       $('.icones-3').addClass('fa-circle');
 
@@ -526,8 +530,28 @@ $(document).ready(function(){
       $('#testimony-1').css('display', 'none');
       $('#testimony-2').css('display', 'none');
       
-      $(this).addClass('active');
+      $('.person-3-action').addClass('active');
       $( "#testimony-3" ).fadeIn(1000);
+    }
+    // Gestion des témoignages (1ere partie site) #testimony
+    $('.person-1-action').click(function(event){
+
+      event.preventDefault();
+      showT1();
+
+    })
+    
+    $('.person-2-action').click(function(event){
+
+      event.preventDefault();
+      showT2();
+    })
+    
+    $('.person-3-action').click(function(event){
+
+      event.preventDefault();
+      showT3();
+
     })
     
     // Gestion des icones et features
