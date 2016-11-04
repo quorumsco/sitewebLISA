@@ -447,18 +447,22 @@ $(document).ready(function(){
           },'slow');
       });
 
-    // var currentTemoignage = '#testimony-1';
+ 
 
-    // function changeCarrousel () {
-
-    //     console.log(currentTemoignage)
-
-    //     setTimeout(changeCarrousel(currentTemoignage), 500000);
-
-    // }
-
-
-    // setTimeout(changeCarrousel(currentTemoignage), 500000);
+    setInterval(
+        function changeTest () {
+            if (localStorage.testimony=='1') {
+                localStorage.setItem('testimony', '2');
+                showT2()
+            }else if (localStorage.testimony=='2') {
+                localStorage.setItem('testimony', '3');
+                showT3()
+            } else {
+                localStorage.setItem('testimony', '1');
+                showT1()
+            }
+        }
+    , 10000);
     
 
     function showT1 () {
@@ -682,5 +686,4 @@ $(document).ready(function(){
     
     // $('#debbug').html($( window ).width());
 });
-
 
