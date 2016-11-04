@@ -110,7 +110,7 @@
                             margin-top: 5px;
                             font-family: 'ProximaNova';
                             color: #011936;
-                            font-size: 12px;
+                            font-size: 14px;
                         }
                     }
                 }
@@ -143,6 +143,9 @@
                 a {
                     color: #fff;
                 }
+            }
+            button:hover {
+                background-color: #2778e4;
             }
         }
 

@@ -3,7 +3,7 @@
         // padding-bottom: 50px;
         margin-top: -15px !important;
         #form-contact {
-            background-color: #eff5fe;
+            // background-color: #eff5fe;
             height: 100%;
             text-align: left;
             float: left;
@@ -58,9 +58,10 @@
                 height: 30px;
                 padding-top: 6px !important;
                 display: block;
+                font-weight: normal;
             }
             button:hover {
-                background-color: #eb3459 !important;
+                background-color: #e10c32 !important;
             }
         }
         #adress-postale {

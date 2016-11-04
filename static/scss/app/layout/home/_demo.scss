@@ -23,7 +23,7 @@
             margin-top: 0px;
             & a {
                 font-size: 25px;
-                font-weight: 700;
+                font-weight: normal;
                 line-height: 31px;
                 color: white;
                 margin-top: 0px !important;
@@ -31,7 +31,7 @@
             }
         }
         button:hover {
-            background-color: #eb3459 !important;
+            background-color: #e10c32 !important;
         }
     }
     @media(max-width: 435px) {
