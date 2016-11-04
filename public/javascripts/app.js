@@ -28,16 +28,16 @@ $(window).scroll(function (event) {
     //Loop scrollTo management
     clickScrollTo = null;
 
-    var currentPageIsNews = $('#nav').next().is('#reset');
+    // var currentPageIsNews = $('#nav').next().is('#reset');
     //Transition scroll
-    if (window.innerWidth > 1110 && $('#nav').next().hasClass('big')) {
-        var breakpoint = 50;
-        if (yOffset > breakpoint && !currentPageIsNews) {
-            $('#nav').addClass('active');
-            $('.navbar-brand').find('img').attr('src', '../images/logo/logo-color.svg');
+    if (window.innerWidth > 1110) {
+        var breakpoint = $("#product").height() + 60;
+        if (yOffset > breakpoint) {
+            $('.info-contact').hide();
+            $('.button-demo').fadeIn();
         } else {
-            //  $('#nav').removeClass('active');
-            //  $('.navbar-brand').find('img').attr('src', '../images/logo/logo-white.svg');
+            $('.info-contact').fadeIn();
+            $('.button-demo').hide();
         }
     }
 
@@ -170,18 +170,7 @@ $(document).ready(function () {
 
     //Random email/name - #contact home page
     if ($('#contact').length > 0) {
-        // if(window.location.pathname.substring(0, 4) == "/fr/") {
-        // //     var tabEmailFR = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['mahatma@gandhi.world', 'Gandhi Mahatma'], ['p.rickwaert@hotmail.fr', 'Philippe Rickwaert']];
-        // //     var chosenOne = tabEmailFR[Math.floor(Math.random() * tabEmailFR.length)];
-        // //     $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
-        // //     $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
-        // // } else {
-        // //     var tabEmailEN = [['barrackobama@whitehouse.org', 'Barrack Obama'], ['franck.underwood@gmail.com', 'Franck Underwood'], ['georges.washington@gmail.com', 'Georges Washington']];
-        // //     var chosenOne = tabEmailEN[Math.floor(Math.random() * tabEmailEN.length)];
-        // //     $('#contact').find('[name="_replyto"]').attr('placeholder', chosenOne[0]);
-        // //     $('#contact').find('[name="name"]').attr('placeholder', chosenOne[1]);
-        // // }
-        //Custom error message - #contact input - home page
+
         function validEmail(email) {
             var emailRegex = /\S+@\S+\.\S+/;
             return emailRegex.test(email);
@@ -294,18 +283,18 @@ $(document).ready(function () {
     });
 
     //a(href) with language EN/FR
-    $.each($('.link'), function () {
-        if ($(this).attr('href').substring(0, 1) == "/") {
-            $(this).attr('href', window.location.pathname.substring(0, 3) + "" + $(this).attr('href'));
-        }
-    });
-    if (window.location.pathname.substring(4) != "") {
-        $.each($('ul.nav').find('a').not('.link'), function () {
-            if ($(this).attr('href').substring(0, 1) == "/") {
-                $(this).attr('href', window.location.pathname.substring(0, 3) + "" + $(this).attr('href'));
-            }
-        });
-    }
+    // $.each($('.link'), function() {
+    //     if($(this).attr('href').substring(0,1) == "/") {
+    //         $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
+    //     }
+    // });
+    // if(window.location.pathname.substring(4) != "") {
+    //     $.each($('ul.nav').find('a').not('.link'), function() {
+    //         if($(this).attr('href').substring(0,1) == "/") {
+    //             $(this).attr('href', window.location.pathname.substring(0,3)+""+$(this).attr('href'));
+    //         }
+    //     });
+    // }
     $('a.navbar-brand').attr('href', window.location.pathname.substring(0, 4));
 
     //Slider switch - about page
@@ -447,10 +436,23 @@ $(document).ready(function () {
         }, 'slow');
     });
 
-    // Gestion des témoignages (1ere partie site) #testimony
-    $('.person-1').click(function (event) {
+    setInterval(function changeTest() {
+        if (localStorage.testimony == '1') {
+            localStorage.setItem('testimony', '2');
+            showT2();
+        } else if (localStorage.testimony == '2') {
+            localStorage.setItem('testimony', '3');
+            showT3();
+        } else {
+            localStorage.setItem('testimony', '1');
+            showT1();
+        }
+    }, 10000);
 
-        event.preventDefault();
+    function showT1() {
+        $('.person-1').show();
+        $('.person-2').css('display', 'none');
+        $('.person-3').css('display', 'none');
 
         $('.icones-1').removeClass('fa-circle-o');
         $('.icones-1').addClass('fa-circle');
@@ -466,13 +468,16 @@ $(document).ready(function () {
         $('#testimony-2').css('display', 'none');
         $('#testimony-3').css('display', 'none');
 
-        $(this).addClass('active');
+        $('.person-1-action').addClass('active');
         $("#testimony-1").fadeIn(1000);
-    });
+    }
 
-    $('.person-2').click(function (event) {
+    function showT2() {
 
-        event.preventDefault();
+        $('.person-2').show();
+
+        $('.person-1').css('display', 'none');
+        $('.person-3').css('display', 'none');
 
         $('.icones-2').removeClass('fa-circle-o');
         $('.icones-2').addClass('fa-circle');
@@ -488,16 +493,18 @@ $(document).ready(function () {
         $('#testimony-1').css('display', 'none');
         $('#testimony-3').css('display', 'none');
 
-        $(this).addClass('active');
+        $('.person-2-action').addClass('active');
         $("#testimony-2").fadeIn(1000);
-    });
+    }
 
-    $('.person-3').click(function (event) {
-
-        event.preventDefault();
-
+    function showT3() {
         $('.icones-3').removeClass('fa-circle-o');
         $('.icones-3').addClass('fa-circle');
+
+        $('.person-3').show();
+
+        $('.person-1').css('display', 'none');
+        $('.person-2').css('display', 'none');
 
         $('.icones-1').removeClass('fa-circle');
         $('.icones-1').addClass('fa-circle-o');
@@ -510,8 +517,26 @@ $(document).ready(function () {
         $('#testimony-1').css('display', 'none');
         $('#testimony-2').css('display', 'none');
 
-        $(this).addClass('active');
+        $('.person-3-action').addClass('active');
         $("#testimony-3").fadeIn(1000);
+    }
+    // Gestion des témoignages (1ere partie site) #testimony
+    $('.person-1-action').click(function (event) {
+
+        event.preventDefault();
+        showT1();
+    });
+
+    $('.person-2-action').click(function (event) {
+
+        event.preventDefault();
+        showT2();
+    });
+
+    $('.person-3-action').click(function (event) {
+
+        event.preventDefault();
+        showT3();
     });
 
     // Gestion des icones et features
@@ -608,7 +633,7 @@ $(document).ready(function () {
             $(".underline").each(function () {
                 $(this).animate({
                     // opacity:0.25
-                    borderBottomWidth: '3px'
+                    borderBottomWidth: '2px'
 
                 }, 500);
             });
